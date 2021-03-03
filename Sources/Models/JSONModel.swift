@@ -54,3 +54,15 @@ public extension JSONModel where Self: Decodable {
         self = try jsonDecoder.decode(Self.self, from: json.rawData())
     }
 }
+
+// MARK: - JSON + JSONModel
+
+public extension JSON {
+
+    /// Load the corresponding `Action` from this `JSON` instance
+    func toJSONModel() throws -> JSONModel? {
+        return try Fusion.shared.jsonModelTypes
+            .compactMap { try $0.init(json: self) }
+            .first
+    }
+}

@@ -30,7 +30,12 @@ open class Fusion {
     }
 
     /// `JSONModel`s to dynamically decode from the JSON
-    open var jsonModels: [JSONModel.Type] {
+    open var jsonModelTypes: [JSONModel.Type] {
+        return []
+    }
+
+    /// `Action`s to dynamically decode from the JSON
+    open var actionTypes: [Action.Type] {
         return []
     }
 }
