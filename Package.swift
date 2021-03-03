@@ -15,11 +15,12 @@ let package = Package(
         )
     ],
     dependencies: [
+        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "4.0.0")
     ],
     targets: [
         .target(
             name: "Fusion",
-            dependencies: [],
+            dependencies: ["SwiftyJSON"],
             path: "Sources"
         ),
         .testTarget(
