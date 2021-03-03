@@ -13,7 +13,7 @@ import SwiftyJSON
 ///
 /// It is identified by the `classIdentifier`, if this matches, then the `JSONModel` will
 /// instantiate itself from the `JSON`
-protocol JSONModel {
+public protocol JSONModel {
 
     /// Define the "class" which uniquely identifies this `JSONModel`.
     ///
@@ -31,7 +31,7 @@ protocol JSONModel {
 
 // MARK: - JSONModel + Defaults
 
-extension JSONModel {
+public extension JSONModel {
 
     /// By default the identifier is the name of the type
     static var classIdentifier: String {
@@ -41,7 +41,7 @@ extension JSONModel {
 
 // MARK: - JSONModel + Decodable
 
-extension JSONModel where Self: Decodable {
+public extension JSONModel where Self: Decodable {
 
     /// Check `class` in `json` matches `classIdentifier`.
     /// If so, instantiate from `JSONDecoder`
@@ -50,7 +50,7 @@ extension JSONModel where Self: Decodable {
     /// - Returns `nil` if the `JSONModel` shouldn't be instantiated
     init?(json: JSON) throws {
         guard Self.classIdentifier == json["class"].string else { return nil }
-        let jsonDecoder = Configuration.shared.jsonDecoder
+        let jsonDecoder = Fusion.shared.jsonDecoder
         self = try jsonDecoder.decode(Self.self, from: json.rawData())
     }
 }
