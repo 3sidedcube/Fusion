@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import HTTPRequest
 
 /// Configuration properties.
 ///
@@ -19,11 +20,11 @@ class Configuration {
 
     /// `JSONDecoder` to use for JSON decoding
     var jsonDecoder: JSONDecoder {
-        return JSONDecoder()
+        return JSONDecoder.default
     }
 
     /// `JSONEncoder` to use for JSON encoding
     var jsonEncoder: JSONEncoder {
-        return JSONEncoder()
+        return JSONEncoder.default
     }
 }

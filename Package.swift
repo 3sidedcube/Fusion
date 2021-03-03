@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "Fusion",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v13),
+        .macOS(.v10_14)
     ],
     products: [
         .library(
@@ -15,12 +16,13 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "4.0.0")
+        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "4.0.0"),
+        .package(url: "https://github.com/BenShutt/HTTPRequest.git", from: "1.0.0")
     ],
     targets: [
         .target(
             name: "Fusion",
-            dependencies: ["SwiftyJSON"],
+            dependencies: ["SwiftyJSON", "HTTPRequest"],
             path: "Sources"
         ),
         .testTarget(
