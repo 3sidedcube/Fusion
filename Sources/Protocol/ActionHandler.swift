@@ -14,5 +14,6 @@ protocol ActionHandler {
     /// Handle the given `action`
     ///
     /// - Parameter action: `Action`
-    func handleAction(_ action: Action)
+    @discardableResult
+    func handleAction(_ action: Action) -> Bool
 }

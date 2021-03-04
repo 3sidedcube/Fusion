@@ -11,8 +11,8 @@ import HTTPRequest
 
 extension JSONDecoder {
 
-    /// The `.default` `JSONDecoder` with `keyEncodingStrategy` set
-    /// to `.convertToSnakeCase`
+    /// The `.default` `JSONDecoder` with `keyDecodingStrategy` set
+    /// to `.convertFromSnakeCase`
     static var snakeCase: JSONDecoder {
         let decoder = JSONDecoder.default
         decoder.keyDecodingStrategy = .convertFromSnakeCase
