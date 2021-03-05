@@ -18,7 +18,7 @@ import Alamofire
 /// - Warning:
 /// This class is abstract as it requires subclasses to provide an instance of `T` where `T` is a
 /// `BaseTableViewController` subclass
-open class PageViewController: UIViewController {
+open class PageViewController: BaseViewController {
 
     /// Provide a `page` if known, otherwise the means of which to fetch it
     public enum Configuration {
@@ -40,17 +40,15 @@ open class PageViewController: UIViewController {
         }
     }
 
-    /// Container `UIView` for other content.
-    ///
-    /// Commonly used by subclasses to insert a child `UIViewController`.
-    private(set) lazy var contentView: UIView = {
+    /// `UIView` to contain child `UITableViewController`
+    public private(set) lazy var contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
         return view
     }()
 
     /// `UIActivityIndicatorView` visible when refreshing
-    private lazy var activityIndicator: UIActivityIndicatorView = {
+    public private(set) lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = view.tintColor
         activityIndicator.hidesWhenStopped = true
@@ -109,17 +107,14 @@ open class PageViewController: UIViewController {
         // Configure `view`
         view.backgroundColor = .white
 
-        // Add `contentView` subview
-        view.addSubview(contentView)
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
         // `tableView`
         tableView.backgroundColor = view.backgroundColor
         tableView.alwaysBounceVertical = false
         tableView.alwaysBounceHorizontal = false
 
-        // `activityIndicator`
-        contentView.addSubview(activityIndicator)
+        // Add subviews and constrain
+        addSubviews()
+        addConstraints()
 
         // Redraw the UI
         redraw()
@@ -128,11 +123,18 @@ open class PageViewController: UIViewController {
         refresh()
     }
 
-    override open func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    // MARK: - Subviews + Constraints
 
-        contentView.frame = view.bounds
-        activityIndicator.center = contentView.center
+    /// Add subviews to the subview hierarchy
+    open func addSubviews() {
+        contentView.addSubview(activityIndicator)
+        view.addSubview(contentView)
+    }
+
+    /// Add constraints to subviews in the subview hierarchy
+    open func addConstraints() {
+        contentView.edgeConstraints(to: view)
+        activityIndicator.centerConstraints(to: contentView)
     }
 
     // MARK: - Redraw

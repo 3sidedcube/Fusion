@@ -1,4 +1,4 @@
 github "3sidedcube/ThunderTable" "4f14fcb34bad5fd7903dd47f596b1b1dcc96eb6f"
 github "Alamofire/Alamofire" "5.4.1"
-github "BenShutt/HTTPRequest" "e3611f21568e81d5a870fcb0a53ef51ace93921c"
+github "BenShutt/HTTPRequest" "2ed041021bdf877edad5e67fe71e102f22e11642"
 github "SwiftyJSON/SwiftyJSON" "4.3.0"

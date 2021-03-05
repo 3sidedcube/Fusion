@@ -36,7 +36,12 @@ open class Fusion: ActionHandler {
 
     /// `Action`s to dynamically decode from `JSON`
     open var actionTypes: [Action.Type] {
-        return []
+        return [
+            PageAction.self,
+            LinkAction.self,
+            NativeAction.self,
+            EmailAction.self
+        ]
     }
 
     /// Create a `HTTPRequest` for fetching a `Page`
