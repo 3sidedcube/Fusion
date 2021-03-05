@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// An entity which can be passed an `action` to invoke functionality
+/// An entity which can be passed an `Action` to invoke functionality
 protocol ActionHandler {
 
     /// Handle the given `action`
