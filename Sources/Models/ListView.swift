@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-/// A dynamic `JSON` of rows to drive a `UITableViewController`
+/// A dynamic `JSON` of rows to drive a `UITableView`
 public struct ListView: Codable {
 
     /// `JSON` array of child nodes to drive subview content.
