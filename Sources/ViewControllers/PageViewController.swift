@@ -132,7 +132,7 @@ open class PageViewController: UIViewController {
         super.viewDidLayoutSubviews()
 
         contentView.frame = view.bounds
-        activityIndicator.center = view.center
+        activityIndicator.center = contentView.center
     }
 
     // MARK: - Redraw

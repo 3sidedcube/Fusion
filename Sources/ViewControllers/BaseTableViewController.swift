@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import ThunderTable
 
-/// A base `TableViewController` to handle `protocol`s which the `Row` might conform
-/// to and expect a handler.
+/// Base `TableViewController` to define default functionality and handle `protocol`s which
+/// the `Row` might conform to and expect a handler.
 /// E.g. `ActionHandler` to handle `Action`s invoked from a `Row`
 ///
 /// Ideally, any `UIViewController` in the app should inherit this or `BaseViewController`
@@ -52,13 +52,13 @@ open class BaseTableViewController: TableViewController,
         super.viewDidLoad()
 
         tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
         tableView.tableHeaderView = UIView(frame: CGRect(
             x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude
         ))
         tableView.tableFooterView = UIView(frame: CGRect(
             x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude
         ))
-        tableView.separatorStyle = .none
     }
 
     // MARK: - Redraw

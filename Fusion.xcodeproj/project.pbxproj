@@ -22,7 +22,6 @@
 
 /* Begin PBXBuildFile section */
 		B82C470225F0CECA0013B02C /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C470125F0CECA0013B02C /* Link.swift */; };
-		B82C473025F0D17A0013B02C /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C472D25F0D17A0013B02C /* TableSection.swift */; };
 		B82C473125F0D17A0013B02C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C472E25F0D17A0013B02C /* Page.swift */; };
 		B82C473225F0D17A0013B02C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C472F25F0D17A0013B02C /* ListView.swift */; };
 		B82C473E25F0D1B70013B02C /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C473D25F0D1B70013B02C /* Identifiable.swift */; };
@@ -34,6 +33,7 @@
 		B8B37A1725F1A1D7002B866A /* Result+CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A1625F1A1D7002B866A /* Result+CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
 		B8B37A4C25F1A78D002B866A /* ThunderTable.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C11CD025EFFE4E00E2AC5E /* ThunderTable.xcframework */; };
+		B8B37A7C25F1AC12002B866A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A7B25F1AC12002B866A /* BaseViewController.swift */; };
 		B8C11BC525EFAA3D00E2AC5E /* JSONEncoder+SnakeCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C11BC025EFAA3D00E2AC5E /* JSONEncoder+SnakeCase.swift */; };
 		B8C11BC625EFAA3D00E2AC5E /* JSONDecoder+SnakeCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C11BC125EFAA3D00E2AC5E /* JSONDecoder+SnakeCase.swift */; };
 		B8C11BD625EFAAA300E2AC5E /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C11BD425EFAAA300E2AC5E /* KeychainError.swift */; };
@@ -185,7 +185,6 @@
 /* Begin PBXFileReference section */
 		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82C470125F0CECA0013B02C /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		B82C472D25F0D17A0013B02C /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
 		B82C472E25F0D17A0013B02C /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		B82C472F25F0D17A0013B02C /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		B82C473D25F0D1B70013B02C /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -196,6 +195,7 @@
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A1625F1A1D7002B866A /* Result+CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+CMSObject.swift"; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		B8B37A7B25F1AC12002B866A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B8C11BC025EFAA3D00E2AC5E /* JSONEncoder+SnakeCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+SnakeCase.swift"; sourceTree = "<group>"; };
 		B8C11BC125EFAA3D00E2AC5E /* JSONDecoder+SnakeCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+SnakeCase.swift"; sourceTree = "<group>"; };
 		B8C11BD425EFAAA300E2AC5E /* KeychainError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
@@ -351,18 +351,11 @@
 		B8C11BD325EFAA8C00E2AC5E /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
-				B8C11BD425EFAAA300E2AC5E /* KeychainError.swift */,
 				B8C11BD525EFAAA300E2AC5E /* KeychainToken.swift */,
-			);
-			path = Keychain;
-			sourceTree = "<group>";
-		};
-		B8C11BEE25EFAC2100E2AC5E /* Notification */ = {
-			isa = PBXGroup;
-			children = (
+				B8C11BD425EFAAA300E2AC5E /* KeychainError.swift */,
 				B8C11BEF25EFAC3000E2AC5E /* NotificationCenter+KeychainToken.swift */,
 			);
-			path = Notification;
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		B8C11BFB25EFAD1F00E2AC5E /* Environment */ = {
@@ -391,6 +384,7 @@
 		B8C11C9225EFEAA000E2AC5E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B8B37A7B25F1AC12002B866A /* BaseViewController.swift */,
 				B8C11D2725F002A700E2AC5E /* BaseTableViewController.swift */,
 				B8C11DA825F04CB500E2AC5E /* PageViewController.swift */,
 			);
@@ -462,7 +456,6 @@
 				B8B37A0A25F1A1AC002B866A /* CMSObject.swift */,
 				B82C472E25F0D17A0013B02C /* Page.swift */,
 				B82C472F25F0D17A0013B02C /* ListView.swift */,
-				B82C472D25F0D17A0013B02C /* TableSection.swift */,
 				B82C470125F0CECA0013B02C /* Link.swift */,
 				B8B379F425F19E7C002B866A /* PageSource.swift */,
 			);
@@ -625,7 +618,6 @@
 				OBJ_8 /* Fusion.swift */,
 				B8C11BFB25EFAD1F00E2AC5E /* Environment */,
 				B8C11C9F25EFEADB00E2AC5E /* Protocol */,
-				B8C11BEE25EFAC2100E2AC5E /* Notification */,
 				B8C11DDE25F04EEB00E2AC5E /* Email */,
 				B8C11BD325EFAA8C00E2AC5E /* Keychain */,
 				B8C11C5225EFD95B00E2AC5E /* Extensions */,
@@ -884,6 +876,7 @@
 				B82C475625F0D3580013B02C /* JSON+Row.swift in Sources */,
 				B8C11DA925F04CB500E2AC5E /* PageViewController.swift in Sources */,
 				B82C477825F0DB330013B02C /* UIViewController+Extensions.swift in Sources */,
+				B8B37A7C25F1AC12002B866A /* BaseViewController.swift in Sources */,
 				B82C470225F0CECA0013B02C /* Link.swift in Sources */,
 				B8B379F525F19E7C002B866A /* PageSource.swift in Sources */,
 				B8C11CA525EFEAEE00E2AC5E /* RowArrayConvertible.swift in Sources */,
@@ -910,7 +903,6 @@
 				B8C11DE525F04F0200E2AC5E /* EmailClient.swift in Sources */,
 				B8C11CA425EFEAEE00E2AC5E /* ActionHandler.swift in Sources */,
 				B8C11D4725F002C200E2AC5E /* BaseTableViewController.swift in Sources */,
-				B82C473025F0D17A0013B02C /* TableSection.swift in Sources */,
 				B8C11DE325F04F0200E2AC5E /* UIViewController+Email.swift in Sources */,
 				B8C11DE625F04F0200E2AC5E /* Email.swift in Sources */,
 				B8C11CB325EFEB1D00E2AC5E /* Action.swift in Sources */,

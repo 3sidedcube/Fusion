@@ -24,7 +24,7 @@ struct Link: Codable, Identifiable {
 extension Link {
 
     /// `url` to `URL`
-    var urlFromString: URL? {
+    func toURL() -> URL? {
         guard let url = url else { return nil }
         return URL(string: url)
     }

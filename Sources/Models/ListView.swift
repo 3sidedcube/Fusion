@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 /// List of `TableSection`s to drive a `UITableViewController`
 public struct ListView: Codable {
 
-    /// Array of `TableSection` content
-    public var children: [TableSection]
+    /// `JSON` array of child nodes to drive subview content.
+    /// This is dynamic, the type of each JSON element may be different.
+    public var children: JSON
 }
