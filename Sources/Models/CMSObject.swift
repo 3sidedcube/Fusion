@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// An object returned from the CMS is wrapped in a `"data"` structure
+/// An object returned from the CMS that is wrapped in a `"data"` structure
 struct CMSObject<T>: Codable where T: Codable {
 
     /// An object `T` wrapped in `"data"`
