@@ -15,11 +15,14 @@ public extension Font {
         guard let size = size else { return nil }
         let fontSize = CGFloat(size)
 
+        // Create system `UIFont` for the given `fontSize
+        let systemFont = UIFont.systemFont(ofSize: fontSize)
+
         guard let fontName = name, let fontWeight = weight else {
-            return UIFont.systemFont(ofSize: fontSize)
+            return systemFont
         }
 
         let name = "\(fontName)-\(fontWeight)"
-        return UIFont(name: name, size: fontSize)
+        return UIFont(name: name, size: fontSize) ?? systemFont
     }
 }
