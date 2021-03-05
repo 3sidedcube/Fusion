@@ -15,10 +15,17 @@ public struct Email {
     public struct Body {
 
         /// Content of the `Body`
-        var content: String
+        public var content: String
 
         /// Is `content` HTML
-        var isHTML: Bool
+        public var isHTML: Bool
+
+        // MARK: - Init
+
+        public init(content: String, isHTML: Bool) {
+            self.content = content
+            self.isHTML = isHTML
+        }
     }
 
     /// Email addresses to send to
@@ -35,4 +42,27 @@ public struct Email {
 
     /// Email `Body`
     public var body: Body?
+
+    // MARK: - Init
+
+    /// Default `public` memberwise initializer
+    /// - Parameters:
+    ///   - toAddresses: `[String]`
+    ///   - ccAddresses: `[String]`
+    ///   - bccAddresses: `[String]`
+    ///   - subject: `String?`
+    ///   - body: `Body?`
+    public init(
+        toAddresses: [String],
+        ccAddresses: [String],
+        bccAddresses: [String],
+        subject: String?,
+        body: Body?
+    ) {
+        self.toAddresses = toAddresses
+        self.ccAddresses = ccAddresses
+        self.bccAddresses = bccAddresses
+        self.subject = subject
+        self.body = body
+    }
 }

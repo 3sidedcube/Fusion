@@ -32,6 +32,15 @@
 		B859FB6025F22DF20058EDAC /* CenterConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FB5D25F22DF20058EDAC /* CenterConstraints.swift */; };
 		B859FB6125F22DF20058EDAC /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FB5E25F22DF20058EDAC /* Constrainable.swift */; };
 		B859FBA825F2556E0058EDAC /* Result+CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FBA725F2556E0058EDAC /* Result+CMSObject.swift */; };
+		B859FBB525F294590058EDAC /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FBB425F294590058EDAC /* Text.swift */; };
+		B859FBC125F296A80058EDAC /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FBC025F296A80058EDAC /* Font.swift */; };
+		B859FBCE25F296C90058EDAC /* Font+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FBCD25F296C90058EDAC /* Font+UIFont.swift */; };
+		B859FBE525F298DF0058EDAC /* TextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FBE425F298DF0058EDAC /* TextAlignment.swift */; };
+		B859FBFB25F299020058EDAC /* TextAlignment+NSTextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */; };
+		B859FC1125F29A3A0058EDAC /* UILabel+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */; };
+		B859FC1D25F29B190058EDAC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FC1C25F29B190058EDAC /* UIColor+Extensions.swift */; };
+		B859FC2925F2A0040058EDAC /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FC2825F2A0040058EDAC /* Padding.swift */; };
+		B859FC3F25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FC3E25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -195,6 +204,15 @@
 		B859FB5D25F22DF20058EDAC /* CenterConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterConstraints.swift; sourceTree = "<group>"; };
 		B859FB5E25F22DF20058EDAC /* Constrainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constrainable.swift; sourceTree = "<group>"; };
 		B859FBA725F2556E0058EDAC /* Result+CMSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+CMSObject.swift"; sourceTree = "<group>"; };
+		B859FBB425F294590058EDAC /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		B859FBC025F296A80058EDAC /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		B859FBCD25F296C90058EDAC /* Font+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+UIFont.swift"; sourceTree = "<group>"; };
+		B859FBE425F298DF0058EDAC /* TextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlignment.swift; sourceTree = "<group>"; };
+		B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextAlignment+NSTextAlignment.swift"; sourceTree = "<group>"; };
+		B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Text.swift"; sourceTree = "<group>"; };
+		B859FC1C25F29B190058EDAC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B859FC2825F2A0040058EDAC /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		B859FC3E25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Padding+UIEdgeInsets.swift"; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -358,6 +376,27 @@
 			path = Constraints;
 			sourceTree = "<group>";
 		};
+		B859FBCC25F296BF0058EDAC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B859FBCD25F296C90058EDAC /* Font+UIFont.swift */,
+				B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */,
+				B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */,
+				B859FC3E25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B859FBE325F2982E0058EDAC /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				B859FBC025F296A80058EDAC /* Font.swift */,
+				B859FBE425F298DF0058EDAC /* TextAlignment.swift */,
+				B859FC2825F2A0040058EDAC /* Padding.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		B8C11BFB25EFAD1F00E2AC5E /* Environment */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +416,7 @@
 				B8C11DBE25F04E9200E2AC5E /* UINavigationController+Action.swift */,
 				B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */,
 				B859FBA725F2556E0058EDAC /* Result+CMSObject.swift */,
+				B859FC1C25F29B190058EDAC /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -420,8 +460,10 @@
 		B8C11DCA25F04EA800E2AC5E /* JSONModels */ = {
 			isa = PBXGroup;
 			children = (
+				B859FBE325F2982E0058EDAC /* Style */,
 				B8C11DCB25F04EB000E2AC5E /* Actions */,
 				OBJ_11 /* JSONModel.swift */,
+				B859FBB425F294590058EDAC /* Text.swift */,
 			);
 			path = JSONModels;
 			sourceTree = "<group>";
@@ -452,6 +494,7 @@
 		OBJ_10 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B859FBCC25F296BF0058EDAC /* ViewModels */,
 				B8C11DCA25F04EA800E2AC5E /* JSONModels */,
 				B8B37A0A25F1A1AC002B866A /* CMSObject.swift */,
 				B82C472E25F0D17A0013B02C /* Page.swift */,
@@ -871,35 +914,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				B859FBC125F296A80058EDAC /* Font.swift in Sources */,
 				B8C11DD325F04EDD00E2AC5E /* PageAction.swift in Sources */,
 				B859FB6025F22DF20058EDAC /* CenterConstraints.swift in Sources */,
 				B8C11D9325F04BCA00E2AC5E /* CellDisplayable.swift in Sources */,
+				B859FBFB25F299020058EDAC /* TextAlignment+NSTextAlignment.swift in Sources */,
 				B82C475625F0D3580013B02C /* JSON+Row.swift in Sources */,
+				B859FBCE25F296C90058EDAC /* Font+UIFont.swift in Sources */,
 				B8C11DA925F04CB500E2AC5E /* PageViewController.swift in Sources */,
 				B82C477825F0DB330013B02C /* UIViewController+Extensions.swift in Sources */,
 				B8B37A7C25F1AC12002B866A /* BaseViewController.swift in Sources */,
 				B82C470225F0CECA0013B02C /* Link.swift in Sources */,
+				B859FBE525F298DF0058EDAC /* TextAlignment.swift in Sources */,
 				B8B379F525F19E7C002B866A /* PageSource.swift in Sources */,
 				B8C11CA525EFEAEE00E2AC5E /* RowArrayConvertible.swift in Sources */,
 				B8C11DD025F04EDD00E2AC5E /* LinkAction.swift in Sources */,
 				B82C475525F0D3580013B02C /* Page+Data.swift in Sources */,
+				B859FC3F25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift in Sources */,
 				B8C11D9125F04BCA00E2AC5E /* CellHeightConfigurable.swift in Sources */,
 				B82C473225F0D17A0013B02C /* ListView.swift in Sources */,
 				OBJ_147 /* Fusion.swift in Sources */,
 				B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */,
 				B859FBA825F2556E0058EDAC /* Result+CMSObject.swift in Sources */,
+				B859FC1D25F29B190058EDAC /* UIColor+Extensions.swift in Sources */,
 				B8C11DD125F04EDD00E2AC5E /* EmailAction.swift in Sources */,
 				B8C11BFE25EFAD2D00E2AC5E /* Environment.swift in Sources */,
 				B8C11BC525EFAA3D00E2AC5E /* JSONEncoder+SnakeCase.swift in Sources */,
 				B82C473125F0D17A0013B02C /* Page.swift in Sources */,
 				B859FB6125F22DF20058EDAC /* Constrainable.swift in Sources */,
+				B859FC2925F2A0040058EDAC /* Padding.swift in Sources */,
 				OBJ_149 /* JSONModel.swift in Sources */,
 				B8C11DE425F04F0200E2AC5E /* EmailDelegate.swift in Sources */,
 				B82C473E25F0D1B70013B02C /* Identifiable.swift in Sources */,
 				B8C11DBF25F04E9200E2AC5E /* UINavigationController+Action.swift in Sources */,
+				B859FBB525F294590058EDAC /* Text.swift in Sources */,
 				B8C11D9225F04BCA00E2AC5E /* RowUpdateListener.swift in Sources */,
 				B8C11BC625EFAA3D00E2AC5E /* JSONDecoder+SnakeCase.swift in Sources */,
 				B8C11CA625EFEAEE00E2AC5E /* RowConvertible.swift in Sources */,
+				B859FC1125F29A3A0058EDAC /* UILabel+Text.swift in Sources */,
 				B8C11DE525F04F0200E2AC5E /* EmailClient.swift in Sources */,
 				B8C11CA425EFEAEE00E2AC5E /* ActionHandler.swift in Sources */,
 				B8C11D4725F002C200E2AC5E /* BaseTableViewController.swift in Sources */,

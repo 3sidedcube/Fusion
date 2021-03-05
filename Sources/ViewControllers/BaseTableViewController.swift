@@ -115,14 +115,14 @@ open class BaseTableViewController: TableViewController,
     /// - Parameters:
     ///   - target: `Any` `.valueChanged` target
     ///   - action: `Selector` `.valueChanged` selector
-    ///   - tintColor: `UIColor` to set on `UIRefreshControl`
+    ///   - tintColor: `UIColor` to set on `UIRefreshControl`, fallback on `view.tintColor`
     func addRefreshControl(
         target: Any,
         action: Selector,
-        tintColor: UIColor = .gray
+        tintColor: UIColor? = nil
     ) {
         let refreshControl = UIRefreshControl()
-        refreshControl.tintColor = tintColor
+        refreshControl.tintColor = tintColor ?? view.tintColor
         refreshControl.addTarget(target, action: action, for: .valueChanged)
         self.refreshControl = refreshControl
     }
