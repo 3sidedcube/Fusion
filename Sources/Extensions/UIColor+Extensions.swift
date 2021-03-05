@@ -107,7 +107,7 @@ extension UIColor {
         return RGBA(red: red, green: green, blue: blue, alpha: alpha)
     }
 
-    /// `UIColor` to HEX `String`
+    /// `UIColor` to RGB HEX `String`
     var hexString: String {
         let rgba = self.rgba
         let rgb: Int = (Int)(rgba.red * 255) << 16 |

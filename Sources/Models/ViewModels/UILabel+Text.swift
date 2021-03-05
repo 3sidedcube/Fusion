@@ -10,13 +10,13 @@ import UIKit
 
 public extension UILabel {
 
-    /// Set `Text` on this `UILabel` instance by setting an `attributedText` to
+    /// Set `Text` on this `UILabel` instance by setting `attributedText` to
     /// an `NSAttributedString` with all the properties configured
     ///
     /// - Parameter text: `Text`
     func setText(_ text: Text) {
         // `text`
-        self.text = nil // Reset
+        self.text = nil
         let string = text.text ?? ""
 
         // Set up `NSMutableAttributedString``
@@ -29,23 +29,23 @@ public extension UILabel {
         paragraphStyle.lineBreakStrategy = lineBreakStrategy
 
         // `backgroundColor`
-        self.backgroundColor = text.backgroundColor?.hexColor // Reset
+        self.backgroundColor = text.backgroundColor?.hexColor
 
         // `textColor`
-        self.textColor = nil // Reset
+        self.textColor = nil
         if let textColor = text.textColor?.hexColor {
             attributed.addAttribute(.foregroundColor, value: textColor, range: range)
         }
 
         // `font`
-        self.font = nil // Reset
+        self.font = nil
         let uiFont = text.font?.uiFont
         if let font = uiFont {
             attributed.addAttribute(.font, value: font, range: range)
         }
 
         // `textAlignment`
-        self.textAlignment = .left // Reset
+        self.textAlignment = .left
         if let textAlignment = text.textAlignment?.nsTextAlignment {
             paragraphStyle.alignment = textAlignment
         }
@@ -65,7 +65,7 @@ public extension UILabel {
             attributed.addAttribute(.kern, value: value, range: range)
         }
 
-        // Commit
+        // Commit attributes and set `attributedText`
         attributed.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)
         self.attributedText = attributed
     }
