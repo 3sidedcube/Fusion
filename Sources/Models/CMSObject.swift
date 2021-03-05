@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import HTTPRequest
 
-/// An object returned from the CMS
-struct CMSObject<T>: Model where T: Codable {
+/// An object returned from the CMS is wrapped in a `"data"` structure
+struct CMSObject<T>: Codable where T: Codable {
 
     /// An object `T` wrapped in `"data"`
     var data: T

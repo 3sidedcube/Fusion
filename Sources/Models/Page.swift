@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import HTTPRequest
 
 /// A data driven model to drive dynamic app content.
-public struct Page: Model, Identifiable {
+public struct Page: Codable, Identifiable {
 
     /// Universally unique identifier
     public var id: UUID

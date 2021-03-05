@@ -174,7 +174,7 @@ open class PageViewController: BaseViewController {
         beginRefreshing()
         AF.request(httpRequest) { [weak self] result in
             self?.endRefreshing()
-            self?.page = result.cmsObjectModel()
+            self?.page = try? result.cmsObjectOrThrow().data
         }
     }
 }
