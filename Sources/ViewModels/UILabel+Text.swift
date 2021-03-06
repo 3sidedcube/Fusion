@@ -65,6 +65,11 @@ public extension UILabel {
             attributed.addAttribute(.kern, value: value, range: range)
         }
 
+        // `padding` relies on the `UILabel` been `Insettable`
+        if let insets = text.padding?.insets, let insettable = self as? Insettable {
+            insettable.setInsets(insets)
+        }
+
         // Commit attributes and set `attributedText`
         attributed.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)
         self.attributedText = attributed

@@ -36,5 +36,5 @@ public struct Text: Codable {
     public var letterSpacing: Float?
 
     /// `Padding` for text insets
-    public var padding: Padding? // TODO - Need InsetLabel
+    public var padding: Padding?
 }
