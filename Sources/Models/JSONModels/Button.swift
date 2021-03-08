@@ -15,4 +15,10 @@ public struct Button: Codable {
 
     /// `Action` on click
     public var action: ActionJSON?
+
+    /// `Padding` for text insets
+    public var padding: Padding?
+
+    /// `Margin` for insets relative to other content
+    public var margin: Margin?
 }

@@ -12,20 +12,23 @@ import Foundation
 public struct Image: Codable {
 
     /// `String` remote URL location
-    public var src: String?
+    public var src: ImageSource?
 
-    /// `Float` width of the image
-    public var width: Float?
+    /// `RGBAHex` color to use for a placeholder while the remote image is being fetched
+    public var placeholderColor: RGBAHex?
 
-    /// `Float` height of the image
-    public var height: Float?
+    /// `Padding` for text insets
+    public var padding: Padding?
+
+    /// `Margin` for insets relative to other content
+    public var margin: Margin?
 }
 
 public extension Image {
 
     /// Map `src` to a `URL` instance
     var url: URL? {
-        guard let src = src else { return nil }
+        guard let src = src?.url else { return nil }
         return URL(string: src)
     }
 }

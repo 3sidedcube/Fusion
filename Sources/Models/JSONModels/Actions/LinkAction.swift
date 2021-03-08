@@ -13,6 +13,9 @@ struct LinkAction: Codable, Action {
 
     /// Web `String` for a `URL`
     var link: String?
+
+    /// Does the link get pushed in app
+    var inApp: Bool?
 }
 
 // MARK: - Extensions
