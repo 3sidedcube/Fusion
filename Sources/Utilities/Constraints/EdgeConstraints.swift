@@ -47,15 +47,15 @@ struct EdgeConstraints: Constrainable {
             return UIEdgeInsets(
                 top: top.constant,
                 left: leading.constant,
-                bottom: -bottom.constant,
-                right: -trailing.constant
+                bottom: -bottom.constant, // Inset
+                right: -trailing.constant // Inset
             )
         }
         set {
             leading.constant = newValue.left
             top.constant = newValue.top
-            trailing.constant = -newValue.right
-            bottom.constant = -newValue.bottom
+            trailing.constant = -newValue.right // Inset
+            bottom.constant = -newValue.bottom // Inset
         }
     }
 }

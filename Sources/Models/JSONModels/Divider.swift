@@ -16,6 +16,8 @@ public struct Divider: Codable, JSONModel {
     /// `Float` height of the divider
     public var strokeWidth: Float?
 
+    // MARK: - View
+
     /// `Margin` for insets relative to other content
     public var margin: Margin?
 }

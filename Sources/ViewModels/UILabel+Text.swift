@@ -29,29 +29,29 @@ public extension UILabel {
         paragraphStyle.lineBreakStrategy = lineBreakStrategy
 
         // `backgroundColor`
-        self.backgroundColor = text.backgroundColor?.hexColor
+        backgroundColor = text.backgroundColor?.hexColor
 
         // `textColor`
-        self.textColor = nil
+        textColor = nil
         if let textColor = text.textColor?.hexColor {
             attributed.addAttribute(.foregroundColor, value: textColor, range: range)
         }
 
         // `font`
-        self.font = nil
+        font = nil
         let uiFont = text.font?.uiFont
         if let font = uiFont {
             attributed.addAttribute(.font, value: font, range: range)
         }
 
         // `textAlignment`
-        self.textAlignment = .left
+        textAlignment = .left
         if let textAlignment = text.textAlignment?.nsTextAlignment {
             paragraphStyle.alignment = textAlignment
         }
 
         // `numberOfLines`
-        self.numberOfLines = text.numberOfLines ?? 0
+        numberOfLines = text.numberOfLines ?? 0
 
         // `lineHeight`
         if let lineHeight = text.lineHeight, let font = uiFont {
@@ -70,8 +70,17 @@ public extension UILabel {
             insettable.setInsets(insets)
         }
 
+        // `border`
+        layer.borderColor = UIColor.clear.cgColor
+        layer.borderWidth = 0
+        if let border = text.border {
+            layer.setBorder(border)
+        }
+
+        // `margin` ignored
+
         // Commit attributes and set `attributedText`
         attributed.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)
-        self.attributedText = attributed
+        attributedText = attributed
     }
 }

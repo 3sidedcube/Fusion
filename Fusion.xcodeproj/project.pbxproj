@@ -57,6 +57,10 @@
 		B859FDDD25F649C30058EDAC /* JSONView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDDC25F649C30058EDAC /* JSONView.swift */; };
 		B859FDF325F64AF10058EDAC /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDF225F64AF10058EDAC /* Border.swift */; };
 		B859FE3125F67F630058EDAC /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE3025F67F630058EDAC /* Defaults.swift */; };
+		B859FE4B25F6955F0058EDAC /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE4825F6955E0058EDAC /* TextTableViewCell.swift */; };
+		B859FE4C25F6955F0058EDAC /* TextRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE4925F6955E0058EDAC /* TextRow.swift */; };
+		B859FE5925F695FD0058EDAC /* TextTableViewCell+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */; };
+		B859FE7925F696B80058EDAC /* CALayer+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE7825F696B80058EDAC /* CALayer+Border.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -245,6 +249,11 @@
 		B859FDDC25F649C30058EDAC /* JSONView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONView.swift; sourceTree = "<group>"; };
 		B859FDF225F64AF10058EDAC /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
 		B859FE3025F67F630058EDAC /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		B859FE4825F6955E0058EDAC /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		B859FE4925F6955E0058EDAC /* TextRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextRow.swift; sourceTree = "<group>"; };
+		B859FE4A25F6955E0058EDAC /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextTableViewCell+Text.swift"; sourceTree = "<group>"; };
+		B859FE7825F696B80058EDAC /* CALayer+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Border.swift"; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -411,10 +420,12 @@
 		B859FBCC25F296BF0058EDAC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B859FE5725F695ED0058EDAC /* Model+Row */,
 				B859FBCD25F296C90058EDAC /* Font+UIFont.swift */,
 				B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */,
 				B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */,
 				B859FCBD25F618700058EDAC /* CALayer+Shadow.swift */,
+				B859FE7825F696B80058EDAC /* CALayer+Border.swift */,
 				B859FC3E25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift */,
 			);
 			path = ViewModels;
@@ -461,6 +472,32 @@
 				B8C11DDE25F04EEB00E2AC5E /* Email */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B859FE4625F692BD0058EDAC /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				B859FE4725F6954E0058EDAC /* TextRow */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
+		B859FE4725F6954E0058EDAC /* TextRow */ = {
+			isa = PBXGroup;
+			children = (
+				B859FE4925F6955E0058EDAC /* TextRow.swift */,
+				B859FE4825F6955E0058EDAC /* TextTableViewCell.swift */,
+				B859FE4A25F6955E0058EDAC /* TextTableViewCell.xib */,
+			);
+			path = TextRow;
+			sourceTree = "<group>";
+		};
+		B859FE5725F695ED0058EDAC /* Model+Row */ = {
+			isa = PBXGroup;
+			children = (
+				B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */,
+			);
+			path = "Model+Row";
 			sourceTree = "<group>";
 		};
 		B8C11BFB25EFAD1F00E2AC5E /* Environment */ = {
@@ -732,6 +769,7 @@
 				B859FE3025F67F630058EDAC /* Defaults.swift */,
 				B8C11BFB25EFAD1F00E2AC5E /* Environment */,
 				B8C11C9F25EFEADB00E2AC5E /* Protocol */,
+				B859FE4625F692BD0058EDAC /* Rows */,
 				OBJ_10 /* Models */,
 				B859FBCC25F296BF0058EDAC /* ViewModels */,
 				B859FC4A25F37B780058EDAC /* Views */,
@@ -1007,6 +1045,7 @@
 				B859FDBB25F646FF0058EDAC /* Size.swift in Sources */,
 				B8C11CA525EFEAEE00E2AC5E /* RowArrayConvertible.swift in Sources */,
 				B8C11DD025F04EDD00E2AC5E /* LinkAction.swift in Sources */,
+				B859FE7925F696B80058EDAC /* CALayer+Border.swift in Sources */,
 				B82C475525F0D3580013B02C /* Page+Data.swift in Sources */,
 				B859FC3F25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift in Sources */,
 				B8C11D9125F04BCA00E2AC5E /* CellHeightConfigurable.swift in Sources */,
@@ -1017,6 +1056,7 @@
 				B859FDDD25F649C30058EDAC /* JSONView.swift in Sources */,
 				B859FC1D25F29B190058EDAC /* UIColor+Extensions.swift in Sources */,
 				B859FCBE25F618700058EDAC /* CALayer+Shadow.swift in Sources */,
+				B859FE5925F695FD0058EDAC /* TextTableViewCell+Text.swift in Sources */,
 				B8C11DD125F04EDD00E2AC5E /* EmailAction.swift in Sources */,
 				B859FD9925F645A30058EDAC /* BulletGroup.swift in Sources */,
 				B859FD0125F61E330058EDAC /* RGBAHex.swift in Sources */,
@@ -1033,8 +1073,10 @@
 				B8C11DBF25F04E9200E2AC5E /* UINavigationController+Action.swift in Sources */,
 				B859FBB525F294590058EDAC /* Text.swift in Sources */,
 				B859FC4C25F37BB30058EDAC /* InsetLabel.swift in Sources */,
+				B859FE4C25F6955F0058EDAC /* TextRow.swift in Sources */,
 				B8C11D9225F04BCA00E2AC5E /* RowUpdateListener.swift in Sources */,
 				B8C11BC625EFAA3D00E2AC5E /* JSONDecoder+SnakeCase.swift in Sources */,
+				B859FE4B25F6955F0058EDAC /* TextTableViewCell.swift in Sources */,
 				B8C11CA625EFEAEE00E2AC5E /* RowConvertible.swift in Sources */,
 				B859FC1125F29A3A0058EDAC /* UILabel+Text.swift in Sources */,
 				B859FD1725F621930058EDAC /* Button.swift in Sources */,
