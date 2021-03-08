@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// A grouping of `Bullet`s
-public struct BulletGroup: Codable {
+/// An ordered grouping of `Bullet`s
+public struct BulletGroup: Codable, JSONModel {
 
     /// The `Bullet` children
     public var children: [Bullet]

@@ -1,5 +1,5 @@
 //
-//  Bullet.swift
+//  Container.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 08/03/2021.
@@ -7,15 +7,11 @@
 
 import Foundation
 
-/// A bullet list item.
-/// These items will likely be numbered and grouped into a `BulletGroup`
-public struct Bullet: Codable, JSONModel {
+/// Structure which contains other content
+public class View: Codable {
 
-    /// `Text` of the title
-    public var title: Text?
-
-    /// `Text` of the subtitle
-    public var subtitle: Text?
+    /// Background `RGBAHex` color
+    public var backgroundColor: RGBAHex?
 
     /// Corner radius of container view in points
     public var cornerRadius: Float?
@@ -28,4 +24,7 @@ public struct Bullet: Codable, JSONModel {
 
     /// `Margin` for insets relative to other content
     public var margin: Margin?
+
+    /// `Border` of the container
+    public var border: Border?
 }

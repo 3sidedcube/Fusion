@@ -53,6 +53,9 @@
 		B859FD9925F645A30058EDAC /* BulletGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FD9825F645A30058EDAC /* BulletGroup.swift */; };
 		B859FDA525F646E00058EDAC /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDA425F646E00058EDAC /* ImageSource.swift */; };
 		B859FDBB25F646FF0058EDAC /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDBA25F646FF0058EDAC /* Size.swift */; };
+		B859FDD125F649770058EDAC /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDD025F649770058EDAC /* ListItem.swift */; };
+		B859FDDD25F649C30058EDAC /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDDC25F649C30058EDAC /* View.swift */; };
+		B859FDF325F64AF10058EDAC /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDF225F64AF10058EDAC /* Border.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -237,6 +240,9 @@
 		B859FD9825F645A30058EDAC /* BulletGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletGroup.swift; sourceTree = "<group>"; };
 		B859FDA425F646E00058EDAC /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 		B859FDBA25F646FF0058EDAC /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		B859FDD025F649770058EDAC /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		B859FDDC25F649C30058EDAC /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		B859FDF225F64AF10058EDAC /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -412,7 +418,7 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		B859FBE325F2982E0058EDAC /* Style */ = {
+		B859FBE325F2982E0058EDAC /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				B859FDA425F646E00058EDAC /* ImageSource.swift */,
@@ -422,8 +428,10 @@
 				B859FC9B25F618090058EDAC /* Shadow.swift */,
 				B859FC2825F2A0040058EDAC /* Padding.swift */,
 				B859FDBA25F646FF0058EDAC /* Size.swift */,
+				B859FDDC25F649C30058EDAC /* View.swift */,
+				B859FDF225F64AF10058EDAC /* Border.swift */,
 			);
-			path = Style;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B859FC4A25F37B780058EDAC /* Views */ = {
@@ -516,12 +524,13 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_11 /* JSONModel.swift */,
-				B859FBE325F2982E0058EDAC /* Style */,
+				B859FBE325F2982E0058EDAC /* Components */,
 				B8C11DCB25F04EB000E2AC5E /* Actions */,
 				B859FBB425F294590058EDAC /* Text.swift */,
 				B859FC8325F6162A0058EDAC /* Image.swift */,
 				B859FD1625F621930058EDAC /* Button.swift */,
 				B859FCD325F61B210058EDAC /* Divider.swift */,
+				B859FDD025F649770058EDAC /* ListItem.swift */,
 				B859FD8225F6457C0058EDAC /* Bullet.swift */,
 				B859FD9825F645A30058EDAC /* BulletGroup.swift */,
 			);
@@ -978,6 +987,7 @@
 				B8C11DD325F04EDD00E2AC5E /* PageAction.swift in Sources */,
 				B859FDA525F646E00058EDAC /* ImageSource.swift in Sources */,
 				B859FB6025F22DF20058EDAC /* CenterConstraints.swift in Sources */,
+				B859FDF325F64AF10058EDAC /* Border.swift in Sources */,
 				B8C11D9325F04BCA00E2AC5E /* CellDisplayable.swift in Sources */,
 				B859FBFB25F299020058EDAC /* TextAlignment+NSTextAlignment.swift in Sources */,
 				B859FCF525F61D860058EDAC /* Shadow.swift in Sources */,
@@ -986,6 +996,7 @@
 				B8C11DA925F04CB500E2AC5E /* PageViewController.swift in Sources */,
 				B82C477825F0DB330013B02C /* UIViewController+Extensions.swift in Sources */,
 				B8B37A7C25F1AC12002B866A /* BaseViewController.swift in Sources */,
+				B859FDD125F649770058EDAC /* ListItem.swift in Sources */,
 				B82C470225F0CECA0013B02C /* Link.swift in Sources */,
 				B859FD8325F6457C0058EDAC /* Bullet.swift in Sources */,
 				B859FBE525F298DF0058EDAC /* TextAlignment.swift in Sources */,
@@ -1000,6 +1011,7 @@
 				OBJ_147 /* Fusion.swift in Sources */,
 				B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */,
 				B859FBA825F2556E0058EDAC /* Result+CMSObject.swift in Sources */,
+				B859FDDD25F649C30058EDAC /* View.swift in Sources */,
 				B859FC1D25F29B190058EDAC /* UIColor+Extensions.swift in Sources */,
 				B859FCBE25F618700058EDAC /* CALayer+Shadow.swift in Sources */,
 				B8C11DD125F04EDD00E2AC5E /* EmailAction.swift in Sources */,

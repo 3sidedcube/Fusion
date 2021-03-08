@@ -8,7 +8,7 @@
 import Foundation
 
 /// A `Text` with an `Action` and a disclosure chevron
-public struct Button: Codable {
+public struct Button: Codable, JSONModel {
 
     /// `Text` to define styling
     public var text: Text?

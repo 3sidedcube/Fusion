@@ -8,7 +8,7 @@
 import Foundation
 
 /// A structure with merely a background color and a fixed height
-public struct Divider {
+public struct Divider: Codable, JSONModel {
 
     /// `RGBAHex` color of the divider
     public var dividerColor: RGBAHex?

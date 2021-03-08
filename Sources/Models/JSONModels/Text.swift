@@ -9,7 +9,7 @@ import Foundation
 
 /// Define the properties to draw text.
 /// This structure is, in some ways, an abstraction of the `UITextView` or `UILabel`.
-public struct Text: Codable {
+public struct Text: Codable, JSONModel {
 
     /// Text `String`
     public var text: String?

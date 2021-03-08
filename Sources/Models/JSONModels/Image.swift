@@ -9,7 +9,7 @@ import Foundation
 
 /// A remote image.
 /// This structure is, in some ways, an abstraction of the `UIImageView`.
-public struct Image: Codable {
+public struct Image: Codable, JSONModel {
 
     /// `String` remote URL location
     public var src: ImageSource?
