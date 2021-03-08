@@ -13,12 +13,12 @@ import UIKit
 
 public extension CALayer {
 
-    /// Apply `sketchShadow` to `CALayer`
+    /// Apply `shadow` to `CALayer`
     ///
     /// - Warning:
     /// This function sets the `shadowPath` based on the `bounds` of the layer
     ///
-    /// - Parameter sketchShadow: `SketchShadow`
+    /// - Parameter shadow: `Shadow`
     func setShadow(_ shadow: Shadow) {
         let color = shadow.color?.hexColor ?? .black
         let alpha = shadow.alpha ?? 0
