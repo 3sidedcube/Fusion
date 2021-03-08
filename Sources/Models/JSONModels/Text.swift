@@ -8,17 +8,17 @@
 import Foundation
 
 /// Define the properties to draw text.
-/// This structure is, in some ways, an abstraction of the `UITextView` or `UILabel`
+/// This structure is, in some ways, an abstraction of the `UITextView` or `UILabel`.
 public struct Text: Codable {
 
     /// Text `String`
     public var text: String?
 
     /// RGBA hex color for the background
-    public var backgroundColor: String?
+    public var backgroundColor: RGBAHex?
 
     /// RGBA hex color for the text
-    public var textColor: String?
+    public var textColor: RGBAHex?
 
     /// `Font` style of the text
     public var font: Font?
@@ -37,4 +37,7 @@ public struct Text: Codable {
 
     /// `Padding` for text insets
     public var padding: Padding?
+
+    /// `Margin` for insets relative to other content
+    public var margin: Margin?
 }

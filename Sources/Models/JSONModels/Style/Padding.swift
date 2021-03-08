@@ -22,3 +22,8 @@ public struct Padding: Codable {
     /// Bottom padding
     public var bottom: Float
 }
+
+/// `Margin` and `Padding` have the same structure, differences are in purpose:
+/// - Padding: Inset of own content relative to itself - e.g. text inset from its own text container
+/// - Margin: Inset relative to other views - e.g. inset of a subview its from superview
+public typealias Margin = Padding
