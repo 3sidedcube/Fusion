@@ -9,8 +9,8 @@
 import Foundation
 
 /// An `Action` to push a (CMS) data driven page.
-struct PageAction: Codable, Action {
+public struct PageAction: Codable, Action {
 
     /// `Link`
-    var link: Link?
+    public var link: Link?
 }

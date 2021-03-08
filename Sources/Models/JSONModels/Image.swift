@@ -19,7 +19,7 @@ public struct Image: Codable, JSONModel {
     /// RGBA hex color for the background
     public var backgroundColor: RGBAHex?
 
-    /// `Padding` for text insets
+    /// `Padding` for insets of own content
     public var padding: Padding?
 
     /// `Margin` for insets relative to other content

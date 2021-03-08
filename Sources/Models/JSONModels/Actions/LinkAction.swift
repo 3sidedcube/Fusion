@@ -9,18 +9,18 @@
 import Foundation
 
 /// `ArticleAction` from the CMS
-struct LinkAction: Codable, Action {
+public struct LinkAction: Codable, Action {
 
     /// Web `String` for a `URL`
-    var link: String?
+    public var link: String?
 
     /// Does the link get pushed in app
-    var inApp: Bool?
+    public var inApp: Bool?
 }
 
 // MARK: - Extensions
 
-extension LinkAction {
+public extension LinkAction {
 
     /// `link` to `URL`
     var url: URL? {

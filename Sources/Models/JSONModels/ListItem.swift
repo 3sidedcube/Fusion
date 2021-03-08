@@ -8,7 +8,7 @@
 import Foundation
 
 /// A standard list item with an `Image`, title `Text`, subtitle `Text`, and a chevron.
-public struct ListItem: Codable, JSONModel {
+public class ListItem: Codable, JSONModel {
 
     /// `Image` of the leading item
     public var image: Image?
@@ -19,15 +19,29 @@ public struct ListItem: Codable, JSONModel {
     /// `Text` of the subtitle
     public var subtitle: Text?
 
-    /// Corner radius of container view in points
-    public var cornerRadius: Float?
+    /// Spacing between `title` and `subtitle` views
+    public var textSpacing: Float?
 
-    /// `Shadow` of container view
-    public var shadow: Shadow?
+    /// Spacing between `image` and text views
+    public var imageSpacing: Float?
 
-    /// `Padding` for text insets
+    // MARK: - View
+
+    /// RGBA hex color for the background
+    public var backgroundColor: RGBAHex?
+
+    /// `Padding` for insets of own content
     public var padding: Padding?
 
     /// `Margin` for insets relative to other content
     public var margin: Margin?
+
+    /// `Shadow` of container view
+    public var shadow: Shadow?
+
+    /// Corner radius of container view in points
+    public var cornerRadius: Float?
+
+    /// `Border` of the container
+    public var border: Border?
 }

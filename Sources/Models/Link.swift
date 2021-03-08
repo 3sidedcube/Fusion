@@ -9,19 +9,19 @@
 import Foundation
 
 /// Structure to `Link` to a URL
-struct Link: Codable, Identifiable {
+public struct Link: Codable, Identifiable {
 
     /// Unique id of the article
-    var id: UUID
+    public var id: UUID
 
     /// Title of the article
-    var title: String?
+    public var title: String?
 
     /// `URL` `String` of the article
-    var url: String?
+    public var url: String?
 }
 
-extension Link {
+public extension Link {
 
     /// `url` to `URL`
     func toURL() -> URL? {

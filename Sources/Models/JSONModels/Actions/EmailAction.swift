@@ -9,30 +9,30 @@
 import Foundation
 
 /// `EmailAction` from the CMS
-struct EmailAction: Codable, Action {
+public struct EmailAction: Codable, Action {
 
     /// Email addresses to send to
-    var to: [String]?
+    public var to: [String]?
 
     /// Email addresses to send to
-    var cc: [String]?
+    public var cc: [String]?
 
     /// Email addresses to send to
-    var bcc: [String]?
+    public var bcc: [String]?
 
     /// Email subject
-    var subject: String?
+    public var subject: String?
 
     /// Email body - text opposed to HTML
-    var body: String?
+    public var body: String?
 
     /// Is the email body HTML
-    var isHTML: Bool?
+    public var isHTML: Bool?
 }
 
 // MARK: - EmailAction + Email
 
-extension EmailAction {
+public extension EmailAction {
 
     /// Map to `Email`
     var email: Email {
