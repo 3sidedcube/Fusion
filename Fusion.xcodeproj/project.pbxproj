@@ -54,13 +54,13 @@
 		B859FDA525F646E00058EDAC /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDA425F646E00058EDAC /* ImageSource.swift */; };
 		B859FDBB25F646FF0058EDAC /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDBA25F646FF0058EDAC /* Size.swift */; };
 		B859FDD125F649770058EDAC /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDD025F649770058EDAC /* ListItem.swift */; };
-		B859FDDD25F649C30058EDAC /* JSONView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDDC25F649C30058EDAC /* JSONView.swift */; };
 		B859FDF325F64AF10058EDAC /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDF225F64AF10058EDAC /* Border.swift */; };
 		B859FE3125F67F630058EDAC /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE3025F67F630058EDAC /* Defaults.swift */; };
 		B859FE4B25F6955F0058EDAC /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE4825F6955E0058EDAC /* TextTableViewCell.swift */; };
 		B859FE4C25F6955F0058EDAC /* TextRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE4925F6955E0058EDAC /* TextRow.swift */; };
 		B859FE5925F695FD0058EDAC /* TextTableViewCell+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */; };
 		B859FE7925F696B80058EDAC /* CALayer+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE7825F696B80058EDAC /* CALayer+Border.swift */; };
+		B859FE9925F69FF50058EDAC /* Text+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -246,7 +246,6 @@
 		B859FDA425F646E00058EDAC /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 		B859FDBA25F646FF0058EDAC /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		B859FDD025F649770058EDAC /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
-		B859FDDC25F649C30058EDAC /* JSONView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONView.swift; sourceTree = "<group>"; };
 		B859FDF225F64AF10058EDAC /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
 		B859FE3025F67F630058EDAC /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		B859FE4825F6955E0058EDAC /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -254,6 +253,7 @@
 		B859FE4A25F6955E0058EDAC /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextTableViewCell+Text.swift"; sourceTree = "<group>"; };
 		B859FE7825F696B80058EDAC /* CALayer+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Border.swift"; sourceTree = "<group>"; };
+		B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+RowConvertible.swift"; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -423,6 +423,7 @@
 				B859FE5725F695ED0058EDAC /* Model+Row */,
 				B859FBCD25F296C90058EDAC /* Font+UIFont.swift */,
 				B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */,
+				B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */,
 				B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */,
 				B859FCBD25F618700058EDAC /* CALayer+Shadow.swift */,
 				B859FE7825F696B80058EDAC /* CALayer+Border.swift */,
@@ -495,7 +496,7 @@
 		B859FE5725F695ED0058EDAC /* Model+Row */ = {
 			isa = PBXGroup;
 			children = (
-				B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */,
+				B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */,
 			);
 			path = "Model+Row";
 			sourceTree = "<group>";
@@ -562,7 +563,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_11 /* JSONModel.swift */,
-				B859FDDC25F649C30058EDAC /* JSONView.swift */,
 				B859FBE325F2982E0058EDAC /* Components */,
 				B8C11DCB25F04EB000E2AC5E /* Actions */,
 				B859FBB425F294590058EDAC /* Text.swift */,
@@ -1053,7 +1053,6 @@
 				OBJ_147 /* Fusion.swift in Sources */,
 				B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */,
 				B859FBA825F2556E0058EDAC /* Result+CMSObject.swift in Sources */,
-				B859FDDD25F649C30058EDAC /* JSONView.swift in Sources */,
 				B859FC1D25F29B190058EDAC /* UIColor+Extensions.swift in Sources */,
 				B859FCBE25F618700058EDAC /* CALayer+Shadow.swift in Sources */,
 				B859FE5925F695FD0058EDAC /* TextTableViewCell+Text.swift in Sources */,
@@ -1066,6 +1065,7 @@
 				B859FB6125F22DF20058EDAC /* Constrainable.swift in Sources */,
 				B859FC8425F6162A0058EDAC /* Image.swift in Sources */,
 				B859FE3125F67F630058EDAC /* Defaults.swift in Sources */,
+				B859FE9925F69FF50058EDAC /* Text+RowConvertible.swift in Sources */,
 				B859FC2925F2A0040058EDAC /* Padding.swift in Sources */,
 				OBJ_149 /* JSONModel.swift in Sources */,
 				B8C11DE425F04F0200E2AC5E /* EmailDelegate.swift in Sources */,
