@@ -54,8 +54,9 @@
 		B859FDA525F646E00058EDAC /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDA425F646E00058EDAC /* ImageSource.swift */; };
 		B859FDBB25F646FF0058EDAC /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDBA25F646FF0058EDAC /* Size.swift */; };
 		B859FDD125F649770058EDAC /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDD025F649770058EDAC /* ListItem.swift */; };
-		B859FDDD25F649C30058EDAC /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDDC25F649C30058EDAC /* View.swift */; };
+		B859FDDD25F649C30058EDAC /* JSONView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDDC25F649C30058EDAC /* JSONView.swift */; };
 		B859FDF325F64AF10058EDAC /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDF225F64AF10058EDAC /* Border.swift */; };
+		B859FE3125F67F630058EDAC /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE3025F67F630058EDAC /* Defaults.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -241,8 +242,9 @@
 		B859FDA425F646E00058EDAC /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 		B859FDBA25F646FF0058EDAC /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		B859FDD025F649770058EDAC /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
-		B859FDDC25F649C30058EDAC /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		B859FDDC25F649C30058EDAC /* JSONView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONView.swift; sourceTree = "<group>"; };
 		B859FDF225F64AF10058EDAC /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
+		B859FE3025F67F630058EDAC /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -428,7 +430,6 @@
 				B859FC9B25F618090058EDAC /* Shadow.swift */,
 				B859FC2825F2A0040058EDAC /* Padding.swift */,
 				B859FDBA25F646FF0058EDAC /* Size.swift */,
-				B859FDDC25F649C30058EDAC /* View.swift */,
 				B859FDF225F64AF10058EDAC /* Border.swift */,
 			);
 			path = Components;
@@ -524,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_11 /* JSONModel.swift */,
+				B859FDDC25F649C30058EDAC /* JSONView.swift */,
 				B859FBE325F2982E0058EDAC /* Components */,
 				B8C11DCB25F04EB000E2AC5E /* Actions */,
 				B859FBB425F294590058EDAC /* Text.swift */,
@@ -727,6 +729,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_8 /* Fusion.swift */,
+				B859FE3025F67F630058EDAC /* Defaults.swift */,
 				B8C11BFB25EFAD1F00E2AC5E /* Environment */,
 				B8C11C9F25EFEADB00E2AC5E /* Protocol */,
 				OBJ_10 /* Models */,
@@ -1011,7 +1014,7 @@
 				OBJ_147 /* Fusion.swift in Sources */,
 				B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */,
 				B859FBA825F2556E0058EDAC /* Result+CMSObject.swift in Sources */,
-				B859FDDD25F649C30058EDAC /* View.swift in Sources */,
+				B859FDDD25F649C30058EDAC /* JSONView.swift in Sources */,
 				B859FC1D25F29B190058EDAC /* UIColor+Extensions.swift in Sources */,
 				B859FCBE25F618700058EDAC /* CALayer+Shadow.swift in Sources */,
 				B8C11DD125F04EDD00E2AC5E /* EmailAction.swift in Sources */,
@@ -1022,6 +1025,7 @@
 				B82C473125F0D17A0013B02C /* Page.swift in Sources */,
 				B859FB6125F22DF20058EDAC /* Constrainable.swift in Sources */,
 				B859FC8425F6162A0058EDAC /* Image.swift in Sources */,
+				B859FE3125F67F630058EDAC /* Defaults.swift in Sources */,
 				B859FC2925F2A0040058EDAC /* Padding.swift in Sources */,
 				OBJ_149 /* JSONModel.swift in Sources */,
 				B8C11DE425F04F0200E2AC5E /* EmailDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  Container.swift
+//  JSONView.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 08/03/2021.
@@ -8,7 +8,7 @@
 import Foundation
 
 /// Structure which contains other content
-public class View: Codable {
+public class JSONView: Codable, JSONModel {
 
     /// Background `RGBAHex` color
     public var backgroundColor: RGBAHex?

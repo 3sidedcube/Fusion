@@ -14,9 +14,6 @@ public struct Text: Codable, JSONModel {
     /// Text `String`
     public var text: String?
 
-    /// RGBA hex color for the background
-    public var backgroundColor: RGBAHex?
-
     /// RGBA hex color for the text
     public var textColor: RGBAHex?
 
@@ -35,9 +32,17 @@ public struct Text: Codable, JSONModel {
     /// Letter spacing
     public var letterSpacing: Float?
 
+    // MARK: - View
+
+    /// RGBA hex color for the background
+    public var backgroundColor: RGBAHex?
+
     /// `Padding` for text insets
     public var padding: Padding?
 
     /// `Margin` for insets relative to other content
     public var margin: Margin?
+
+    /// `Border` of the container
+    public var border: Border?
 }
