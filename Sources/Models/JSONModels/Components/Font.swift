@@ -27,6 +27,9 @@ public struct Font: Codable {
 
         /// "Light" font
         case light
+
+        /// "Italic" font
+        case italic
     }
 
     /// Name of the font, e.g. "Open Sans"
