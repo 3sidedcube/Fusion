@@ -20,14 +20,17 @@ public struct Page: Codable, Identifiable {
     /// Date created
     public var date: Date?
 
+    /// Date last updated
+    public var lastModified: Date?
+
     /// Associated tag
     public var slug: String?
 
     /// Background hex color
-    public var backgroundColor: String?
+    public var backgroundColor: RGBAHex?
 
-    /// `ListView` to drive subview content
-    public var listView: ListView?
+    /// `Screen` (aka listView) to drive subview content
+    public var screen: Screen?
 
     /// "screen_view" for analytics screen tracking
     public var analyticsScreenView: String?

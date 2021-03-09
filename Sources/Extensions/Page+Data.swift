@@ -23,7 +23,7 @@ extension Page {
     /// are less of a thing on Android so we, in practice, work with a 1 dimensional `[Row]`. From this
     /// we can still achieve the same outcome as `[Section]`.
     var data: [Section] {
-        let rows = listView?.children.array?.flatMap { $0.rows } ?? []
+        let rows = screen?.children.array?.flatMap { $0.rows } ?? []
         return [Section(
             rows: rows,
             headerHeight: 0,

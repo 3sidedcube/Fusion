@@ -17,7 +17,7 @@ public extension UILabel {
     func setText(_ text: Text) {
         // `text`
         self.text = nil
-        let string = text.text ?? ""
+        let string = text.content ?? ""
 
         // Set up `NSMutableAttributedString``
         let attributed = NSMutableAttributedString(string: string)
@@ -46,7 +46,7 @@ public extension UILabel {
 
         // `textAlignment`
         textAlignment = .left
-        if let textAlignment = text.textAlignment?.nsTextAlignment {
+        if let textAlignment = text.textAlignment?.value.nsTextAlignment {
             paragraphStyle.alignment = textAlignment
         }
 

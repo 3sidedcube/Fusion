@@ -1,5 +1,5 @@
 //
-//  ListView.swift
+//  Screen.swift
 //  CBIT
 //
 //  Created by Ben Shutt on 07/12/2020.
@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 /// A dynamic `JSON` of rows to drive a `UITableView`
-public struct ListView: Codable {
+public struct Screen: Codable {
 
     /// `JSON` array of child nodes to drive subview content.
     /// This is dynamic, the type of each JSON element may be different.

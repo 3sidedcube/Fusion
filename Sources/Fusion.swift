@@ -31,7 +31,15 @@ open class Fusion: ActionHandler {
 
     /// `JSONModel`s to dynamically decode from `JSON`
     open var jsonModelTypes: [JSONModel.Type] {
-        return []
+        return [
+            Text.self,
+            Image.self,
+            Button.self,
+            Divider.self,
+            ListItem.self,
+            Bullet.self,
+            BulletGroup.self
+        ]
     }
 
     /// `Action`s to dynamically decode from `JSON`
@@ -44,7 +52,8 @@ open class Fusion: ActionHandler {
         ]
     }
 
-    /// Create a `HTTPRequest` for fetching a `Page`
+    /// Create a `HTTPRequest` for fetching a `Page` at the given `pageURL`
+    ///
     /// - Parameter pageURL: `URL` to fetch `Page` from
     open func pageHttpRequest(for pageURL: URL) throws -> HTTPRequest {
         // Create `URLComponents` from `URL` by resolving against the base URL
@@ -65,7 +74,9 @@ open class Fusion: ActionHandler {
 
     // MARK: - ActionHandler
 
-    /// Handle the given `action`
+    /// Handle the given `action`.
+    /// By default, do not handle the `action` in preference of the default behavior.
+    ///
     /// - Parameter action: `Action`
     /// - Returns: Return `false` by default (i.e. does not handle the `action`)
     open func handleAction(_ action: Action) -> Bool {

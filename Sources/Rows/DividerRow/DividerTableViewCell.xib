@@ -13,15 +13,15 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="DividerTableViewCell" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQc-hU-Xr1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="95" id="emu-S4-ddg"/>
+                            <constraint firstAttribute="height" constant="20" id="emu-S4-ddg"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -39,7 +39,7 @@
                 <outlet property="dividerLeadingConstraint" destination="hmo-qK-WMu" id="P0k-2L-j9G"/>
                 <outlet property="dividerTopConstraint" destination="jwt-ZP-jj7" id="ilx-aH-uYF"/>
                 <outlet property="dividerTrailingConstraint" destination="1nf-gP-ZFN" id="Kvr-3C-bs1"/>
-                <outlet property="dividerView" destination="UQc-hU-Xr1" id="7B2-5G-dqg"/>
+                <outlet property="dividerView" destination="UQc-hU-Xr1" id="36v-xt-UJH"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="145.64732142857142"/>
         </tableViewCell>

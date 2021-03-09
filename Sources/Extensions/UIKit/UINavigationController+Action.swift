@@ -30,7 +30,7 @@ extension UINavigationController {
     @discardableResult
     func pushAction(_ action: Action) -> Bool {
         let didHandle = Fusion.shared.handleAction(action)
-        guard !didHandle else { return didHandle }
+        guard !didHandle else { return didHandle /* true */ }
 
         // `PageAction`
         if let pageAction = action as? PageAction {

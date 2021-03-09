@@ -12,7 +12,7 @@ import Foundation
 public struct Text: Codable, JSONModel {
 
     /// Text `String`
-    public var text: String?
+    public var content: String?
 
     /// RGBA hex color for the text
     public var textColor: RGBAHex?
@@ -21,7 +21,7 @@ public struct Text: Codable, JSONModel {
     public var font: Font?
 
     /// `TextAlignment`
-    public var textAlignment: TextAlignment?
+    public var textAlignment: CMSEnum<TextAlignment>?
 
     /// Number of lines to show this text in
     public var numberOfLines: Int?

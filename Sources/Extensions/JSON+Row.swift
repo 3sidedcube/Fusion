@@ -9,13 +9,14 @@
 import Foundation
 import SwiftyJSON
 import ThunderTable
+import os // OSLog
 
 extension JSON {
 
     /// Parse this `JSON` instance into a `JSONModel` then convert to an `[Row]`
     var rows: [Row] {
         // Load this `JSON` instance into a `JSONModel`
-        let jsonModel: JSONModel? = try? toJSONModel()
+        let jsonModel: JSONModel? = self.jsonModel()
 
         // Try `RowArrayConvertible` cast
         if let rows = try? (jsonModel as? RowArrayConvertible)?.toRows() {
@@ -33,5 +34,16 @@ extension JSON {
         }
 
         return []
+    }
+
+    /// Execute `toJSONModel()` catch the `Error` and logging
+    private func jsonModel() -> JSONModel? {
+        do {
+            return try toJSONModel()
+        } catch {
+            let message = "\(JSONModel.self) decode failed: \(error)"
+            os_log(.error, log: .logger, "%@", message)
+            return nil
+        }
     }
 }

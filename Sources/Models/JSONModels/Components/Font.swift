@@ -11,7 +11,7 @@ import Foundation
 public struct Font: Codable {
 
     /// Properties which map to a`Font.Weight`
-    public enum Weight: String, Codable {
+    public enum Weight: String, Codable, CaseIterable {
 
         /// "Regular" font
         case regular
@@ -36,7 +36,7 @@ public struct Font: Codable {
     public var name: String?
 
     /// Weight of the font, e.g. "Regular"
-    public var weight: Weight?
+    public var weight: CMSEnum<Weight>?
 
     /// Size of the font in pt, e.g. 10
     public var size: Float?
