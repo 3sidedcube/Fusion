@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,20 +18,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaP-bX-Qnt">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaP-bX-Qnt" customClass="ImageContainerView" customModule="Fusion" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Y6-Bg-0xe" customClass="AdjustableImageView" customModule="Fusion">
-                                <rect key="frame" x="20" y="20" width="280" height="187"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="9Y6-Bg-0xe" firstAttribute="trailing" secondItem="JaP-bX-Qnt" secondAttribute="trailing" constant="-20" id="5om-Ze-KdV"/>
-                            <constraint firstItem="9Y6-Bg-0xe" firstAttribute="leading" secondItem="JaP-bX-Qnt" secondAttribute="leading" constant="20" id="Aeb-y8-4aA"/>
-                            <constraint firstItem="9Y6-Bg-0xe" firstAttribute="bottom" secondItem="JaP-bX-Qnt" secondAttribute="bottom" constant="-20" id="KvA-pf-FUJ"/>
-                            <constraint firstItem="9Y6-Bg-0xe" firstAttribute="top" secondItem="JaP-bX-Qnt" secondAttribute="top" constant="20" id="yKC-DN-Yio"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -42,16 +32,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cellImageView" destination="9Y6-Bg-0xe" id="aBf-tt-pyo"/>
                 <outlet property="imageContainerView" destination="JaP-bX-Qnt" id="KUW-uq-Iy3"/>
                 <outlet property="imageContainerViewBottomConstraint" destination="zec-g6-Yec" id="eLN-cF-7Pr"/>
                 <outlet property="imageContainerViewLeadingConstraint" destination="6U5-xZ-3Yb" id="Xr5-sP-0s8"/>
                 <outlet property="imageContainerViewTopConstraint" destination="eLq-oA-kMU" id="wMb-un-DuV"/>
                 <outlet property="imageContainerViewTrailingConstraint" destination="3wm-hB-0C4" id="lrY-ht-4Qb"/>
-                <outlet property="imageViewBottomConstraint" destination="KvA-pf-FUJ" id="tKu-uH-PTb"/>
-                <outlet property="imageViewLeadingConstraint" destination="Aeb-y8-4aA" id="pFj-Jt-xhC"/>
-                <outlet property="imageViewTopConstraint" destination="yKC-DN-Yio" id="tcz-H8-8wr"/>
-                <outlet property="imageViewTrailingConstraint" destination="5om-Ze-KdV" id="szk-8t-EJv"/>
             </connections>
             <point key="canvasLocation" x="-143" y="55"/>
         </tableViewCell>

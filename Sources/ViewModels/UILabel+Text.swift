@@ -71,11 +71,7 @@ public extension UILabel {
         }
 
         // `border`
-        layer.borderColor = UIColor.clear.cgColor
-        layer.borderWidth = 0
-        if let border = text.border {
-            layer.setBorder(border)
-        }
+        layer.setBorder(text.border)
 
         // `margin` ignored
 

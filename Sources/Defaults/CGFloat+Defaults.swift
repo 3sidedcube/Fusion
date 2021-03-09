@@ -17,3 +17,9 @@ extension CGFloat {
     /// Default text size
     static var defaultTextSize: CGFloat = 12
 }
+
+extension Float {
+
+    /// `defaultTextSize` to `Float`
+    static var defaultTextSize = Float(CGFloat.defaultTextSize)
+}

@@ -79,12 +79,9 @@ class DefaultRow: Row {
         in tableViewController: TableViewController
     ) {
         guard let cell = cell as? DefaultCellClass else { return }
+        cell.setDefaults()
 
-        // cell
-        cell.backgroundColor = .clear
-        cell.contentView.backgroundColor = .clear
         /*
-
         // containerViews
         cell.containerViews.forEach {
             $0.backgroundColor = .defaultUnhighlightedColor

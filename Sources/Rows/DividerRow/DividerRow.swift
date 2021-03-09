@@ -48,10 +48,7 @@ class DividerRow: Row {
         in tableViewController: TableViewController
     ) {
         guard let cell = cell as? CellClass else { return }
-
-        // Configure defaults
-        cell.backgroundColor = .clear
-        cell.contentView.backgroundColor = .clear
+        cell.setDefaults()
 
         // Set view-model
         cell.setDivider(divider)

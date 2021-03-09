@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import ThunderTable
+import Kingfisher
 
 /// `UITableViewCell` subclass
 private typealias CellClass = ImageTableViewCell
@@ -18,17 +19,11 @@ private typealias CellClass = ImageTableViewCell
 class ImageRow: Row, CellHeightConfigurable {
 
     /// `Image` to drive UI
-    let image: Image
-
-    /// `RemoteImage` from the `URL` of `image`
-    private(set) lazy var remoteImage: RemoteImage? = {
-        guard let url = image.url else { return nil }
-        return RemoteImage(url: url)
-    }()
+    private(set) var image: Image
 
     /// Return `image` of `remoteImage`
     private var uiImage: UIImage? {
-        return remoteImage?.image
+        return image.remoteImage?.image
     }
 
     // MARK: - Init
@@ -82,17 +77,14 @@ class ImageRow: Row, CellHeightConfigurable {
         in tableViewController: TableViewController
     ) {
         guard let cell = cell as? CellClass else { return }
+        cell.setDefaults()
 
-        cell.backgroundColor = .clear
-        cell.contentView.backgroundColor = .clear
-        cell.setImage(image)
-
-        // cellImageView
-        cell.cellImageView.contentMode = .scaleAspectFill
-        cell.cellImageView.image = nil
-        cell.cellImageView.kf.cancelDownloadTask()
-        if let image = remoteImage {
-            load(image: image, for: cell.cellImageView, in: tableViewController)
+        // imageView
+        let imageBefore = uiImage
+        let updateListener = tableViewController as? RowUpdateListener
+        cell.setImage(&image) { [weak self, weak updateListener] remoteImage, _ in
+            guard let self = self, remoteImage.image != imageBefore else { return }
+            updateListener?.rowRequestedUpdate(self)
         }
     }
 

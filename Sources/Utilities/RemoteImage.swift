@@ -9,26 +9,25 @@ import Foundation
 import UIKit // Shouldn't usually with a `Model` but required here
 import Kingfisher
 
-/// Completion closure when `Image` finishes loading
-typealias ImageCompletion = (Result<RetrieveImageResult, KingfisherError>) -> Void
+/// `Result` the image fetch task completes with
+typealias ImageResult = Result<RetrieveImageResult, KingfisherError>
 
-/// Wrap a `UIImage` by loading a `URL`
+/// Completion closure with a `RemoteImage`
+typealias ImageCompletion = (RemoteImage, ImageResult) -> Void
+
+/// Wrap a `UIImage` by loading a `URL` using `Kingfisher`
 final class RemoteImage {
 
     /// Remote image `URL`
     let url: URL
 
     /// `UIImage` once fetched from the remote URL or cache
-    var image: UIImage?
+    private(set) var result: ImageResult?
 
-    /// Placeholder `UIImage` to show while a remote image loads
-    var placeholder: UIImage?
-
-    /// `KingfisherOptionsInfo`s when loading a remote image
-    var remoteOptions: KingfisherOptionsInfo? = [
-        .transition(.fade(0.1)),
-        .cacheOriginalImage
-    ]
+    /// If the `result` is `success`, return the `image`
+    var image: UIImage? {
+        return result?.success?.image
+    }
 
     // MARK: - Init
 
@@ -44,10 +43,17 @@ final class RemoteImage {
     /// Load this `Image` instance in `imageView`
     ///
     /// - Parameters:
-    ///   - imageView: `UIImageView`
+    ///   - imageView: `UIImageView` to load `UIImage` into
+    ///   - placeholder: `UIImage` placeholder
+    ///   - remoteOptions: `KingfisherOptionsInfo`
     ///   - completion: `ImageCompletion`
     func load(
         in imageView: UIImageView,
+        placeholder: UIImage? = nil,
+        remoteOptions: KingfisherOptionsInfo? = [
+            .transition(.fade(0.1)),
+            .cacheOriginalImage
+        ],
         completion: ImageCompletion?
     ) {
         imageView.kf.indicatorType = .activity
@@ -56,23 +62,10 @@ final class RemoteImage {
             placeholder: placeholder,
             options: remoteOptions,
             completionHandler: { result in // retain self
-                if let image = result.remoteImage {
-                    self.image = image
-                }
-
-                // The `UIImage` is set by Kingfisher on the `UIImageView`
-                completion?(result)
+                // The `UIImage` is set on the `UIImageView` by Kingfisher
+                self.result = result
+                completion?(self, result)
             }
         )
-    }
-}
-
-// MARK: - Result + RetrieveImageResult
-
-extension Result where Success == RetrieveImageResult {
-
-    /// The `image` against the associated value if the result is a `success`
-    var remoteImage: UIImage? {
-        return success?.image
     }
 }

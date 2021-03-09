@@ -19,7 +19,16 @@ public extension CALayer {
     /// This function sets the `shadowPath` based on the `bounds` of the layer
     ///
     /// - Parameter shadow: `Shadow`
-    func setShadow(_ shadow: Shadow) {
+    func setShadow(_ shadow: Shadow?) {
+        guard let shadow = shadow else {
+            shadowColor = UIColor.black.cgColor
+            shadowOpacity = 0
+            shadowOffset = CGSize(width: 0, height: -3)
+            shadowRadius = 3
+            shadowPath = nil
+            return
+        }
+
         let color = shadow.color?.hexColor ?? .black
         let alpha = shadow.alpha ?? 0
         let width = CGFloat(shadow.x ?? 0)

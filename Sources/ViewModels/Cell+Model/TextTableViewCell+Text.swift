@@ -15,7 +15,7 @@ extension TextTableViewCell {
     func setText(_ text: Text) {
         label.setText(text)
 
-        // Handle `margin`
+        // `margin`
         labelInsets = text.margin?.insets ?? .zero
     }
 }

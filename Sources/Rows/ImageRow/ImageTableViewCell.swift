@@ -12,10 +12,7 @@ import UIKit
 class ImageTableViewCell: UITableViewCell {
 
     /// `UIView` container of `cellImageView`
-    @IBOutlet private(set) var imageContainerView: UIView!
-
-    /// `UIImageView` of the cell
-    @IBOutlet private(set) var cellImageView: UIImageView!
+    @IBOutlet private(set) var imageContainerView: ImageContainerView!
 
     // MARK: - ImageContainerView Constraints
 
@@ -54,43 +51,6 @@ class ImageTableViewCell: UITableViewCell {
         }
         set {
             var edgeConstraints = imageContainerViewEdgeConstraints
-            edgeConstraints.insets = newValue
-        }
-    }
-
-    // MARK: - ImageView Constraints
-
-    /// `cellImageView` leading to `imageContainerView` leading
-    @IBOutlet private(set) var imageViewLeadingConstraint: NSLayoutConstraint!
-
-    /// `cellImageView` top to `imageContainerView` top
-    @IBOutlet private(set) var imageViewTopConstraint: NSLayoutConstraint!
-
-    /// `cellImageView` trailing to `imageContainerView` trailing
-    @IBOutlet private(set) var imageViewTrailingConstraint: NSLayoutConstraint!
-
-    /// `cellImageView` bottom to `imageContainerView` bottom
-    @IBOutlet private(set) var imageViewBottomConstraint: NSLayoutConstraint!
-
-    // MARK: - ImageView EdgeConstraints
-
-    /// `EdgeConstraints` of `cellImageView`
-    var imageViewEdgeConstraints: EdgeConstraints {
-        return EdgeConstraints(
-            leading: imageViewLeadingConstraint,
-            top: imageViewTopConstraint,
-            trailing: imageViewTrailingConstraint,
-            bottom: imageViewBottomConstraint
-        )
-    }
-
-    /// `UIEdgeInsets` of the `imageViewEdgeConstraints`
-    var imageViewInsets: UIEdgeInsets {
-        get {
-            return imageViewEdgeConstraints.insets
-        }
-        set {
-            var edgeConstraints = imageViewEdgeConstraints
             edgeConstraints.insets = newValue
         }
     }

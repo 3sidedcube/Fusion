@@ -12,7 +12,11 @@ import Foundation
 public struct Image: Codable, JSONModel {
 
     /// `String` remote URL location
-    public var src: ImageSource?
+    public var src: ImageSource? {
+        didSet {
+            remoteImage = createRemoteImage()
+        }
+    }
 
     // MARK: - View
 
@@ -33,6 +37,17 @@ public struct Image: Codable, JSONModel {
 
     /// `Border` of the container
     public var border: Border?
+
+    // MARK: - RemoteImage
+
+    /// `RemoteImage` from `src`
+    lazy var remoteImage = createRemoteImage()
+
+    /// Create a `RemoteImage` from the `src`
+    private func createRemoteImage() -> RemoteImage? {
+        guard let url = url else { return nil }
+        return RemoteImage(url: url)
+    }
 }
 
 // MARK: - Extensions

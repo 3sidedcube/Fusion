@@ -26,7 +26,7 @@ class AdjustableImageView: UIImageView {
             return super.image
         }
         set {
-            return super.image = resizeImage(newValue)
+            super.image = resizeImage(newValue)
         }
     }
 
