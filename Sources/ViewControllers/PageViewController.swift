@@ -70,7 +70,7 @@ open class PageViewController: BaseViewController {
     ///
     /// - Parameters:
     ///   - page: `Page`
-    convenience init(page: Page) {
+    public convenience init(page: Page) {
         self.init(configuration: .page(page))
     }
 
@@ -78,7 +78,7 @@ open class PageViewController: BaseViewController {
     ///
     /// - Parameters:
     ///   - pageURL: `URL`
-    convenience init(pageURL: URL) {
+    public convenience init(pageURL: URL) {
         self.init(configuration: .pageURL(pageURL))
     }
 
