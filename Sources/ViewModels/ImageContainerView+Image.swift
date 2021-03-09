@@ -11,10 +11,11 @@ import Kingfisher
 
 extension ImageContainerView {
 
-    /// Set the given 
+    /// Set the given `image`
+    ///
     /// - Parameters:
-    ///   - image: <#image description#>
-    ///   - completion: <#completion description#>
+    ///   - image: `Image`
+    ///   - completion: `ImageCompletion`
     func setImage(_ image: inout Image, completion: ImageCompletion?) {
         // `backgroundColor`
         backgroundColor = image.backgroundColor?.hexColor ?? .clear

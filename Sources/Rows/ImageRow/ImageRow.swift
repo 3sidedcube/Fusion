@@ -79,12 +79,11 @@ class ImageRow: Row, CellHeightConfigurable {
         guard let cell = cell as? CellClass else { return }
         cell.setDefaults()
 
-        // imageView
+        // Set view-model
         let imageBefore = uiImage
-        let updateListener = tableViewController as? RowUpdateListener
-        cell.setImage(&image) { [weak self, weak updateListener] remoteImage, _ in
+        cell.setImage(&image) { [weak self, weak tableViewController] remoteImage, _ in
             guard let self = self, remoteImage.image != imageBefore else { return }
-            updateListener?.rowRequestedUpdate(self)
+            (tableViewController as? RowUpdateListener)?.rowRequestedUpdate(self)
         }
     }
 
