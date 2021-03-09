@@ -1,3 +1,7 @@
+# 3rd party
 github "SwiftyJSON/SwiftyJSON" ~> 4.0
-github "BenShutt/HTTPRequest" "develop"
+github "onevcat/Kingfisher" ~> 5.0
+
+# 3SidedCube
 github "3sidedcube/ThunderTable" "feature/declarative-section"
+github "BenShutt/HTTPRequest" "develop"

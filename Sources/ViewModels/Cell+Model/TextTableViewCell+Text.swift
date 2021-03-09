@@ -9,7 +9,8 @@ import Foundation
 
 extension TextTableViewCell {
 
-    /// Set `Text` on this instance
+    /// Set the given `text`
+    ///
     /// - Parameter text: `Text`
     func setText(_ text: Text) {
         label.setText(text)

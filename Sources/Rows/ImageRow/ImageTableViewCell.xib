@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="227" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="CBIT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaP-bX-Qnt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Y6-Bg-0xe">
+                                <rect key="frame" x="20" y="20" width="280" height="187"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Y6-Bg-0xe" firstAttribute="trailing" secondItem="JaP-bX-Qnt" secondAttribute="trailing" constant="-20" id="5om-Ze-KdV"/>
+                            <constraint firstItem="9Y6-Bg-0xe" firstAttribute="leading" secondItem="JaP-bX-Qnt" secondAttribute="leading" constant="20" id="Aeb-y8-4aA"/>
+                            <constraint firstItem="9Y6-Bg-0xe" firstAttribute="bottom" secondItem="JaP-bX-Qnt" secondAttribute="bottom" constant="-20" id="KvA-pf-FUJ"/>
+                            <constraint firstItem="9Y6-Bg-0xe" firstAttribute="top" secondItem="JaP-bX-Qnt" secondAttribute="top" constant="20" id="yKC-DN-Yio"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JaP-bX-Qnt" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="3wm-hB-0C4"/>
+                    <constraint firstItem="JaP-bX-Qnt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6U5-xZ-3Yb"/>
+                    <constraint firstItem="JaP-bX-Qnt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eLq-oA-kMU"/>
+                    <constraint firstItem="JaP-bX-Qnt" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="zec-g6-Yec"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellImageView" destination="9Y6-Bg-0xe" id="aBf-tt-pyo"/>
+                <outlet property="imageContainerView" destination="JaP-bX-Qnt" id="KUW-uq-Iy3"/>
+                <outlet property="imageContainerViewBottomConstraint" destination="zec-g6-Yec" id="eLN-cF-7Pr"/>
+                <outlet property="imageContainerViewLeadingConstraint" destination="6U5-xZ-3Yb" id="Xr5-sP-0s8"/>
+                <outlet property="imageContainerViewTopConstraint" destination="eLq-oA-kMU" id="wMb-un-DuV"/>
+                <outlet property="imageContainerViewTrailingConstraint" destination="3wm-hB-0C4" id="lrY-ht-4Qb"/>
+                <outlet property="imageViewBottomConstraint" destination="KvA-pf-FUJ" id="tKu-uH-PTb"/>
+                <outlet property="imageViewLeadingConstraint" destination="Aeb-y8-4aA" id="pFj-Jt-xhC"/>
+                <outlet property="imageViewTopConstraint" destination="yKC-DN-Yio" id="tcz-H8-8wr"/>
+                <outlet property="imageViewTrailingConstraint" destination="5om-Ze-KdV" id="szk-8t-EJv"/>
+            </connections>
+            <point key="canvasLocation" x="-143" y="55"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
