@@ -14,6 +14,8 @@ extension ImageTableViewCell {
     ///
     /// - Parameter image: `Image`
     func setImage(_ image: Image) {
+        // `src` handled in row
+
         // `backgroundColor`
         imageContainerView.backgroundColor = image.backgroundColor?.hexColor ?? .clear
 

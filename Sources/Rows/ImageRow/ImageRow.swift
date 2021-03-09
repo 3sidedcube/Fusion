@@ -102,12 +102,21 @@ class ImageRow: Row, CellHeightConfigurable {
         _ tableViewController: TableViewController,
         forRowAt indexPath: IndexPath
     ) -> CGFloat {
-        let targetWidth = tableViewController.tableView.bounds.width
+        // Vertical insets
+        let verticalMargin = max(0, image.margin?.insets.verticalSum ?? 0)
+        let verticalPadding = max(0, image.padding?.insets.verticalSum ?? 0)
 
-        let imageHeight = self.imageHeight(for: targetWidth)
-        let verticalMargin = image.margin?.insets.verticalSum ?? 0
-        let verticalPadding = image.padding?.insets.verticalSum ?? 0
+        // Horizontal insets
+        let horizontalMargin = max(0, image.margin?.insets.horizontalSum ?? 0)
+        let horizontalPadding = max(0, image.padding?.insets.horizontalSum ?? 0)
 
-        return imageHeight + verticalMargin + verticalPadding
+        // Get the targetWidth of the image
+        let tableViewWidth = tableViewController.tableView.bounds.width
+        let insetWidth = tableViewWidth - horizontalMargin - horizontalPadding
+        let targetWidth = max(0, insetWidth)
+
+        // Get the targetHeight of the image
+        let targetHeight = self.imageHeight(for: targetWidth)
+        return targetHeight + verticalMargin + verticalPadding
     }
 }
