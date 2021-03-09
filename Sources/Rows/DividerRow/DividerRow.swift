@@ -1,9 +1,8 @@
 //
-//  TextRow.swift
-//  CBIT
+//  DividerRow.swift
+//  Fusion
 //
-//  Created by Ben Shutt on 25/11/2020.
-//  Copyright © 2020 3 SIDED CUBE APP PRODUCTIONS LTD. All rights reserved.
+//  Created by Ben Shutt on 09/03/2021.
 //
 
 import Foundation
@@ -11,22 +10,22 @@ import UIKit
 import ThunderTable
 
 /// `UITableViewCell` subclass
-private typealias CellClass = TextTableViewCell
+private typealias CellClass = DividerTableViewCell
 
-/// A `Row` which draws a `Text`
-class TextRow: Row {
+/// A `Row` which draws a `Divider`
+class DividerRow: Row {
 
-    /// `Text` to drive UI
-    var text: Text
+    /// `Divider` to drive UI
+    var divider: Divider
 
     // MARK: - Init
 
     /// Default memberwise initializer
     ///
     /// - Parameters:
-    ///   - text: `Text`
-    init(text: Text) {
-        self.text = text
+    ///   - divider: `Divider`
+    init(divider: Divider) {
+        self.divider = divider
     }
 
     // MARK: - Row
@@ -55,6 +54,6 @@ class TextRow: Row {
         cell.contentView.backgroundColor = .clear
 
         // Set view-model
-        cell.setText(text)
+        cell.setDivider(divider)
     }
 }

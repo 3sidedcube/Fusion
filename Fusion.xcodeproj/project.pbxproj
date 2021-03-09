@@ -63,6 +63,9 @@
 		B859FE9925F69FF50058EDAC /* Text+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */; };
 		B859FEA525F6A2810058EDAC /* SelectableRow+ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FEA425F6A2810058EDAC /* SelectableRow+ActionHandler.swift */; };
 		B859FEB125F6A3AD0058EDAC /* SelectableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FEB025F6A3AD0058EDAC /* SelectableRow.swift */; };
+		B867D62325F77BD70063F988 /* DividerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D62125F77BD70063F988 /* DividerTableViewCell.swift */; };
+		B867D63925F782A30063F988 /* DividerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D63825F782A30063F988 /* DividerRow.swift */; };
+		B867D64625F783140063F988 /* DividerTableViewCell+Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -258,6 +261,10 @@
 		B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+RowConvertible.swift"; sourceTree = "<group>"; };
 		B859FEA425F6A2810058EDAC /* SelectableRow+ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectableRow+ActionHandler.swift"; sourceTree = "<group>"; };
 		B859FEB025F6A3AD0058EDAC /* SelectableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableRow.swift; sourceTree = "<group>"; };
+		B867D62125F77BD70063F988 /* DividerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTableViewCell.swift; sourceTree = "<group>"; };
+		B867D62225F77BD70063F988 /* DividerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DividerTableViewCell.xib; sourceTree = "<group>"; };
+		B867D63825F782A30063F988 /* DividerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerRow.swift; sourceTree = "<group>"; };
+		B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DividerTableViewCell+Divider.swift"; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -424,10 +431,10 @@
 		B859FBCC25F296BF0058EDAC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B867D64425F782FD0063F988 /* Cell+Model */,
 				B859FE5725F695ED0058EDAC /* Model+Row */,
 				B859FBCD25F296C90058EDAC /* Font+UIFont.swift */,
 				B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */,
-				B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */,
 				B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */,
 				B859FCBD25F618700058EDAC /* CALayer+Shadow.swift */,
 				B859FE7825F696B80058EDAC /* CALayer+Border.swift */,
@@ -482,6 +489,7 @@
 		B859FE4625F692BD0058EDAC /* Rows */ = {
 			isa = PBXGroup;
 			children = (
+				B867D62025F77B990063F988 /* DividerRow */,
 				B859FE4725F6954E0058EDAC /* TextRow */,
 			);
 			path = Rows;
@@ -503,6 +511,25 @@
 				B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */,
 			);
 			path = "Model+Row";
+			sourceTree = "<group>";
+		};
+		B867D62025F77B990063F988 /* DividerRow */ = {
+			isa = PBXGroup;
+			children = (
+				B867D63825F782A30063F988 /* DividerRow.swift */,
+				B867D62125F77BD70063F988 /* DividerTableViewCell.swift */,
+				B867D62225F77BD70063F988 /* DividerTableViewCell.xib */,
+			);
+			path = DividerRow;
+			sourceTree = "<group>";
+		};
+		B867D64425F782FD0063F988 /* Cell+Model */ = {
+			isa = PBXGroup;
+			children = (
+				B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */,
+				B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */,
+			);
+			path = "Cell+Model";
 			sourceTree = "<group>";
 		};
 		B8C11BFB25EFAD1F00E2AC5E /* Environment */ = {
@@ -1035,6 +1062,7 @@
 				B859FDA525F646E00058EDAC /* ImageSource.swift in Sources */,
 				B859FB6025F22DF20058EDAC /* CenterConstraints.swift in Sources */,
 				B859FDF325F64AF10058EDAC /* Border.swift in Sources */,
+				B867D62325F77BD70063F988 /* DividerTableViewCell.swift in Sources */,
 				B8C11D9325F04BCA00E2AC5E /* CellDisplayable.swift in Sources */,
 				B859FEB125F6A3AD0058EDAC /* SelectableRow.swift in Sources */,
 				B859FBFB25F299020058EDAC /* TextAlignment+NSTextAlignment.swift in Sources */,
@@ -1063,6 +1091,7 @@
 				B859FC1D25F29B190058EDAC /* UIColor+Extensions.swift in Sources */,
 				B859FCBE25F618700058EDAC /* CALayer+Shadow.swift in Sources */,
 				B859FE5925F695FD0058EDAC /* TextTableViewCell+Text.swift in Sources */,
+				B867D63925F782A30063F988 /* DividerRow.swift in Sources */,
 				B8C11DD125F04EDD00E2AC5E /* EmailAction.swift in Sources */,
 				B859FD9925F645A30058EDAC /* BulletGroup.swift in Sources */,
 				B859FD0125F61E330058EDAC /* RGBAHex.swift in Sources */,
@@ -1099,6 +1128,7 @@
 				B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */,
 				B859FB5F25F22DF20058EDAC /* EdgeConstraints.swift in Sources */,
 				B8C11DD225F04EDD00E2AC5E /* NativeAction.swift in Sources */,
+				B867D64625F783140063F988 /* DividerTableViewCell+Divider.swift in Sources */,
 				B8C11CA725EFEAEE00E2AC5E /* RowActionable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
