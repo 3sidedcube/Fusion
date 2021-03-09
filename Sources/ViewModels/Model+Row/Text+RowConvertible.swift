@@ -10,6 +10,7 @@ import ThunderTable
 
 extension Text: RowConvertible {
 
+    /// Create a `TextRow`
     func toRow() throws -> Row {
         return TextRow(text: self)
     }
