@@ -60,8 +60,6 @@
 		B859FE5925F695FD0058EDAC /* TextTableViewCell+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */; };
 		B859FE7925F696B80058EDAC /* CALayer+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE7825F696B80058EDAC /* CALayer+Border.swift */; };
 		B859FE9925F69FF50058EDAC /* Text+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */; };
-		B859FEA525F6A2810058EDAC /* SelectableRow+ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FEA425F6A2810058EDAC /* SelectableRow+ActionHandler.swift */; };
-		B859FEB125F6A3AD0058EDAC /* SelectableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FEB025F6A3AD0058EDAC /* SelectableRow.swift */; };
 		B867D62325F77BD70063F988 /* DividerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D62125F77BD70063F988 /* DividerTableViewCell.swift */; };
 		B867D63925F782A30063F988 /* DividerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D63825F782A30063F988 /* DividerRow.swift */; };
 		B867D64625F783140063F988 /* DividerTableViewCell+Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */; };
@@ -111,6 +109,7 @@
 		B867D9B925F8FBB10063F988 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D9B825F8FBB10063F988 /* DefaultView.swift */; };
 		B867D9FA25F8FF2F0063F988 /* DefaultView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D9F925F8FF2F0063F988 /* DefaultView+ListItem.swift */; };
 		B867DA0625F9009E0063F988 /* CALayer+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA0525F9009E0063F988 /* CALayer+CornerRadius.swift */; };
+		B867DA1C25F905340063F988 /* ListItem+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA1B25F905340063F988 /* ListItem+RowConvertible.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -331,8 +330,6 @@
 		B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextTableViewCell+Text.swift"; sourceTree = "<group>"; };
 		B859FE7825F696B80058EDAC /* CALayer+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Border.swift"; sourceTree = "<group>"; };
 		B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+RowConvertible.swift"; sourceTree = "<group>"; };
-		B859FEA425F6A2810058EDAC /* SelectableRow+ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectableRow+ActionHandler.swift"; sourceTree = "<group>"; };
-		B859FEB025F6A3AD0058EDAC /* SelectableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableRow.swift; sourceTree = "<group>"; };
 		B867D62125F77BD70063F988 /* DividerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTableViewCell.swift; sourceTree = "<group>"; };
 		B867D62225F77BD70063F988 /* DividerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DividerTableViewCell.xib; sourceTree = "<group>"; };
 		B867D63825F782A30063F988 /* DividerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerRow.swift; sourceTree = "<group>"; };
@@ -381,6 +378,7 @@
 		B867D9B825F8FBB10063F988 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
 		B867D9F925F8FF2F0063F988 /* DefaultView+ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultView+ListItem.swift"; sourceTree = "<group>"; };
 		B867DA0525F9009E0063F988 /* CALayer+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+CornerRadius.swift"; sourceTree = "<group>"; };
+		B867DA1B25F905340063F988 /* ListItem+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListItem+RowConvertible.swift"; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -651,6 +649,7 @@
 				B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */,
 				B867D65B25F7848B0063F988 /* Divider+RowConvertible.swift */,
 				B867D70925F7A0240063F988 /* Image+RowConvertible.swift */,
+				B867DA1B25F905340063F988 /* ListItem+RowConvertible.swift */,
 			);
 			path = "Model+Row";
 			sourceTree = "<group>";
@@ -776,7 +775,6 @@
 				B8C11BC125EFAA3D00E2AC5E /* JSONDecoder+SnakeCase.swift */,
 				B8C11BC025EFAA3D00E2AC5E /* JSONEncoder+SnakeCase.swift */,
 				B859FBA725F2556E0058EDAC /* Result+CMSObject.swift */,
-				B859FEA425F6A2810058EDAC /* SelectableRow+ActionHandler.swift */,
 				B867D8AB25F7EAC50063F988 /* OSLog+Logger.swift */,
 			);
 			path = Extensions;
@@ -804,7 +802,6 @@
 				B8C11D8E25F04BCA00E2AC5E /* CellHeightConfigurable.swift */,
 				B8C11D8F25F04BCA00E2AC5E /* RowUpdateListener.swift */,
 				B859FC6D25F37C860058EDAC /* Insettable.swift */,
-				B859FEB025F6A3AD0058EDAC /* SelectableRow.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1357,12 +1354,12 @@
 				B859FBC125F296A80058EDAC /* Font.swift in Sources */,
 				B8C11DD325F04EDD00E2AC5E /* PageAction.swift in Sources */,
 				B867D93725F808320063F988 /* LabelContainerView.swift in Sources */,
+				B867DA1C25F905340063F988 /* ListItem+RowConvertible.swift in Sources */,
 				B859FDA525F646E00058EDAC /* ImageSource.swift in Sources */,
 				B859FB6025F22DF20058EDAC /* CenterConstraints.swift in Sources */,
 				B859FDF325F64AF10058EDAC /* Border.swift in Sources */,
 				B867D62325F77BD70063F988 /* DividerTableViewCell.swift in Sources */,
 				B8C11D9325F04BCA00E2AC5E /* CellDisplayable.swift in Sources */,
-				B859FEB125F6A3AD0058EDAC /* SelectableRow.swift in Sources */,
 				B859FBFB25F299020058EDAC /* TextAlignment+NSTextAlignment.swift in Sources */,
 				B859FCF525F61D860058EDAC /* Shadow.swift in Sources */,
 				B82C475625F0D3580013B02C /* JSON+Row.swift in Sources */,
@@ -1412,7 +1409,6 @@
 				B8C11BC525EFAA3D00E2AC5E /* JSONEncoder+SnakeCase.swift in Sources */,
 				B867D89625F7E8160063F988 /* CMSEnum.swift in Sources */,
 				B82C473125F0D17A0013B02C /* Page.swift in Sources */,
-				B859FEA525F6A2810058EDAC /* SelectableRow+ActionHandler.swift in Sources */,
 				B859FB6125F22DF20058EDAC /* Constrainable.swift in Sources */,
 				B859FC8425F6162A0058EDAC /* Image.swift in Sources */,
 				B867D6AD25F795560063F988 /* RemoteImage.swift in Sources */,
