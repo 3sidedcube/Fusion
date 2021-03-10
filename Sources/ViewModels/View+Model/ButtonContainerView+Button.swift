@@ -10,7 +10,12 @@ import UIKit
 
 extension ButtonContainerView {
 
+    /// Set the given `button`
+    ///
+    /// - Parameter button: `Button`
     func setButton(_ button: Button) {
-        // TODO
+        if let text = button.text {
+            self.button.titleLabel?.setText(text)
+        }
     }
 }

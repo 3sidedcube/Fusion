@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		B82C470225F0CECA0013B02C /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C470125F0CECA0013B02C /* Link.swift */; };
 		B82C473125F0D17A0013B02C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C472E25F0D17A0013B02C /* Page.swift */; };
 		B82C473225F0D17A0013B02C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C472F25F0D17A0013B02C /* Screen.swift */; };
 		B82C473E25F0D1B70013B02C /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C473D25F0D1B70013B02C /* Identifiable.swift */; };
@@ -301,7 +300,6 @@
 
 /* Begin PBXFileReference section */
 		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B82C470125F0CECA0013B02C /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		B82C472E25F0D17A0013B02C /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		B82C472F25F0D17A0013B02C /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		B82C473D25F0D1B70013B02C /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -915,7 +913,6 @@
 				B867D89525F7E8150063F988 /* CMSEnum.swift */,
 				B82C472E25F0D17A0013B02C /* Page.swift */,
 				B82C472F25F0D17A0013B02C /* Screen.swift */,
-				B82C470125F0CECA0013B02C /* Link.swift */,
 				B8B379F425F19E7C002B866A /* PageSource.swift */,
 			);
 			path = Models;
@@ -1421,7 +1418,6 @@
 				B867D6F425F79B2A0063F988 /* UIEdgeInsets+Extensions.swift in Sources */,
 				B8B37A7C25F1AC12002B866A /* BaseViewController.swift in Sources */,
 				B859FDD125F649770058EDAC /* ListItem.swift in Sources */,
-				B82C470225F0CECA0013B02C /* Link.swift in Sources */,
 				B859FD8325F6457C0058EDAC /* Bullet.swift in Sources */,
 				B867D94D25F811950063F988 /* UITableViewCell+Defaults.swift in Sources */,
 				B859FBE525F298DF0058EDAC /* TextAlignment.swift in Sources */,
