@@ -1,5 +1,5 @@
 # Fusion
-JSON data driven `UITableView` UI for iOS fetched from a remote API (e.g. headless CMS).
+JSON driven `UITableViewController` for iOS fetched from a remote API (e.g. headless CMS).
 
 ## Installation
 ### Carthage
