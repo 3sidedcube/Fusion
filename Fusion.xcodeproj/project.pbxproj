@@ -106,6 +106,7 @@
 		B867D91725F803900063F988 /* ImageContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D91625F803900063F988 /* ImageContainerView.swift */; };
 		B867D93725F808320063F988 /* LabelContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D93625F808320063F988 /* LabelContainerView.swift */; };
 		B867D94D25F811950063F988 /* UITableViewCell+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D94C25F811950063F988 /* UITableViewCell+Defaults.swift */; };
+		B867D98325F8EE910063F988 /* LabelContainerView+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -371,6 +372,7 @@
 		B867D91625F803900063F988 /* ImageContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainerView.swift; sourceTree = "<group>"; };
 		B867D93625F808320063F988 /* LabelContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelContainerView.swift; sourceTree = "<group>"; };
 		B867D94C25F811950063F988 /* UITableViewCell+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Defaults.swift"; sourceTree = "<group>"; };
+		B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelContainerView+Text.swift"; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 				B867D64425F782FD0063F988 /* Cell+Model */,
 				B859FE5725F695ED0058EDAC /* Model+Row */,
 				B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */,
+				B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */,
 				B867D90025F7FE530063F988 /* ImageContainerView+Image.swift */,
 				B859FBCD25F296C90058EDAC /* Font+UIFont.swift */,
 				B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */,
@@ -615,10 +618,10 @@
 		B859FE4625F692BD0058EDAC /* Rows */ = {
 			isa = PBXGroup;
 			children = (
-				B867D7DE25F7CB870063F988 /* DefaultRow */,
-				B867D66725F7852A0063F988 /* ImageRow */,
-				B867D62025F77B990063F988 /* DividerRow */,
 				B859FE4725F6954E0058EDAC /* TextRow */,
+				B867D66725F7852A0063F988 /* ImageRow */,
+				B867D7DE25F7CB870063F988 /* DefaultRow */,
+				B867D62025F77B990063F988 /* DividerRow */,
 			);
 			path = Rows;
 			sourceTree = "<group>";
@@ -657,8 +660,8 @@
 			isa = PBXGroup;
 			children = (
 				B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */,
-				B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */,
 				B867D6A025F791A00063F988 /* ImageTableViewCell+Image.swift */,
+				B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */,
 				B867D8F425F7FC9E0063F988 /* DefaultTableViewCell+ListItem.swift */,
 			);
 			path = "Cell+Model";
@@ -1364,6 +1367,7 @@
 				B859FE7925F696B80058EDAC /* CALayer+Border.swift in Sources */,
 				B82C475525F0D3580013B02C /* Page+Data.swift in Sources */,
 				B859FC3F25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift in Sources */,
+				B867D98325F8EE910063F988 /* LabelContainerView+Text.swift in Sources */,
 				B8C11D9125F04BCA00E2AC5E /* CellHeightConfigurable.swift in Sources */,
 				B82C473225F0D17A0013B02C /* Screen.swift in Sources */,
 				OBJ_147 /* Fusion.swift in Sources */,

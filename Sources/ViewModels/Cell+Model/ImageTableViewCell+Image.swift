@@ -17,8 +17,5 @@ extension ImageTableViewCell {
     ///   - completion: `ImageCompletion`
     func setImage(_ image: inout Image, completion: ImageCompletion?) {
         imageContainerView.setImage(&image, completion: completion)
-
-        // `margin`
-        imageContainerViewInsets = image.margin?.insets ?? .zero
     }
 }

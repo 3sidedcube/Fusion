@@ -10,9 +10,18 @@ import Foundation
 /// Source of a remote image
 public struct ImageSource: Codable {
 
-    /// Remote URL source
+    /// Image id as `String`
+    public var id: String?
+
+    /// Permalink `String`
+    public var permalink: String?
+
+    /// API `URL` `String`
+    public var apiUrl: String?
+
+    /// Remote `URL` `String` source
     public var url: String?
 
-    /// `Size`
+    /// `Size` of the image
     public var size: Size?
 }

@@ -21,7 +21,7 @@ public struct Text: Codable, JSONModel {
     public var font: Font?
 
     /// `TextAlignment`
-    public var textAlignment: CMSEnum<TextAlignment>?
+    public var textAlignment: TextAlignment?
 
     /// Number of lines to show this text in
     public var numberOfLines: Int?

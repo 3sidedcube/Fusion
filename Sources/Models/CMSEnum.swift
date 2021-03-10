@@ -15,4 +15,7 @@ public struct CMSEnum<T>: Codable where T: RawRepresentable, T: Codable {
 
     /// Value of type `T`
     public var value: T
+
+    /// Human readable name for `key`
+    public var label: String?
 }

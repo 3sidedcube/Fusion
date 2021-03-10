@@ -13,9 +13,6 @@ extension TextTableViewCell {
     ///
     /// - Parameter text: `Text`
     func setText(_ text: Text) {
-        label.setText(text)
-
-        // `margin`
-        labelInsets = text.margin?.insets ?? .zero
+        labelContainerView.setText(text)
     }
 }

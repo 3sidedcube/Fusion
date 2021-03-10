@@ -18,22 +18,23 @@ extension ImageContainerView {
     ///   - completion: `ImageCompletion`
     func setImage(_ image: inout Image, completion: ImageCompletion?) {
         // `backgroundColor`
-        backgroundColor = image.backgroundColor?.hexColor ?? .clear
+        imageContainerView.backgroundColor = image.backgroundColor?.hexColor ?? .clear
 
         // `cornerRadius`
-        layer.cornerRadius = CGFloat(image.cornerRadius ?? 0)
-        layer.cornerCurve = .continuous
+        imageContainerView.layer.cornerRadius = CGFloat(image.cornerRadius ?? 0)
+        imageContainerView.layer.cornerCurve = .continuous
 
         // `shadow`
-        layer.setShadow(image.shadow)
+        imageContainerView.layer.setShadow(image.shadow)
 
         // `border`
-        layer.setBorder(image.border)
+        imageContainerView.layer.setBorder(image.border)
 
         // `padding`
-        imageViewInsets = image.padding?.insets ?? .zero
+        padding = image.padding?.insets ?? .zero
 
         // `margin` ignored
+        margin = image.margin?.insets ?? .zero
 
         // `src`
         imageView.kf.cancelDownloadTask()

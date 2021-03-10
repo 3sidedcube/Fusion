@@ -46,7 +46,7 @@ public extension UILabel {
 
         // `textAlignment`
         textAlignment = .left
-        if let textAlignment = text.textAlignment?.value.nsTextAlignment {
+        if let textAlignment = text.textAlignment?.nsTextAlignment {
             paragraphStyle.alignment = textAlignment
         }
 
