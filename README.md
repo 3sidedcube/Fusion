@@ -1,18 +1,19 @@
 # Fusion
 JSON data driven `UITableView` UI for iOS fetched from a remote API (e.g. headless CMS).
 
-## Install
-To install, simply run the `install.sh` script.
-The script will, using [Carthage](https://github.com/Carthage/Carthage), fetch and build the
-`.xcframework`s linked in the `.xcodeproj`.
-```bash
-./install.sh
-``` 
+## Installation
+### Carthage
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "3sidedcube/Fusion" "develop"
+```
+It's recommended you build with `xcframework`s.
+
 
 ## Make your own model
 It's extremely likely an app using this framework will want to add its own model driven dynamic UI.
 Doing so is, more or less, as simple as creating a `JSONModel` and hooking it up to a `Row` so the framework knows how to draw it.
-
 
 1. Create your `JSONModel`
 ```swift
@@ -84,6 +85,14 @@ This framework can use these models to draw a `UIView`s in a `UITableView`.
 
 ### Inheritance
 It would make sense for a lot of the `JSONModel`s to share properties. E.g. properties on a `UIView` such as `backgroundColor`, or `cornerRadius`. `Decodable` doesn't work with inheritance out of the box, so currently all `JSONModel`s are `struct`s which specify all of the properties required to draw the `UIView`.
+
+## Development
+To install dependencies, simply run the `install.sh` script.
+The script will, using [Carthage](https://github.com/Carthage/Carthage), fetch and build the
+`.xcframework`s linked in the `.xcodeproj`.
+```bash
+./install.sh
+``` 
 
 ## Swift Package Manager
 This framework is fundamentally driven by `UIKit` for (only) iOS apps.
