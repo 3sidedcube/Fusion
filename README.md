@@ -9,6 +9,70 @@ The script will, using [Carthage](https://github.com/Carthage/Carthage), fetch a
 ./install.sh
 ``` 
 
+## Make your own model
+It's extremely likely an app using this framework will want to add its own model driven dynamic UI.
+Doing so is, more or less, as simple as creating a `JSONModel` and hooking it up to a `Row` so the framework knows how to draw it.
+
+
+1. Create your `JSONModel`
+```swift
+/// A model which drives the UI for a CardRow
+struct Card: Codable, JSONModel {
+
+    // Title of the card 
+    var title: String?
+    
+    // etc...
+}
+///
+```
+2. Create a `Row` to draw your model. The model doesn't have to be passed into the initializer, you can hook up the properties however you want (e.g. when creating a `Row` from the model).
+```swift
+/// A `Row` to draw the `Card` model
+class CardRow: Row {
+
+     /// `Card` model to drive UI
+     let card: Card
+     
+     /// Default memberwise initializer
+     ///
+     /// - Parameters:
+     ///   - card: `Card`
+     init(card: Card) {
+         self.card = card
+     }
+     
+     // Implement `Row`...
+}
+```
+3. Conform your model to `Row`, `RowConvertible`, or `RowArrayConvertible` so the framework knows how your model should be drawn
+```swift
+extension Card: RowConvertible {
+
+    /// Map `Card` model to `CardRow` 
+    public func toRow() throws -> Row {
+        return CardRow(card: self)
+    }
+}
+```
+4. Declare your model as one of the app's `JSONModel`s
+```
+/// Override `Fusion` to provide app specific configuration
+class AppFusion: Fusion {
+
+    /// Append additional app specific `JSONModel`s
+    override var jsonModelTypes: [JSONModel.Type] {
+        return super.jsonModelTypes + [
+            Card.self
+        ]
+    }
+}
+```
+5. Ensure the singleton `Fusion` instance uses your `Fusion` subclass. E.g. in `application(_:didFinishLaunchingWithOptions:)`
+```swift
+Fusion.shared = AppFusion()
+```
+
 ## JSONModel
 A `JSONModel` is an entity which can be dynamically instantiated from a `JSON` ([SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)) .
 The `JSON` should include a `"class"` field which defines the `JSONModel` to instantiate.
