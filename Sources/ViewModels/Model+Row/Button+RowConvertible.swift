@@ -11,7 +11,7 @@ import ThunderTable
 extension Button: RowConvertible {
 
     /// Create a `ButtonRow`
-    func toRow() throws -> Row {
+    public func toRow() throws -> Row {
         return ButtonRow(button: self)
     }
 }

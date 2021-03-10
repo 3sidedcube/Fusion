@@ -52,7 +52,7 @@ public class ListItem: Codable, JSONModel, RowConvertible {
     // MARK: - RowConvertible
 
     /// Create a `DefaultRow`
-    func toRow() throws -> Row {
+    public func toRow() throws -> Row {
         return DefaultRow(listItem: self)
     }
 }

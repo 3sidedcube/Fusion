@@ -11,7 +11,7 @@ import UIKit
 import ThunderTable
 
 /// Execute functionality on `tableView(_:willDisplay:forRowAt:)`
-protocol CellDisplayable {
+public protocol CellDisplayable {
 
     /// Called on `tableView(_:willDisplay:forRowAt:)` if the `Row` or `UITableViewCell`
     /// conforms to this protocol

@@ -54,7 +54,7 @@ open class InsetLabel: UILabel, Insettable {
 
     /// Set `insets`
     /// - Parameter insets: `UIEdgeInsets`
-    func setInsets(_ insets: UIEdgeInsets) {
+    public func setInsets(_ insets: UIEdgeInsets) {
         self.insets = insets
     }
 }

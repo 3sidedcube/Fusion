@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 /// An entity which can be inset with `UIEdgeInsets`
-protocol Insettable {
+public protocol Insettable {
 
     /// Set the given `insets`
     ///

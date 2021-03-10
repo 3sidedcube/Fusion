@@ -10,7 +10,7 @@ import Foundation
 import ThunderTable
 
 /// A `Row` which may invoke an `Action` by passing the `Action` to the `ActionHandler`
-protocol RowActionable: Row, AnyObject {
+public protocol RowActionable: Row, AnyObject {
 
     /// An `ActionHandler` property to handle `Action`s
     var actionHandler: ActionHandler? { get set }

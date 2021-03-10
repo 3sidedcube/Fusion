@@ -10,7 +10,7 @@ import Foundation
 import ThunderTable
 
 /// A `TableViewController` which responds to `Row`s who request a `UITableView` update
-protocol RowUpdateListener: TableViewController {
+public protocol RowUpdateListener: TableViewController {
 
     /// The given `row` requests a `UITableView` update
     ///

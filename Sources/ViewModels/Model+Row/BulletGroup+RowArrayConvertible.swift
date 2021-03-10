@@ -11,7 +11,7 @@ import ThunderTable
 extension BulletGroup: RowArrayConvertible {
 
     /// Convert to `NumberRow`s
-    func toRows() throws -> [Row] {
+    public func toRows() throws -> [Row] {
         return children
             .enumerated()
             .compactMap {

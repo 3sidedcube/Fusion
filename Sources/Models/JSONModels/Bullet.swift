@@ -12,7 +12,7 @@ import ThunderTable // RowConvertible
 /// These items will likely be numbered and grouped into a `BulletGroup`
 public class Bullet: ListItem {
 
-    override func toRow() throws -> Row {
+    override public func toRow() throws -> Row {
         return NumberRow(listItem: self)
     }
 }

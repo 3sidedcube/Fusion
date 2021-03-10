@@ -11,7 +11,7 @@ import UIKit
 import ThunderTable
 
 /// Execute functionality on `tableView(_:heightForRowAt:)`
-protocol CellHeightConfigurable {
+public protocol CellHeightConfigurable {
 
     /// Called on `tableView(_:heightForRowAt:)` if the `Row` (not `UITableViewCell`)
     /// conforms to this protocol

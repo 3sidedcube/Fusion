@@ -11,7 +11,7 @@ import ThunderTable
 extension Divider: RowConvertible {
 
     /// Create a `DividerRow`
-    func toRow() throws -> Row {
+    public func toRow() throws -> Row {
         return DividerRow(divider: self)
     }
 }

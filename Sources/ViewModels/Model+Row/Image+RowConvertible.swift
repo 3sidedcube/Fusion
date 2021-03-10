@@ -11,7 +11,7 @@ import ThunderTable
 extension Image: RowConvertible {
 
     /// Create an `ImageRow`
-    func toRow() throws -> Row {
+    public func toRow() throws -> Row {
         return ImageRow(image: self)
     }
 }

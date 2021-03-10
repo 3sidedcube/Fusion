@@ -15,7 +15,7 @@ import ThunderTable
 /// If `[Row]` can not be created it should `throw`.
 /// I.e. `nil` is not an acceptable state; this entity should correspond to a `[Row]`
 /// unless there is an `Error`.
-protocol RowArrayConvertible {
+public protocol RowArrayConvertible {
 
     /// Convert to an `[Row]`
     func toRows() throws -> [Row]
