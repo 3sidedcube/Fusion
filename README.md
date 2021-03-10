@@ -26,3 +26,12 @@ This framework is fundamentally driven by `UIKit` for (only) iOS apps.
 The Swift Package Manager integration has been started. Indeed, the framework
 is structured like a Swift Package. When iOS only Swift Packages become more
 standard we will update dependencies and add full support here.
+
+## FAQ
+
+### Why call the model `Text` instead of `TextView`?
+The `Text` represents the model/data read from the API. A "View" is an instance of a `UIView`.
+Indeed, the `Text` model ultimately drives the `UIView` (e.g. `UILabel`) defining how it's properties should look, but it is not a `UIView` itself.
+
+### Why make `ImageContainerView` and `LabelContainerView`, just use `UIImageView` and `UILabel` respectively?
+These are created to handle the `padding` and `margin` properties found on most models which drive the views (`UIView` properties). These are, when phrased like this, more of an Android thing. The iOS equivalent for `margins` is `UIEdgeInsets` which set the `constant` property on `NSLayoutConstraint`s, `padding` can vary but is much the same. The `LabelContainerView`, essentially, wraps an iOS `UILabel` in a container `UIView` where the `padding` and `margin` can be set, like a `TextView` does out of the box in Android.

@@ -108,6 +108,7 @@
 		B867D94D25F811950063F988 /* UITableViewCell+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D94C25F811950063F988 /* UITableViewCell+Defaults.swift */; };
 		B867D98325F8EE910063F988 /* LabelContainerView+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */; };
 		B867D99925F8F2910063F988 /* FusionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D99825F8F2910063F988 /* FusionRow.swift */; };
+		B867D9B925F8FBB10063F988 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D9B825F8FBB10063F988 /* DefaultView.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -375,6 +376,7 @@
 		B867D94C25F811950063F988 /* UITableViewCell+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Defaults.swift"; sourceTree = "<group>"; };
 		B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelContainerView+Text.swift"; sourceTree = "<group>"; };
 		B867D99825F8F2910063F988 /* FusionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionRow.swift; sourceTree = "<group>"; };
+		B867D9B825F8FBB10063F988 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -550,11 +552,9 @@
 		B859FBCC25F296BF0058EDAC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B867D9DA25F8FE470063F988 /* View+Model */,
 				B867D64425F782FD0063F988 /* Cell+Model */,
 				B859FE5725F695ED0058EDAC /* Model+Row */,
-				B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */,
-				B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */,
-				B867D90025F7FE530063F988 /* ImageContainerView+Image.swift */,
 				B859FBCD25F296C90058EDAC /* Font+UIFont.swift */,
 				B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */,
 				B859FCBD25F618700058EDAC /* CALayer+Shadow.swift */,
@@ -589,6 +589,7 @@
 				B867D71525F7A2110063F988 /* AdjustableImageView.swift */,
 				B867D91625F803900063F988 /* ImageContainerView.swift */,
 				B867D93625F808320063F988 /* LabelContainerView.swift */,
+				B867D9B825F8FBB10063F988 /* DefaultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -739,6 +740,16 @@
 				B867D83425F7D30A0063F988 /* UILabel+Defaults.swift */,
 			);
 			path = Defaults;
+			sourceTree = "<group>";
+		};
+		B867D9DA25F8FE470063F988 /* View+Model */ = {
+			isa = PBXGroup;
+			children = (
+				B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */,
+				B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */,
+				B867D90025F7FE530063F988 /* ImageContainerView+Image.swift */,
+			);
+			path = "View+Model";
 			sourceTree = "<group>";
 		};
 		B8C11BFB25EFAD1F00E2AC5E /* Environment */ = {
@@ -1390,6 +1401,7 @@
 				B867D71625F7A2110063F988 /* AdjustableImageView.swift in Sources */,
 				B859FD0125F61E330058EDAC /* RGBAHex.swift in Sources */,
 				B8C11BFE25EFAD2D00E2AC5E /* Environment.swift in Sources */,
+				B867D9B925F8FBB10063F988 /* DefaultView.swift in Sources */,
 				B8C11BC525EFAA3D00E2AC5E /* JSONEncoder+SnakeCase.swift in Sources */,
 				B867D89625F7E8160063F988 /* CMSEnum.swift in Sources */,
 				B82C473125F0D17A0013B02C /* Page.swift in Sources */,
