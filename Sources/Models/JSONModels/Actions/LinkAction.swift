@@ -8,13 +8,13 @@
 
 import Foundation
 
-/// `ArticleAction` from the CMS
+/// `Action` to open an external `URL`
 public struct LinkAction: Codable, Action {
 
-    /// Web `String` for a `URL`
+    /// `String` for a `URL` 
     public var link: String?
 
-    /// Does the link get pushed in app
+    /// Does the link get pushed in app or opened in an external browser app like Safari or Chrome.
     public var inApp: Bool?
 }
 

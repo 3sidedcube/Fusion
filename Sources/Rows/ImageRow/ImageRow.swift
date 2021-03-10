@@ -46,10 +46,6 @@ class ImageRow: FusionRow<ImageTableViewCell>, CellHeightConfigurable {
             return min(image.imageHeight(for: targetWidth), image.size.height)
         }
 
-        if let size = image.src?.size {
-            return size.cgSize.height(for: targetWidth)
-        }
-
         return 0
     }
 

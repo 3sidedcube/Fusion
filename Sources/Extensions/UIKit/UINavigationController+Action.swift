@@ -59,7 +59,7 @@ extension UINavigationController {
     /// - Parameters:
     ///   - pageAction: `PageAction`
     private func pushPageAction(_ pageAction: PageAction) -> Bool {
-        guard let pageURL = pageAction.link?.toURL() else { return false }
+        guard let pageURL = pageAction.entry?.toURL() else { return false }
         push(PageViewController(pageURL: pageURL))
         return true
     }

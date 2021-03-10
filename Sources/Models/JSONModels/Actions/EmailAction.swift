@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// `EmailAction` from the CMS
+/// `EmailAction` to open an email compose
 public struct EmailAction: Codable, Action {
 
     /// Email addresses to send to

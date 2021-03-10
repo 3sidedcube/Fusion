@@ -51,7 +51,7 @@
 		B859FD1725F621930058EDAC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FD1625F621930058EDAC /* Button.swift */; };
 		B859FD8325F6457C0058EDAC /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FD8225F6457C0058EDAC /* Bullet.swift */; };
 		B859FD9925F645A30058EDAC /* BulletGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FD9825F645A30058EDAC /* BulletGroup.swift */; };
-		B859FDA525F646E00058EDAC /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDA425F646E00058EDAC /* ImageSource.swift */; };
+		B859FDA525F646E00058EDAC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDA425F646E00058EDAC /* Entry.swift */; };
 		B859FDBB25F646FF0058EDAC /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDBA25F646FF0058EDAC /* Size.swift */; };
 		B859FDD125F649770058EDAC /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDD025F649770058EDAC /* ListItem.swift */; };
 		B859FDF325F64AF10058EDAC /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDF225F64AF10058EDAC /* Border.swift */; };
@@ -118,6 +118,9 @@
 		B867DAB025F932D10063F988 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DAAF25F932D10063F988 /* ButtonRow.swift */; };
 		B867DABE25F932E80063F988 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DABC25F932E80063F988 /* ButtonTableViewCell.swift */; };
 		B867DABF25F932E80063F988 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B867DABD25F932E80063F988 /* ButtonTableViewCell.xib */; };
+		B867DAD525F9394A0063F988 /* ButtonContainerView+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DAD425F9394A0063F988 /* ButtonContainerView+Button.swift */; };
+		B867DAE125F939D10063F988 /* ButtonTableViewCell+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DAE025F939D10063F988 /* ButtonTableViewCell+Button.swift */; };
+		B867DAED25F93A170063F988 /* Button+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DAEC25F93A170063F988 /* Button+RowConvertible.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -328,7 +331,7 @@
 		B859FD1625F621930058EDAC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		B859FD8225F6457C0058EDAC /* Bullet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
 		B859FD9825F645A30058EDAC /* BulletGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletGroup.swift; sourceTree = "<group>"; };
-		B859FDA425F646E00058EDAC /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
+		B859FDA425F646E00058EDAC /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		B859FDBA25F646FF0058EDAC /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		B859FDD025F649770058EDAC /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		B859FDF225F64AF10058EDAC /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
@@ -395,6 +398,9 @@
 		B867DAAF25F932D10063F988 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
 		B867DABC25F932E80063F988 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		B867DABD25F932E80063F988 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
+		B867DAD425F9394A0063F988 /* ButtonContainerView+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainerView+Button.swift"; sourceTree = "<group>"; };
+		B867DAE025F939D10063F988 /* ButtonTableViewCell+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonTableViewCell+Button.swift"; sourceTree = "<group>"; };
+		B867DAEC25F93A170063F988 /* Button+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+RowConvertible.swift"; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -587,7 +593,7 @@
 		B859FBE325F2982E0058EDAC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B859FDA425F646E00058EDAC /* ImageSource.swift */,
+				B859FDA425F646E00058EDAC /* Entry.swift */,
 				B859FBC025F296A80058EDAC /* Font.swift */,
 				B859FBE425F298DF0058EDAC /* TextAlignment.swift */,
 				B859FD0025F61E330058EDAC /* RGBAHex.swift */,
@@ -669,6 +675,7 @@
 				B867D65B25F7848B0063F988 /* Divider+RowConvertible.swift */,
 				B867D70925F7A0240063F988 /* Image+RowConvertible.swift */,
 				B867DA4725F912CE0063F988 /* BulletGroup+RowArrayConvertible.swift */,
+				B867DAEC25F93A170063F988 /* Button+RowConvertible.swift */,
 			);
 			path = "Model+Row";
 			sourceTree = "<group>";
@@ -690,6 +697,7 @@
 				B867D6A025F791A00063F988 /* ImageTableViewCell+Image.swift */,
 				B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */,
 				B867D8F425F7FC9E0063F988 /* DefaultTableViewCell+ListItem.swift */,
+				B867DAE025F939D10063F988 /* ButtonTableViewCell+Button.swift */,
 			);
 			path = "Cell+Model";
 			sourceTree = "<group>";
@@ -764,6 +772,7 @@
 				B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */,
 				B867D90025F7FE530063F988 /* ImageContainerView+Image.swift */,
 				B867D9F925F8FF2F0063F988 /* DefaultView+ListItem.swift */,
+				B867DAD425F9394A0063F988 /* ButtonContainerView+Button.swift */,
 			);
 			path = "View+Model";
 			sourceTree = "<group>";
@@ -1392,10 +1401,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				B867DAD525F9394A0063F988 /* ButtonContainerView+Button.swift in Sources */,
 				B859FBC125F296A80058EDAC /* Font.swift in Sources */,
 				B8C11DD325F04EDD00E2AC5E /* PageAction.swift in Sources */,
 				B867D93725F808320063F988 /* LabelContainerView.swift in Sources */,
-				B859FDA525F646E00058EDAC /* ImageSource.swift in Sources */,
+				B859FDA525F646E00058EDAC /* Entry.swift in Sources */,
 				B859FB6025F22DF20058EDAC /* CenterConstraints.swift in Sources */,
 				B859FDF325F64AF10058EDAC /* Border.swift in Sources */,
 				B867D62325F77BD70063F988 /* DividerTableViewCell.swift in Sources */,
@@ -1441,6 +1451,7 @@
 				B867D63925F782A30063F988 /* DividerRow.swift in Sources */,
 				B867D68E25F785A70063F988 /* ImageRow.swift in Sources */,
 				B8C11DD125F04EDD00E2AC5E /* EmailAction.swift in Sources */,
+				B867DAED25F93A170063F988 /* Button+RowConvertible.swift in Sources */,
 				B867D8AC25F7EAC50063F988 /* OSLog+Logger.swift in Sources */,
 				B859FD9925F645A30058EDAC /* BulletGroup.swift in Sources */,
 				B867D8B825F7F0AC0063F988 /* UIFont+UIFontDescriptor.swift in Sources */,
@@ -1486,6 +1497,7 @@
 				B8C11CA425EFEAEE00E2AC5E /* ActionHandler.swift in Sources */,
 				B859FCD425F61B210058EDAC /* Divider.swift in Sources */,
 				B867D65C25F7848B0063F988 /* Divider+RowConvertible.swift in Sources */,
+				B867DAE125F939D10063F988 /* ButtonTableViewCell+Button.swift in Sources */,
 				B8C11D4725F002C200E2AC5E /* BaseTableViewController.swift in Sources */,
 				B8C11DE325F04F0200E2AC5E /* UIViewController+Email.swift in Sources */,
 				B867D6E825F79A680063F988 /* Size+CGSize.swift in Sources */,
