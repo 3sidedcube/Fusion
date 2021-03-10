@@ -11,12 +11,11 @@ import UIKit
 import ThunderTable
 import Kingfisher
 
-/// `UITableViewCell` subclass
-private typealias CellClass = ImageTableViewCell
-
 /// A `Row` which draws an `Image`
+///
+/// - Note:
 /// The height of the `ImageRow` should be determined by the `size` of the `UIImage`
-class ImageRow: Row, CellHeightConfigurable {
+class ImageRow: FusionRow<ImageTableViewCell>, CellHeightConfigurable {
 
     /// `Image` to drive UI
     private(set) var image: Image
@@ -37,16 +36,6 @@ class ImageRow: Row, CellHeightConfigurable {
     }
 
     // MARK: - Row
-
-    /// `UITableViewCell` subclass to draw
-    var cellClass: UITableViewCell.Type? {
-        return CellClass.self
-    }
-
-    /// Handle selection style on the cell
-    var selectionStyle: UITableViewCell.SelectionStyle? {
-        return nil
-    }
 
     /// Given a fixed `targetWidth`, get the target height by scaling proportionally
     /// to the aspect ratio of the `rowImage`
@@ -71,14 +60,11 @@ class ImageRow: Row, CellHeightConfigurable {
 
     // MARK: - Configure
 
-    func configure(
-        cell: UITableViewCell,
+    override func configureCell(
+        _ cell: ImageTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
     ) {
-        guard let cell = cell as? CellClass else { return }
-        cell.setDefaults()
-
         // Set view-model
         let imageBefore = uiImage
         cell.setImage(&image) { [weak self, weak tableViewController] remoteImage, _ in

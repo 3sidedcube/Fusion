@@ -9,11 +9,8 @@ import Foundation
 import UIKit
 import ThunderTable
 
-/// `UITableViewCell` subclass
-private typealias CellClass = DividerTableViewCell
-
 /// A `Row` which draws a `Divider`
-class DividerRow: Row {
+class DividerRow: FusionRow<DividerTableViewCell> {
 
     /// `Divider` to drive UI
     var divider: Divider
@@ -27,29 +24,13 @@ class DividerRow: Row {
     init(divider: Divider) {
         self.divider = divider
     }
-
-    // MARK: - Row
-
-    /// `UITableViewCell` subclass to draw
-    var cellClass: UITableViewCell.Type? {
-        return CellClass.self
-    }
-
-    /// `UITableViewCell.SelectionStyle`
-    var selectionStyle: UITableViewCell.SelectionStyle? {
-        return nil
-    }
-
     // MARK: - Configure
 
-    func configure(
-        cell: UITableViewCell,
+    override func configureCell(
+        _ cell: DividerTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
     ) {
-        guard let cell = cell as? CellClass else { return }
-        cell.setDefaults()
-
         // Set view-model
         cell.setDivider(divider)
     }

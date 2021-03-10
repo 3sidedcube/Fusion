@@ -10,11 +10,8 @@ import Foundation
 import UIKit
 import ThunderTable
 
-/// `UITableViewCell` subclass
-private typealias CellClass = TextTableViewCell
-
 /// A `Row` which draws a `Text`
-class TextRow: Row {
+class TextRow: FusionRow<TextTableViewCell> {
 
     /// `Text` to drive UI
     var text: Text
@@ -29,28 +26,13 @@ class TextRow: Row {
         self.text = text
     }
 
-    // MARK: - Row
-
-    /// `UITableViewCell` subclass to draw
-    var cellClass: UITableViewCell.Type? {
-        return CellClass.self
-    }
-
-    /// `UITableViewCell.SelectionStyle`
-    var selectionStyle: UITableViewCell.SelectionStyle? {
-        return nil
-    }
-
     // MARK: - Configure
 
-    func configure(
-        cell: UITableViewCell,
+    override func configureCell(
+        _ cell: TextTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
     ) {
-        guard let cell = cell as? CellClass else { return }
-        cell.setDefaults()
-
         // Set view-model
         cell.setText(text)
     }
