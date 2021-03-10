@@ -21,13 +21,13 @@ class DefaultView: UIView, Insettable {
         }
     }
 
-    /// Set the `UIEdgeInsets` of `verticalStackViewEdgeConstraints`
+    /// Set the `UIEdgeInsets` of `horizontalStackViewEdgeConstraints`
     var padding: UIEdgeInsets {
         get {
-            return verticalStackViewEdgeConstraints.insets
+            return horizontalStackViewEdgeConstraints.insets
         }
         set {
-            verticalStackViewEdgeConstraints.insets = newValue
+            horizontalStackViewEdgeConstraints.insets = newValue
         }
     }
 
@@ -68,7 +68,7 @@ class DefaultView: UIView, Insettable {
     private(set) lazy var subtitleLabelContainerView = LabelContainerView()
 
     /// `EdgeConstraints` of the `verticalStackView`
-    private var verticalStackViewEdgeConstraints: EdgeConstraints!
+    private var horizontalStackViewEdgeConstraints: EdgeConstraints!
 
     /// `EdgeConstraints` of the `containerView`
     private var containerViewEdgeConstraints: EdgeConstraints!
@@ -119,8 +119,8 @@ class DefaultView: UIView, Insettable {
     /// Add constraints to subviews in the subview hierarchy
     private func addConstraints() {
         containerViewEdgeConstraints = containerView.edgeConstraints(to: self)
-        verticalStackViewEdgeConstraints =
-            verticalStackView.edgeConstraints(to: containerView)
+        horizontalStackViewEdgeConstraints =
+            horizontalStackView.edgeConstraints(to: containerView)
     }
 
     // MARK: Insettable

@@ -21,8 +21,7 @@ extension ImageContainerView {
         imageContainerView.backgroundColor = image.backgroundColor?.hexColor ?? .clear
 
         // `cornerRadius`
-        imageContainerView.layer.cornerRadius = CGFloat(image.cornerRadius ?? 0)
-        imageContainerView.layer.cornerCurve = .continuous
+        imageContainerView.layer.setCornerRadius(image.cornerRadius)
 
         // `shadow`
         imageContainerView.layer.setShadow(image.shadow)

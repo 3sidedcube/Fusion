@@ -109,6 +109,8 @@
 		B867D98325F8EE910063F988 /* LabelContainerView+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */; };
 		B867D99925F8F2910063F988 /* FusionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D99825F8F2910063F988 /* FusionRow.swift */; };
 		B867D9B925F8FBB10063F988 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D9B825F8FBB10063F988 /* DefaultView.swift */; };
+		B867D9FA25F8FF2F0063F988 /* DefaultView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D9F925F8FF2F0063F988 /* DefaultView+ListItem.swift */; };
+		B867DA0625F9009E0063F988 /* CALayer+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA0525F9009E0063F988 /* CALayer+CornerRadius.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -377,6 +379,8 @@
 		B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelContainerView+Text.swift"; sourceTree = "<group>"; };
 		B867D99825F8F2910063F988 /* FusionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionRow.swift; sourceTree = "<group>"; };
 		B867D9B825F8FBB10063F988 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
+		B867D9F925F8FF2F0063F988 /* DefaultView+ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultView+ListItem.swift"; sourceTree = "<group>"; };
+		B867DA0525F9009E0063F988 /* CALayer+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+CornerRadius.swift"; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -559,6 +563,7 @@
 				B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */,
 				B859FCBD25F618700058EDAC /* CALayer+Shadow.swift */,
 				B859FE7825F696B80058EDAC /* CALayer+Border.swift */,
+				B867DA0525F9009E0063F988 /* CALayer+CornerRadius.swift */,
 				B859FC3E25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift */,
 				B867D6E725F79A680063F988 /* Size+CGSize.swift */,
 			);
@@ -748,6 +753,7 @@
 				B859FC1025F29A3A0058EDAC /* UILabel+Text.swift */,
 				B867D98225F8EE910063F988 /* LabelContainerView+Text.swift */,
 				B867D90025F7FE530063F988 /* ImageContainerView+Image.swift */,
+				B867D9F925F8FF2F0063F988 /* DefaultView+ListItem.swift */,
 			);
 			path = "View+Model";
 			sourceTree = "<group>";
@@ -1379,6 +1385,7 @@
 				B867D90125F7FE530063F988 /* ImageContainerView+Image.swift in Sources */,
 				B8C11DD025F04EDD00E2AC5E /* LinkAction.swift in Sources */,
 				B859FE7925F696B80058EDAC /* CALayer+Border.swift in Sources */,
+				B867D9FA25F8FF2F0063F988 /* DefaultView+ListItem.swift in Sources */,
 				B82C475525F0D3580013B02C /* Page+Data.swift in Sources */,
 				B859FC3F25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift in Sources */,
 				B867D98325F8EE910063F988 /* LabelContainerView+Text.swift in Sources */,
@@ -1424,6 +1431,7 @@
 				B8C11BC625EFAA3D00E2AC5E /* JSONDecoder+SnakeCase.swift in Sources */,
 				B859FE4B25F6955F0058EDAC /* TextTableViewCell.swift in Sources */,
 				B8C11CA625EFEAEE00E2AC5E /* RowConvertible.swift in Sources */,
+				B867DA0625F9009E0063F988 /* CALayer+CornerRadius.swift in Sources */,
 				B867D70A25F7A0240063F988 /* Image+RowConvertible.swift in Sources */,
 				B859FC1125F29A3A0058EDAC /* UILabel+Text.swift in Sources */,
 				B859FD1725F621930058EDAC /* Button.swift in Sources */,
