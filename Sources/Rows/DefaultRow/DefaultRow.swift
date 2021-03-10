@@ -57,5 +57,5 @@ class DefaultRow: FusionRow<DefaultTableViewCell>, RowActionable {
     // MARK: - RowActionable
 
     /// `ActionHandler` to handle `Action`s
-    var actionHandler: ActionHandler?
+    weak var actionHandler: ActionHandler?
 }

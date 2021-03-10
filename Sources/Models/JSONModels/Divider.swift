@@ -20,4 +20,14 @@ public struct Divider: Codable, JSONModel {
 
     /// `Margin` for insets relative to other content
     public var margin: Margin?
+
+    // `backgroundColor` not supported
+
+    // `padding` not supported
+
+    // `shadow` not supported
+
+    // `cornerRadius` not supported
+
+    // `border` not supported
 }

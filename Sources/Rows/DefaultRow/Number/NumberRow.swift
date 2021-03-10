@@ -23,37 +23,12 @@ class NumberRow: DefaultRow, CellDisplayable {
 
     // MARK: - Row
 
-    override func configure(
-        cell: UITableViewCell,
+    override func configureCell(
+        _ cell: DefaultTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
     ) {
-        /*
-
-
-        // Override
-        titleSpacing = 4
-        containerInsets = .zero
-        innerInsets = UIEdgeInsets(
-            top: 13, left: .horizontalMargin, bottom: 16, right: .horizontalMargin
-        )
-
-        // Execute super
-        super.configure(cell: cell, at: indexPath, in: tableViewController)
-
-        // Cast to cell known type
-        guard let cell = cell as? DefaultCellClass else { return }
-
-        // shadowContainerView
-        cell.shadowContainerView.layer.shadow = nil
-
-        // containerViews
-        cell.containerViews.forEach {
-            $0.layer.cornerRadius = 0
-        }
-
-        // horizontalStackView
-        cell.horizontalStackView.alignment = .top
+        super.configureCell(cell, at: indexPath, in: tableViewController)
 
         // NumberLabel
         let label = NumberLabel()
@@ -64,21 +39,22 @@ class NumberRow: DefaultRow, CellDisplayable {
         )
 
         // leadingContainerView
-        cell.leadingContainerView.isHidden = false
-        cell.leadingContainerView.backgroundColor = .clear
-        cell.leadingContainerView.layer.shadow = nil
-        cell.leadingContainerView.removeSubviewsRecursive()
-        cell.leadingContainerView.addSubview(label)
+        let numberContainerView = cell.numberContainerView
+        numberContainerView.isHidden = false
+        numberContainerView.backgroundColor = .clear
+        numberContainerView.layer.setShadow(nil)
+        numberContainerView.layer.setBorder(nil)
+        numberContainerView.padding = .zero
+        numberContainerView.margin = .zero
+        numberContainerView.removeSubviewsRecursive()
+        numberContainerView.addSubview(label)
 
         // Constrain
-        label.snp.makeConstraints { make in
-            make.width.equalTo(label.snp.height)
-            make.edges.equalTo(cell.leadingContainerView)
-        }
+        label.edgeConstraints(to: numberContainerView)
+        label.widthAnchor.constraint(equalTo: label.heightAnchor).isActive = true
 
         // Separators
         cell.separators = [TableSeparator(position: .bottom, strokeWidth: 2)]
-         */
     }
 
     /// Get the index of `self` in its `Section` of other `NumberRow` instances
@@ -113,10 +89,9 @@ class NumberRow: DefaultRow, CellDisplayable {
         in tableViewController: TableViewController,
         forRowAt indexPath: IndexPath
     ) {
-        /*
         let sectionRow = tableViewController[indexPath]
         guard
-            let cell = cell as? DefaultCellClass,
+            let cell = cell as? DefaultTableViewCell,
             let row = sectionRow?.row as? NumberRow,
             let section = sectionRow?.section
         else {
@@ -124,13 +99,21 @@ class NumberRow: DefaultRow, CellDisplayable {
         }
 
         // `UILabel` to set number text
-        let numberLabel: NumberLabel? = cell.leadingContainerView.firstSubviewOfType()
+        let numberLabel: NumberLabel? = cell.numberContainerView.firstSubviewOfType()
 
         // Number of the `NumberRow`
         let number = row.number ?? self.number(for: indexPath, in: section) ?? 0
 
         // Set `text` of `UILabel`
         numberLabel?.text = String(number)
- */
+    }
+}
+
+// MARK: - DefaultTableViewCell + Container
+
+private extension DefaultTableViewCell {
+
+    var numberContainerView: ImageContainerView {
+        return defaultView.imageContainerView
     }
 }

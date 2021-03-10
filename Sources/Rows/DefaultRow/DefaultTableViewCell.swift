@@ -9,7 +9,7 @@
 import UIKit
 
 /// `UITableViewCell` which a title, subtitle, and leading container `UIView`
-class DefaultTableViewCell: UITableViewCell, Highlightable {
+class DefaultTableViewCell: SeparatorTableViewCell, Highlightable {
 
     /// `DefaultView`
     @IBOutlet private(set) var defaultView: DefaultView!

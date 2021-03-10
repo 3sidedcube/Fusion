@@ -109,7 +109,11 @@
 		B867D9B925F8FBB10063F988 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D9B825F8FBB10063F988 /* DefaultView.swift */; };
 		B867D9FA25F8FF2F0063F988 /* DefaultView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D9F925F8FF2F0063F988 /* DefaultView+ListItem.swift */; };
 		B867DA0625F9009E0063F988 /* CALayer+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA0525F9009E0063F988 /* CALayer+CornerRadius.swift */; };
-		B867DA1C25F905340063F988 /* ListItem+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA1B25F905340063F988 /* ListItem+RowConvertible.swift */; };
+		B867DA4825F912CE0063F988 /* BulletGroup+RowArrayConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA4725F912CE0063F988 /* BulletGroup+RowArrayConvertible.swift */; };
+		B867DA5E25F9151D0063F988 /* NumberLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA5D25F9151C0063F988 /* NumberLabel.swift */; };
+		B867DA6A25F915570063F988 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA6925F915570063F988 /* UIView+Extensions.swift */; };
+		B867DA7825F91B7D0063F988 /* TableSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA7625F91B7D0063F988 /* TableSeparator.swift */; };
+		B867DA7925F91B7D0063F988 /* SeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA7725F91B7D0063F988 /* SeparatorTableViewCell.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -378,7 +382,11 @@
 		B867D9B825F8FBB10063F988 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
 		B867D9F925F8FF2F0063F988 /* DefaultView+ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultView+ListItem.swift"; sourceTree = "<group>"; };
 		B867DA0525F9009E0063F988 /* CALayer+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+CornerRadius.swift"; sourceTree = "<group>"; };
-		B867DA1B25F905340063F988 /* ListItem+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListItem+RowConvertible.swift"; sourceTree = "<group>"; };
+		B867DA4725F912CE0063F988 /* BulletGroup+RowArrayConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BulletGroup+RowArrayConvertible.swift"; sourceTree = "<group>"; };
+		B867DA5D25F9151C0063F988 /* NumberLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberLabel.swift; sourceTree = "<group>"; };
+		B867DA6925F915570063F988 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		B867DA7625F91B7D0063F988 /* TableSeparator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSeparator.swift; sourceTree = "<group>"; };
+		B867DA7725F91B7D0063F988 /* SeparatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewCell.swift; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -593,6 +601,7 @@
 				B867D91625F803900063F988 /* ImageContainerView.swift */,
 				B867D93625F808320063F988 /* LabelContainerView.swift */,
 				B867D9B825F8FBB10063F988 /* DefaultView.swift */,
+				B867DA5D25F9151C0063F988 /* NumberLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -607,6 +616,7 @@
 				B867D6CF25F798420063F988 /* UIImage+Extensions.swift */,
 				B867D6F325F79B2A0063F988 /* UIEdgeInsets+Extensions.swift */,
 				B867D8B725F7F0AC0063F988 /* UIFont+UIFontDescriptor.swift */,
+				B867DA6925F915570063F988 /* UIView+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -626,6 +636,7 @@
 			children = (
 				B867D99825F8F2910063F988 /* FusionRow.swift */,
 				B859FE4725F6954E0058EDAC /* TextRow */,
+				B867DA7525F91B660063F988 /* Separator */,
 				B867D66725F7852A0063F988 /* ImageRow */,
 				B867D62025F77B990063F988 /* DividerRow */,
 				B867D7DE25F7CB870063F988 /* DefaultRow */,
@@ -649,7 +660,7 @@
 				B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */,
 				B867D65B25F7848B0063F988 /* Divider+RowConvertible.swift */,
 				B867D70925F7A0240063F988 /* Image+RowConvertible.swift */,
-				B867DA1B25F905340063F988 /* ListItem+RowConvertible.swift */,
+				B867DA4725F912CE0063F988 /* BulletGroup+RowArrayConvertible.swift */,
 			);
 			path = "Model+Row";
 			sourceTree = "<group>";
@@ -755,6 +766,15 @@
 				B867D9F925F8FF2F0063F988 /* DefaultView+ListItem.swift */,
 			);
 			path = "View+Model";
+			sourceTree = "<group>";
+		};
+		B867DA7525F91B660063F988 /* Separator */ = {
+			isa = PBXGroup;
+			children = (
+				B867DA7725F91B7D0063F988 /* SeparatorTableViewCell.swift */,
+				B867DA7625F91B7D0063F988 /* TableSeparator.swift */,
+			);
+			path = Separator;
 			sourceTree = "<group>";
 		};
 		B8C11BFB25EFAD1F00E2AC5E /* Environment */ = {
@@ -1354,13 +1374,13 @@
 				B859FBC125F296A80058EDAC /* Font.swift in Sources */,
 				B8C11DD325F04EDD00E2AC5E /* PageAction.swift in Sources */,
 				B867D93725F808320063F988 /* LabelContainerView.swift in Sources */,
-				B867DA1C25F905340063F988 /* ListItem+RowConvertible.swift in Sources */,
 				B859FDA525F646E00058EDAC /* ImageSource.swift in Sources */,
 				B859FB6025F22DF20058EDAC /* CenterConstraints.swift in Sources */,
 				B859FDF325F64AF10058EDAC /* Border.swift in Sources */,
 				B867D62325F77BD70063F988 /* DividerTableViewCell.swift in Sources */,
 				B8C11D9325F04BCA00E2AC5E /* CellDisplayable.swift in Sources */,
 				B859FBFB25F299020058EDAC /* TextAlignment+NSTextAlignment.swift in Sources */,
+				B867DA7925F91B7D0063F988 /* SeparatorTableViewCell.swift in Sources */,
 				B859FCF525F61D860058EDAC /* Shadow.swift in Sources */,
 				B82C475625F0D3580013B02C /* JSON+Row.swift in Sources */,
 				B867D6D025F798420063F988 /* UIImage+Extensions.swift in Sources */,
@@ -1392,6 +1412,7 @@
 				B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */,
 				B867D80125F7CE100063F988 /* HighlightableView.swift in Sources */,
 				B859FBA825F2556E0058EDAC /* Result+CMSObject.swift in Sources */,
+				B867DA5E25F9151D0063F988 /* NumberLabel.swift in Sources */,
 				B859FC1D25F29B190058EDAC /* UIColor+Extensions.swift in Sources */,
 				B867D80F25F7D0170063F988 /* UIColor+Defaults.swift in Sources */,
 				B859FCBE25F618700058EDAC /* CALayer+Shadow.swift in Sources */,
@@ -1411,6 +1432,7 @@
 				B82C473125F0D17A0013B02C /* Page.swift in Sources */,
 				B859FB6125F22DF20058EDAC /* Constrainable.swift in Sources */,
 				B859FC8425F6162A0058EDAC /* Image.swift in Sources */,
+				B867DA4825F912CE0063F988 /* BulletGroup+RowArrayConvertible.swift in Sources */,
 				B867D6AD25F795560063F988 /* RemoteImage.swift in Sources */,
 				B859FE9925F69FF50058EDAC /* Text+RowConvertible.swift in Sources */,
 				B859FC2925F2A0040058EDAC /* Padding.swift in Sources */,
@@ -1420,6 +1442,8 @@
 				B867D80025F7CE100063F988 /* Highlightable.swift in Sources */,
 				B8C11DBF25F04E9200E2AC5E /* UINavigationController+Action.swift in Sources */,
 				B859FBB525F294590058EDAC /* Text.swift in Sources */,
+				B867DA7825F91B7D0063F988 /* TableSeparator.swift in Sources */,
+				B867DA6A25F915570063F988 /* UIView+Extensions.swift in Sources */,
 				B859FC4C25F37BB30058EDAC /* InsetLabel.swift in Sources */,
 				B867D7E425F7CCF40063F988 /* DefaultRow.swift in Sources */,
 				B859FE4C25F6955F0058EDAC /* TextRow.swift in Sources */,

@@ -45,4 +45,8 @@ public struct Text: Codable, JSONModel {
 
     /// `Border` of the container
     public var border: Border?
+
+    // `shadow` not supported
+
+    // `cornerRadius` not supported
 }

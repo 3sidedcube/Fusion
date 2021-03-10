@@ -89,11 +89,12 @@ class ImageRow: FusionRow<ImageTableViewCell>, CellHeightConfigurable {
 
         // Get the targetWidth of the image
         let tableViewWidth = tableViewController.tableView.bounds.width
-        let insetWidth = tableViewWidth - horizontalMargin - horizontalPadding
-        let targetWidth = max(0, insetWidth)
+        let width = tableViewWidth - horizontalMargin - horizontalPadding
+        let targetWidth = max(0, width)
 
         // Get the targetHeight of the image
         let targetHeight = imageHeight(for: targetWidth)
-        return targetHeight + verticalMargin + verticalPadding
+        let height = targetHeight + verticalMargin + verticalPadding
+        return height
     }
 }

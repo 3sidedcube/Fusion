@@ -9,7 +9,7 @@
 import Foundation
 
 /// An entity which can be passed an `Action` to invoke functionality
-protocol ActionHandler {
+protocol ActionHandler: AnyObject {
 
     /// Handle the given `action`
     ///

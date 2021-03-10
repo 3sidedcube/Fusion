@@ -12,6 +12,8 @@ import ThunderTable
 /// Base `Row` for other `Row`s in this project
 class FusionRow<T>: Row where T: UITableViewCell {
 
+    // MARK: - Row
+
     /// `UITableViewCell` subclass to draw
     var cellClass: UITableViewCell.Type? {
         return T.self
