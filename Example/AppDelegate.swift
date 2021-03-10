@@ -18,9 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: LaunchOptions?
     ) -> Bool {
-
         // Turn on HTTPRequest logging
-        HTTPRequest.Configuration.shared.responseLogging = Debug.isDebugging
+        HTTPRequest.Configuration.shared.responseLogging = true
 
         return true
     }
