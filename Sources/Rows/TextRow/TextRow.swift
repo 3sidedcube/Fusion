@@ -14,7 +14,7 @@ import ThunderTable
 class TextRow: FusionRow<TextTableViewCell> {
 
     /// `Text` to drive UI
-    var text: Text
+    let text: Text
 
     // MARK: - Init
 
