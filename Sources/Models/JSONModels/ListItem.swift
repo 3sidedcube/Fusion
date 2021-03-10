@@ -25,6 +25,9 @@ public class ListItem: Codable, JSONModel {
     /// Spacing between `image` and text views
     public var imageSpacing: Float?
 
+    /// `ActionJSON` to fire `Action` when clicked
+    public var action: ActionJSON?
+
     // MARK: - View
 
     /// RGBA hex color for the background

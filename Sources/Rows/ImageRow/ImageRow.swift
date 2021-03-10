@@ -53,7 +53,7 @@ class ImageRow: Row, CellHeightConfigurable {
     ///
     /// - Parameter targetWidth: `CGFloat` width to force
     func imageHeight(for targetWidth: CGFloat) -> CGFloat {
-        if let image = self.uiImage {
+        if let image = uiImage {
             return min(image.imageHeight(for: targetWidth), image.size.height)
         }
 
@@ -107,7 +107,7 @@ class ImageRow: Row, CellHeightConfigurable {
         let targetWidth = max(0, insetWidth)
 
         // Get the targetHeight of the image
-        let targetHeight = self.imageHeight(for: targetWidth)
+        let targetHeight = imageHeight(for: targetWidth)
         return targetHeight + verticalMargin + verticalPadding
     }
 }

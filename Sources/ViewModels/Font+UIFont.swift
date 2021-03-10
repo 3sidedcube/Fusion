@@ -23,20 +23,20 @@ public extension Font {
     /// Try get `UIFont` from  `name` and `weight`
     private func font() -> UIFont? {
         guard let fontName = name, let weight = weight else { return nil }
-        let fontWeight = weight.value.rawValue.capitalized
+        let fontWeight = weight.capitalized
         let name = "\(fontName)-\(fontWeight)"
         return UIFont(name: name, size: fontSize)
     }
 
     /// Try get system `UIFont` with `weight` falling back on default system `UIFont`
     private func systemFont() -> UIFont {
-        guard let weight = weight?.value else {
+        guard let fontWeight = fontWeight else {
             return UIFont.systemFont(ofSize: fontSize)
         }
 
-        let fontWeight = weight.uiFontWeight
-        let font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
-        return weight.addingTraitsToFont(font)
+        let uiFontWeight = fontWeight.uiFontWeight
+        let font = UIFont.systemFont(ofSize: fontSize, weight: uiFontWeight)
+        return fontWeight.addingTraitsToFont(font)
     }
 }
 
@@ -49,7 +49,7 @@ public extension Font.Weight {
         switch self {
         case .regular: return .regular
         case .bold: return .bold
-        case .semiBold: return .semibold
+        case .semibold: return .semibold
         case .heavy: return .heavy
         case .light: return .light
         case .italic: return .regular

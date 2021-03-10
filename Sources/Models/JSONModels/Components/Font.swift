@@ -10,8 +10,22 @@ import Foundation
 /// Properties which map to a `UIFont`
 public struct Font: Codable {
 
-    /// Properties which map to a`Font.Weight`
-    public enum Weight: String, Codable, CaseIterable {
+    /// Name of the font, e.g. "OpenSans"
+    public var name: String?
+
+    /// Weight of the font, e.g. "regular"
+    public var weight: String?
+
+    /// Size of the font in pt, e.g. 10
+    public var size: Float?
+}
+
+// MARK: - Font.Weight
+
+public extension Font {
+
+    /// Properties which map to a`UIFont.Weight`
+    enum Weight: String, Codable, CaseIterable {
 
         /// "Regular" font
         case regular
@@ -20,7 +34,7 @@ public struct Font: Codable {
         case bold
 
         /// "SemiBold" font
-        case semiBold
+        case semibold
 
         /// "Heavy" font
         case heavy
@@ -32,12 +46,9 @@ public struct Font: Codable {
         case italic
     }
 
-    /// Name of the font, e.g. "Open Sans"
-    public var name: String?
-
-    /// Weight of the font, e.g. "Regular"
-    public var weight: CMSEnum<Weight>?
-
-    /// Size of the font in pt, e.g. 10
-    public var size: Float?
+    /// Map `weight` to `Font.Weight`
+    var fontWeight: Font.Weight? {
+        guard let weight = weight else { return nil }
+        return Weight(rawValue: weight)
+    }
 }
