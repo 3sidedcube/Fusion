@@ -11,6 +11,6 @@ import UIKit
 /// A `UITableViewCell` with a single `UIImageView` contained in a `UIView`
 class ImageTableViewCell: UITableViewCell {
 
-    /// `UIView` container of `UIImageView`
+    /// `ImageContainerView`
     @IBOutlet private(set) var imageContainerView: ImageContainerView!
 }

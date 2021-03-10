@@ -11,6 +11,6 @@ import UIKit
 /// Simple `UITableViewCell` with a `label` inset from the `contentView`
 class TextTableViewCell: UITableViewCell {
 
-    /// The `LabelContainerView`
+    /// `LabelContainerView`
     @IBOutlet private(set) var labelContainerView: LabelContainerView!
 }

@@ -24,6 +24,7 @@ class DividerRow: FusionRow<DividerTableViewCell> {
     init(divider: Divider) {
         self.divider = divider
     }
+
     // MARK: - Configure
 
     override func configureCell(
