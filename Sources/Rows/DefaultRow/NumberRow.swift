@@ -44,6 +44,7 @@ class NumberRow: DefaultRow, CellDisplayable {
         numberContainerView.backgroundColor = .clear
         numberContainerView.layer.setShadow(nil)
         numberContainerView.layer.setBorder(nil)
+        numberContainerView.layer.setCornerRadius(nil)
         numberContainerView.padding = .zero
         numberContainerView.margin = .zero
         numberContainerView.removeSubviewsRecursive()

@@ -635,8 +635,8 @@
 			isa = PBXGroup;
 			children = (
 				B867D99825F8F2910063F988 /* FusionRow.swift */,
-				B859FE4725F6954E0058EDAC /* TextRow */,
 				B867DA7525F91B660063F988 /* Separator */,
+				B859FE4725F6954E0058EDAC /* TextRow */,
 				B867D66725F7852A0063F988 /* ImageRow */,
 				B867D62025F77B990063F988 /* DividerRow */,
 				B867D7DE25F7CB870063F988 /* DefaultRow */,
@@ -723,20 +723,12 @@
 		B867D7DE25F7CB870063F988 /* DefaultRow */ = {
 			isa = PBXGroup;
 			children = (
-				B867D7F025F7CD650063F988 /* Number */,
 				B867D7E225F7CCF40063F988 /* DefaultRow.swift */,
+				B867D7F125F7CD740063F988 /* NumberRow.swift */,
 				B867D7E025F7CCF40063F988 /* DefaultTableViewCell.swift */,
 				B867D7E125F7CCF40063F988 /* DefaultTableViewCell.xib */,
 			);
 			path = DefaultRow;
-			sourceTree = "<group>";
-		};
-		B867D7F025F7CD650063F988 /* Number */ = {
-			isa = PBXGroup;
-			children = (
-				B867D7F125F7CD740063F988 /* NumberRow.swift */,
-			);
-			path = Number;
 			sourceTree = "<group>";
 		};
 		B867D80D25F7CFFD0063F988 /* Defaults */ = {

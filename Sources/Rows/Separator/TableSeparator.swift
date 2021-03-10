@@ -36,17 +36,14 @@ class TableSeparator {
         return shapeLayer
     }()
 
-    /// Width of the stroked path
-    /// - Note:
-    /// If a cell above has a `RewardTierSeparator` at the bottom and this cell
-    /// has a `RewardTierSeparator` the stroke width will be the sum of the 2.
+    /// `CGFloat` width of the stroked path
     var strokeWidth: CGFloat {
         didSet {
             updateStrokeWidth()
         }
     }
 
-    /// Color of the stroked path
+    /// `UIColor` of the stroked path
     var strokeColor: UIColor {
         didSet {
             updateStrokeColor()
@@ -63,10 +60,8 @@ class TableSeparator {
     /// `UIBezierPath` of `shapeLayer`'s path
     var path: UIBezierPath? {
         get {
-            if let path = shapeLayer.path {
-                return UIBezierPath(cgPath: path)
-            }
-            return nil
+            guard let path = shapeLayer.path else { return nil }
+            return UIBezierPath(cgPath: path)
         }
         set {
             shapeLayer.path = newValue?.cgPath
@@ -106,10 +101,9 @@ class TableSeparator {
     }
 
     func bringToFront() {
-        if let superlayer = shapeLayer.superlayer {
-            removeFromSuperlayer()
-            addToLayer(layer: superlayer)
-        }
+        guard let superlayer = shapeLayer.superlayer else { return }
+        removeFromSuperlayer()
+        addToLayer(layer: superlayer)
     }
 
     // MARK: - Update
@@ -132,9 +126,7 @@ class TableSeparator {
     /// Update the path of `shapeLayer`, based on the metrics of
     /// its superlayer
     func updatePath() {
-        guard let superlayer = shapeLayer.superlayer else {
-            return
-        }
+        guard let superlayer = shapeLayer.superlayer else { return }
 
         let width = superlayer.bounds.width
         let height = superlayer.bounds.height
