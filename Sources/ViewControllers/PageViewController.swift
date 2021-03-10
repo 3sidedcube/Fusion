@@ -64,6 +64,16 @@ open class PageViewController: BaseViewController {
         return tableViewController.tableView
     }
 
+    /// Refresh the `Page` on pull
+    public var pullToRefresh = false {
+        didSet {
+            didSetPullToRefresh()
+        }
+    }
+
+    /// Is the `Page` currently being refreshed
+    private(set) var isRefreshing = false
+
     // MARK: - Init
 
     /// Initialize with `page`
@@ -116,6 +126,9 @@ open class PageViewController: BaseViewController {
         addSubviews()
         addConstraints()
 
+        // Fire `didSet` of `pullToRefresh`
+        didSetPullToRefresh()
+
         // Redraw the UI
         redraw()
 
@@ -129,6 +142,13 @@ open class PageViewController: BaseViewController {
     open func addSubviews() {
         contentView.addSubview(activityIndicator)
         view.addSubview(contentView)
+
+        // Add `tableViewController` as child in `contentView`
+        add(
+            child: tableViewController,
+            toView: contentView,
+            setFrameAndAutoresizingMask: true
+        )
     }
 
     /// Add constraints to subviews in the subview hierarchy
@@ -147,9 +167,23 @@ open class PageViewController: BaseViewController {
 
     // MARK: - Refresh
 
+    /// `pullToRefresh` set
+    private func didSetPullToRefresh() {
+        if pullToRefresh {
+            tableViewController.addRefreshControl(
+                target: self,
+                action: #selector(refresh),
+                tintColor: view.tintColor
+            )
+        } else {
+            tableViewController.removeRefreshControl()
+        }
+    }
+
     /// Start animating `activityIndicator` unless the `tableViewController` defines
     /// a `UIRefreshControl`
     func beginRefreshing() {
+        isRefreshing = true
         tableViewController.beginRefreshing()
         if tableViewController.refreshControl == nil {
             activityIndicator.startAnimating()
@@ -158,12 +192,14 @@ open class PageViewController: BaseViewController {
 
     /// Stop animating `activityIndicator`
     func endRefreshing() {
+        isRefreshing = false
         tableViewController.endRefreshing()
         activityIndicator.stopAnimating()
     }
 
     /// Load the `Page` from the API if the `Page` can be fetched from a `URL`
-    func refresh() {
+    @objc
+    private func refresh() {
         guard
             case .pageURL(let pageURL) = configuration,
             let httpRequest = try? Fusion.shared.pageHttpRequest(for: pageURL)
@@ -171,6 +207,10 @@ open class PageViewController: BaseViewController {
             return
         }
 
+        // Check if we are already refreshing
+        guard !isRefreshing else { return }
+
+        // Hit API to fetch `Page`
         beginRefreshing()
         AF.request(httpRequest) { [weak self] result in
             self?.endRefreshing()

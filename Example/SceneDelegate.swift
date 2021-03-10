@@ -28,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         do {
             let pageURL = try PageId.sample.toURL()
             let viewController = PageViewController(pageURL: pageURL)
+            viewController.pullToRefresh = true
             return UINavigationController(rootViewController: viewController)
         } catch {
             fatalError("Failed to create rootViewController: \(error)")

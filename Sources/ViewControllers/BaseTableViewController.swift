@@ -127,6 +127,11 @@ open class BaseTableViewController: TableViewController,
         self.refreshControl = refreshControl
     }
 
+    /// Set `refreshControl` to `nil`
+    func removeRefreshControl() {
+        refreshControl = nil
+    }
+
     /// `beginRefreshing` on `refreshControl` if not already
     func beginRefreshing() {
         guard let refreshControl = refreshControl else { return }
