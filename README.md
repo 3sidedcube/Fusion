@@ -17,7 +17,7 @@ Doing so is, more or less, as simple as creating a `JSONModel` and hooking it up
 
 1. Create your `JSONModel`
 ```swift
-/// A model which drives the UI for a CardRow
+/// A model which drives the UI for a `CardRow`
 struct Card: Codable, JSONModel {
 
     // Title of the card 
@@ -57,7 +57,7 @@ extension Card: RowConvertible {
 }
 ```
 4. Declare your model as one of the app's `JSONModel`s
-```
+```swift
 /// Override `Fusion` to provide app specific configuration
 class AppFusion: Fusion {
 
