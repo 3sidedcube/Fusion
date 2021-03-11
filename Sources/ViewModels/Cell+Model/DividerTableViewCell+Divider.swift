@@ -14,13 +14,6 @@ extension DividerTableViewCell {
     ///
     /// - Parameter divider: `Divider`
     func setDivider(_ divider: Divider) {
-        // `color`
-        dividerView.backgroundColor = divider.color?.hexColor ?? .clear
-
-        // `strokeWidth`
-        dividerHeightConstraint.constant = CGFloat(divider.strokeWidth ?? 0)
-
-        // `margin`
-        dividerInsets = divider.margin?.insets ?? .zero
+        dividerView.setDivider(divider)
     }
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,36 +11,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="DividerTableViewCell" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="DividerTableViewCell" customModule="Fusion" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQc-hU-Xr1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKr-mT-UzV" customClass="DividerView" customModule="Fusion" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="emu-S4-ddg"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="UQc-hU-Xr1" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="1nf-gP-ZFN"/>
-                    <constraint firstItem="UQc-hU-Xr1" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="Vwh-sv-xvP"/>
-                    <constraint firstItem="UQc-hU-Xr1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hmo-qK-WMu"/>
-                    <constraint firstItem="UQc-hU-Xr1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jwt-ZP-jj7"/>
+                    <constraint firstAttribute="bottom" secondItem="MKr-mT-UzV" secondAttribute="bottom" id="7rS-Zk-08C"/>
+                    <constraint firstAttribute="trailing" secondItem="MKr-mT-UzV" secondAttribute="trailing" id="GO6-Id-1At"/>
+                    <constraint firstItem="MKr-mT-UzV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gt4-fY-ytO"/>
+                    <constraint firstItem="MKr-mT-UzV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lGy-bm-u80"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="dividerBottomConstraint" destination="Vwh-sv-xvP" id="X7K-qF-Ezc"/>
-                <outlet property="dividerHeightConstraint" destination="emu-S4-ddg" id="Q65-oB-3dm"/>
-                <outlet property="dividerLeadingConstraint" destination="hmo-qK-WMu" id="P0k-2L-j9G"/>
-                <outlet property="dividerTopConstraint" destination="jwt-ZP-jj7" id="ilx-aH-uYF"/>
-                <outlet property="dividerTrailingConstraint" destination="1nf-gP-ZFN" id="Kvr-3C-bs1"/>
-                <outlet property="dividerView" destination="UQc-hU-Xr1" id="36v-xt-UJH"/>
+                <outlet property="dividerView" destination="MKr-mT-UzV" id="UMF-RG-UmL"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="145.64732142857142"/>
         </tableViewCell>

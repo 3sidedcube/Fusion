@@ -118,9 +118,10 @@ open class PageViewController: BaseViewController {
         view.backgroundColor = .white
 
         // `tableView`
-        tableView.backgroundColor = view.backgroundColor
         tableView.alwaysBounceVertical = false
         tableView.alwaysBounceHorizontal = false
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 50
 
         // Add subviews and constrain
         addSubviews()

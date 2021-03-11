@@ -49,7 +49,7 @@ public extension Font.Weight {
         switch self {
         case .regular: return .regular
         case .bold: return .bold
-        case .semibold: return .semibold
+        case .semiBold: return .semibold
         case .heavy: return .heavy
         case .light: return .light
         case .italic: return .regular

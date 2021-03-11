@@ -67,11 +67,11 @@ class DefaultView: UIView, Insettable {
     /// `LabelContainerView` for subtitle
     private(set) lazy var subtitleLabelContainerView = LabelContainerView()
 
-    /// `EdgeConstraints` of the `verticalStackView`
-    private var horizontalStackViewEdgeConstraints: EdgeConstraints!
-
     /// `EdgeConstraints` of the `containerView`
     private var containerViewEdgeConstraints: EdgeConstraints!
+
+    /// `EdgeConstraints` of the `verticalStackView`
+    private var horizontalStackViewEdgeConstraints: EdgeConstraints!
 
     // MARK: - Init
 
@@ -121,6 +121,12 @@ class DefaultView: UIView, Insettable {
         containerViewEdgeConstraints = containerView.edgeConstraints(to: self)
         horizontalStackViewEdgeConstraints =
             horizontalStackView.edgeConstraints(to: containerView)
+
+        imageContainerView.imageView.setContent(
+            hugging: 800,
+            compressionResistance: 800,
+            axis: [.vertical, .horizontal]
+        )
     }
 
     // MARK: Insettable

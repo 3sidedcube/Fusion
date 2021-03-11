@@ -34,7 +34,7 @@ public extension Font {
         case bold
 
         /// "SemiBold" font
-        case semibold
+        case semiBold
 
         /// "Heavy" font
         case heavy

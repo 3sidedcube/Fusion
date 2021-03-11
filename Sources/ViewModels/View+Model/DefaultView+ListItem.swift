@@ -29,7 +29,7 @@ extension DefaultView {
         }
 
         // `image`
-        imageContainerView.isHidden = listItem.subtitle == nil
+        imageContainerView.isHidden = listItem.image == nil
         if listItem.image != nil {
             imageContainerView.setImage(&listItem.image!, completion: completion)
         }

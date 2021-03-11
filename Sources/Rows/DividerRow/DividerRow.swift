@@ -10,7 +10,7 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `Divider`
-class DividerRow: FusionRow<DividerTableViewCell> {
+class DividerRow: FusionRow<DividerTableViewCell>, CellHeightConfigurable {
 
     /// `Divider` to drive UI
     var divider: Divider
@@ -34,5 +34,15 @@ class DividerRow: FusionRow<DividerTableViewCell> {
     ) {
         // Set view-model
         cell.setDivider(divider)
+    }
+
+    // MARK: - CellHeightConfigurable
+
+    func heightForRowInTableViewController(
+        _ tableViewController: TableViewController,
+        forRowAt indexPath: IndexPath
+    ) -> CGFloat {
+        guard divider.totalHeight > 0 else { return 0 }
+        return UITableView.automaticDimension
     }
 }

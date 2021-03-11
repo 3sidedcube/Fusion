@@ -31,3 +31,13 @@ public struct Divider: Codable, JSONModel {
 
     // `border` not supported
 }
+
+extension Divider {
+
+    /// Total height including `margin` and `strokeWidth`
+    var totalHeight: Float {
+        let margin = (self.margin?.insets ?? .zero).verticalSum
+        let strokeWidth = self.strokeWidth ?? 0
+        return max(0, Float(margin) + strokeWidth)
+    }
+}
