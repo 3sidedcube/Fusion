@@ -24,3 +24,13 @@ extension Float {
         return CGFloat(self)
     }
 }
+
+// MARK: - CGFloat + Float
+
+extension CGFloat {
+
+    /// Map to `Float`
+    var float: Float {
+        return Float(self)
+    }
+}

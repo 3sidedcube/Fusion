@@ -18,6 +18,10 @@ public struct Image: Codable, JSONModel, ViewModel {
         }
     }
 
+    /// Define a fixed width and/or height to enforce on the image.
+    /// If `nil`, then dynamically size the `UIImageView` from the `size` of the `UIImage`.
+    public var fixedSize: Size?
+
     // MARK: - View
 
     /// `RGBAHex` for the background

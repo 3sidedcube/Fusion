@@ -19,6 +19,9 @@ extension ImageContainerView {
     func setImage(_ image: inout Image, completion: ImageCompletion?) {
         setViewModel(image)
 
+        // `fixedSize`
+        subview.fixedSize = image.fixedSize
+
         // `src`
         imageView.kf.cancelDownloadTask()
         if let uiImage = image.remoteImage?.image {

@@ -8,7 +8,7 @@
 import Foundation
 
 /// Properties which apply on the `UIView` level.
-/// All models which drives `UIView`s should share these properties and handle them accordingly
+/// All models which drive a `UIView` should share these properties and handle them accordingly
 protocol ViewModel {
 
     /// `RGBAHex` color for the background

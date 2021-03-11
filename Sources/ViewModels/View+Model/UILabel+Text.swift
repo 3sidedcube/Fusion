@@ -68,8 +68,28 @@ public extension UILabel {
         attributed.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)
         attributedText = attributed
 
-        // `view-model`
-        //setViewModel(setViewProperties ? text : nil)
-        // TODO
+        // MARK: - ViewModel
+        guard setViewProperties else { return }
+
+        // `backgroundColor`
+        let backgroundHexColor = text?.backgroundColor?.hexColor
+        self.backgroundColor = backgroundHexColor ?? .defaultBackgroundColor
+
+        // `padding`
+        var padded = self as? Padded
+        padded?.padding = text?.padding ?? .zero
+
+        // `margin`
+        var margined = self as? Margined
+        margined?.margins = text?.margin ?? .zero
+
+        // `border`
+        layer.setBorder(text?.border)
+
+        // `shadow`
+        layer.setShadow(text?.shadow)
+
+        // `cornerRadius`
+        layer.setCornerRadius(text?.cornerRadius)
     }
 }

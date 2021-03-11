@@ -31,6 +31,22 @@ class PaddedImageView: UIView, Padded {
     /// `EdgeConstraints` of `imageView`
     private(set) var imageViewEdgeConstraints: EdgeConstraints!
 
+    /// `NSLayoutConstraint` to fix the `imageView` width
+    private(set) var imageViewWidthConstraint: NSLayoutConstraint?
+
+    /// `NSLayoutConstraint` to fix the `imageView` height
+    private(set) var imageViewHeightConstraint: NSLayoutConstraint?
+
+    /// Fixed a `CGSize` for the `imageView`.
+    var fixedSize: Size? {
+        get {
+            return getFixedSize()
+        }
+        set {
+            setFixedSize(newValue)
+        }
+    }
+
     // MARK: - Init
 
     convenience init() {
@@ -76,5 +92,41 @@ class PaddedImageView: UIView, Padded {
         set {
             imageViewEdgeConstraints.insets = newValue.insets
         }
+    }
+
+    // MARK: - ImageSize
+
+    /// Configure `imageView` constraints according to the given `size`
+    ///
+    /// - Parameter size: `Size`
+    private func setFixedSize(_ size: Size?) {
+        imageViewWidthConstraint?.isActive = false
+        imageViewHeightConstraint?.isActive = false
+
+        // Set width
+        if let width = size?.width {
+            let imageWidth = max(0, width.cgFloat)
+            imageViewWidthConstraint = imageView.widthAnchor.constraint(
+                equalToConstant: imageWidth
+            )
+            imageViewWidthConstraint?.isActive = true
+        }
+
+        // Set height
+        if let height = size?.height {
+            let imageHeight = max(0, height.cgFloat)
+            imageViewHeightConstraint = imageView.heightAnchor.constraint(
+                equalToConstant: imageHeight
+            )
+            imageViewHeightConstraint?.isActive = true
+        }
+    }
+
+    /// `Size` from `imageView` constraints
+    private func getFixedSize() -> Size {
+        return Size(
+            width: imageViewWidthConstraint?.constant.float,
+            height: imageViewHeightConstraint?.constant.float
+        )
     }
 }
