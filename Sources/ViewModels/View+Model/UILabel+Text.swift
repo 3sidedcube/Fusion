@@ -32,13 +32,13 @@ public extension UILabel {
         backgroundColor = text.backgroundColor?.hexColor
 
         // `textColor`
-        textColor = nil
+        textColor = .defaultTextColor
         if let textColor = text.textColor?.hexColor {
             attributed.addAttribute(.foregroundColor, value: textColor, range: range)
         }
 
         // `font`
-        font = nil
+        font = .default
         let uiFont = text.font?.uiFont
         if let font = uiFont {
             attributed.addAttribute(.font, value: font, range: range)

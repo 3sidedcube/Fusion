@@ -8,11 +8,13 @@
 import Foundation
 import UIKit
 
+/// `UIColor` defaults
 extension UIColor {
 
     /// Default value for `highlightedColor`
-    static var defaultHighlightedColor =
-        UIColor(red255: 247, green255: 241, blue255: 247)
+    static var defaultHighlightedColor = UIColor(
+        red255: 247, green255: 241, blue255: 247
+    )
 
     /// Default value for `unhighlightedColor`
     static var defaultUnhighlightedColor: UIColor = .white

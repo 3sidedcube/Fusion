@@ -8,18 +8,19 @@
 import Foundation
 import UIKit
 
+/// `CGFloat` defaults
 extension CGFloat {
-
-    /// Default for leading and trailing offset from their respective edges.
-    /// E.g. views are often constrained by this from their parent in a horizontal direction.
-    static var defaultHorizontalMargin: CGFloat = 20
 
     /// Default text size
     static var defaultTextSize: CGFloat = 12
 }
 
+// MARK: - Float + CGFloat
+
 extension Float {
 
-    /// `defaultTextSize` to `Float`
-    static var defaultTextSize = Float(CGFloat.defaultTextSize)
+    /// Map to `CGFloat`
+    var cgFloat: CGFloat {
+        return CGFloat(self)
+    }
 }

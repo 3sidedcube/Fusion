@@ -17,7 +17,7 @@ public extension Font {
 
     /// Get size of font
     private var fontSize: CGFloat {
-        return CGFloat(size ?? .defaultTextSize)
+        return size?.cgFloat ?? .defaultTextSize
     }
 
     /// Try get `UIFont` from  `name` and `weight`

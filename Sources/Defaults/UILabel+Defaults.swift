@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// `UILabel` defaults
 extension UILabel {
 
     /// Set properties to defaults
@@ -15,7 +16,7 @@ extension UILabel {
         backgroundColor = .clear
         textColor = .defaultTextColor
         textAlignment = .left
-        font = UIFont.systemFont(ofSize: .defaultTextSize)
+        font = .default
         numberOfLines = 0
         lineBreakMode = .byTruncatingTail
     }

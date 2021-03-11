@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// `UITableViewCell` defaults
 extension UITableViewCell {
 
     /// Set default properties
