@@ -163,7 +163,6 @@
 		B8C1B1BF25FA72F000628649 /* UIButton+Padded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B1BE25FA72F000628649 /* UIButton+Padded.swift */; };
 		B8C1B1CB25FA731500628649 /* InsetLabel+Padded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B1CA25FA731500628649 /* InsetLabel+Padded.swift */; };
 		B8C1B1FA25FA848400628649 /* ContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B1F825FA848400628649 /* ContainerTableViewCell.swift */; };
-		B8C1B1FB25FA848500628649 /* ContainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C1B1F925FA848400628649 /* ContainerTableViewCell.xib */; };
 		B8C1B27825FA98E200628649 /* ListItem+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B27725FA98E200628649 /* ListItem+RowConvertible.swift */; };
 		OBJ_100 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* AFError.swift */; };
 		OBJ_101 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Alamofire.swift */; };
@@ -457,7 +456,6 @@
 		B8C1B1BE25FA72F000628649 /* UIButton+Padded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Padded.swift"; sourceTree = "<group>"; };
 		B8C1B1CA25FA731500628649 /* InsetLabel+Padded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsetLabel+Padded.swift"; sourceTree = "<group>"; };
 		B8C1B1F825FA848400628649 /* ContainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewCell.swift; sourceTree = "<group>"; };
-		B8C1B1F925FA848400628649 /* ContainerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerTableViewCell.xib; sourceTree = "<group>"; };
 		B8C1B27725FA98E200628649 /* ListItem+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListItem+RowConvertible.swift"; sourceTree = "<group>"; };
 		"Fusion::Fusion::Product" /* Fusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Fusion::FusionTests::Product" /* FusionTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FusionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -972,7 +970,6 @@
 			isa = PBXGroup;
 			children = (
 				B8C1B1F825FA848400628649 /* ContainerTableViewCell.swift */,
-				B8C1B1F925FA848400628649 /* ContainerTableViewCell.xib */,
 			);
 			path = ContainerTableViewCell;
 			sourceTree = "<group>";
@@ -1439,7 +1436,6 @@
 				B867DABF25F932E80063F988 /* ButtonTableViewCell.xib in Resources */,
 				B867D8DE25F7F8DF0063F988 /* DividerTableViewCell.xib in Resources */,
 				B867D8DF25F7F8DF0063F988 /* TextTableViewCell.xib in Resources */,
-				B8C1B1FB25FA848500628649 /* ContainerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
