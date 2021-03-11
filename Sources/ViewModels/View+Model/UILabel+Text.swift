@@ -15,7 +15,7 @@ public extension UILabel {
     ///
     /// - Parameters:
     ///   - text: `Text`
-    ///   - setViewProperties: `Bool` Set
+    ///   - setViewProperties: `Bool` Set view level properties
     func setText(_ text: Text?, setViewProperties: Bool = true) {
         // `content`
         self.text = nil
