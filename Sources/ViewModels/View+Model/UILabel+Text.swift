@@ -13,11 +13,13 @@ public extension UILabel {
     /// Set `Text` on this `UILabel` instance by setting `attributedText` to
     /// an `NSAttributedString` with all the properties configured
     ///
-    /// - Parameter text: `Text`
-    func setText(_ text: Text) {
-        // `text`
+    /// - Parameters:
+    ///   - text: `Text`
+    ///   - setViewProperties: `Bool` Set
+    func setText(_ text: Text?, setViewProperties: Bool = true) {
+        // `content`
         self.text = nil
-        let string = text.content ?? ""
+        let string = text?.content ?? ""
 
         // Set up `NSMutableAttributedString``
         let attributed = NSMutableAttributedString(string: string)
@@ -28,55 +30,46 @@ public extension UILabel {
         paragraphStyle.lineBreakMode = lineBreakMode
         paragraphStyle.lineBreakStrategy = lineBreakStrategy
 
-        // `backgroundColor`
-        backgroundColor = text.backgroundColor?.hexColor ?? .defaultBackgroundColor
-
         // `textColor`
         textColor = .defaultTextColor
-        if let textColor = text.textColor?.hexColor {
+        if let textColor = text?.textColor?.hexColor {
             attributed.addAttribute(.foregroundColor, value: textColor, range: range)
         }
 
         // `font`
         font = .default
-        let uiFont = text.font?.uiFont
+        let uiFont = text?.font?.uiFont
         if let font = uiFont {
             attributed.addAttribute(.font, value: font, range: range)
         }
 
         // `textAlignment`
         textAlignment = .default
-        if let textAlignment = text.textAlignment?.nsTextAlignment {
+        if let textAlignment = text?.textAlignment?.nsTextAlignment {
             paragraphStyle.alignment = textAlignment
         }
 
         // `numberOfLines`
-        numberOfLines = text.numberOfLines ?? .defaultNumberOfLines
+        numberOfLines = text?.numberOfLines ?? .defaultNumberOfLines
 
         // `lineHeight`
-        if let lineHeight = text.lineHeight, let font = uiFont {
+        if let lineHeight = text?.lineHeight, let font = uiFont {
             paragraphStyle.lineHeightMultiple = 1
             paragraphStyle.lineSpacing = CGFloat(lineHeight) - font.lineHeight
         }
 
         // `letterSpacing`
-        if let letterSpacing = text.letterSpacing {
+        if let letterSpacing = text?.letterSpacing {
             let value = CGFloat(letterSpacing)
             attributed.addAttribute(.kern, value: value, range: range)
         }
 
-        // `padding` relies on the `UILabel` been `Insettable`
-        if let insetLabel = self as? Insettable, let padding = text.padding?.insets {
-            insetLabel.setPadding(padding)
-        }
-
-        // `border`
-        layer.setBorder(text.border)
-
-        // `margin` ignored
-
         // Commit attributes and set `attributedText`
         attributed.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)
         attributedText = attributed
+
+        // `view-model`
+        //setViewModel(setViewProperties ? text : nil)
+        // TODO
     }
 }

@@ -12,7 +12,7 @@ extension TextTableViewCell {
     /// Set the given `text`
     ///
     /// - Parameter text: `Text`
-    func setText(_ text: Text) {
+    func setText(_ text: Text?) {
         labelContainerView.setText(text)
     }
 }

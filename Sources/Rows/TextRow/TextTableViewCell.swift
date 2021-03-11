@@ -8,9 +8,16 @@
 
 import UIKit
 
-/// Simple `UITableViewCell` with a `label` inset from the `contentView`
-class TextTableViewCell: UITableViewCell {
+/// `UITableViewCell` with a `LabelContainerView`
+class TextTableViewCell: ContainerTableViewCell {
 
-    /// `LabelContainerView`
-    @IBOutlet private(set) var labelContainerView: LabelContainerView!
+    override class func createSubview() -> UIView {
+        return LabelContainerView()
+    }
+
+    // swiftlint:disable force_cast
+    var labelContainerView: LabelContainerView {
+        return subview as! LabelContainerView
+    }
+    // swiftlint:enable force_cast
 }

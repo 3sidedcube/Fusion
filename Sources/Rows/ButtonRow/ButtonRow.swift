@@ -10,6 +10,7 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `Button`
+// TODO: Handle click on button only in cell
 class ButtonRow: FusionRow<ButtonTableViewCell>, RowActionable {
 
     /// `Button` to drive UI

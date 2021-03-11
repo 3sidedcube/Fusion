@@ -8,39 +8,18 @@
 import Foundation
 import UIKit
 
-/// Container of a `UIImageView` which can load `UIImage`s from a remote `URL`.
-///
-/// For Android compatibility, this `UIView` can set both
-/// - `padding` (inset of own content)
-/// - `margin` (inset relative to other views)
-class ImageContainerView: UIView, Insettable {
+/// `ContainerView` wrapping a `InsetLabel` subview.
+class ImageContainerView: ContainerView<PaddedImageView> {
 
-    /// Set the `UIEdgeInsets` of `imageContainerViewEdgeConstraints`
-    var margin: UIEdgeInsets {
-        get {
-            return imageContainerViewEdgeConstraints.insets
-        }
-        set {
-            imageContainerViewEdgeConstraints.insets = newValue
-        }
+    var imageView: UIImageView {
+        return subview.imageView
     }
+}
 
-    /// Set the `UIEdgeInsets` of `imageViewEdgeConstraints`
-    var padding: UIEdgeInsets {
-        get {
-            return imageViewEdgeConstraints.insets
-        }
-        set {
-            imageViewEdgeConstraints.insets = newValue
-        }
-    }
+// MARK: - PaddedImageView
 
-    /// `UIView` container of `imageView`
-    let imageContainerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .clear
-        return view
-    }()
+/// `UIView` wrapping a `UIImageView` to support `Padding`
+class PaddedImageView: UIView, Padded {
 
     /// `AdjustableImageView` to draw `UIImage`
     let imageView: AdjustableImageView = {
@@ -48,9 +27,6 @@ class ImageContainerView: UIView, Insettable {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-
-    /// `EdgeConstraints` of `imageContainerView`
-    private(set) var imageContainerViewEdgeConstraints: EdgeConstraints!
 
     /// `EdgeConstraints` of `imageView`
     private(set) var imageViewEdgeConstraints: EdgeConstraints!
@@ -83,23 +59,22 @@ class ImageContainerView: UIView, Insettable {
 
     /// Add subviews to subview hierarchy
     private func addSubviews() {
-        imageContainerView.addSubview(imageView)
-        addSubview(imageContainerView)
+        addSubview(imageView)
     }
 
     /// Add constraints to subviews in the subview hierarchy
     private func addConstraints() {
-        imageContainerViewEdgeConstraints = imageContainerView.edgeConstraints(to: self)
-        imageViewEdgeConstraints = imageView.edgeConstraints(to: imageContainerView)
+        imageViewEdgeConstraints = imageView.edgeConstraints(to: self)
     }
 
-    // MARK: - Insettable
+    // MARK: - Padded
 
-    func setPadding(_ padding: UIEdgeInsets) {
-        self.padding = padding
-    }
-
-    func setMargin(_ margin: UIEdgeInsets) {
-        self.margin = margin
+    var padding: Padding {
+        get {
+            return Padding(insets: imageViewEdgeConstraints.insets)
+        }
+        set {
+            imageViewEdgeConstraints.insets = newValue.insets
+        }
     }
 }

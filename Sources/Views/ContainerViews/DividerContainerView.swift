@@ -1,5 +1,5 @@
 //
-//  DividerView.swift
+//  DividerContainerView.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 11/03/2021.
@@ -8,16 +8,24 @@
 import Foundation
 import UIKit
 
-/// Container of a `UIView` divider.
-class DividerView: UIView, Insettable {
+/// `ContainerView` wrapping a `DividerView` subview.
+class DividerContainerView: ContainerView<DividerView> {
 
-    /// Set the `UIEdgeInsets` of `dividerViewEdgeConstraints`
-    var margin: UIEdgeInsets {
+    var dividerView: DividerView {
+        return subview
+    }
+}
+
+/// Container of a `UIView` divider.
+class DividerView: UIView, Padded {
+
+    /// Set the `Padding`
+    var padding: Padding {
         get {
-            return dividerViewEdgeConstraints.insets
+            return Padding(insets: dividerViewEdgeConstraints.insets)
         }
         set {
-            dividerViewEdgeConstraints.insets = newValue
+            dividerViewEdgeConstraints.insets = newValue.insets
         }
     }
 
@@ -81,15 +89,5 @@ class DividerView: UIView, Insettable {
         dividerViewHeightConstraint =
             dividerView.heightAnchor.constraint(equalToConstant: 0)
         dividerViewHeightConstraint.isActive = true
-    }
-
-    // MARK: - Insettable
-
-    func setPadding(_ padding: UIEdgeInsets) {
-        // do nothing
-    }
-
-    func setMargin(_ margin: UIEdgeInsets) {
-        self.margin = margin
     }
 }

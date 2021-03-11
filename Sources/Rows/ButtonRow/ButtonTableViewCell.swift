@@ -7,28 +7,16 @@
 
 import UIKit
 
-class ButtonTableViewCell: UITableViewCell, Highlightable {
+/// `UITableViewCell` with a `ButtonContainerView`
+class ButtonTableViewCell: ContainerTableViewCell {
 
-    /// `ButtonContainerView`
-    @IBOutlet private(set) var buttonContainerView: ButtonContainerView!
-
-    // MARK: - Lifecycle
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-        updateHighlighted()
-        selectedBackgroundView = UIView()
+    override class func createSubview() -> UIView {
+        return ButtonContainerView()
     }
 
-    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-        super.setHighlighted(highlighted, animated: animated)
-        set(highlighted: highlighted, animated: animated)
+    // swiftlint:disable force_cast
+    var buttonContainerView: ButtonContainerView {
+        return subview as! ButtonContainerView
     }
-
-    // MARK: - Highlightable
-
-    var viewToHighlight: UIView {
-        return buttonContainerView.button
-    }
+    // swiftlint:enable force_cast
 }

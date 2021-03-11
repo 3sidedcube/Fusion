@@ -12,13 +12,8 @@ extension LabelContainerView {
     /// Set the given `text`
     /// 
     /// - Parameter text: `Text`
-    func setText(_ text: Text) {
-        label.setText(text)
-
-        // `padding`
-        padding = text.padding?.insets ?? .zero
-
-        // `margin`
-        margin = text.margin?.insets ?? .zero
+    func setText(_ text: Text?) {
+        label.setText(text, setViewProperties: false)
+        setViewModel(text)
     }
 }

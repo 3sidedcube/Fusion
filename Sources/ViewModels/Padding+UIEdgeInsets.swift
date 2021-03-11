@@ -19,4 +19,16 @@ public extension Padding {
             right: CGFloat(right)
         )
     }
+
+    /// Initialize with `insets`
+    ///
+    /// - Parameter insets: `UIEdgeInsets`
+    init(insets: UIEdgeInsets) {
+        self.init(
+            top: Float(insets.top),
+            left: Float(insets.left),
+            right: Float(insets.right),
+            bottom: Float(insets.bottom)
+        )
+    }
 }

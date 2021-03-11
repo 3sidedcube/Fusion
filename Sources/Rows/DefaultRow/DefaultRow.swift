@@ -46,7 +46,7 @@ class DefaultRow: FusionRow<DefaultTableViewCell>, RowActionable {
     ) {
         // Set view-model
         let imageBefore = listItem.image?.remoteImage?.image
-        cell.defaultView.setListItem(
+        cell.setListItem(
             &listItem
         ) { [weak self, weak tableViewController] remoteImage, _ in
             guard let self = self, remoteImage.image != imageBefore else { return }

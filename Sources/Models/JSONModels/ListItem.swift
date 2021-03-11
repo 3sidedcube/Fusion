@@ -9,7 +9,7 @@ import Foundation
 import ThunderTable // RowConvertible
 
 /// A standard list item with an `Image`, title `Text`, subtitle `Text`, and a chevron.
-public class ListItem: Codable, JSONModel, RowConvertible {
+public class ListItem: Codable, JSONModel, ViewModel, RowConvertible {
 
     /// `Image` of the leading item
     public var image: Image?
@@ -38,7 +38,7 @@ public class ListItem: Codable, JSONModel, RowConvertible {
     public var padding: Padding?
 
     /// `Margin` for insets relative to other content
-    public var margin: Margin?
+    public var margin: Margins?
 
     /// `Shadow` of container view
     public var shadow: Shadow?

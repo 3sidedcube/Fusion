@@ -11,7 +11,7 @@ import Foundation
 enum PageId: String {
 
     /// Sample/example page to test data driven UI
-    case sample = "a1d3ace4-696f-4205-8104-c3805704ee2b"
+    case sample = "6199f440-70a6-4542-bf68-61ecb995752d"
 }
 
 // MARK: - URL

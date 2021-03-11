@@ -18,7 +18,7 @@ protocol ViewModel {
     var padding: Padding? { get }
 
     /// `Margin` for insets relative to other views
-    var margin: Margin? { get }
+    var margin: Margins? { get }
 
     /// `Border` of the container
     var border: Border? { get }

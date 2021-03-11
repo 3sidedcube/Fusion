@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,29 +16,9 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rL-t1-Zbx" customClass="LabelContainerView" customModule="Fusion" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </subviews>
-                <constraints>
-                    <constraint firstItem="2rL-t1-Zbx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KUn-ps-p7J"/>
-                    <constraint firstItem="2rL-t1-Zbx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XvC-Ea-4h6"/>
-                    <constraint firstAttribute="bottom" secondItem="2rL-t1-Zbx" secondAttribute="bottom" id="jhy-sV-vpg"/>
-                    <constraint firstAttribute="trailing" secondItem="2rL-t1-Zbx" secondAttribute="trailing" id="s1o-dD-kia"/>
-                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <connections>
-                <outlet property="labelContainerView" destination="2rL-t1-Zbx" id="HW2-pg-fCU"/>
-            </connections>
             <point key="canvasLocation" x="72.463768115942031" y="223.32589285714283"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
