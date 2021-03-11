@@ -13,7 +13,7 @@ extension UITableViewCell {
 
     /// Set default properties
     func setDefaults() {
-        backgroundColor = .clear
-        contentView.backgroundColor = .clear
+        backgroundColor = .defaultCellBackgroundColor
+        contentView.backgroundColor = backgroundColor
     }
 }

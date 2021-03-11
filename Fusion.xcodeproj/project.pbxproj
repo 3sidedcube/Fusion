@@ -122,6 +122,9 @@
 		B887800625FA236F0010B73C /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887800525FA236F0010B73C /* DividerView.swift */; };
 		B887801225FA24680010B73C /* DividerView+Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887801125FA24680010B73C /* DividerView+Divider.swift */; };
 		B887801E25FA361A0010B73C /* UIFont+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887801D25FA361A0010B73C /* UIFont+Defaults.swift */; };
+		B887803425FA39BA0010B73C /* NSTextAlignment+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887803325FA39BA0010B73C /* NSTextAlignment+Defaults.swift */; };
+		B887804025FA39F70010B73C /* Int+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887803F25FA39F70010B73C /* Int+Defaults.swift */; };
+		B887804C25FA3A3C0010B73C /* NSLineBreakMode+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887804B25FA3A3C0010B73C /* NSLineBreakMode+Defaults.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -403,6 +406,9 @@
 		B887800525FA236F0010B73C /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		B887801125FA24680010B73C /* DividerView+Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DividerView+Divider.swift"; sourceTree = "<group>"; };
 		B887801D25FA361A0010B73C /* UIFont+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Defaults.swift"; sourceTree = "<group>"; };
+		B887803325FA39BA0010B73C /* NSTextAlignment+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAlignment+Defaults.swift"; sourceTree = "<group>"; };
+		B887803F25FA39F70010B73C /* Int+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Defaults.swift"; sourceTree = "<group>"; };
+		B887804B25FA3A3C0010B73C /* NSLineBreakMode+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLineBreakMode+Defaults.swift"; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -757,6 +763,9 @@
 				B867D83425F7D30A0063F988 /* UILabel+Defaults.swift */,
 				B867D94C25F811950063F988 /* UITableViewCell+Defaults.swift */,
 				B887801D25FA361A0010B73C /* UIFont+Defaults.swift */,
+				B887803325FA39BA0010B73C /* NSTextAlignment+Defaults.swift */,
+				B887803F25FA39F70010B73C /* Int+Defaults.swift */,
+				B887804B25FA3A3C0010B73C /* NSLineBreakMode+Defaults.swift */,
 			);
 			path = Defaults;
 			sourceTree = "<group>";
@@ -1398,6 +1407,7 @@
 				B887801E25FA361A0010B73C /* UIFont+Defaults.swift in Sources */,
 				B867DAD525F9394A0063F988 /* ButtonContainerView+Button.swift in Sources */,
 				B859FBC125F296A80058EDAC /* Font.swift in Sources */,
+				B887804025FA39F70010B73C /* Int+Defaults.swift in Sources */,
 				B8C11DD325F04EDD00E2AC5E /* PageAction.swift in Sources */,
 				B867D93725F808320063F988 /* LabelContainerView.swift in Sources */,
 				B859FDA525F646E00058EDAC /* Entry.swift in Sources */,
@@ -1433,6 +1443,7 @@
 				B859FC3F25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift in Sources */,
 				B867D98325F8EE910063F988 /* LabelContainerView+Text.swift in Sources */,
 				B8C11D9125F04BCA00E2AC5E /* CellHeightConfigurable.swift in Sources */,
+				B887803425FA39BA0010B73C /* NSTextAlignment+Defaults.swift in Sources */,
 				B82C473225F0D17A0013B02C /* Screen.swift in Sources */,
 				OBJ_147 /* Fusion.swift in Sources */,
 				B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */,
@@ -1480,6 +1491,7 @@
 				B859FE4B25F6955F0058EDAC /* TextTableViewCell.swift in Sources */,
 				B867DABE25F932E80063F988 /* ButtonTableViewCell.swift in Sources */,
 				B8C11CA625EFEAEE00E2AC5E /* RowConvertible.swift in Sources */,
+				B887804C25FA3A3C0010B73C /* NSLineBreakMode+Defaults.swift in Sources */,
 				B867DA0625F9009E0063F988 /* CALayer+CornerRadius.swift in Sources */,
 				B867D70A25F7A0240063F988 /* Image+RowConvertible.swift in Sources */,
 				B859FC1125F29A3A0058EDAC /* UILabel+Text.swift in Sources */,

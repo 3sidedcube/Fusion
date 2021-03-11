@@ -13,11 +13,11 @@ extension UILabel {
 
     /// Set properties to defaults
     func setDefaults() {
-        backgroundColor = .clear
+        backgroundColor = .defaultLabelBackgroundColor
         textColor = .defaultTextColor
-        textAlignment = .left
+        textAlignment = .default
         font = .default
-        numberOfLines = 0
-        lineBreakMode = .byTruncatingTail
+        numberOfLines = .defaultNumberOfLines
+        lineBreakMode = .default
     }
 }

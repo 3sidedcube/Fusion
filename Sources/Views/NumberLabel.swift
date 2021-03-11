@@ -30,6 +30,7 @@ class NumberLabel: InsetLabel {
 
     private func setup() {
         setDefaults()
+
         numberOfLines = 1
         textAlignment = .center
         clipsToBounds = true

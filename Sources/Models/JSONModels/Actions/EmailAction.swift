@@ -27,7 +27,7 @@ public struct EmailAction: Codable, Action {
     public var body: String?
 
     /// Is the email body HTML
-    public var isHTML: Bool?
+    public var isHtml: Bool?
 }
 
 // MARK: - EmailAction + Email
@@ -43,7 +43,7 @@ public extension EmailAction {
             subject: subject,
             body: .init(
                 content: body ?? "",
-                isHTML: isHTML ?? false
+                isHTML: isHtml ?? false
             )
         )
     }
@@ -57,6 +57,6 @@ public extension EmailAction {
         bcc = email.bccAddresses
         subject = email.subject
         body = email.body?.content
-        isHTML = email.body?.isHTML
+        isHtml = email.body?.isHTML
     }
 }

@@ -29,7 +29,7 @@ public extension UILabel {
         paragraphStyle.lineBreakStrategy = lineBreakStrategy
 
         // `backgroundColor`
-        backgroundColor = text.backgroundColor?.hexColor
+        backgroundColor = text.backgroundColor?.hexColor ?? .defaultLabelBackgroundColor
 
         // `textColor`
         textColor = .defaultTextColor
@@ -45,13 +45,13 @@ public extension UILabel {
         }
 
         // `textAlignment`
-        textAlignment = .left
+        textAlignment = .default
         if let textAlignment = text.textAlignment?.nsTextAlignment {
             paragraphStyle.alignment = textAlignment
         }
 
         // `numberOfLines`
-        numberOfLines = text.numberOfLines ?? 0
+        numberOfLines = text.numberOfLines ?? .defaultNumberOfLines
 
         // `lineHeight`
         if let lineHeight = text.lineHeight, let font = uiFont {

@@ -12,7 +12,7 @@ import UIKit
 extension CGFloat {
 
     /// Default text size
-    static var defaultTextSize: CGFloat = 12
+    static let defaultTextSize: CGFloat = 12
 }
 
 // MARK: - Float + CGFloat
