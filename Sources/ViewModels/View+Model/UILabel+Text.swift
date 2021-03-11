@@ -29,7 +29,7 @@ public extension UILabel {
         paragraphStyle.lineBreakStrategy = lineBreakStrategy
 
         // `backgroundColor`
-        backgroundColor = text.backgroundColor?.hexColor ?? .defaultLabelBackgroundColor
+        backgroundColor = text.backgroundColor?.hexColor ?? .defaultBackgroundColor
 
         // `textColor`
         textColor = .defaultTextColor
@@ -66,8 +66,8 @@ public extension UILabel {
         }
 
         // `padding` relies on the `UILabel` been `Insettable`
-        if let insets = text.padding?.insets, let insettable = self as? Insettable {
-            insettable.setInsets(insets)
+        if let insetLabel = self as? Insettable, let padding = text.padding?.insets {
+            insetLabel.setPadding(padding)
         }
 
         // `border`

@@ -52,9 +52,11 @@ open class InsetLabel: UILabel, Insettable {
 
     // MARK: - Insettable
 
-    /// Set `insets`
-    /// - Parameter insets: `UIEdgeInsets`
-    public func setInsets(_ insets: UIEdgeInsets) {
-        self.insets = insets
+    public func setPadding(_ padding: UIEdgeInsets) {
+        insets = padding
+    }
+
+    public func setMargin(_ margin: UIEdgeInsets) {
+        // do nothing
     }
 }

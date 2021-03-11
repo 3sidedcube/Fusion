@@ -17,5 +17,21 @@ extension ButtonContainerView {
         if let text = button.text {
             self.button.titleLabel?.setText(text)
         }
+
+        // Override `backgroundColor`
+        self.button.titleLabel?.backgroundColor = .clear
+        self.button.backgroundColor =
+            button.text?.backgroundColor?.hexColor ?? .defaultBackgroundColor
+
+        // `padding`
+        padding = button.text?.padding?.insets ?? .zero
+
+        // `margin`
+        margin = button.text?.margin?.insets ?? .zero
+
+        // `border`
+        self.button.layer.setBorder(button.text?.border)
+
+        // TODO
     }
 }

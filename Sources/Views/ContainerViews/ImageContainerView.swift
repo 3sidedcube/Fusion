@@ -93,9 +93,13 @@ class ImageContainerView: UIView, Insettable {
         imageViewEdgeConstraints = imageView.edgeConstraints(to: imageContainerView)
     }
 
-    // MARK: Insettable
+    // MARK: - Insettable
 
-    func setInsets(_ insets: UIEdgeInsets) {
-        padding = insets
+    func setPadding(_ padding: UIEdgeInsets) {
+        self.padding = padding
+    }
+
+    func setMargin(_ margin: UIEdgeInsets) {
+        self.margin = margin
     }
 }

@@ -22,9 +22,6 @@ extension UIColor {
     /// Default text `UIColor`
     static let defaultTextColor = UIColor(red255: 68, green255: 68, blue255: 68)
 
-    /// Default `UILabel` background `UIColor`
-    static let defaultLabelBackgroundColor: UIColor = .clear
-
-    /// Default `UITableViewCell` background `UIColor`
-    static let defaultCellBackgroundColor: UIColor = .clear
+    /// Default `UIView` background `UIColor`
+    static let defaultBackgroundColor: UIColor = .clear
 }

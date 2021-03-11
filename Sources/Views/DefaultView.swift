@@ -129,9 +129,13 @@ class DefaultView: UIView, Insettable {
         )
     }
 
-    // MARK: Insettable
+    // MARK: - Insettable
 
-    func setInsets(_ insets: UIEdgeInsets) {
-        margin = insets
+    func setPadding(_ padding: UIEdgeInsets) {
+        self.padding = padding
+    }
+
+    func setMargin(_ margin: UIEdgeInsets) {
+        self.margin = margin
     }
 }

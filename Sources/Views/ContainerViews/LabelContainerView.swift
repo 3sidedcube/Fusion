@@ -81,9 +81,13 @@ class LabelContainerView: UIView, Insettable {
         labelEdgeConstraints = label.edgeConstraints(to: self)
     }
 
-    // MARK: Insettable
+    // MARK: - Insettable
 
-    func setInsets(_ insets: UIEdgeInsets) {
-        padding = insets
+    func setPadding(_ padding: UIEdgeInsets) {
+        self.padding = padding
+    }
+
+    func setMargin(_ margin: UIEdgeInsets) {
+        self.margin = margin
     }
 }

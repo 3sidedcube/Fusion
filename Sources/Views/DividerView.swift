@@ -83,9 +83,13 @@ class DividerView: UIView, Insettable {
         dividerViewHeightConstraint.isActive = true
     }
 
-    // MARK: Insettable
+    // MARK: - Insettable
 
-    func setInsets(_ insets: UIEdgeInsets) {
-        margin = insets
+    func setPadding(_ padding: UIEdgeInsets) {
+        // do nothing
+    }
+
+    func setMargin(_ margin: UIEdgeInsets) {
+        self.margin = margin
     }
 }

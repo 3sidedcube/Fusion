@@ -11,8 +11,13 @@ import UIKit
 /// An entity which can be inset with `UIEdgeInsets`
 public protocol Insettable {
 
-    /// Set the given `insets`
+    /// Set the given `padding`
     ///
-    /// - Parameter insets: `UIEdgeInsets`
-    func setInsets(_ insets: UIEdgeInsets)
+    /// - Parameter padding: `UIEdgeInsets`
+    func setPadding(_ padding: UIEdgeInsets)
+
+    /// Set the given `margin`
+    ///
+    /// - Parameter margin: `UIEdgeInsets`
+    func setMargin(_ margin: UIEdgeInsets)
 }
