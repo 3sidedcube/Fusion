@@ -73,14 +73,14 @@ class NumberRow: DefaultRow, CellDisplayable {
         // Index of this `Row`
         let rowIndex = indexPath.row
 
-        // Find the index of the first, adjacent `NumberRow` to count from
-        var firstNumberRowIndex = rowIndex
-        while firstNumberRowIndex > 0 {
-            guard rows[firstNumberRowIndex] is NumberRow else { break }
-            firstNumberRowIndex -= 1
+        // Find the index before the first adjacent `NumberRow` to count from or 0
+        var startIndex = rowIndex
+        while startIndex > 0 {
+            guard rows[startIndex] is NumberRow else { break }
+            startIndex -= 1
         }
 
-        return rowIndex - firstNumberRowIndex + 1
+        return rowIndex - startIndex + 1 // Add 1 due to 0 based index
     }
 
     // MARK: - CellDisplayable
