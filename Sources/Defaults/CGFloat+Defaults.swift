@@ -13,6 +13,12 @@ extension CGFloat {
 
     /// Default text size
     static let defaultTextSize: CGFloat = 12
+
+    /// Max width of `UIImageView` in `DefaultView`
+    static let defaultViewImageMaxWidth: CGFloat = 100
+
+    /// Max height of `UIImageView` in `DefaultView`
+    static let defaultViewImageMaxHeight: CGFloat = 100
 }
 
 // MARK: - Float + CGFloat

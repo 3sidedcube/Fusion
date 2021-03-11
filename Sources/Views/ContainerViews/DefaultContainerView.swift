@@ -103,12 +103,30 @@ class DefaultView: UIView, Padded {
 
     /// Add constraints to subviews in the subview hierarchy
     private func addConstraints() {
+        // `hStackViewEdgeConstraints`
         hStackViewEdgeConstraints = hStackView.edgeConstraints(to: self)
 
-        imageContainerView.imageView.setContent(
+        // `imageView`
+        let imageView = imageContainerView.imageView
+        imageView.setContent(
             hugging: 800,
             compressionResistance: 800,
             axis: [.vertical, .horizontal]
         )
+
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        let widthConstraint = imageView.widthAnchor.constraint(
+            lessThanOrEqualToConstant: .defaultViewImageMaxWidth
+        )
+        let heightConstraint = imageView.heightAnchor.constraint(
+            lessThanOrEqualToConstant: .defaultViewImageMaxHeight
+        )
+
+        // Set constraint not-required in case the properties force a fixed width
+        // and height greater than this value
+        widthConstraint.priority = .init(999)
+        heightConstraint.priority = .init(999)
+
+        NSLayoutConstraint.activate([widthConstraint, heightConstraint])
     }
 }
