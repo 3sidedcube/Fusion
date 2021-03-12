@@ -34,7 +34,7 @@ class DefaultView: UIView, Padded {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fill
-        stackView.alignment = .top
+        stackView.alignment = .center
         stackView.spacing = 5
         return stackView
     }()
@@ -83,6 +83,9 @@ class DefaultView: UIView, Padded {
 
         addSubviews()
         addConstraints()
+
+        // Remove auto-resizing of `imageView` based on image size
+        imageContainerView.imageView.isResizingEnabled = false
     }
 
     // MARK: - Subviews and Constraints

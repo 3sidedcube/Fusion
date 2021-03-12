@@ -11,7 +11,7 @@ import UIKit
 /// `ContainerView` wrapping a `InsetLabel` subview.
 class ImageContainerView: ContainerView<PaddedImageView> {
 
-    var imageView: UIImageView {
+    var imageView: AdjustableImageView {
         return subview.imageView
     }
 }

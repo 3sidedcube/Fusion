@@ -13,15 +13,15 @@ import UIKit
 /// Upon setting `image`, that `UIImage` will be resized such that:
 /// - It's `size.width` matches `bounds.width`
 /// - It's `size.height` is such that the `UIImage` maintains it's aspect ratio with its new `size.width`.
-class AdjustableImageView: UIImageView {
+open class AdjustableImageView: UIImageView {
 
     /// Perform `image` resizing on `bounds` change and setting `image`
-    var isResizingEnabled = true
+    open var isResizingEnabled = true
 
     // MARK: - Image
 
     /// Override `image` resizing if necessary on set
-    override var image: UIImage? {
+    override open var image: UIImage? {
         get {
             return super.image
         }
@@ -32,17 +32,17 @@ class AdjustableImageView: UIImageView {
 
     // MARK: - Init
 
-    override init(image: UIImage?) {
+    override public init(image: UIImage?) {
         super.init(image: image)
         setup()
     }
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -57,7 +57,7 @@ class AdjustableImageView: UIImageView {
 
     // MARK: - Lifecycle
 
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         resizeImage() // performance?
     }
@@ -72,7 +72,7 @@ class AdjustableImageView: UIImageView {
     /// Resize the given image based on `bounds`
     ///
     /// - Parameter image: `UIImage`
-    private func resizeImage(_ image: UIImage?) -> UIImage? {
+    public func resizeImage(_ image: UIImage?) -> UIImage? {
         guard isResizingEnabled else { return image }
         guard let image = image else { return nil }
 
