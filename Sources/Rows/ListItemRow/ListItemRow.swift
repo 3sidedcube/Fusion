@@ -29,9 +29,10 @@ class ListItemRow: FusionRow<ListItemTableViewCell>, RowActionable {
     // MARK: - Row
 
     /// `SelectionHandler`
-    var selectionHandler: SelectionHandler? {
+    override var selectionHandler: SelectionHandler? {
+        guard let action = try? listItem.action?.toAction() else { return nil }
         return { [weak self] _, _, _, _ in
-            self?.tryHandleAction(self?.listItem.action)
+            self?.actionHandler?.handleAction(action)
         }
     }
 

@@ -25,13 +25,6 @@ class ButtonRow: FusionRow<ButtonTableViewCell>, RowActionable {
         self.button = button
     }
 
-    // MARK: - Row
-
-    /// `SelectionHandler`
-    var selectionHandler: SelectionHandler? {
-        return nil // `UIButton` should handle click
-    }
-
     // MARK: - Configure
 
     override func configureCell(

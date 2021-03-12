@@ -21,6 +21,12 @@ class FusionRow<T>: Row, CellHeightConfigurable where T: UITableViewCell {
 
     /// `UITableViewCell.SelectionStyle`
     var selectionStyle: UITableViewCell.SelectionStyle? {
+        guard selectionHandler != nil else { return UITableViewCell.SelectionStyle.none }
+        return .default
+    }
+
+    /// `SelectionHandler` - by default do not handle selection
+    var selectionHandler: SelectionHandler? {
         return nil
     }
 
