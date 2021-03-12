@@ -25,6 +25,9 @@ protocol Highlightable: AnyObject {
 
 extension UITableViewCell: Highlightable {
 
+    /// `setHighlighted(_:animated)` passing the `isHighlighted` property
+    /// 
+    /// - Parameter animated: `Bool`
     func updateHighlighted(animated: Bool) {
         setHighlighted(isHighlighted, animated: animated)
     }
