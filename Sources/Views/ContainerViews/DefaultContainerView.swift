@@ -86,6 +86,7 @@ class DefaultView: UIView, Padded {
 
         // Remove auto-resizing of `imageView` based on image size
         imageContainerView.imageView.isResizingEnabled = false
+        imageContainerView.imageView.contentMode = .scaleAspectFit
     }
 
     // MARK: - Subviews and Constraints
