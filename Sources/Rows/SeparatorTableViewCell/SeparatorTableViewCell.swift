@@ -14,7 +14,7 @@ import ThunderTable
 
 /// Sometimes the provided separators on a `UITableViewCell` are not enough.
 /// `SeparatorTableViewCell` allows us to stroke custom paths according to the
-/// `separators` (`TableSeparator`s).
+/// `separators` (`TableSeparator`s) property.
 ///
 /// How it works:
 /// Define `separators` (which are `TableSeparator`s).
