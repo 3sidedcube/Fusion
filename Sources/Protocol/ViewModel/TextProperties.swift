@@ -13,6 +13,9 @@ public protocol TextProperties {
     /// `String` text
     var content: String? { get }
 
+    /// `RGBAHex` color of the text background
+    var backgroundColor: RGBAHex? { get }
+
     /// `RGBAHex` color of the text
     var textColor: RGBAHex? { get }
 

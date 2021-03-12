@@ -91,8 +91,10 @@ class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded
     /// - Parameter viewModel: `ViewModel`
     func setViewModel(_ viewModel: ViewModel?) {
         // `backgroundColor`
-        let backgroundHexColor = viewModel?.backgroundColor?.hexColor
-        subview.backgroundColor = backgroundHexColor ?? .defaultBackgroundColor
+        let backgroundColor = viewModel?.backgroundColor?.hexColor
+        subview.backgroundColor = backgroundColor ?? .defaultBackgroundColor
+
+        debugPrint("\(type(of: subview)) background \(backgroundColor?.hexString)")
 
         // `padding`
         padding = viewModel?.padding ?? .zero

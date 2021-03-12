@@ -36,7 +36,7 @@ extension ListItemContainerView {
         // `textSpacing`
         listItemView.vStackView.spacing = CGFloat(listItem.textSpacing ?? 0)
 
-        // `view-model`
+        // `ViewModel`
         setViewModel(listItem)
     }
 }

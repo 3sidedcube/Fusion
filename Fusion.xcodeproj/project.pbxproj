@@ -33,6 +33,8 @@
 		B84D044225FB91AF00DE4935 /* UITableView+Bug.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D044125FB91AF00DE4935 /* UITableView+Bug.swift */; };
 		B84D044E25FBAD8A00DE4935 /* TextProperties+NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D044D25FBAD8A00DE4935 /* TextProperties+NSAttributedString.swift */; };
 		B84D045A25FBAE8D00DE4935 /* TextProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D045925FBAE8D00DE4935 /* TextProperties.swift */; };
+		B84D04BA25FBB42600DE4935 /* UILabel+TextProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D04B925FBB42600DE4935 /* UILabel+TextProperties.swift */; };
+		B84D04C625FBB43000DE4935 /* UIButton+TextProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D04C525FBB43000DE4935 /* UIButton+TextProperties.swift */; };
 		B859FB5F25F22DF20058EDAC /* EdgeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FB5C25F22DF20058EDAC /* EdgeConstraints.swift */; };
 		B859FB6025F22DF20058EDAC /* CenterConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FB5D25F22DF20058EDAC /* CenterConstraints.swift */; };
 		B859FB6125F22DF20058EDAC /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FB5E25F22DF20058EDAC /* Constrainable.swift */; };
@@ -331,6 +333,8 @@
 		B84D044125FB91AF00DE4935 /* UITableView+Bug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Bug.swift"; sourceTree = "<group>"; };
 		B84D044D25FBAD8A00DE4935 /* TextProperties+NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextProperties+NSAttributedString.swift"; sourceTree = "<group>"; };
 		B84D045925FBAE8D00DE4935 /* TextProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProperties.swift; sourceTree = "<group>"; };
+		B84D04B925FBB42600DE4935 /* UILabel+TextProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+TextProperties.swift"; sourceTree = "<group>"; };
+		B84D04C525FBB43000DE4935 /* UIButton+TextProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TextProperties.swift"; sourceTree = "<group>"; };
 		B859FB5C25F22DF20058EDAC /* EdgeConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeConstraints.swift; sourceTree = "<group>"; };
 		B859FB5D25F22DF20058EDAC /* CenterConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterConstraints.swift; sourceTree = "<group>"; };
 		B859FB5E25F22DF20058EDAC /* Constrainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constrainable.swift; sourceTree = "<group>"; };
@@ -806,6 +810,8 @@
 			children = (
 				B8C1B26225FA970300628649 /* ContainerViews */,
 				B84D044D25FBAD8A00DE4935 /* TextProperties+NSAttributedString.swift */,
+				B84D04B925FBB42600DE4935 /* UILabel+TextProperties.swift */,
+				B84D04C525FBB43000DE4935 /* UIButton+TextProperties.swift */,
 			);
 			path = "View+Model";
 			sourceTree = "<group>";
@@ -1544,6 +1550,7 @@
 				B867D9FA25F8FF2F0063F988 /* ListItemContainerView+ListItem.swift in Sources */,
 				B82C475525F0D3580013B02C /* Page+Data.swift in Sources */,
 				B859FC3F25F2A04D0058EDAC /* Padding+UIEdgeInsets.swift in Sources */,
+				B84D04BA25FBB42600DE4935 /* UILabel+TextProperties.swift in Sources */,
 				B867D98325F8EE910063F988 /* LabelContainerView+Text.swift in Sources */,
 				B8C11D9125F04BCA00E2AC5E /* CellHeightConfigurable.swift in Sources */,
 				B887803425FA39BA0010B73C /* NSTextAlignment+Defaults.swift in Sources */,
@@ -1592,6 +1599,7 @@
 				B867DA6A25F915570063F988 /* UIView+Extensions.swift in Sources */,
 				B859FC4C25F37BB30058EDAC /* InsetLabel.swift in Sources */,
 				B867D7E425F7CCF40063F988 /* ListItemRow.swift in Sources */,
+				B84D04C625FBB43000DE4935 /* UIButton+TextProperties.swift in Sources */,
 				B859FE4C25F6955F0058EDAC /* TextRow.swift in Sources */,
 				B8C11D9225F04BCA00E2AC5E /* RowUpdateListener.swift in Sources */,
 				B8C11BC625EFAA3D00E2AC5E /* JSONDecoder+SnakeCase.swift in Sources */,

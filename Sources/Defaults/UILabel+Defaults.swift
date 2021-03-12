@@ -13,6 +13,7 @@ extension UILabel {
 
     /// Set properties to defaults
     func setDefaults() {
+        text = nil
         backgroundColor = .defaultBackgroundColor
         textColor = .defaultTextColor
         textAlignment = .default

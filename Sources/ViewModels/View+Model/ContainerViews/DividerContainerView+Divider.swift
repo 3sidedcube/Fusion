@@ -17,12 +17,7 @@ extension DividerContainerView {
         // `strokeWidth`
         dividerView.strokeWidth = CGFloat(max(0, divider.strokeWidth ?? 0))
 
-        // `view-model`
+        // `ViewModel`
         setViewModel(divider)
-
-        // Overwrite `backgroundColor`
-        let backgroundColor = divider.backgroundColor?.hexColor ?? .defaultBackgroundColor
-        dividerView.backgroundColor = .defaultBackgroundColor
-        dividerView.dividerView.backgroundColor = backgroundColor
     }
 }

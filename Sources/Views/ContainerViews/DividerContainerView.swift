@@ -15,6 +15,16 @@ class DividerContainerView: ContainerView<DividerView> {
     var dividerView: DividerView {
         return subview
     }
+
+    override func setViewModel(_ viewModel: ViewModel?) {
+        super.setViewModel(viewModel)
+
+        // Overwrite `backgroundColor` to apply to the actual divider rather
+        // than it's container view
+        let color = viewModel?.backgroundColor?.hexColor ?? .defaultBackgroundColor
+        dividerView.backgroundColor = .defaultBackgroundColor
+        dividerView.dividerView.backgroundColor = color
+    }
 }
 
 /// Container of a `UIView` divider.

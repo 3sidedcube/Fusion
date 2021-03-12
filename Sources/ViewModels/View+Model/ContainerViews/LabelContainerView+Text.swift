@@ -14,12 +14,9 @@ extension LabelContainerView {
     /// - Parameter text: `Text`
     func setText(_ text: Text?) {
         // `TextProperties`
-        label.text = nil
-        label.setDefaults()
-        label.attributedText = text?.attributedString
-        self.label.numberOfLines = text?.numberOfLines ?? .defaultNumberOfLines
+        label.setTextProperties(text)
 
-        // `view-model`
+        // `ViewModel`
         setViewModel(text)
     }
 }

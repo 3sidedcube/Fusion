@@ -17,10 +17,11 @@ extension ImageContainerView {
     ///   - image: `Image`
     ///   - completion: `ImageCompletion`
     func setImage(_ image: inout Image, completion: ImageCompletion?) {
-        setViewModel(image)
-
         // `fixedSize`
         subview.fixedSize = image.fixedSize
+
+        // `ViewModel`
+        setViewModel(image)
 
         // `src`
         imageView.kf.cancelDownloadTask()

@@ -23,6 +23,11 @@ extension TextProperties {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byTruncatingTail
 
+        // `backgroundColor`
+        if let backgroundColor = backgroundColor?.hexColor {
+            attributed.addAttribute(.backgroundColor, value: backgroundColor, range: range)
+        }
+
         // `textColor`
         if let textColor = textColor?.hexColor {
             attributed.addAttribute(.foregroundColor, value: textColor, range: range)

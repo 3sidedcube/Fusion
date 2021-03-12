@@ -15,11 +15,9 @@ extension ButtonContainerView {
     /// - Parameter button: `Button`
     func setButton(_ button: Button?) {
         // `TextProperties`
-        self.button.setAttributedTitle(button?.attributedString, for: .normal)
-        self.button.titleLabel?.numberOfLines =
-            button?.numberOfLines ?? .defaultNumberOfLines
+        self.button.setTextProperties(button)
 
-        // `view-model`
+        // `ViewModel`
         setViewModel(button)
     }
 }
