@@ -51,8 +51,8 @@ public class ListItem: Codable, JSONModel, ViewModel, RowConvertible {
 
     // MARK: - RowConvertible
 
-    /// Create a `DefaultRow`
+    /// Create a `ListItemRow`
     public func toRow() throws -> Row {
-        return DefaultRow(listItem: self)
+        return ListItemRow(listItem: self)
     }
 }

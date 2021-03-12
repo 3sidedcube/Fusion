@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 import ThunderTable
 
-/// A `DefaultRow` where the `UIView` inside the leading container `UIView` is a `UILabel`
+/// A `ListItemRow` where the `UIView` inside the leading container `UIView` is a `UILabel`
 /// with a number.
 ///
 /// This might be used for, say, a numbered list in a CMS `Article`.
 /// Each `Row` represents 1 list item.
-class NumberRow: DefaultRow, CellDisplayable {
+class NumberRow: ListItemRow, CellDisplayable {
 
     /// Provide an explicit number.
     /// Otherwise fallback to `Row` index in `Section` adding 1.
@@ -24,7 +24,7 @@ class NumberRow: DefaultRow, CellDisplayable {
     // MARK: - Row
 
     override func configureCell(
-        _ cell: DefaultTableViewCell,
+        _ cell: ListItemTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
     ) {
@@ -92,7 +92,7 @@ class NumberRow: DefaultRow, CellDisplayable {
     ) {
         let sectionRow = tableViewController[indexPath]
         guard
-            let cell = cell as? DefaultTableViewCell,
+            let cell = cell as? ListItemTableViewCell,
             let row = sectionRow?.row as? NumberRow,
             let section = sectionRow?.section
         else {
@@ -110,11 +110,11 @@ class NumberRow: DefaultRow, CellDisplayable {
     }
 }
 
-// MARK: - DefaultTableViewCell + Container
+// MARK: - ListItemTableViewCell + Container
 
-private extension DefaultTableViewCell {
+private extension ListItemTableViewCell {
 
     var numberContainerView: ImageContainerView {
-        return defaultContainerView.defaultView.imageContainerView
+        return listItemContainerView.listItemView.imageContainerView
     }
 }

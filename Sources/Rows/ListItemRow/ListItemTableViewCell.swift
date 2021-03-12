@@ -1,5 +1,5 @@
 //
-//  DefaultTableViewCell.swift
+//  ListItemTableViewCell.swift
 //  CBIT
 //
 //  Created by Ben Shutt on 03/12/2020.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-/// `UITableViewCell` with a `DefaultContainerView`
-class DefaultTableViewCell: ContainerTableViewCell, Highlightable {
+/// `UITableViewCell` with a `ListItemContainerView`
+class ListItemTableViewCell: ContainerTableViewCell, Highlightable {
 
     override class func createSubview() -> UIView {
-        return DefaultContainerView()
+        return ListItemContainerView()
     }
 
     // swiftlint:disable force_cast
-    var defaultContainerView: DefaultContainerView {
-        return subview as! DefaultContainerView
+    var listItemContainerView: ListItemContainerView {
+        return subview as! ListItemContainerView
     }
     // swiftlint:enable force_cast
 
@@ -38,6 +38,6 @@ class DefaultTableViewCell: ContainerTableViewCell, Highlightable {
     // MARK: - Highlightable
 
     var viewToHighlight: UIView {
-        return defaultContainerView.viewToHighlight
+        return listItemContainerView.viewToHighlight
     }
 }

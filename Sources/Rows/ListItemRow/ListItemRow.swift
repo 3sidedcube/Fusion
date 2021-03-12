@@ -1,5 +1,5 @@
 //
-//  DefaultRow.swift
+//  ListItemRow.swift
 //  CBIT
 //
 //  Created by Ben Shutt on 03/12/2020.
@@ -11,7 +11,7 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `ListItem`
-class DefaultRow: FusionRow<DefaultTableViewCell>, RowActionable {
+class ListItemRow: FusionRow<ListItemTableViewCell>, RowActionable {
 
     /// `ListItem` to drive UI
     private(set) var listItem: ListItem
@@ -38,7 +38,7 @@ class DefaultRow: FusionRow<DefaultTableViewCell>, RowActionable {
     // MARK: - Configure
 
     override func configureCell(
-        _ cell: DefaultTableViewCell,
+        _ cell: ListItemTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
     ) {

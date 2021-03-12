@@ -1,5 +1,5 @@
 //
-//  DefaultContainerView.swift
+//  ListItemContainerView.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 10/03/2021.
@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-/// `ContainerView` wrapping a `DefaultView` subview.
-class DefaultContainerView: ContainerView<DefaultView> {
+/// `ContainerView` wrapping a `ListItemView` subview.
+class ListItemContainerView: ContainerView<ListItemView> {
 
-    var defaultView: DefaultView {
+    var listItemView: ListItemView {
         return subview
     }
 }
 
-/// Default `UIView` cell structure
-class DefaultView: UIView, Padded {
+/// List item `UIView` cell structure
+class ListItemView: UIView, Padded {
 
     /// `Padding` of `hStackViewEdgeConstraints`
     var padding: Padding {

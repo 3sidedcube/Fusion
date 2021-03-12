@@ -1,5 +1,5 @@
 //
-//  DefaultTableViewCell+ListItem.swift
+//  ListItemTableViewCell+ListItem.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 09/03/2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension DefaultTableViewCell {
+extension ListItemTableViewCell {
 
     /// Set the given `listItem`
     ///
@@ -15,6 +15,6 @@ extension DefaultTableViewCell {
     ///   - listItem: `ListItem`
     ///   - completion: `ImageCompletion`
     func setListItem(_ listItem: inout ListItem, completion: ImageCompletion?) {
-        defaultContainerView.setListItem(&listItem, completion: completion)
+        listItemContainerView.setListItem(&listItem, completion: completion)
     }
 }
