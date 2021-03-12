@@ -58,7 +58,6 @@ class ContainerTableViewCell: SeparatorTableViewCell {
 
     /// Add subviews to subview hierarchy
     private func addSubviews() {
-        subview?.removeFromSuperview()
         subview = Self.createSubview()
         contentView.addSubview(subview)
     }
@@ -66,5 +65,8 @@ class ContainerTableViewCell: SeparatorTableViewCell {
     /// Add constraints to subviews in the subview hierarchy
     private func addConstraints() {
         edgeConstraints = subview.edgeConstraints(to: contentView)
+
+        // Silence `UIView-Encapsulated-Layout-Height` warnings
+        edgeConstraints.bottom.priority = .init(999)
     }
 }
