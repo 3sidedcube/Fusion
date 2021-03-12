@@ -46,7 +46,7 @@ class NumberRow: DefaultRow, CellDisplayable {
         numberContainerView.layer.setBorder(nil)
         numberContainerView.layer.setCornerRadius(nil)
         numberContainerView.padding = .zero
-        numberContainerView.margin = .zero
+        numberContainerView.margins = .zero
         numberContainerView.removeSubviewsRecursive()
         numberContainerView.addSubview(label)
 
@@ -115,6 +115,6 @@ class NumberRow: DefaultRow, CellDisplayable {
 private extension DefaultTableViewCell {
 
     var numberContainerView: ImageContainerView {
-        return defaultView.imageContainerView
+        return defaultContainerView.defaultView.imageContainerView
     }
 }

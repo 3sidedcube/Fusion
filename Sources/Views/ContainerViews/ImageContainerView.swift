@@ -8,39 +8,18 @@
 import Foundation
 import UIKit
 
-/// Container of a `UIImageView` which can load `UIImage`s from a remote `URL`.
-///
-/// For Android compatibility, this `UIView` can set both
-/// - `padding` (inset of own content)
-/// - `margin` (inset relative to other views)
-class ImageContainerView: UIView, Insettable {
+/// `ContainerView` wrapping a `InsetLabel` subview.
+class ImageContainerView: ContainerView<PaddedImageView> {
 
-    /// Set the `UIEdgeInsets` of `imageContainerViewEdgeConstraints`
-    var margin: UIEdgeInsets {
-        get {
-            return imageContainerViewEdgeConstraints.insets
-        }
-        set {
-            imageContainerViewEdgeConstraints.insets = newValue
-        }
+    var imageView: UIImageView {
+        return subview.imageView
     }
+}
 
-    /// Set the `UIEdgeInsets` of `imageViewEdgeConstraints`
-    var padding: UIEdgeInsets {
-        get {
-            return imageViewEdgeConstraints.insets
-        }
-        set {
-            imageViewEdgeConstraints.insets = newValue
-        }
-    }
+// MARK: - PaddedImageView
 
-    /// `UIView` container of `imageView`
-    let imageContainerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .clear
-        return view
-    }()
+/// `UIView` wrapping a `UIImageView` to support `Padding`
+class PaddedImageView: UIView, Padded {
 
     /// `AdjustableImageView` to draw `UIImage`
     let imageView: AdjustableImageView = {
@@ -49,11 +28,24 @@ class ImageContainerView: UIView, Insettable {
         return imageView
     }()
 
-    /// `EdgeConstraints` of `imageContainerView`
-    private(set) var imageContainerViewEdgeConstraints: EdgeConstraints!
-
     /// `EdgeConstraints` of `imageView`
     private(set) var imageViewEdgeConstraints: EdgeConstraints!
+
+    /// `NSLayoutConstraint` to fix the `imageView` width
+    private(set) var imageViewWidthConstraint: NSLayoutConstraint?
+
+    /// `NSLayoutConstraint` to fix the `imageView` height
+    private(set) var imageViewHeightConstraint: NSLayoutConstraint?
+
+    /// Fixed a `CGSize` for the `imageView`.
+    var fixedSize: Size? {
+        get {
+            return getFixedSize()
+        }
+        set {
+            setFixedSize(newValue)
+        }
+    }
 
     // MARK: - Init
 
@@ -83,19 +75,58 @@ class ImageContainerView: UIView, Insettable {
 
     /// Add subviews to subview hierarchy
     private func addSubviews() {
-        imageContainerView.addSubview(imageView)
-        addSubview(imageContainerView)
+        addSubview(imageView)
     }
 
     /// Add constraints to subviews in the subview hierarchy
     private func addConstraints() {
-        imageContainerViewEdgeConstraints = imageContainerView.edgeConstraints(to: self)
-        imageViewEdgeConstraints = imageView.edgeConstraints(to: imageContainerView)
+        imageViewEdgeConstraints = imageView.edgeConstraints(to: self)
     }
 
-    // MARK: Insettable
+    // MARK: - Padded
 
-    func setInsets(_ insets: UIEdgeInsets) {
-        padding = insets
+    var padding: Padding {
+        get {
+            return Padding(insets: imageViewEdgeConstraints.insets)
+        }
+        set {
+            imageViewEdgeConstraints.insets = newValue.insets
+        }
+    }
+
+    // MARK: - ImageSize
+
+    /// Configure `imageView` constraints according to the given `size`
+    ///
+    /// - Parameter size: `Size`
+    private func setFixedSize(_ size: Size?) {
+        imageViewWidthConstraint?.isActive = false
+        imageViewHeightConstraint?.isActive = false
+
+        // Set width
+        if let width = size?.width {
+            let imageWidth = max(0, width.cgFloat)
+            imageViewWidthConstraint = imageView.widthAnchor.constraint(
+                equalToConstant: imageWidth
+            )
+            imageViewWidthConstraint?.isActive = true
+        }
+
+        // Set height
+        if let height = size?.height {
+            let imageHeight = max(0, height.cgFloat)
+            imageViewHeightConstraint = imageView.heightAnchor.constraint(
+                equalToConstant: imageHeight
+            )
+            imageViewHeightConstraint?.isActive = true
+        }
+    }
+
+    /// `Size` from `imageView` constraints
+    private func getFixedSize() -> Size {
+        return Size(
+            width: imageViewWidthConstraint?.constant.float,
+            height: imageViewHeightConstraint?.constant.float
+        )
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A structure used as a spacer or divider.
-public struct Divider: Codable, JSONModel {
+public struct Divider: Codable, JSONModel, ViewModel {
 
     /// `RGBAHex` color of the divider
     public var color: RGBAHex?
@@ -18,18 +18,23 @@ public struct Divider: Codable, JSONModel {
 
     // MARK: - View
 
+    /// `RGBAHex` color for the background
+    public var backgroundColor: RGBAHex?
+
+    /// `Padding` for insets of own content
+    public var padding: Padding?
+
     /// `Margin` for insets relative to other content
-    public var margin: Margin?
+    public var margin: Margins?
 
-    // `backgroundColor` not supported
+    /// `Shadow` of container view
+    public var shadow: Shadow?
 
-    // `padding` not supported
+    /// Corner radius of container view in points
+    public var cornerRadius: Float?
 
-    // `shadow` not supported
-
-    // `cornerRadius` not supported
-
-    // `border` not supported
+    /// `Border` of the container view
+    public var border: Border?
 }
 
 extension Divider {

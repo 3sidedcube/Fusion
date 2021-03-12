@@ -11,8 +11,8 @@ import Foundation
 public struct Size: Codable {
 
     /// Width component
-    public var width: Float
+    public var width: Float?
 
     /// Height component
-    public var height: Float
+    public var height: Float?
 }

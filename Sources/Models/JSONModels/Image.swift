@@ -9,7 +9,7 @@ import Foundation
 
 /// A remote image.
 /// This structure is, in some ways, an abstraction of the `UIImageView`.
-public struct Image: Codable, JSONModel {
+public struct Image: Codable, JSONModel, ViewModel {
 
     /// `Entry` where the image is located
     public var src: Entry? {
@@ -18,16 +18,20 @@ public struct Image: Codable, JSONModel {
         }
     }
 
+    /// Define a fixed width and/or height to enforce on the image.
+    /// If `nil`, then dynamically size the `UIImageView` from the `size` of the `UIImage`.
+    public var fixedSize: Size?
+
     // MARK: - View
 
-    /// RGBA hex color for the background
+    /// `RGBAHex` for the background
     public var backgroundColor: RGBAHex?
 
     /// `Padding` for insets of own content
     public var padding: Padding?
 
     /// `Margin` for insets relative to other content
-    public var margin: Margin?
+    public var margin: Margins?
 
     /// `Shadow` of container view
     public var shadow: Shadow?
@@ -35,7 +39,7 @@ public struct Image: Codable, JSONModel {
     /// Corner radius of container view in points
     public var cornerRadius: Float?
 
-    /// `Border` of the container
+    /// `Border` of the container view
     public var border: Border?
 
     // MARK: - RemoteImage

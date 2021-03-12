@@ -7,9 +7,16 @@
 
 import UIKit
 
-/// A `UITableViewCell` which can be used to divide or separate `UITableViewCell`s
-class DividerTableViewCell: UITableViewCell {
+/// `UITableViewCell` with a `DividerContainerView`
+class DividerTableViewCell: ContainerTableViewCell {
 
-    /// `DividerView`
-    @IBOutlet private(set) var dividerView: DividerView!
+    override class func createSubview() -> UIView {
+        return DividerContainerView()
+    }
+
+    // swiftlint:disable force_cast
+    var dividerContainerView: DividerContainerView {
+        return subview as! DividerContainerView
+    }
+    // swiftlint:enable force_cast
 }

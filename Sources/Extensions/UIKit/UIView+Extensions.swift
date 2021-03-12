@@ -54,7 +54,7 @@ extension UIView {
     /// Return the first subview of type `T`
     ///
     /// - Parameter includeSelf: `Bool` If `self` is of type `T` then `self` will be returned
-    func firstSubviewOfType<T>(includeSelf: Bool) -> T? where T: UIView {
+    private func firstSubviewOfType<T>(includeSelf: Bool) -> T? where T: UIView {
         if includeSelf, let view = self as? T {
             return view
         }

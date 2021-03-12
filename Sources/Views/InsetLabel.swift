@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// A `UILabel` where the drawn text can be inset
-open class InsetLabel: UILabel, Insettable {
+open class InsetLabel: UILabel {
 
     /// `UIEdgeInsets` to inset text
     public var insets: UIEdgeInsets = .zero {
@@ -48,13 +48,5 @@ open class InsetLabel: UILabel, Insettable {
         let width = size.width + insets.left + insets.right
         let height = size.height + insets.top + insets.bottom
         return CGSize(width: width, height: height)
-    }
-
-    // MARK: - Insettable
-
-    /// Set `insets`
-    /// - Parameter insets: `UIEdgeInsets`
-    public func setInsets(_ insets: UIEdgeInsets) {
-        self.insets = insets
     }
 }

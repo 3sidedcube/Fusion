@@ -1,5 +1,5 @@
 //
-//  DividerView+Divider.swift
+//  dividerView.+Divider.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 11/03/2021.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension DividerView {
+extension DividerContainerView {
 
     /// Set the given `divider`
     ///
@@ -18,9 +18,9 @@ extension DividerView {
         dividerView.backgroundColor = divider.color?.hexColor ?? .clear
 
         // `strokeWidth`
-        strokeWidth = CGFloat(max(0, divider.strokeWidth ?? 0))
+        dividerView.strokeWidth = CGFloat(max(0, divider.strokeWidth ?? 0))
 
-        // `margin`
-        margin = divider.margin?.insets ?? .zero
+        // `view-model`
+        setViewModel(divider)
     }
 }

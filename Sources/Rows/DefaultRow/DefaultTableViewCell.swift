@@ -8,16 +8,18 @@
 
 import UIKit
 
-/// `UITableViewCell` which a title, subtitle, and leading container `UIView`
-class DefaultTableViewCell: SeparatorTableViewCell, Highlightable {
+/// `UITableViewCell` with a `DefaultContainerView`
+class DefaultTableViewCell: ContainerTableViewCell, Highlightable {
 
-    /// `DefaultView`
-    @IBOutlet private(set) var defaultView: DefaultView!
-
-    /// `containerView` of `defaultView`
-    var containerView: UIView {
-        return defaultView.containerView
+    override class func createSubview() -> UIView {
+        return DefaultContainerView()
     }
+
+    // swiftlint:disable force_cast
+    var defaultContainerView: DefaultContainerView {
+        return subview as! DefaultContainerView
+    }
+    // swiftlint:enable force_cast
 
     // MARK: - Lifecycle
 
@@ -36,6 +38,6 @@ class DefaultTableViewCell: SeparatorTableViewCell, Highlightable {
     // MARK: - Highlightable
 
     var viewToHighlight: UIView {
-        return containerView
+        return defaultContainerView.viewToHighlight
     }
 }

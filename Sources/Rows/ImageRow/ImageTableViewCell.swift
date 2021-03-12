@@ -8,9 +8,16 @@
 
 import UIKit
 
-/// A `UITableViewCell` with a single `UIImageView` contained in a `UIView`
-class ImageTableViewCell: UITableViewCell {
+/// `UITableViewCell` with a `ImageContainerView`
+class ImageTableViewCell: ContainerTableViewCell {
 
-    /// `ImageContainerView`
-    @IBOutlet private(set) var imageContainerView: ImageContainerView!
+    override class func createSubview() -> UIView {
+        return ImageContainerView()
+    }
+
+    // swiftlint:disable force_cast
+    var imageContainerView: ImageContainerView {
+        return subview as! ImageContainerView
+    }
+    // swiftlint:enable force_cast
 }

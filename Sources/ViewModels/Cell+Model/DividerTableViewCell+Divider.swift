@@ -14,6 +14,6 @@ extension DividerTableViewCell {
     ///
     /// - Parameter divider: `Divider`
     func setDivider(_ divider: Divider) {
-        dividerView.setDivider(divider)
+        dividerContainerView.setDivider(divider)
     }
 }

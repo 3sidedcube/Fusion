@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SafariServices
 
 extension UINavigationController {
 
@@ -52,7 +53,7 @@ extension UINavigationController {
         return false
     }
 
-    // MARK: - ArticleAction
+    // MARK: - PageAction
 
     /// Push a `PageAction`
     ///
@@ -81,12 +82,27 @@ extension UINavigationController {
     /// - Parameters:
     ///   - linkAction: `LinkAction`
     private func pushLinkAction(_ linkAction: LinkAction) -> Bool {
-        guard
-            let url = linkAction.url,
-            UIApplication.shared.canOpenURL(url)
-        else {
-            return false
-        }
+        guard let url = linkAction.url else { return false }
+        let inApp = linkAction.inApp ?? false
+        guard inApp else { return openURL(url) }
+        return presentURL(url)
+    }
+
+    /// Push the given `url` in app
+    ///
+    /// - Parameter url: `URL`
+    private func presentURL(_ url: URL) -> Bool {
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.delegate = SafariDelegate.shared
+        present(safariViewController, animated: true, completion: nil)
+        return true
+    }
+
+    /// Open the given `url`
+    ///
+    /// - Parameter url: `URL`
+    private func openURL(_ url: URL) -> Bool {
+        guard UIApplication.shared.canOpenURL(url) else { return false }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
         return true
     }
@@ -98,8 +114,7 @@ extension UINavigationController {
     /// - Parameters:
     ///   - emailAction: `EmailAction`
     private func presentEmailAction(_ emailAction: EmailAction) -> Bool {
-        guard let viewController = visibleViewController else { return false }
-        return viewController.presentEmailCompose(for: emailAction.email)
+        return presentEmailCompose(for: emailAction.email)
     }
 
     // MARK: - Push

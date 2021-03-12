@@ -15,6 +15,6 @@ extension DefaultTableViewCell {
     ///   - listItem: `ListItem`
     ///   - completion: `ImageCompletion`
     func setListItem(_ listItem: inout ListItem, completion: ImageCompletion?) {
-        defaultView.setListItem(&listItem, completion: completion)
+        defaultContainerView.setListItem(&listItem, completion: completion)
     }
 }
