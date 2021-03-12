@@ -14,14 +14,10 @@ class ListItemContainerView: ContainerView<ListItemView> {
     var listItemView: ListItemView {
         return subview
     }
-
-    override var isHighlightable: Bool {
-        return true
-    }
 }
 
 /// List item `UIView` cell structure
-class ListItemView: UIView, Padded {
+class ListItemView: HighlightableView, Padded {
 
     /// `Padding` of `hStackViewEdgeConstraints`
     var padding: Padding {
@@ -59,8 +55,18 @@ class ListItemView: UIView, Padded {
     /// `LabelContainerView` for title
     private(set) lazy var titleLabelContainerView = LabelContainerView()
 
+    /// `subview` of `titleLabelContainerView`
+    var titleLabel: UILabel {
+        return titleLabelContainerView.subview
+    }
+
     /// `LabelContainerView` for subtitle
     private(set) lazy var subtitleLabelContainerView = LabelContainerView()
+
+    /// `subview` of `subtitleLabelContainerView`
+    var subtitleLabel: UILabel {
+        return subtitleLabelContainerView.subview
+    }
 
     /// `EdgeConstraints` of the `hStackView`
     private var hStackViewEdgeConstraints: EdgeConstraints!

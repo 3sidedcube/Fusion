@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ThunderTable
 
 /// `UITableViewCell` with a `ListItemContainerView`
 class ListItemTableViewCell: ContainerTableViewCell {
@@ -20,4 +21,20 @@ class ListItemTableViewCell: ContainerTableViewCell {
         return subview as! ListItemContainerView
     }
     // swiftlint:enable force_cast
+
+    override func setup() {
+        super.setup()
+
+        // fix to stop (multiline) labels being truncated in cell
+        listItemContainerView.listItemView.titleLabel.setContent(
+            hugging: 1000,
+            compressionResistance: 100,
+            axis: [.horizontal]
+        )
+        listItemContainerView.listItemView.subtitleLabel.setContent(
+            hugging: 1000,
+            compressionResistance: 100,
+            axis: [.horizontal]
+        )
+    }
 }

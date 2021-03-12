@@ -12,7 +12,7 @@ extension UITableView {
 
     /// Fix multi-line `UILabel` inside `UIStackView` inside  `UITableViewCell` bug 🤮.
     ///
-    /// This code code is not ideal, but the `preferredMaxLayoutWidth` of the `UILabal`s
+    /// This code code is not ideal, but the `preferredMaxLayoutWidth` of the `UILabel`s
     /// are not being set correctly/automatically when loading a cell from a nib or Storyboard.
     ///
     /// https://github.com/smileyborg/TableViewCellWithAutoLayoutiOS8/issues/22#issuecomment-89853337

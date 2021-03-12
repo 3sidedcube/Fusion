@@ -43,17 +43,18 @@ class ListItemRow: FusionRow<ListItemTableViewCell>, RowActionable {
         at indexPath: IndexPath,
         in tableViewController: TableViewController
     ) {
+        // Handle highlighting
+        let containerView = cell.listItemContainerView
+        containerView.subview.isHighlightable = selectionHandler != nil
+
         // Set view-model
         let imageBefore = listItem.image?.remoteImage?.image
-
-        cell.listItemContainerView.setListItem(
+        containerView.setListItem(
             &listItem
         ) { [weak self, weak tableViewController] remoteImage, _ in
             guard let self = self, remoteImage.image != imageBefore else { return }
             (tableViewController as? RowUpdateListener)?.rowRequestedUpdate(self)
         }
-
-        tableViewController.tableView.fixMultiLineLabelBugForCell(cell)
     }
 
     // MARK: - RowActionable

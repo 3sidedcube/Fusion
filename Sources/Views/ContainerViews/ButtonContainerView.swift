@@ -24,7 +24,7 @@ class ButtonContainerView: ContainerView<UIButton> {
 
     /// Create the `UIButton` instance
     override func createSubview() -> UIButton {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.addTarget(
             self,
             action: #selector(buttonTouchUpInside),

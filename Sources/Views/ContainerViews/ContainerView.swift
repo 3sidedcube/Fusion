@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-/// A container `UIView` with a single subview.
+/// A container `UIView` with a single subview which can be inset to support `margins` (on the subview).
 ///
 /// This enables conformance to `Insettable` where the subview handles the `Padding` and
 /// this `ContainerView` handles the `Margins`.
-class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded {
+class ContainerView<T>: UIView, Insettable where T: UIView, T: Padded {
 
     /// Create the `subview` of type `T`
     func createSubview() -> T {
@@ -36,6 +36,7 @@ class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded
         }
         set {
             edgeConstraints.insets = newValue.insets
+            invalidateIntrinsicContentSize()
         }
     }
 
@@ -108,5 +109,27 @@ class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded
 
         // `cornerRadius`
         subview.layer.setCornerRadius(viewModel?.cornerRadius)
+    }
+
+    // MARK: - IntrinsicContentSize
+
+    /// Append `margins` to `intrinsicContentSize` of `subview`
+    ///
+    /// - Note:
+    /// `padding` should be handled in the `intrinsicContentSize` of the subview as `padding`
+    /// refers to inset of own content
+    override var intrinsicContentSize: CGSize {
+        let intrinsicContentSize = subview.intrinsicContentSize
+        var width = intrinsicContentSize.width
+        if width >= 0 {
+            width += margins.insets.horizontalSum
+        }
+
+        var height = intrinsicContentSize.height
+        if height >= 0 {
+            height += margins.insets.verticalSum
+        }
+
+        return CGSize(width: width, height: height)
     }
 }
