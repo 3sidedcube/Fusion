@@ -15,7 +15,7 @@ import SafariServices
 class SafariDelegate: NSObject, SFSafariViewControllerDelegate {
 
     /// Shared singleton `SafariDelegate` instance
-    public static let shared = SafariDelegate()
+    static let shared = SafariDelegate()
 
     // MARK: - Init
 

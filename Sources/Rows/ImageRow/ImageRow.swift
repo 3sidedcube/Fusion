@@ -15,7 +15,7 @@ import Kingfisher
 ///
 /// - Note:
 /// The height of the `ImageRow` should be determined by the `size` of the `UIImage`
-class ImageRow: FusionRow<ImageTableViewCell>, CellHeightConfigurable {
+class ImageRow: FusionRow<ImageTableViewCell> {
 
     /// `Image` to drive UI
     private(set) var image: Image
@@ -71,7 +71,7 @@ class ImageRow: FusionRow<ImageTableViewCell>, CellHeightConfigurable {
 
     // MARK: - CellHeightConfigurable
 
-    func heightForRowInTableViewController(
+    override func heightForRowInTableViewController(
         _ tableViewController: TableViewController,
         forRowAt indexPath: IndexPath
     ) -> CGFloat {

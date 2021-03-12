@@ -61,7 +61,7 @@ class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded
         setup()
     }
 
-    private func setup() {
+    func setup() {
         backgroundColor = .clear
 
         addSubviews()

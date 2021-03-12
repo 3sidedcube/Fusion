@@ -43,10 +43,6 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
         setup()
     }
 
@@ -54,7 +50,12 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
         updateSeparators(oldValue: separators)
     }
 
-    // MARK: - Reuse
+    // MARK: - Lifecycle
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
+    }
 
     override func prepareForReuse() {
         super.prepareForReuse()

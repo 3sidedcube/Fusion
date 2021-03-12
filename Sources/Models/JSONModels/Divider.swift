@@ -39,10 +39,11 @@ public struct Divider: Codable, JSONModel, ViewModel {
 
 extension Divider {
 
-    /// Total height including `margin` and `strokeWidth`
-    var totalHeight: Float {
-        let margin = (self.margin?.insets ?? .zero).verticalSum
+    /// Total height including `strokeWidth`, `padding`, `margin`
+    var height: Float {
+        let paddingHeight = padding?.insets.verticalSum.float ?? 0
+        let marginsHeight = margin?.insets.verticalSum.float ?? 0
         let strokeWidth = self.strokeWidth ?? 0
-        return max(0, Float(margin) + strokeWidth)
+        return max(0, strokeWidth + paddingHeight + marginsHeight)
     }
 }

@@ -30,10 +30,8 @@ class DefaultRow: FusionRow<DefaultTableViewCell>, RowActionable {
 
     /// `SelectionHandler`
     var selectionHandler: SelectionHandler? {
-        return { [weak self] row, _, _, _ in
-            guard let row = row as? Self else { return }
-            guard let action = try? row.listItem.action?.toAction() else { return }
-            self?.actionHandler?.handleAction(action)
+        return { [weak self] _, _, _, _ in
+            self?.tryHandleAction(self?.listItem.action)
         }
     }
 

@@ -10,7 +10,7 @@ import UIKit
 import ThunderTable
 
 /// Base `Row` for other `Row`s in this project
-class FusionRow<T>: Row where T: UITableViewCell {
+class FusionRow<T>: Row, CellHeightConfigurable where T: UITableViewCell {
 
     // MARK: - Row
 
@@ -42,5 +42,14 @@ class FusionRow<T>: Row where T: UITableViewCell {
         in tableViewController: TableViewController
     ) {
         // Subclasses should override
+    }
+
+    // MARK: - CellHeightConfigurable
+
+    func heightForRowInTableViewController(
+        _ tableViewController: TableViewController,
+        forRowAt indexPath: IndexPath
+    ) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }

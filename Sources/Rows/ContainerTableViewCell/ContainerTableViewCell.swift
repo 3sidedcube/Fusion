@@ -45,14 +45,26 @@ class ContainerTableViewCell: SeparatorTableViewCell {
         }
     }
 
-    // MARK: - Lifeycle
+    // MARK: - Setup
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func setup() {
+        super.setup()
 
+        addSubviews()
+        addConstraints()
+    }
+
+    // MARK: - Subview
+
+    /// Add subviews to subview hierarchy
+    private func addSubviews() {
         subview?.removeFromSuperview()
         subview = Self.createSubview()
         contentView.addSubview(subview)
-        subview.edgeConstraints(to: self)
+    }
+
+    /// Add constraints to subviews in the subview hierarchy
+    private func addConstraints() {
+        edgeConstraints = subview.edgeConstraints(to: contentView)
     }
 }

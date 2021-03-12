@@ -11,6 +11,7 @@ import UIKit
 /// `ContainerView` wrapping a `DividerView` subview.
 class DividerContainerView: ContainerView<DividerView> {
 
+    /// `subview` where `subview` is a `DividerView`
     var dividerView: DividerView {
         return subview
     }

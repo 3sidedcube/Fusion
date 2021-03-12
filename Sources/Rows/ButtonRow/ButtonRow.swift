@@ -10,7 +10,6 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `Button`
-// TODO: Handle click on button only in cell
 class ButtonRow: FusionRow<ButtonTableViewCell>, RowActionable {
 
     /// `Button` to drive UI
@@ -30,11 +29,7 @@ class ButtonRow: FusionRow<ButtonTableViewCell>, RowActionable {
 
     /// `SelectionHandler`
     var selectionHandler: SelectionHandler? {
-        return { [weak self] row, _, _, _ in
-            guard let row = row as? Self else { return }
-            guard let action = try? row.button.action?.toAction() else { return }
-            self?.actionHandler?.handleAction(action)
-        }
+        return nil // `UIButton` should handle click
     }
 
     // MARK: - Configure
@@ -46,6 +41,12 @@ class ButtonRow: FusionRow<ButtonTableViewCell>, RowActionable {
     ) {
         // Set view-model
         cell.setButton(button)
+
+        // Handle click
+        cell.buttonContainerView.removeButtonTargetActions()
+        cell.buttonContainerView.onButtonTouchUpInside = { [weak self] _ in
+            self?.tryHandleAction(self?.button.action)
+        }
     }
 
     // MARK: - RowActionable
