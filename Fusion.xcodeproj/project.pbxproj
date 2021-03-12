@@ -63,16 +63,13 @@
 		B859FDF325F64AF10058EDAC /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FDF225F64AF10058EDAC /* Border.swift */; };
 		B859FE4B25F6955F0058EDAC /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE4825F6955E0058EDAC /* TextTableViewCell.swift */; };
 		B859FE4C25F6955F0058EDAC /* TextRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE4925F6955E0058EDAC /* TextRow.swift */; };
-		B859FE5925F695FD0058EDAC /* TextTableViewCell+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */; };
 		B859FE7925F696B80058EDAC /* CALayer+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE7825F696B80058EDAC /* CALayer+Border.swift */; };
 		B859FE9925F69FF50058EDAC /* Text+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */; };
 		B867D62325F77BD70063F988 /* DividerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D62125F77BD70063F988 /* DividerTableViewCell.swift */; };
 		B867D63925F782A30063F988 /* DividerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D63825F782A30063F988 /* DividerRow.swift */; };
-		B867D64625F783140063F988 /* DividerTableViewCell+Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */; };
 		B867D65C25F7848B0063F988 /* Divider+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D65B25F7848B0063F988 /* Divider+RowConvertible.swift */; };
 		B867D68E25F785A70063F988 /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D68B25F785A70063F988 /* ImageRow.swift */; };
 		B867D68F25F785A70063F988 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D68D25F785A70063F988 /* ImageTableViewCell.swift */; };
-		B867D6A125F791A00063F988 /* ImageTableViewCell+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D6A025F791A00063F988 /* ImageTableViewCell+Image.swift */; };
 		B867D6AD25F795560063F988 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D6AC25F795560063F988 /* RemoteImage.swift */; };
 		B867D6B925F797530063F988 /* Kingfisher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B867D6B825F797530063F988 /* Kingfisher.xcframework */; };
 		B867D6D025F798420063F988 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D6CF25F798420063F988 /* UIImage+Extensions.swift */; };
@@ -104,7 +101,6 @@
 		B867D8DD25F7F8DF0063F988 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B867D68C25F785A70063F988 /* ImageTableViewCell.xib */; };
 		B867D8DE25F7F8DF0063F988 /* DividerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B867D62225F77BD70063F988 /* DividerTableViewCell.xib */; };
 		B867D8DF25F7F8DF0063F988 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B859FE4A25F6955E0058EDAC /* TextTableViewCell.xib */; };
-		B867D8F525F7FC9E0063F988 /* ListItemTableViewCell+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D8F425F7FC9E0063F988 /* ListItemTableViewCell+ListItem.swift */; };
 		B867D90125F7FE530063F988 /* ImageContainerView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D90025F7FE530063F988 /* ImageContainerView+Image.swift */; };
 		B867D91725F803900063F988 /* ImageContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D91625F803900063F988 /* ImageContainerView.swift */; };
 		B867D93725F808320063F988 /* LabelContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867D93625F808320063F988 /* LabelContainerView.swift */; };
@@ -124,7 +120,6 @@
 		B867DABE25F932E80063F988 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DABC25F932E80063F988 /* ButtonTableViewCell.swift */; };
 		B867DABF25F932E80063F988 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B867DABD25F932E80063F988 /* ButtonTableViewCell.xib */; };
 		B867DAD525F9394A0063F988 /* ButtonContainerView+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DAD425F9394A0063F988 /* ButtonContainerView+Button.swift */; };
-		B867DAE125F939D10063F988 /* ButtonTableViewCell+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DAE025F939D10063F988 /* ButtonTableViewCell+Button.swift */; };
 		B867DAED25F93A170063F988 /* Button+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DAEC25F93A170063F988 /* Button+RowConvertible.swift */; };
 		B887800625FA236F0010B73C /* DividerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887800525FA236F0010B73C /* DividerContainerView.swift */; };
 		B887801225FA24680010B73C /* DividerContainerView+Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887801125FA24680010B73C /* DividerContainerView+Divider.swift */; };
@@ -364,18 +359,15 @@
 		B859FE4825F6955E0058EDAC /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		B859FE4925F6955E0058EDAC /* TextRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextRow.swift; sourceTree = "<group>"; };
 		B859FE4A25F6955E0058EDAC /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
-		B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextTableViewCell+Text.swift"; sourceTree = "<group>"; };
 		B859FE7825F696B80058EDAC /* CALayer+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Border.swift"; sourceTree = "<group>"; };
 		B859FE9825F69FF50058EDAC /* Text+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+RowConvertible.swift"; sourceTree = "<group>"; };
 		B867D62125F77BD70063F988 /* DividerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTableViewCell.swift; sourceTree = "<group>"; };
 		B867D62225F77BD70063F988 /* DividerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DividerTableViewCell.xib; sourceTree = "<group>"; };
 		B867D63825F782A30063F988 /* DividerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerRow.swift; sourceTree = "<group>"; };
-		B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DividerTableViewCell+Divider.swift"; sourceTree = "<group>"; };
 		B867D65B25F7848B0063F988 /* Divider+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+RowConvertible.swift"; sourceTree = "<group>"; };
 		B867D68B25F785A70063F988 /* ImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
 		B867D68C25F785A70063F988 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		B867D68D25F785A70063F988 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
-		B867D6A025F791A00063F988 /* ImageTableViewCell+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageTableViewCell+Image.swift"; sourceTree = "<group>"; };
 		B867D6AC25F795560063F988 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		B867D6B825F797530063F988 /* Kingfisher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Kingfisher.xcframework; path = Carthage/Build/Kingfisher.xcframework; sourceTree = "<group>"; };
 		B867D6CF25F798420063F988 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -404,7 +396,6 @@
 		B867D89525F7E8150063F988 /* CMSEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSEnum.swift; sourceTree = "<group>"; };
 		B867D8AB25F7EAC50063F988 /* OSLog+Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Logger.swift"; sourceTree = "<group>"; };
 		B867D8B725F7F0AC0063F988 /* UIFont+UIFontDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+UIFontDescriptor.swift"; sourceTree = "<group>"; };
-		B867D8F425F7FC9E0063F988 /* ListItemTableViewCell+ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListItemTableViewCell+ListItem.swift"; sourceTree = "<group>"; };
 		B867D90025F7FE530063F988 /* ImageContainerView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageContainerView+Image.swift"; sourceTree = "<group>"; };
 		B867D91625F803900063F988 /* ImageContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainerView.swift; sourceTree = "<group>"; };
 		B867D93625F808320063F988 /* LabelContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelContainerView.swift; sourceTree = "<group>"; };
@@ -424,7 +415,6 @@
 		B867DABC25F932E80063F988 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		B867DABD25F932E80063F988 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
 		B867DAD425F9394A0063F988 /* ButtonContainerView+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainerView+Button.swift"; sourceTree = "<group>"; };
-		B867DAE025F939D10063F988 /* ButtonTableViewCell+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonTableViewCell+Button.swift"; sourceTree = "<group>"; };
 		B867DAEC25F93A170063F988 /* Button+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+RowConvertible.swift"; sourceTree = "<group>"; };
 		B887800525FA236F0010B73C /* DividerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerContainerView.swift; sourceTree = "<group>"; };
 		B887801125FA24680010B73C /* DividerContainerView+Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DividerContainerView+Divider.swift"; sourceTree = "<group>"; };
@@ -617,7 +607,6 @@
 			isa = PBXGroup;
 			children = (
 				B867D9DA25F8FE470063F988 /* View+Model */,
-				B867D64425F782FD0063F988 /* Cell+Model */,
 				B859FE5725F695ED0058EDAC /* Model+Row */,
 				B859FBCD25F296C90058EDAC /* Font+UIFont.swift */,
 				B859FBFA25F299020058EDAC /* TextAlignment+NSTextAlignment.swift */,
@@ -731,18 +720,6 @@
 				B867D62225F77BD70063F988 /* DividerTableViewCell.xib */,
 			);
 			path = DividerRow;
-			sourceTree = "<group>";
-		};
-		B867D64425F782FD0063F988 /* Cell+Model */ = {
-			isa = PBXGroup;
-			children = (
-				B859FE5825F695FD0058EDAC /* TextTableViewCell+Text.swift */,
-				B867D6A025F791A00063F988 /* ImageTableViewCell+Image.swift */,
-				B867D64525F783140063F988 /* DividerTableViewCell+Divider.swift */,
-				B867D8F425F7FC9E0063F988 /* ListItemTableViewCell+ListItem.swift */,
-				B867DAE025F939D10063F988 /* ButtonTableViewCell+Button.swift */,
-			);
-			path = "Cell+Model";
 			sourceTree = "<group>";
 		};
 		B867D66725F7852A0063F988 /* ImageRow */ = {
@@ -1565,7 +1542,6 @@
 				B867D80F25F7D0170063F988 /* UIColor+Defaults.swift in Sources */,
 				B859FCBE25F618700058EDAC /* CALayer+Shadow.swift in Sources */,
 				B8C1B1A925FA6E5400628649 /* Insettable.swift in Sources */,
-				B859FE5925F695FD0058EDAC /* TextTableViewCell+Text.swift in Sources */,
 				B867D63925F782A30063F988 /* DividerRow.swift in Sources */,
 				B867D68E25F785A70063F988 /* ImageRow.swift in Sources */,
 				B8C11DD125F04EDD00E2AC5E /* EmailAction.swift in Sources */,
@@ -1615,12 +1591,10 @@
 				B8C11DE525F04F0200E2AC5E /* EmailClient.swift in Sources */,
 				B859FC6E25F37C860058EDAC /* Padded.swift in Sources */,
 				B867DA9A25F932570063F988 /* ButtonContainerView.swift in Sources */,
-				B867D6A125F791A00063F988 /* ImageTableViewCell+Image.swift in Sources */,
 				B8C11CA425EFEAEE00E2AC5E /* ActionHandler.swift in Sources */,
 				B859FCD425F61B210058EDAC /* Divider.swift in Sources */,
 				B887801225FA24680010B73C /* DividerContainerView+Divider.swift in Sources */,
 				B867D65C25F7848B0063F988 /* Divider+RowConvertible.swift in Sources */,
-				B867DAE125F939D10063F988 /* ButtonTableViewCell+Button.swift in Sources */,
 				B8C11D4725F002C200E2AC5E /* BaseTableViewController.swift in Sources */,
 				B8C11DE325F04F0200E2AC5E /* UIViewController+Email.swift in Sources */,
 				B8C1B16625FA5DB200628649 /* UIEdgeInsets+Defaults.swift in Sources */,
@@ -1636,9 +1610,7 @@
 				B8C1B17225FA655500628649 /* ContainerView.swift in Sources */,
 				B859FB5F25F22DF20058EDAC /* EdgeConstraints.swift in Sources */,
 				B867D81C25F7D09A0063F988 /* CGFloat+Defaults.swift in Sources */,
-				B867D8F525F7FC9E0063F988 /* ListItemTableViewCell+ListItem.swift in Sources */,
 				B8C11DD225F04EDD00E2AC5E /* NativeAction.swift in Sources */,
-				B867D64625F783140063F988 /* DividerTableViewCell+Divider.swift in Sources */,
 				B8C11CA725EFEAEE00E2AC5E /* RowActionable.swift in Sources */,
 				B84D03E425FB636E00DE4935 /* Row+RowActionable.swift in Sources */,
 			);

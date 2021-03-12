@@ -20,9 +20,9 @@ import UIKit
 /// Ideally we use generics here but unfortunately that doesn't work nicely with Objective-C!
 class ContainerTableViewCell: SeparatorTableViewCell, Highlightable {
 
-    /// Subclasses create the subview
     // swiftlint:disable unavailable_function
-    class func createSubview() -> UIView {
+    /// Subclasses create the subview
+    func createSubview() -> UIView {
         fatalError("Abstract: subclasses should override \(#function)")
     }
     // swiftlint:enable unavailable_function
@@ -58,7 +58,7 @@ class ContainerTableViewCell: SeparatorTableViewCell, Highlightable {
 
     /// Add subviews to subview hierarchy
     private func addSubviews() {
-        subview = Self.createSubview()
+        subview = createSubview()
         contentView.addSubview(subview)
     }
 

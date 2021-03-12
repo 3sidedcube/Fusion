@@ -11,7 +11,7 @@ import UIKit
 /// `UITableViewCell` with a `ImageContainerView`
 class ImageTableViewCell: ContainerTableViewCell {
 
-    override class func createSubview() -> UIView {
+    override func createSubview() -> UIView {
         return ImageContainerView()
     }
 

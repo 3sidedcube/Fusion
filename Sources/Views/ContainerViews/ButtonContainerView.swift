@@ -22,17 +22,15 @@ class ButtonContainerView: ContainerView<UIButton> {
         return subview
     }
 
-    // MARK: - Setup
-
-    /// Add initializer functionality
-    override func setup() {
-        super.setup()
-
+    /// Create the `UIButton` instance
+    override func createSubview() -> UIButton {
+        let button = UIButton()
         button.addTarget(
             self,
             action: #selector(buttonTouchUpInside),
             for: .touchUpInside
         )
+        return button
     }
 
     // MARK: - Action

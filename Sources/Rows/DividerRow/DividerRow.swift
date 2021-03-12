@@ -33,7 +33,7 @@ class DividerRow: FusionRow<DividerTableViewCell> {
         in tableViewController: TableViewController
     ) {
         // Set view-model
-        cell.setDivider(divider)
+        cell.dividerContainerView.setDivider(divider)
     }
 
     // MARK: - CellHeightConfigurable

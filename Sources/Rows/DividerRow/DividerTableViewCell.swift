@@ -10,7 +10,7 @@ import UIKit
 /// `UITableViewCell` with a `DividerContainerView`
 class DividerTableViewCell: ContainerTableViewCell {
 
-    override class func createSubview() -> UIView {
+    override func createSubview() -> UIView {
         return DividerContainerView()
     }
 

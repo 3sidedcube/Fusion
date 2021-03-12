@@ -29,7 +29,7 @@ public class ListItem: Codable, JSONModel, ViewModel, RowConvertible {
     /// `ActionJSON` to fire `Action` when clicked
     public var action: ActionJSON?
 
-    // MARK: - View
+    // MARK: - ViewModel
 
     /// RGBA hex color for the background
     public var backgroundColor: RGBAHex?

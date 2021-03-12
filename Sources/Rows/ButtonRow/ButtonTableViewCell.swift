@@ -10,7 +10,7 @@ import UIKit
 /// `UITableViewCell` with a `ButtonContainerView`
 class ButtonTableViewCell: ContainerTableViewCell {
 
-    override class func createSubview() -> UIView {
+    override func createSubview() -> UIView {
         return ButtonContainerView()
     }
 

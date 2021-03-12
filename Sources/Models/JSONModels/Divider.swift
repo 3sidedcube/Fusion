@@ -13,7 +13,7 @@ public struct Divider: Codable, JSONModel, ViewModel {
     /// `Float` height of the divider
     public var strokeWidth: Float?
 
-    // MARK: - View
+    // MARK: - ViewModel
 
     /// `RGBAHex` color for the background
     public var backgroundColor: RGBAHex?

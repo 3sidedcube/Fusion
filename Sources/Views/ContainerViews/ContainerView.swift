@@ -15,7 +15,7 @@ import UIKit
 class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded {
 
     /// Create the `subview` of type `T`
-    class func createSubview() -> T {
+    func createSubview() -> T {
         return T()
     }
 
@@ -40,7 +40,7 @@ class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded
     }
 
     /// Subview of type `T`
-    private(set) lazy var subview = Self.createSubview()
+    private(set) lazy var subview = createSubview()
 
     /// `EdgeConstraints` of `subview` to `self`
     private(set) var edgeConstraints: EdgeConstraints!
@@ -94,8 +94,6 @@ class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded
         let backgroundColor = viewModel?.backgroundColor?.hexColor
         subview.backgroundColor = backgroundColor ?? .defaultBackgroundColor
 
-        debugPrint("\(type(of: subview)) background \(backgroundColor?.hexString)")
-
         // `padding`
         padding = viewModel?.padding ?? .zero
 
@@ -110,15 +108,5 @@ class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded
 
         // `cornerRadius`
         subview.layer.setCornerRadius(viewModel?.cornerRadius)
-    }
-
-    // MARK: - Highlightable
-
-    override var viewToHighlight: UIView {
-        return subview
-    }
-
-    override var isHighlightable: Bool {
-        return false
     }
 }

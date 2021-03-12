@@ -11,6 +11,8 @@ import Foundation
 /// This structure is, in some ways, an abstraction of the `UITextView` or `UILabel`.
 public struct Text: Codable, JSONModel, ViewModel, TextProperties {
 
+    // MARK: - TextProperties
+
     /// `String` text
     public var content: String?
 
@@ -32,7 +34,7 @@ public struct Text: Codable, JSONModel, ViewModel, TextProperties {
     /// Letter spacing between characters
     public var letterSpacing: Float?
 
-    // MARK: - View
+    // MARK: - ViewModel
 
     /// `RGBAHex` color for the background
     public var backgroundColor: RGBAHex?

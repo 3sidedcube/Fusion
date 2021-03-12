@@ -45,7 +45,8 @@ class ListItemRow: FusionRow<ListItemTableViewCell>, RowActionable {
     ) {
         // Set view-model
         let imageBefore = listItem.image?.remoteImage?.image
-        cell.setListItem(
+
+        cell.listItemContainerView.setListItem(
             &listItem
         ) { [weak self, weak tableViewController] remoteImage, _ in
             guard let self = self, remoteImage.image != imageBefore else { return }

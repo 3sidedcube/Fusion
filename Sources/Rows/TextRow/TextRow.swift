@@ -34,6 +34,6 @@ class TextRow: FusionRow<TextTableViewCell> {
         in tableViewController: TableViewController
     ) {
         // Set view-model
-        cell.setText(text)
+        cell.labelContainerView.setText(text)
     }
 }

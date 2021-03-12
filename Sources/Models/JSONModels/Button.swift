@@ -10,6 +10,9 @@ import Foundation
 /// A `Text` with an `Action` and a disclosure chevron
 public struct Button: Codable, JSONModel, ViewModel, TextProperties {
 
+    /// `Action` on click
+    public var action: ActionJSON?
+
     // MARK: - TextProperties
 
     /// `String` text
@@ -33,7 +36,7 @@ public struct Button: Codable, JSONModel, ViewModel, TextProperties {
     /// Letter spacing between characters
     public var letterSpacing: Float?
 
-    // MARK: - View
+    // MARK: - ViewModel
 
     /// `RGBAHex` color for the background
     public var backgroundColor: RGBAHex?
@@ -52,9 +55,4 @@ public struct Button: Codable, JSONModel, ViewModel, TextProperties {
 
     /// Corner radius of the container
     public var cornerRadius: Float?
-
-    // MARK: - Button
-
-    /// `Action` on click
-    public var action: ActionJSON?
 }

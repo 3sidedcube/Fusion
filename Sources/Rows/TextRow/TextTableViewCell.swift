@@ -11,7 +11,7 @@ import UIKit
 /// `UITableViewCell` with a `LabelContainerView`
 class TextTableViewCell: ContainerTableViewCell {
 
-    override class func createSubview() -> UIView {
+    override func createSubview() -> UIView {
         return LabelContainerView()
     }
 

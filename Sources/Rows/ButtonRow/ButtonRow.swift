@@ -33,7 +33,7 @@ class ButtonRow: FusionRow<ButtonTableViewCell>, RowActionable {
         in tableViewController: TableViewController
     ) {
         // Set view-model
-        cell.setButton(button)
+        cell.buttonContainerView.setButton(button)
 
         // Handle click
         // Don't need to remove target-actions and just setting a closure

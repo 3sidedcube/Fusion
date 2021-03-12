@@ -22,7 +22,7 @@ public struct Image: Codable, JSONModel, ViewModel {
     /// If `nil`, then dynamically size the `UIImageView` from the `size` of the `UIImage`.
     public var fixedSize: Size?
 
-    // MARK: - View
+    // MARK: - ViewModel
 
     /// `RGBAHex` for the background
     public var backgroundColor: RGBAHex?

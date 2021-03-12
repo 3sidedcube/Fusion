@@ -11,7 +11,7 @@ import UIKit
 /// `UITableViewCell` with a `ListItemContainerView`
 class ListItemTableViewCell: ContainerTableViewCell {
 
-    override class func createSubview() -> UIView {
+    override func createSubview() -> UIView {
         return ListItemContainerView()
     }
 
