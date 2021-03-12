@@ -29,6 +29,8 @@
 		B82C477825F0DB330013B02C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C477725F0DB330013B02C /* UIViewController+Extensions.swift */; };
 		B84D03A625FB5F4100DE4935 /* SafariDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D03A525FB5F4100DE4935 /* SafariDelegate.swift */; };
 		B84D03E425FB636E00DE4935 /* Row+RowActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D03E325FB636E00DE4935 /* Row+RowActionable.swift */; };
+		B84D043625FB88A300DE4935 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D043525FB88A200DE4935 /* Lock.swift */; };
+		B84D044225FB91AF00DE4935 /* UITableView+Bug.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D044125FB91AF00DE4935 /* UITableView+Bug.swift */; };
 		B859FB5F25F22DF20058EDAC /* EdgeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FB5C25F22DF20058EDAC /* EdgeConstraints.swift */; };
 		B859FB6025F22DF20058EDAC /* CenterConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FB5D25F22DF20058EDAC /* CenterConstraints.swift */; };
 		B859FB6125F22DF20058EDAC /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859FB5E25F22DF20058EDAC /* Constrainable.swift */; };
@@ -324,6 +326,8 @@
 		B82C477725F0DB330013B02C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		B84D03A525FB5F4100DE4935 /* SafariDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariDelegate.swift; sourceTree = "<group>"; };
 		B84D03E325FB636E00DE4935 /* Row+RowActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Row+RowActionable.swift"; sourceTree = "<group>"; };
+		B84D043525FB88A200DE4935 /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		B84D044125FB91AF00DE4935 /* UITableView+Bug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Bug.swift"; sourceTree = "<group>"; };
 		B859FB5C25F22DF20058EDAC /* EdgeConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeConstraints.swift; sourceTree = "<group>"; };
 		B859FB5D25F22DF20058EDAC /* CenterConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterConstraints.swift; sourceTree = "<group>"; };
 		B859FB5E25F22DF20058EDAC /* Constrainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constrainable.swift; sourceTree = "<group>"; };
@@ -658,6 +662,7 @@
 				B867D6F325F79B2A0063F988 /* UIEdgeInsets+Extensions.swift */,
 				B867D8B725F7F0AC0063F988 /* UIFont+UIFontDescriptor.swift */,
 				B867DA6925F915570063F988 /* UIView+Extensions.swift */,
+				B84D044125FB91AF00DE4935 /* UITableView+Bug.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -668,6 +673,7 @@
 				B859FB5B25F22DDB0058EDAC /* Constraints */,
 				B8C11DDE25F04EEB00E2AC5E /* Email */,
 				B867D6AC25F795560063F988 /* RemoteImage.swift */,
+				B84D043525FB88A200DE4935 /* Lock.swift */,
 				B84D03A525FB5F4100DE4935 /* SafariDelegate.swift */,
 			);
 			path = Utilities;
@@ -1518,6 +1524,7 @@
 				B867D6F425F79B2A0063F988 /* UIEdgeInsets+Extensions.swift in Sources */,
 				B8B37A7C25F1AC12002B866A /* BaseViewController.swift in Sources */,
 				B859FDD125F649770058EDAC /* ListItem.swift in Sources */,
+				B84D043625FB88A300DE4935 /* Lock.swift in Sources */,
 				B859FD8325F6457C0058EDAC /* Bullet.swift in Sources */,
 				B867D94D25F811950063F988 /* UITableViewCell+Defaults.swift in Sources */,
 				B859FBE525F298DF0058EDAC /* TextAlignment.swift in Sources */,
@@ -1572,6 +1579,7 @@
 				OBJ_149 /* JSONModel.swift in Sources */,
 				B8C11DE425F04F0200E2AC5E /* EmailDelegate.swift in Sources */,
 				B82C473E25F0D1B70013B02C /* Identifiable.swift in Sources */,
+				B84D044225FB91AF00DE4935 /* UITableView+Bug.swift in Sources */,
 				B867D80025F7CE100063F988 /* Highlightable.swift in Sources */,
 				B8C11DBF25F04E9200E2AC5E /* UINavigationController+Action.swift in Sources */,
 				B859FBB525F294590058EDAC /* Text.swift in Sources */,

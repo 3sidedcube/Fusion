@@ -14,6 +14,10 @@ class ListItemContainerView: ContainerView<ListItemView> {
     var listItemView: ListItemView {
         return subview
     }
+
+    override var isHighlightable: Bool {
+        return true
+    }
 }
 
 /// List item `UIView` cell structure

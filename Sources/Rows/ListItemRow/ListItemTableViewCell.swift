@@ -9,7 +9,7 @@
 import UIKit
 
 /// `UITableViewCell` with a `ListItemContainerView`
-class ListItemTableViewCell: ContainerTableViewCell, Highlightable {
+class ListItemTableViewCell: ContainerTableViewCell {
 
     override class func createSubview() -> UIView {
         return ListItemContainerView()
@@ -20,24 +20,4 @@ class ListItemTableViewCell: ContainerTableViewCell, Highlightable {
         return subview as! ListItemContainerView
     }
     // swiftlint:enable force_cast
-
-    // MARK: - Lifecycle
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-        updateHighlighted()
-        selectedBackgroundView = UIView()
-    }
-
-    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-        super.setHighlighted(highlighted, animated: animated)
-        set(highlighted: highlighted, animated: animated)
-    }
-
-    // MARK: - Highlightable
-
-    var viewToHighlight: UIView {
-        return listItemContainerView.viewToHighlight
-    }
 }

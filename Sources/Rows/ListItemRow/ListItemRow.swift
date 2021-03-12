@@ -51,6 +51,8 @@ class ListItemRow: FusionRow<ListItemTableViewCell>, RowActionable {
             guard let self = self, remoteImage.image != imageBefore else { return }
             (tableViewController as? RowUpdateListener)?.rowRequestedUpdate(self)
         }
+
+        tableViewController.tableView.fixMultiLineLabelBugForCell(cell)
     }
 
     // MARK: - RowActionable

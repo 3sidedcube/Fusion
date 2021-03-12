@@ -12,6 +12,9 @@ enum PageId: String {
 
     /// Sample/example page to test data driven UI
     case sample = "6199f440-70a6-4542-bf68-61ecb995752d"
+
+    /// ID of page to test UI
+    case test = "3d37856f-5f56-41d8-a04f-eedfa1482139"
 }
 
 // MARK: - URL

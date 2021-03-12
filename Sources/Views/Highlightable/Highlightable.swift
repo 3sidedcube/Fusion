@@ -19,10 +19,10 @@ protocol Highlightable: AnyObject {
     var viewToHighlight: UIView { get }
 
     /// The background colour of the view when highlighted
-    var highlightedColor: UIColor { get }
+    var highlightedColor: UIColor? { get }
 
     /// The colour of the view when not highlighted
-    var unhighlightedColor: UIColor { get }
+    var unhighlightedColor: UIColor? { get }
 
     /// Whether the view updates it's UI on highlightable events
     var isHighlightable: Bool { get }
@@ -32,11 +32,11 @@ protocol Highlightable: AnyObject {
 
 extension Highlightable {
 
-    var highlightedColor: UIColor {
+    var highlightedColor: UIColor? {
         return .defaultHighlightedColor
     }
 
-    var unhighlightedColor: UIColor {
+    var unhighlightedColor: UIColor? {
         return .defaultUnhighlightedColor
     }
 
@@ -53,8 +53,8 @@ extension Highlightable {
     ///   - highlighted: Whether the component is highlighted
     ///   - animated: Whether to animate the change
     func set(highlighted: Bool, animated: Bool) {
-        // If `isHighlightable` is disabled do nothing
         guard isHighlightable else { return }
+
         UIView.animate(withDuration: animated ? 0.2 : 0.0) { [weak self] in
             guard let self = self else { return }
             let color = highlighted ? self.highlightedColor : self.unhighlightedColor

@@ -115,4 +115,8 @@ class ContainerView<T>: HighlightableView, Insettable where T: UIView, T: Padded
     override var viewToHighlight: UIView {
         return subview
     }
+
+    override var isHighlightable: Bool {
+        return false
+    }
 }

@@ -67,4 +67,18 @@ extension UIView {
 
         return nil
     }
+
+    /// Get all `subviews` of type `T`
+    func subviewsOfType<T>() -> [T] {
+        var views = [T]()
+
+        for subview in subviews {
+            if let view = subview as? T {
+                views.append(view)
+            }
+            views.append(contentsOf: subview.subviewsOfType())
+        }
+
+        return views
+    }
 }

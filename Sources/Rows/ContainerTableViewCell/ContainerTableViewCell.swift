@@ -18,7 +18,7 @@ import UIKit
 ///
 /// - Note:
 /// Ideally we use generics here but unfortunately that doesn't work nicely with Objective-C!
-class ContainerTableViewCell: SeparatorTableViewCell {
+class ContainerTableViewCell: SeparatorTableViewCell, Highlightable {
 
     /// Subclasses create the subview
     // swiftlint:disable unavailable_function
@@ -68,5 +68,30 @@ class ContainerTableViewCell: SeparatorTableViewCell {
 
         // Silence `UIView-Encapsulated-Layout-Height` warnings
         edgeConstraints.bottom.priority = .init(999)
+    }
+
+    // MARK: - Lifecycle
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        updateHighlighted()
+        selectedBackgroundView = UIView()
+    }
+
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        set(highlighted: highlighted, animated: animated)
+    }
+
+    // MARK: - Highlightable
+
+    var isHighlightable: Bool {
+        return subview is Highlightable
+    }
+
+    var viewToHighlight: UIView {
+        guard let view = subview as? Highlightable else { return self }
+        return view.viewToHighlight
     }
 }

@@ -17,7 +17,7 @@ extension UIColor {
     )
 
     /// Default value for `unhighlightedColor`
-    static let defaultUnhighlightedColor: UIColor = .white
+    static let defaultUnhighlightedColor: UIColor = .clear
 
     /// Default text `UIColor`
     static let defaultTextColor = UIColor(red255: 68, green255: 68, blue255: 68)

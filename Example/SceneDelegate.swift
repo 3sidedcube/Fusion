@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     /// The root `UIViewController` of the app
     private static func rootViewController() -> UIViewController {
         do {
-            let pageURL = try PageId.sample.toURL()
+            let pageURL = try PageId.test.toURL()
             let viewController = PageViewController(pageURL: pageURL)
             viewController.pullToRefresh = true
             return UINavigationController(rootViewController: viewController)
