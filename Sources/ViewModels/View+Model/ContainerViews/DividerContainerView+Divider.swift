@@ -14,13 +14,15 @@ extension DividerContainerView {
     ///
     /// - Parameter divider: `Divider`
     func setDivider(_ divider: Divider) {
-        // `color`
-        dividerView.backgroundColor = divider.color?.hexColor ?? .clear
-
         // `strokeWidth`
         dividerView.strokeWidth = CGFloat(max(0, divider.strokeWidth ?? 0))
 
         // `view-model`
         setViewModel(divider)
+
+        // Overwrite `backgroundColor`
+        let backgroundColor = divider.backgroundColor?.hexColor ?? .defaultBackgroundColor
+        dividerView.backgroundColor = .defaultBackgroundColor
+        dividerView.dividerView.backgroundColor = backgroundColor
     }
 }

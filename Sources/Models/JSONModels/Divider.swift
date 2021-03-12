@@ -10,9 +10,6 @@ import Foundation
 /// A structure used as a spacer or divider.
 public struct Divider: Codable, JSONModel, ViewModel {
 
-    /// `RGBAHex` color of the divider
-    public var color: RGBAHex?
-
     /// `Float` height of the divider
     public var strokeWidth: Float?
 

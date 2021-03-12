@@ -36,7 +36,7 @@ class ButtonRow: FusionRow<ButtonTableViewCell>, RowActionable {
         cell.setButton(button)
 
         // Handle click
-        cell.buttonContainerView.removeButtonTargetActions()
+        // Don't need to remove target-actions and just setting a closure
         cell.buttonContainerView.onButtonTouchUpInside = { [weak self] _ in
             self?.tryHandleAction(self?.button.action)
         }

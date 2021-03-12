@@ -9,27 +9,27 @@ import Foundation
 
 /// Define the properties to draw text.
 /// This structure is, in some ways, an abstraction of the `UITextView` or `UILabel`.
-public struct Text: Codable, JSONModel, ViewModel {
+public struct Text: Codable, JSONModel, ViewModel, TextProperties {
 
-    /// Text `String`
+    /// `String` text
     public var content: String?
 
-    /// RGBA hex color for the text
+    /// `RGBAHex` color of the text
     public var textColor: RGBAHex?
 
-    /// `Font` style of the text
+    /// `Font` of the text
     public var font: Font?
 
-    /// `TextAlignment`
+    /// `TextAlignment` to position text
     public var textAlignment: TextAlignment?
 
-    /// Number of lines to show this text in
+    /// Number of lines of text to draw
     public var numberOfLines: Int?
 
-    /// Height of the line
+    /// Height of each line
     public var lineHeight: Float?
 
-    /// Letter spacing
+    /// Letter spacing between characters
     public var letterSpacing: Float?
 
     // MARK: - View

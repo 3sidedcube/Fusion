@@ -11,13 +11,13 @@ import Foundation
 /// All models which drive a `UIView` should share these properties and handle them accordingly
 protocol ViewModel {
 
-    /// `RGBAHex` color for the background
+    /// `RGBAHex` color of the background
     var backgroundColor: RGBAHex? { get }
 
-    /// `Padding` for content insets
+    /// `Padding` of content insets
     var padding: Padding? { get }
 
-    /// `Margin` for insets relative to other views
+    /// `Margin` of insets relative to other views
     var margin: Margins? { get }
 
     /// `Border` of the container
