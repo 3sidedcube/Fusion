@@ -53,7 +53,7 @@ extension UINavigationController {
         return false
     }
 
-    // MARK: - ArticleAction
+    // MARK: - PageAction
 
     /// Push a `PageAction`
     ///
@@ -114,8 +114,7 @@ extension UINavigationController {
     /// - Parameters:
     ///   - emailAction: `EmailAction`
     private func presentEmailAction(_ emailAction: EmailAction) -> Bool {
-        guard let viewController = visibleViewController else { return false }
-        return viewController.presentEmailCompose(for: emailAction.email)
+        return presentEmailCompose(for: emailAction.email)
     }
 
     // MARK: - Push
