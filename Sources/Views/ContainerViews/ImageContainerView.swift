@@ -25,6 +25,7 @@ class PaddedImageView: UIView, Padded {
     let imageView: AdjustableImageView = {
         let imageView = AdjustableImageView(image: nil)
         imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = .placeholder
         return imageView
     }()
 

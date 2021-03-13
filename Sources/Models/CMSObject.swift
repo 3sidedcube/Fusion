@@ -9,8 +9,8 @@
 import Foundation
 
 /// An object returned from the CMS that is wrapped in a `CMSObject` structure
-struct CMSObject<T>: Codable where T: Codable {
+public struct CMSObject<T>: Codable where T: Codable {
 
     /// An object `T` wrapped in `"data"`
-    var data: T
+    public var data: T
 }

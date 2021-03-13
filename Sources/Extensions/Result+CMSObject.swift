@@ -8,7 +8,7 @@
 import Foundation
 import HTTPRequest
 
-extension Result where Success == Data {
+public extension Result where Success == Data {
 
     /// Get the associated `Data` if the result is a success otherwise throw.
     /// Decode that `Data` into a `CMSObject<T>` where `T` is a `Decodable`

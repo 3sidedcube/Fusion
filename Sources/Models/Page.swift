@@ -32,6 +32,9 @@ public struct Page: Codable, Identifiable {
     /// `Screen` (aka listView) to drive subview content
     public var screen: Screen?
 
+    /// `String` API `URL`
+    public var apiUrl: String?
+
     /// "screen_view" for analytics screen tracking
     public var analyticsScreenView: String?
 }

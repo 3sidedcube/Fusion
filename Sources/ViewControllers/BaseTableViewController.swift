@@ -116,7 +116,7 @@ open class BaseTableViewController: TableViewController,
     ///   - target: `Any` `.valueChanged` target
     ///   - action: `Selector` `.valueChanged` selector
     ///   - tintColor: `UIColor` to set on `UIRefreshControl`, fallback on `view.tintColor`
-    func addRefreshControl(
+    open func addRefreshControl(
         target: Any,
         action: Selector,
         tintColor: UIColor? = nil
@@ -128,19 +128,19 @@ open class BaseTableViewController: TableViewController,
     }
 
     /// Set `refreshControl` to `nil`
-    func removeRefreshControl() {
+    open func removeRefreshControl() {
         refreshControl = nil
     }
 
     /// `beginRefreshing` on `refreshControl` if not already
-    func beginRefreshing() {
+    open func beginRefreshing() {
         guard let refreshControl = refreshControl else { return }
         guard !refreshControl.isRefreshing else { return }
         refreshControl.beginRefreshing()
     }
 
     /// `endRefreshing` on `refreshControl` if not already
-    func endRefreshing() {
+    open func endRefreshing() {
         DispatchQueue.main.async { // Push back of main queue to prevent glitch
             guard let refreshControl = self.refreshControl else { return }
             guard refreshControl.isRefreshing else { return }
@@ -151,7 +151,7 @@ open class BaseTableViewController: TableViewController,
     /// Set `refreshing` state
     ///
     /// - Parameter refreshing: `Bool`
-    func setRefreshing(_ refreshing: Bool) {
+    open func setRefreshing(_ refreshing: Bool) {
         if refreshing {
             beginRefreshing()
         } else {
