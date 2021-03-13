@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit // Shouldn't usually with a `Model` but required here
+import UIKit // Shouldn't usually with a "model" but required here
 import Kingfisher
 
 /// `Result` the image fetch task completes with
@@ -51,7 +51,8 @@ final class RemoteImage {
         in imageView: UIImageView,
         placeholder: UIImage? = nil,
         remoteOptions: KingfisherOptionsInfo? = [
-            .transition(.fade(0.1)),
+            .transition(.fade(0.5)),
+            .scaleFactor(UIScreen.main.scale),
             .cacheOriginalImage
         ],
         completion: ImageCompletion?

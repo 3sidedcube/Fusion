@@ -9,6 +9,10 @@ import Foundation
 
 /// A remote image.
 /// This structure is, in some ways, an abstraction of the `UIImageView`.
+///
+/// - Note:
+/// A `class` so `remoteImage` can be mutated without needing to pass `inout`
+/// instead passing a reference
 public class Image: Codable, JSONModel, ViewModel {
 
     /// `Entry` where the image is located

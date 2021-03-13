@@ -20,7 +20,11 @@ class DividerContainerView: ContainerView<DividerView> {
         super.setViewModel(viewModel)
 
         // Overwrite `backgroundColor` to apply to the actual divider rather
-        // than it's container view
+        // than its container view. This doesn't quite follow the same
+        // structure as the other view-models.
+        // To correct, we would add a `color` property which would
+        // apply to the divider and the `backgroundColor` would apply to the
+        // divider container.
         let color = viewModel?.backgroundColor?.hexColor ?? .defaultBackgroundColor
         dividerView.backgroundColor = .defaultBackgroundColor
         dividerView.dividerView.backgroundColor = color

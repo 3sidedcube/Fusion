@@ -16,7 +16,7 @@ import UIKit
 open class AdjustableImageView: UIImageView {
 
     /// Perform `image` resizing on `bounds` change and setting `image`
-    open var isResizingEnabled = true
+    open var isResizingEnabled = false
 
     // MARK: - Image
 
