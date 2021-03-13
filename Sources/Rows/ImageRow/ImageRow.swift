@@ -64,7 +64,7 @@ class ImageRow: FusionRow<ImageTableViewCell> {
         // Set view-model
         let imageBefore = uiImage
         cell.imageContainerView.setImage(
-            &image
+            image
         ) { [weak self, weak tableViewController] remoteImage, _ in
             guard let self = self, remoteImage.image != imageBefore else { return }
             (tableViewController as? RowUpdateListener)?.rowRequestedUpdate(self)

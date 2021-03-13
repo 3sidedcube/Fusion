@@ -26,9 +26,7 @@ extension ListItemContainerView {
 
         // `image`
         listItemView.imageContainerView.isHidden = listItem.image == nil
-        if listItem.image != nil {
-            listItemView.imageContainerView.setImage(&listItem.image!, completion: completion)
-        }
+        listItemView.imageContainerView.setImage(listItem.image, completion: completion)
 
         // `imageSpacing`
         listItemView.hStackView.spacing = CGFloat(listItem.imageSpacing ?? 0)
