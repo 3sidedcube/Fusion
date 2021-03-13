@@ -22,7 +22,7 @@ extension URLComponents {
         var urlComponents = URLComponents()
 
         urlComponents.scheme = "https"
-        urlComponents.host = StatamicEnvironment.value().host
+        urlComponents.host = StatamicEnvironment.live.host
         urlComponents.path = "/api/\(endpoint)"
         urlComponents.queryItems = queryItems
 

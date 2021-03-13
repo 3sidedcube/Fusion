@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Fusion
 
 /// Statamic CMS endpoint
 enum StatamicEnvironment: String {
@@ -17,10 +16,10 @@ enum StatamicEnvironment: String {
 
 // MARK: - Environment
 
-extension StatamicEnvironment: Environment {
+extension StatamicEnvironment {
 
     /// Default `StatamicEnvironment` to fall back to
-    public static var `default`: StatamicEnvironment {
+    static var `default`: StatamicEnvironment {
         return .live
     }
 }

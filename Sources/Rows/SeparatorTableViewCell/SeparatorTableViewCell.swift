@@ -66,7 +66,6 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-
         updatePath()
     }
 
@@ -103,6 +102,7 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
         in tableViewController: TableViewController,
         forRowAt indexPath: IndexPath
     ) {
+        guard !separators.isEmpty else { return }
         layoutIfNeeded() // Path using bounds
         updatePath()
     }
