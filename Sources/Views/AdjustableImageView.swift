@@ -86,6 +86,8 @@ open class AdjustableImageView: UIImageView {
             equalTo: widthAnchor,
             multiplier: aspectRatio
         )
+        // Setting both a fixed width AND height should override this
+        aspectRatioConstraint?.priority = .init(999)
 
         // Activate new constraint
         aspectRatioConstraint?.isActive = true
