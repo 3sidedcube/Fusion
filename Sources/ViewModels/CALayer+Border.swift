@@ -14,14 +14,7 @@ public extension CALayer {
     /// 
     /// - Parameter border: `Border`
     func setBorder(_ border: Border?) {
-        guard let border = border else {
-            borderColor = nil
-            borderWidth = 0
-            return
-        }
-
-        let color = border.color?.hexColor ?? .clear
-        borderColor = color.cgColor
-        borderWidth = CGFloat(border.strokeWidth ?? 0)
+        borderColor = border?.color?.hexColor?.cgColor
+        borderWidth = CGFloat(border?.strokeWidth ?? 0)
     }
 }
