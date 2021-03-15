@@ -22,19 +22,17 @@ open class AdjustableImageView: UIImageView {
         }
     }
 
-    /// `NSLayoutConstraint` constraining `heightAnchor` relative to the `widthAnchor`
-    /// with the same `multiplier` as the inverse of the `image` aspect ratio, where aspect
-    /// ratio is defined width/height.
-    private var aspectRatioConstraint: NSLayoutConstraint?
-
-    // MARK: - Image
-
     /// Override `image` setting constraint if necessary on set
     override open var image: UIImage? {
         didSet {
             updateAspectRatioConstraint()
         }
     }
+
+    /// `NSLayoutConstraint` constraining `heightAnchor` relative to the `widthAnchor`
+    /// with the same `multiplier` as the inverse of the `image` aspect ratio, where aspect
+    /// ratio is defined width/height.
+    private var aspectRatioConstraint: NSLayoutConstraint?
 
     // MARK: - Init
 
