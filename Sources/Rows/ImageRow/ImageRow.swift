@@ -25,6 +25,9 @@ class ImageRow: FusionRow<ImageTableViewCell> {
         return image.remoteImage?.image
     }
 
+    /// `DownloadTask` for fetching the image
+    private var downloadTask: DownloadTask?
+
     // MARK: - Init
 
     /// Default memberwise initializer
@@ -59,15 +62,52 @@ class ImageRow: FusionRow<ImageTableViewCell> {
     override func configureCell(
         _ cell: ImageTableViewCell,
         at indexPath: IndexPath,
-        in tableViewController: TableViewController
+        in controller: TableViewController
     ) {
         // Set view-model
         let imageBefore = uiImage
-        cell.imageContainerView.setImage(
+        downloadTask = cell.imageContainerView.setImage(
             image
-        ) { [weak self, weak tableViewController] remoteImage, _ in
-            guard let self = self, remoteImage.image != imageBefore else { return }
-            (tableViewController as? RowUpdateListener)?.rowRequestedUpdate(self)
+        ) { [weak self, weak controller] _, _ in
+            guard let self = self, self.uiImage != imageBefore else { return }
+            (controller as? RowUpdateListener)?.rowRequestedUpdate(self)
         }
+
+        redrawUI(cell)
+    }
+
+    /// Update `Padding` and `Margins` based on image download state
+    ///
+    /// - Parameter cell: `ImageTableViewCell`
+    private func redrawUI(_ cell: ImageTableViewCell) {
+        // `Padding` and `Margins` to set
+        let padding: Padding
+        let margins: Margins
+
+        if let task = downloadTask, task.isRunning {
+            // Task in progress - ad padding to show activity indicator
+            padding = .init(top: 20, left: 0, right: 0, bottom: 20)
+            margins = .zero
+        } else if uiImage != nil {
+            // Task finished with an image - show UI
+            padding = image.padding ?? .zero
+            margins = image.margin ?? .zero
+        } else {
+            // Task finished without an image - hide UI
+            padding = .zero
+            margins = .zero
+        }
+
+        // Update UI
+        cell.imageContainerView.padding = padding
+        cell.imageContainerView.margins = margins
+    }
+}
+
+extension DownloadTask {
+
+    /// Check if the `URLSessionDataTask` has a `state` equal to `.running`
+    var isRunning: Bool {
+        return sessionTask.task.state == .running
     }
 }

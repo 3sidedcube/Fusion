@@ -82,6 +82,14 @@ class PaddedImageView: UIView, Padded {
     /// Add constraints to subviews in the subview hierarchy
     private func addConstraints() {
         imageViewEdgeConstraints = imageView.edgeConstraints(to: self)
+
+        // Add a default height constraint of 0 on the imageView for
+        // when there's no image. This is to prevent there to ensure there are
+        // enough constraints in the cell for Auto Layout to inform the tableview
+        // of the height of the cell
+        let heightConstraint = imageView.heightAnchor.constraint(equalToConstant: 0)
+        heightConstraint.priority = .init(150)
+        heightConstraint.isActive = true
     }
 
     // MARK: - Padded

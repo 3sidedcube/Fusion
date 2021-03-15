@@ -47,6 +47,7 @@ final class RemoteImage {
     ///   - placeholder: `UIImage` placeholder
     ///   - remoteOptions: `KingfisherOptionsInfo`
     ///   - completion: `ImageCompletion`
+    @discardableResult
     func load(
         in imageView: UIImageView,
         placeholder: UIImage? = nil,
@@ -56,9 +57,9 @@ final class RemoteImage {
             .cacheOriginalImage
         ],
         completion: ImageCompletion?
-    ) {
+    ) -> DownloadTask? {
         imageView.kf.indicatorType = .activity
-        imageView.kf.setImage(
+        return imageView.kf.setImage(
             with: url,
             placeholder: placeholder,
             options: remoteOptions,

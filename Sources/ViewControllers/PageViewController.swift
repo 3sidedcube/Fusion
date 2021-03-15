@@ -67,6 +67,7 @@ open class PageViewController: BaseViewController {
     /// Refresh the `Page` on pull
     public var pullToRefresh = false {
         didSet {
+            guard isViewLoaded else { return }
             didSetPullToRefresh()
         }
     }
@@ -170,15 +171,13 @@ open class PageViewController: BaseViewController {
 
     /// `pullToRefresh` set
     private func didSetPullToRefresh() {
-        if pullToRefresh {
-            tableViewController.addRefreshControl(
-                target: self,
-                action: #selector(refresh),
-                tintColor: view.tintColor
-            )
-        } else {
-            tableViewController.removeRefreshControl()
-        }
+        tableViewController.removeRefreshControl()
+        guard pullToRefresh else { return }
+        tableViewController.addRefreshControl(
+            target: self,
+            action: #selector(refresh),
+            tintColor: view.tintColor
+        )
     }
 
     /// Start animating `activityIndicator` unless the `tableViewController` defines

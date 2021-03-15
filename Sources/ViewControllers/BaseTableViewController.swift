@@ -129,6 +129,7 @@ open class BaseTableViewController: TableViewController,
 
     /// Set `refreshControl` to `nil`
     open func removeRefreshControl() {
+        refreshControl?.endRefreshing()
         refreshControl = nil
     }
 
