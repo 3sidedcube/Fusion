@@ -32,9 +32,14 @@ class ListItemTableViewCell: ContainerTableViewCell {
         ]
         labels.forEach {
             $0.setContent(
+                hugging: 250,
+                compressionResistance: 750,
+                axis: [.horizontal]
+            )
+            $0.setContent(
                 hugging: 1000,
                 compressionResistance: 1000,
-                axis: [.horizontal]
+                axis: [.vertical]
             )
         }
     }
