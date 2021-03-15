@@ -14,7 +14,8 @@ import UIKit
 /// `image` width/height ratio
 open class AdjustableImageView: UIImageView {
 
-    /// Perform `image` resizing on `bounds` change and setting `image`
+    /// When `true`, add an `NSLayoutConstraint` to this `UIImageView` so that
+    /// it's width/height ratio matches that of the `image`
     open var isResizingEnabled = true {
         didSet {
             updateAspectRatioConstraint()
