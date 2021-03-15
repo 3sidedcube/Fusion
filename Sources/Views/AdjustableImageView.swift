@@ -9,24 +9,28 @@
 import Foundation
 import UIKit
 
-/// `AdjustableImageView` is a `UIImageView` which should have a fixed width.
-/// Upon setting `image`, that `UIImage` will be resized such that:
-/// - It's `size.width` matches `bounds.width`
-/// - It's `size.height` is such that the `UIImage` maintains it's aspect ratio with its new `size.width`.
+/// `AdjustableImageView` is a `UIImageView` which should have a fixed width or height.
+/// It will add an `NSLayoutConstraint` such that it's width/height ratio matches the
+/// `image` width/height ratio
 open class AdjustableImageView: UIImageView {
 
     /// Perform `image` resizing on `bounds` change and setting `image`
-    open var isResizingEnabled = false
+    open var isResizingEnabled = true {
+        didSet {
+            updateAspectRatioConstraint()
+        }
+    }
+
+    /// `NSLayoutConstraint` constraining `heightAnchor` relative to the `widthAnchor`
+    /// with the same `multiplier` as the `image` aspect ratio
+    private var aspectRatioConstraint: NSLayoutConstraint?
 
     // MARK: - Image
 
-    /// Override `image` resizing if necessary on set
+    /// Override `image` setting constraint if necessary on set
     override open var image: UIImage? {
-        get {
-            return super.image
-        }
-        set {
-            super.image = resizeImage(newValue)
+        didSet {
+            updateAspectRatioConstraint()
         }
     }
 
@@ -53,79 +57,37 @@ open class AdjustableImageView: UIImageView {
     private func setup() {
         // Set default `contentMode`
         contentMode = .scaleAspectFill
-    }
 
-    // MARK: - Lifecycle
-
-    override open func layoutSubviews() {
-        super.layoutSubviews()
-        resizeImage() // performance?
+        // Update constraints
+        updateAspectRatioConstraint()
     }
 
     // MARK: - Resize
 
-    /// Set `image` to the resized version of `image`
-    private func resizeImage() {
-        image = resizeImage(image)
-    }
+    /// De-active `aspectRatioConstraint` and re-active if conditions are met
+    private func updateAspectRatioConstraint() {
+        // De-active old constraint
+        aspectRatioConstraint?.isActive = false
 
-    /// Resize the given image based on `bounds`
-    ///
-    /// - Parameter image: `UIImage`
-    public func resizeImage(_ image: UIImage?) -> UIImage? {
-        guard isResizingEnabled else { return image }
-        guard let image = image else { return nil }
+        // Check that we have an image and resizing is enabled
+        guard let image = image, isResizingEnabled else { return }
 
         // `image` dimensions
         let imageWidth = image.size.width
         let imageHeight = image.size.height
 
         // `image` aspectRatio
-        guard imageHeight > 0 else { return image }
-        let aspectRatio = imageWidth / imageHeight
-        guard aspectRatio > 0 else { return image }
+        guard imageWidth > 0 else { return }
+        let aspectRatio = imageHeight / imageWidth
+        guard aspectRatio > 0 else { return }
 
-        // `self` dimensions
-        let width = bounds.size.width
-
-        // Target dimensions
-        let targetWidth = width
-        let targetHeight = targetWidth / aspectRatio
-
-        // Check if we need to resize at all
-        let widthIsEqual = CGFloat.isEqual(
-            imageWidth, targetWidth, epsilon: .largeEpsilon
+        // Create a new constraint
+        aspectRatioConstraint = heightAnchor.constraint(
+            equalTo: widthAnchor,
+            multiplier: aspectRatio
         )
-        let heightIsEqual = CGFloat.isEqual(
-            imageHeight, targetHeight, epsilon: .largeEpsilon
-        )
-        guard !widthIsEqual || !heightIsEqual else { return image }
 
-        // Perform resize
-        return image.resizeImage(
-            to: CGSize(width: targetWidth, height: targetHeight)
-        )
-    }
-}
-
-// MARK: - CGFloat + Equal
-
-extension CGFloat {
-
-    /// Large epsilon value (i.e. doesn't require a lot of precision)
-    fileprivate static let largeEpsilon: CGFloat = 0.001
-
-    /// Are `a` and `b` equal within `epsilon`
-    ///
-    /// - Parameters:
-    ///   - a: `CGFloat`
-    ///   - b: `CGFloat`
-    ///   - epsilon: `CGFloat`
-    static func isEqual(
-        _ a: CGFloat,
-        _ b: CGFloat,
-        epsilon: CGFloat = .ulpOfOne
-    ) -> Bool {
-        return abs(a - b) < epsilon
+        // Activate new constraint
+        aspectRatioConstraint?.isActive = true
     }
 }

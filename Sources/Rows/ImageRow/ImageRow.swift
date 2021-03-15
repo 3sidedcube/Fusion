@@ -70,29 +70,4 @@ class ImageRow: FusionRow<ImageTableViewCell> {
             (tableViewController as? RowUpdateListener)?.rowRequestedUpdate(self)
         }
     }
-
-    // MARK: - CellHeightConfigurable
-
-    override func heightForRowInTableViewController(
-        _ tableViewController: TableViewController,
-        forRowAt indexPath: IndexPath
-    ) -> CGFloat {
-        // Vertical insets
-        let verticalMargin = max(0, image.margin?.insets.verticalSum ?? 0)
-        let verticalPadding = max(0, image.padding?.insets.verticalSum ?? 0)
-
-        // Horizontal insets
-        let horizontalMargin = max(0, image.margin?.insets.horizontalSum ?? 0)
-        let horizontalPadding = max(0, image.padding?.insets.horizontalSum ?? 0)
-
-        // Get the targetWidth of the image
-        let tableViewWidth = tableViewController.tableView.bounds.width
-        let width = tableViewWidth - horizontalMargin - horizontalPadding
-        let targetWidth = max(0, width)
-
-        // Get the targetHeight of the image
-        let targetHeight = imageHeight(for: targetWidth)
-        let height = targetHeight + verticalMargin + verticalPadding
-        return height
-    }
 }

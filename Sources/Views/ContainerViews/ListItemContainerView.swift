@@ -94,8 +94,6 @@ class ListItemView: HighlightableView, Padded {
         addSubviews()
         addConstraints()
 
-        // Remove auto-resizing of `imageView` based on image size
-        imageContainerView.imageView.isResizingEnabled = false
         imageContainerView.imageView.contentMode = .scaleAspectFit
     }
 

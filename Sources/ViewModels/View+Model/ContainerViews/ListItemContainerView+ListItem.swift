@@ -15,7 +15,7 @@ extension ListItemContainerView {
     /// - Parameters:
     ///   - listItem: `ListItem`
     ///   - completion: `ImageCompletion`
-    func setListItem(_ listItem: inout ListItem, completion: ImageCompletion?) {
+    func setListItem(_ listItem: ListItem, completion: ImageCompletion?) {
         // `title`
         listItemView.titleLabelContainerView.isHidden = listItem.title == nil
         listItemView.titleLabelContainerView.setText(listItem.title)
