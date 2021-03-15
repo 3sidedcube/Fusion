@@ -8,7 +8,7 @@
 import Foundation
 
 /// Entity supports `Margins`
-protocol Margined {
+public protocol Margined {
 
     /// Get and set `Margins`
     var margins: Margins { get set }

@@ -68,11 +68,6 @@ class TableSeparator {
         }
     }
 
-    /// `CALayer` `superlayer` of `shapeLayer`
-    var superlayer: CALayer? {
-        return shapeLayer.superlayer
-    }
-
     // MARK: - Init
 
     init (
@@ -123,13 +118,12 @@ class TableSeparator {
         path = UIBezierPath()
     }
 
-    /// Update the path of `shapeLayer`, based on the metrics of
-    /// its superlayer
+    /// Update the path of `shapeLayer`, based on the `bounds` of its parent layer
     func updatePath() {
-        guard let superlayer = shapeLayer.superlayer else { return }
+        guard let superLayer = shapeLayer.superlayer else { return }
 
-        let width = superlayer.bounds.width
-        let height = superlayer.bounds.height
+        let width = superLayer.bounds.width
+        let height = superLayer.bounds.height
 
         let path = UIBezierPath()
 

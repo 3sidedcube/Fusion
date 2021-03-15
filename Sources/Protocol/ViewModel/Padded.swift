@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 /// Entity supports `Padding`
-protocol Padded {
+public protocol Padded {
 
     /// Get and set `Padding`
     var padding: Padding { get set }

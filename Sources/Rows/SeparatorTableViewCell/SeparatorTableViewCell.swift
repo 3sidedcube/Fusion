@@ -88,6 +88,7 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
         updatePath()
     }
 
+    /// Update the path for each of the `separators`
     func updatePath() {
         separators.forEach {
             $0.bringToFront()

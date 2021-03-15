@@ -10,7 +10,7 @@ import UIKit
 
 extension InsetLabel: Padded {
 
-    var padding: Padding {
+    public var padding: Padding {
         get {
             return Padding(insets: insets)
         }
