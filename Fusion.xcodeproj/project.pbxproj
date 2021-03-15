@@ -1182,8 +1182,8 @@
 				B859FC4A25F37B780058EDAC /* Views */,
 				B8C11C9225EFEAA000E2AC5E /* ViewControllers */,
 				B8C11C5225EFD95B00E2AC5E /* Extensions */,
-				B867D80D25F7CFFD0063F988 /* Defaults */,
 				B859FD6325F62CF80058EDAC /* Utilities */,
+				B867D80D25F7CFFD0063F988 /* Defaults */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;

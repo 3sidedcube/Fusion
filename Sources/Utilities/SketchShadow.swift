@@ -63,7 +63,9 @@ public extension SketchShadow {
 
     /// `SketchShadow` with the default shadow properties
     static var `default`: SketchShadow {
-        return SketchShadow(color: .black, alpha: 0, x: 0, y: -3, blur: 6, spread: 0)
+        return SketchShadow(
+            color: .black, alpha: 0, x: 0, y: -3, blur: 6, spread: 0
+        )
     }
 }
 

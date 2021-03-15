@@ -46,6 +46,7 @@ public struct Email {
     // MARK: - Init
 
     /// Default `public` memberwise initializer
+    /// 
     /// - Parameters:
     ///   - toAddresses: `[String]`
     ///   - ccAddresses: `[String]`
