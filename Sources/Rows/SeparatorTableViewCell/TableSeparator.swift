@@ -73,7 +73,7 @@ class TableSeparator {
     init (
         position: Position,
         strokeWidth: CGFloat = 1,
-        strokeColor: UIColor = .lightGray
+        strokeColor: UIColor = .defaultSeparatorColor
     ) {
         self.position = position
         self.strokeWidth = strokeWidth

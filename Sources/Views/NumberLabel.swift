@@ -34,7 +34,9 @@ class NumberLabel: InsetLabel {
         numberOfLines = 1
         textAlignment = .center
         clipsToBounds = true
-        insets = UIEdgeInsets(value: 1)
+        insets = UIEdgeInsets(value: 10)
+
+        widthAnchor.constraint(equalTo: heightAnchor).isActive = true
     }
 
     // MARK: - Lifecycle

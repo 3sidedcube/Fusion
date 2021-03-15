@@ -30,29 +30,36 @@ class NumberRow: ListItemRow, CellDisplayable {
     ) {
         super.configureCell(cell, at: indexPath, in: tableViewController)
 
-        // NumberLabel
+        // `listItemContainerView`
+        let containerView = cell.listItemContainerView
+        containerView.margins = .zero
+        containerView.padding = .init(top: 13, left: 20, right: 20, bottom: 18)
+
+        // `vStackView`
+        cell.listItemContainerView.listItemView.vStackView.spacing = 5
+
+        // `hStackView`
+        cell.listItemContainerView.listItemView.hStackView.spacing = 8
+
+        // Create a `NumberLabel` instance
         let label = NumberLabel()
         label.setContent(
-            hugging: 800,
-            compressionResistance: 801,
+            hugging: 1000,
+            compressionResistance: 1000,
             axis: [.horizontal, .vertical]
         )
 
         // leadingContainerView
         let numberContainerView = cell.numberContainerView
+        numberContainerView.setImage(nil, completion: nil)
         numberContainerView.isHidden = false
-        numberContainerView.backgroundColor = .clear
-        numberContainerView.layer.setShadow(nil)
-        numberContainerView.layer.setBorder(nil)
-        numberContainerView.layer.setCornerRadius(nil)
-        numberContainerView.padding = .zero
-        numberContainerView.margins = .zero
         numberContainerView.removeSubviewsRecursive()
         numberContainerView.addSubview(label)
 
         // Constrain
         label.edgeConstraints(to: numberContainerView)
-        label.widthAnchor.constraint(equalTo: label.heightAnchor).isActive = true
+        label.backgroundColor = .defaultSeparatorColor
+        label.textColor = .gray
 
         // Separators
         cell.separators = [TableSeparator(position: .bottom, strokeWidth: 2)]

@@ -122,7 +122,7 @@ class ListItemView: HighlightableView, Padded {
         let imageView = imageContainerView.imageView
         imageView.setContent(
             hugging: 800,
-            compressionResistance: 800,
+            compressionResistance: 1000,
             axis: [.vertical, .horizontal]
         )
 
