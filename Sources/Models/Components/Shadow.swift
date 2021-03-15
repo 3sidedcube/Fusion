@@ -28,3 +28,20 @@ public struct Shadow: Codable {
     /// Shadow spread
     public var spread: Float?
 }
+
+// MARK: - Shadow + SketchShadow
+
+extension Shadow {
+
+    /// Map to `SketchShadow`
+    var sketchShadow: SketchShadow {
+        return SketchShadow(
+            color: color?.hexColor ?? .black,
+            alpha: alpha ?? 0,
+            x: x?.cgFloat ?? 0,
+            y: y?.cgFloat ?? -3,
+            blur: blur?.cgFloat ?? 6,
+            spread: spread?.cgFloat ?? 0
+        )
+    }
+}

@@ -10,29 +10,35 @@ import UIKit
 import ThunderTable
 
 /// Base `Row` for other `Row`s in this project
-class FusionRow<T>: Row, CellHeightConfigurable where T: UITableViewCell {
+open class FusionRow<T>: Row, CellHeightConfigurable where T: UITableViewCell {
+
+    // MARK: - Init
+
+    /// Public initializer
+    public init() {
+    }
 
     // MARK: - Row
 
     /// `UITableViewCell` subclass to draw
-    var cellClass: UITableViewCell.Type? {
+    open var cellClass: UITableViewCell.Type? {
         return T.self
     }
 
     /// `UITableViewCell.SelectionStyle`
-    var selectionStyle: UITableViewCell.SelectionStyle? {
+    open var selectionStyle: UITableViewCell.SelectionStyle? {
         guard selectionHandler != nil else { return UITableViewCell.SelectionStyle.none }
         return .default
     }
 
     /// `SelectionHandler` - by default do not handle selection
-    var selectionHandler: SelectionHandler? {
+    open var selectionHandler: SelectionHandler? {
         return nil
     }
 
     // MARK: - Configure
 
-    func configure(
+    open func configure(
         cell: UITableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
@@ -42,7 +48,7 @@ class FusionRow<T>: Row, CellHeightConfigurable where T: UITableViewCell {
         configureCell(cell, at: indexPath, in: tableViewController)
     }
 
-    func configureCell(
+    open func configureCell(
         _ cell: T,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
@@ -52,7 +58,7 @@ class FusionRow<T>: Row, CellHeightConfigurable where T: UITableViewCell {
 
     // MARK: - CellHeightConfigurable
 
-    func heightForRowInTableViewController(
+    open func heightForRowInTableViewController(
         _ tableViewController: TableViewController,
         forRowAt indexPath: IndexPath
     ) -> CGFloat {

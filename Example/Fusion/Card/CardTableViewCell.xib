@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="459" id="KGk-i7-Jjw" customClass="CardTableViewCell" customModule="Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="459"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="459"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tn1-Bd-SKZ">
+                        <rect key="frame" x="20" y="20" width="280" height="419"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkL-ab-NIP">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="419"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Tq2-PF-UGc">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="419"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kUH-2U-d0U" customClass="AdjustableImageView" customModule="Fusion">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="368"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyf-zx-fFh">
+                                                <rect key="frame" x="119.5" y="373" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79g-VG-9Vr">
+                                                <rect key="frame" x="119.5" y="398.5" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Tq2-PF-UGc" secondAttribute="bottom" id="3Nr-Pg-I1Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tq2-PF-UGc" secondAttribute="trailing" id="DEK-RK-E5I"/>
+                                    <constraint firstItem="Tq2-PF-UGc" firstAttribute="top" secondItem="UkL-ab-NIP" secondAttribute="top" id="FMk-U3-Og8"/>
+                                    <constraint firstItem="Tq2-PF-UGc" firstAttribute="leading" secondItem="UkL-ab-NIP" secondAttribute="leading" id="Kv4-mQ-Re7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UkL-ab-NIP" secondAttribute="trailing" id="2hz-PM-kJZ"/>
+                            <constraint firstAttribute="bottom" secondItem="UkL-ab-NIP" secondAttribute="bottom" id="Hor-KF-ic1"/>
+                            <constraint firstItem="UkL-ab-NIP" firstAttribute="leading" secondItem="Tn1-Bd-SKZ" secondAttribute="leading" id="QGm-Ps-Fr9"/>
+                            <constraint firstItem="UkL-ab-NIP" firstAttribute="top" secondItem="Tn1-Bd-SKZ" secondAttribute="top" id="XNl-Ea-1Va"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Tn1-Bd-SKZ" secondAttribute="bottom" constant="20" id="9je-op-UZ4"/>
+                    <constraint firstAttribute="trailing" secondItem="Tn1-Bd-SKZ" secondAttribute="trailing" constant="20" id="JEB-ig-QDO"/>
+                    <constraint firstItem="Tn1-Bd-SKZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="ODP-X1-vEJ"/>
+                    <constraint firstItem="Tn1-Bd-SKZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="xSx-qs-Ard"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellImageView" destination="kUH-2U-d0U" id="y4X-G5-qFo"/>
+                <outlet property="containerView" destination="Tn1-Bd-SKZ" id="aQW-Gd-dJZ"/>
+                <outlet property="stackView" destination="Tq2-PF-UGc" id="eUa-PW-Vr1"/>
+                <outlet property="stackViewContainerView" destination="UkL-ab-NIP" id="pgt-ep-hmW"/>
+                <outlet property="subtitleLabel" destination="79g-VG-9Vr" id="LDa-jL-iZk"/>
+                <outlet property="titleLabel" destination="Eyf-zx-fFh" id="nnP-dz-kpS"/>
+            </connections>
+            <point key="canvasLocation" x="40.579710144927539" y="263.50446428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

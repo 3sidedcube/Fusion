@@ -21,6 +21,13 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B826232025FF79CB009AD57D /* AppFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826231F25FF79CB009AD57D /* AppFusion.swift */; };
+		B826232F25FF7A24009AD57D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826232E25FF7A24009AD57D /* Card.swift */; };
+		B826236825FF7A69009AD57D /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826236725FF7A69009AD57D /* CardRow.swift */; };
+		B826238E25FF7B34009AD57D /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826238C25FF7B34009AD57D /* CardTableViewCell.swift */; };
+		B826238F25FF7B34009AD57D /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B826238D25FF7B34009AD57D /* CardTableViewCell.xib */; };
+		B826239C25FF7EEB009AD57D /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826239B25FF7EEB009AD57D /* SketchShadow.swift */; };
+		B82623A925FF84E7009AD57D /* Card+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82623A825FF84E7009AD57D /* Card+RowConvertible.swift */; };
 		B82C473125F0D17A0013B02C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C472E25F0D17A0013B02C /* Page.swift */; };
 		B82C473225F0D17A0013B02C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C472F25F0D17A0013B02C /* Screen.swift */; };
 		B82C473E25F0D1B70013B02C /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C473D25F0D1B70013B02C /* Identifiable.swift */; };
@@ -301,6 +308,13 @@
 
 /* Begin PBXFileReference section */
 		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B826231F25FF79CB009AD57D /* AppFusion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFusion.swift; sourceTree = "<group>"; };
+		B826232E25FF7A24009AD57D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B826236725FF7A69009AD57D /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
+		B826238C25FF7B34009AD57D /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		B826238D25FF7B34009AD57D /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
+		B826239B25FF7EEB009AD57D /* SketchShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
+		B82623A825FF84E7009AD57D /* Card+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+RowConvertible.swift"; sourceTree = "<group>"; };
 		B82C472E25F0D17A0013B02C /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		B82C472F25F0D17A0013B02C /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		B82C473D25F0D1B70013B02C /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -578,6 +592,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B826232C25FF7A0C009AD57D /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				B826232E25FF7A24009AD57D /* Card.swift */,
+				B826236725FF7A69009AD57D /* CardRow.swift */,
+				B826238C25FF7B34009AD57D /* CardTableViewCell.swift */,
+				B826238D25FF7B34009AD57D /* CardTableViewCell.xib */,
+				B82623A825FF84E7009AD57D /* Card+RowConvertible.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		B826232D25FF7A16009AD57D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B867D78A25F7C5EA0063F988 /* StatamicEnvironment.swift */,
+				B867D7B925F7C7420063F988 /* URLComponents+StatamicAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		B859FB5B25F22DDB0058EDAC /* Constraints */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +690,7 @@
 				B867D6AC25F795560063F988 /* RemoteImage.swift */,
 				B84D043525FB88A200DE4935 /* Lock.swift */,
 				B84D03A525FB5F4100DE4935 /* SafariDelegate.swift */,
+				B826239B25FF7EEB009AD57D /* SketchShadow.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -733,9 +769,10 @@
 		B867D7A225F7C5F10063F988 /* Fusion */ = {
 			isa = PBXGroup;
 			children = (
-				B867D78A25F7C5EA0063F988 /* StatamicEnvironment.swift */,
-				B867D7B925F7C7420063F988 /* URLComponents+StatamicAPI.swift */,
+				B826232D25FF7A16009AD57D /* API */,
+				B826232C25FF7A0C009AD57D /* Card */,
 				B887DD9B25FC43670053FDB4 /* PagesTableViewController.swift */,
+				B826231F25FF79CB009AD57D /* AppFusion.swift */,
 			);
 			path = Fusion;
 			sourceTree = "<group>";
@@ -1397,6 +1434,7 @@
 			files = (
 				B867D73E25F7C47A0063F988 /* LaunchScreen.storyboard in Resources */,
 				B867D73B25F7C47A0063F988 /* Assets.xcassets in Resources */,
+				B826238F25FF7B34009AD57D /* CardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1442,8 +1480,13 @@
 			files = (
 				B887DD9C25FC43670053FDB4 /* PagesTableViewController.swift in Sources */,
 				B867D7BA25F7C7420063F988 /* URLComponents+StatamicAPI.swift in Sources */,
+				B826236825FF7A69009AD57D /* CardRow.swift in Sources */,
 				B867D73225F7C4780063F988 /* AppDelegate.swift in Sources */,
+				B826232025FF79CB009AD57D /* AppFusion.swift in Sources */,
 				B867D73425F7C4780063F988 /* SceneDelegate.swift in Sources */,
+				B82623A925FF84E7009AD57D /* Card+RowConvertible.swift in Sources */,
+				B826232F25FF7A24009AD57D /* Card.swift in Sources */,
+				B826238E25FF7B34009AD57D /* CardTableViewCell.swift in Sources */,
 				B867D78B25F7C5EA0063F988 /* StatamicEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1513,6 +1556,7 @@
 				B867D80125F7CE100063F988 /* HighlightableView.swift in Sources */,
 				B859FBA825F2556E0058EDAC /* Result+CMSObject.swift in Sources */,
 				B867DA5E25F9151D0063F988 /* NumberLabel.swift in Sources */,
+				B826239C25FF7EEB009AD57D /* SketchShadow.swift in Sources */,
 				B859FC1D25F29B190058EDAC /* UIColor+Extensions.swift in Sources */,
 				B867D80F25F7D0170063F988 /* UIColor+Defaults.swift in Sources */,
 				B859FCBE25F618700058EDAC /* CALayer+Shadow.swift in Sources */,

@@ -20,12 +20,11 @@ Doing so is, more or less, as simple as creating a `JSONModel` and hooking it up
 /// A model which drives the UI for a `CardRow`
 struct Card: Codable, JSONModel {
 
-    // Title of the card 
+    /// Title of the card 
     var title: String?
     
     // etc...
 }
-///
 ```
 2. Create a `Row` to draw your model. The model doesn't have to be passed into the initializer, you can hook up the properties however you want (e.g. when creating a `Row` from the model).
 ```swift

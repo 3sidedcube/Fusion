@@ -19,6 +19,14 @@ open class Fusion: ActionHandler {
     /// `Fusion` shared `static` singleton instance
     public static var shared = Fusion()
 
+    // MARK: - Init
+
+    /// Default initializer
+    public init() {
+    }
+
+    // MARK: - Codable
+
     /// `JSONDecoder` to use for JSON decoding
     open var jsonDecoder: JSONDecoder {
         return JSONDecoder.snakeCase
@@ -28,6 +36,8 @@ open class Fusion: ActionHandler {
     open var jsonEncoder: JSONEncoder {
         return JSONEncoder.snakeCase
     }
+
+    // MARK: - JSONModel
 
     /// `JSONModel`s to dynamically decode from `JSON`
     open var jsonModelTypes: [JSONModel.Type] {
@@ -51,6 +61,8 @@ open class Fusion: ActionHandler {
             EmailAction.self
         ]
     }
+
+    // MARK: - HTTPRequest
 
     /// Create a `HTTPRequest` for fetching a `Page` at the given `pageURL`
     ///

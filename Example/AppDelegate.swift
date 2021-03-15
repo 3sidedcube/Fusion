@@ -7,6 +7,7 @@
 
 import UIKit
 import HTTPRequest
+import Fusion
 
 /// `Dictionary` passed into the application on launch
 typealias LaunchOptions = [UIApplication.LaunchOptionsKey: Any]
@@ -20,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         // Turn on HTTPRequest logging
         HTTPRequest.Configuration.shared.responseLogging = true
+
+        // Set 
+        Fusion.shared = AppFusion()
 
         return true
     }
