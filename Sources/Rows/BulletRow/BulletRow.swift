@@ -21,7 +21,7 @@ class BulletRow: ListItemRow, CellDisplayable {
     /// `Bullet` model to drive UI
     private let bullet: Bullet
 
-    /// Get the number from the `BulletRow` from the neighbourhood of `BulletRow`s
+    /// Get the number of the `BulletRow` from its neighbourhood of `BulletRow`s
     var numberFromNeighbourhood = false
 
     /// Initialize with `bullet`
@@ -63,7 +63,7 @@ class BulletRow: ListItemRow, CellDisplayable {
         numberContainerView.setText(bullet.bullet)
 
         // If `number` is defined and no value is specified, set the number
-        if numberContainerView.label.text == nil, let number = number {
+        if !numberContainerView.hasText, let number = number {
             numberContainerView.label.text = "\(number)"
         }
     }
@@ -124,4 +124,9 @@ class BulletRow: ListItemRow, CellDisplayable {
 
 /// Defined so we can filter by type
 class NumberContainerView: LabelContainerView {
+
+    /// Is the `text` of `label` non-empty after trimming
+    var hasText: Bool {
+        return !(label.text?.trimmed ?? "").isEmpty
+    }
 }
