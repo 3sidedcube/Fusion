@@ -29,13 +29,13 @@ public struct Email {
     }
 
     /// Email addresses to send to
-    public var toAddresses: [String] = []
+    public var toAddresses: [String]
 
     /// Email addresses to copy in
-    public var ccAddresses: [String] = []
+    public var ccAddresses: [String]
 
     /// Email addresses to blind copy in
-    public var bccAddresses: [String] = []
+    public var bccAddresses: [String]
 
     /// Email subject
     public var subject: String?
@@ -55,8 +55,8 @@ public struct Email {
     ///   - body: `Body?`
     public init(
         toAddresses: [String],
-        ccAddresses: [String],
-        bccAddresses: [String],
+        ccAddresses: [String] = [],
+        bccAddresses: [String] = [],
         subject: String?,
         body: Body?
     ) {
