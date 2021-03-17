@@ -52,7 +52,7 @@ open class InsetLabel: UILabel, Padded {
 
     // MARK: - Padded
 
-    /// Get and set `Padding` by mapping to and from `insets`
+    /// Get and set `Padding` by mapping from and to `insets`
     public var padding: Padding {
         get {
             return Padding(insets: insets)

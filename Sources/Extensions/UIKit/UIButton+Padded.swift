@@ -10,6 +10,7 @@ import UIKit
 
 extension UIButton: Padded {
 
+    /// Get and set `Padding` by mapping from and to `contentEdgeInsets`
     public var padding: Padding {
         get {
             return Padding(insets: contentEdgeInsets)
