@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import HTTPRequest
 import Alamofire
+import OSLog
 
 /// Overridable configuration properties.
 ///
@@ -24,6 +25,25 @@ open class Fusion: ActionHandler {
 
     /// Default initializer
     public init() {
+    }
+
+    // MARK: - Logging
+
+    /// Are `OSLog`s enabled
+    open var isLoggingEnabled: Bool {
+        return false
+    }
+
+    /// Log an error with the given `message`
+    ///
+    /// - Parameters:
+    ///   - type: `OSLogType`
+    ///   - message: `String`
+    @discardableResult
+    open func log(type: OSLogType, message: String) -> Bool {
+        guard isLoggingEnabled else { return false }
+        os_log(type, log: .logger, "%@", message)
+        return true
     }
 
     // MARK: - Codable
@@ -68,7 +88,7 @@ open class Fusion: ActionHandler {
     /// Create a `HTTPRequest` for fetching a `Page` at the given `pageURL`
     ///
     /// - Parameter pageURL: `URL` to fetch `Page` from
-    open func pageHttpRequest(for pageURL: URL) throws -> HTTPRequest {
+    open func httpRequestForPageURL(_ pageURL: URL) throws -> HTTPRequest {
         // Create `URLComponents` from `URL` by resolving against the base URL
         guard let urlComponents = URLComponents(
             url: pageURL,

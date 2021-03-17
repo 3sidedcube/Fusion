@@ -11,6 +11,7 @@ import UIKit
 import ThunderTable
 import HTTPRequest
 import Alamofire
+import OSLog
 
 /// A `TemplateViewController` where a `TableViewController` child `UIViewController`
 /// is embedded in `contentView`.
@@ -205,7 +206,7 @@ open class PageViewController: BaseViewController {
     private func refresh() {
         guard
             case .pageURL(let pageURL) = configuration,
-            let httpRequest = try? Fusion.shared.pageHttpRequest(for: pageURL)
+            let httpRequest = httpRequestForPageURLOrLog(pageURL)
         else {
             return
         }
@@ -218,6 +219,22 @@ open class PageViewController: BaseViewController {
         AF.request(httpRequest) { [weak self] result in
             self?.endRefreshing()
             self?.page = try? result.cmsObjectOrThrow().data
+        }
+    }
+
+    // MARK: - HTTPRequest
+
+    /// Create a `HTTPRequest` from the given `pageURL` to fetch a `Page`.
+    /// On `throw` log the `Error`.
+    ///
+    /// - Parameter pageURL: `HTTPRequest`
+    private func httpRequestForPageURLOrLog(_ pageURL: URL) -> HTTPRequest? {
+        do {
+            return try Fusion.shared.httpRequestForPageURL(pageURL)
+        } catch {
+            let message = "Failed to create \(HTTPRequest.self) for page %@"
+            Fusion.shared.log(type: .error, message: message)
+            return nil
         }
     }
 }

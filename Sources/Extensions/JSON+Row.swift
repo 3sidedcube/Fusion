@@ -42,7 +42,7 @@ extension JSON {
             return try toJSONModel()
         } catch {
             let message = "\(JSONModel.self) decode failed: \(error)"
-            os_log(.error, log: .logger, "%@", message)
+            Fusion.shared.log(type: .error, message: message)
             return nil
         }
     }
