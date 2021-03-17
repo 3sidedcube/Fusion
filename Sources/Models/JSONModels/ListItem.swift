@@ -6,10 +6,9 @@
 //
 
 import Foundation
-import ThunderTable // RowConvertible
 
 /// A standard list item with an `Image`, title `Text`, subtitle `Text`, and a chevron.
-public class ListItem: Codable, JSONModel, ViewModel, RowConvertible {
+public struct ListItem: Codable, JSONModel, ViewModel {
 
     /// `Image` of the leading item
     public var image: Image?
@@ -48,11 +47,4 @@ public class ListItem: Codable, JSONModel, ViewModel, RowConvertible {
 
     /// `Border` of the container
     public var border: Border?
-
-    // MARK: - RowConvertible
-
-    /// Create a `ListItemRow`
-    public func toRow() throws -> Row {
-        return ListItemRow(listItem: self)
-    }
 }

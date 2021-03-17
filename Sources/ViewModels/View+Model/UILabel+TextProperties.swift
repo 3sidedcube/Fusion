@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UILabel {
+public extension UILabel {
 
     /// Set the given `textProperties`
     ///
