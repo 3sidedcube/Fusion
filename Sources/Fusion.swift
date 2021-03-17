@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import HTTPRequest
 import Alamofire
 
@@ -93,6 +94,22 @@ open class Fusion: ActionHandler {
     /// - Returns: Return `false` by default (i.e. does not handle the `action`)
     open func handleAction(_ action: Action) -> Bool {
         return false
+    }
+
+    // MARK: - Row
+
+    /// Message sent when the `row` finished configuring
+    ///
+    /// - Parameter row: `FusionRow<T>` where `T` is a `UITableViewCell`
+    open func rowDidConfigure<T>(_ row: FusionRow<T>) where T: UITableViewCell {
+        // Subclasses can override
+    }
+
+    /// Message sent when the `row` finished "willDisplay"
+    ///
+    /// - Parameter row: `FusionRow<T>` where `T` is a `UITableViewCell`
+    open func rowWillDisplay<T>(_ row: FusionRow<T>) where T: UITableViewCell {
+        // Subclasses can override
     }
 }
 

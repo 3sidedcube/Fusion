@@ -10,7 +10,8 @@ import UIKit
 import ThunderTable
 
 /// Base `Row` for other `Row`s in this project
-open class FusionRow<T>: Row, CellHeightConfigurable where T: UITableViewCell {
+open class FusionRow<T>: Row, CellHeightConfigurable, CellDisplayable
+    where T: UITableViewCell {
 
     // MARK: - Init
 
@@ -44,8 +45,15 @@ open class FusionRow<T>: Row, CellHeightConfigurable where T: UITableViewCell {
         in tableViewController: TableViewController
     ) {
         guard let cell = cell as? T else { return }
+
+        // Set defaults
         cell.setDefaults()
+
+        // Subclasses perform configuration
         configureCell(cell, at: indexPath, in: tableViewController)
+
+        // Inform the `Fusion` the row finished configuration
+        Fusion.shared.rowDidConfigure(self)
     }
 
     open func configureCell(
@@ -53,15 +61,39 @@ open class FusionRow<T>: Row, CellHeightConfigurable where T: UITableViewCell {
         at indexPath: IndexPath,
         in tableViewController: TableViewController
     ) {
-        // Subclasses should override
+        // Subclasses may override
     }
 
     // MARK: - CellHeightConfigurable
 
-    open func heightForRowInTableViewController(
-        _ tableViewController: TableViewController,
-        forRowAt indexPath: IndexPath
+    public func heightForRowAtIndexPath(
+        _ indexPath: IndexPath,
+        in tableViewController: TableViewController
     ) -> CGFloat {
         return UITableView.automaticDimension
+    }
+
+    // MARK: - CellDisplayable
+
+    open func willDisplayCell(
+        _ cell: UITableViewCell,
+        forRowAt indexPath: IndexPath,
+        in tableViewController: TableViewController
+    ) {
+        guard let cell = cell as? T else { return }
+
+        // Subclasses perform "willDisplay"
+        willDisplayCell(cell, forRowAt: indexPath, in: tableViewController)
+
+        // Inform the `Fusion` the row finished "willDisplay"
+        Fusion.shared.rowWillDisplay(self)
+    }
+
+    open func willDisplayCell(
+        _ cell: T,
+        forRowAt indexPath: IndexPath,
+        in tableViewController: TableViewController
+    ) {
+        // Subclasses may override
     }
 }

@@ -38,9 +38,9 @@ class DividerRow: FusionRow<DividerTableViewCell> {
 
     // MARK: - CellHeightConfigurable
 
-    override func heightForRowInTableViewController(
-        _ tableViewController: TableViewController,
-        forRowAt indexPath: IndexPath
+    override func heightForRowAtIndexPath(
+        _ indexPath: IndexPath,
+        in tableViewController: TableViewController
     ) -> CGFloat {
         return divider.height.cgFloat
     }

@@ -13,7 +13,7 @@ import ThunderTable
 /// A `ListItemRow` where the `ImageContainerView` is replaced by a `LabelContainerView`.
 ///
 /// This might be used for, say, a numbered list in a CMS `Page` where each `BulletRow` represents 1 item.
-class BulletRow: ListItemRow, CellDisplayable {
+class BulletRow: ListItemRow {
 
     /// Define how the number of the `BulletRow` is determined.
     ///
@@ -104,14 +104,13 @@ class BulletRow: ListItemRow, CellDisplayable {
 
     // MARK: - CellDisplayable
 
-    func willDisplayCell(
-        _ cell: UITableViewCell,
-        in tableViewController: TableViewController,
-        forRowAt indexPath: IndexPath
+    override func willDisplayCell(
+        _ cell: ListItemTableViewCell,
+        forRowAt indexPath: IndexPath,
+        in tableViewController: TableViewController
     ) {
         guard
             case .neighbourhood = numberStyle,
-            let cell = cell as? ListItemTableViewCell,
             let section = tableViewController[indexPath]?.section
         else {
             return

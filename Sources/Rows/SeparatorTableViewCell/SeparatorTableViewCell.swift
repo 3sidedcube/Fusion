@@ -100,8 +100,8 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
 
     func willDisplayCell(
         _ cell: UITableViewCell,
-        in tableViewController: TableViewController,
-        forRowAt indexPath: IndexPath
+        forRowAt indexPath: IndexPath,
+        in tableViewController: TableViewController
     ) {
         guard !separators.isEmpty else { return }
         layoutIfNeeded() // Path using bounds

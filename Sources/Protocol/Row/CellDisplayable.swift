@@ -22,7 +22,7 @@ public protocol CellDisplayable {
     ///   - indexPath: `IndexPath`
     func willDisplayCell(
         _ cell: UITableViewCell,
-        in tableViewController: TableViewController,
-        forRowAt indexPath: IndexPath
+        forRowAt indexPath: IndexPath,
+        in tableViewController: TableViewController
     )
 }

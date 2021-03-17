@@ -19,8 +19,8 @@ public protocol CellHeightConfigurable {
     /// - Parameters:
     ///   - tableViewController: `TableViewController`
     ///   - indexPath: `IndexPath`
-    func heightForRowInTableViewController(
-        _ tableViewController: TableViewController,
-        forRowAt indexPath: IndexPath
+    func heightForRowAtIndexPath(
+        _ indexPath: IndexPath,
+        in tableViewController: TableViewController
     ) -> CGFloat
 }

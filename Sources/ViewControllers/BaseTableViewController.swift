@@ -87,7 +87,7 @@ open class BaseTableViewController: TableViewController,
             return super.tableView(tableView, heightForRowAt: indexPath)
         }
 
-        return row.heightForRowInTableViewController(self, forRowAt: indexPath)
+        return row.heightForRowAtIndexPath(indexPath, in: self)
     }
 
     override open func tableView(
@@ -99,12 +99,12 @@ open class BaseTableViewController: TableViewController,
 
         // `CellDisplayable` of the cell
         if let tableCell = cell as? CellDisplayable {
-            tableCell.willDisplayCell(cell, in: self, forRowAt: indexPath)
+            tableCell.willDisplayCell(cell, forRowAt: indexPath, in: self)
         }
 
         // `CellDisplayable` of the row
         if let row = self[indexPath]?.row as? CellDisplayable {
-            row.willDisplayCell(cell, in: self, forRowAt: indexPath)
+            row.willDisplayCell(cell, forRowAt: indexPath, in: self)
         }
     }
 
