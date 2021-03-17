@@ -67,7 +67,6 @@ open class PageViewController: BaseViewController {
     /// Refresh the `Page` on pull
     public var pullToRefresh = false {
         didSet {
-            guard isViewLoaded else { return }
             didSetPullToRefresh()
         }
     }
@@ -163,6 +162,8 @@ open class PageViewController: BaseViewController {
 
     /// Redraw UI
     open func redraw() {
+        guard isViewLoaded else { return }
+
         title = page?.title
         tableViewController.data = page?.data ?? []
     }
@@ -171,6 +172,8 @@ open class PageViewController: BaseViewController {
 
     /// `pullToRefresh` set
     private func didSetPullToRefresh() {
+        guard isViewLoaded else { return }
+
         tableViewController.removeRefreshControl()
         guard pullToRefresh else { return }
         tableViewController.addRefreshControl(
