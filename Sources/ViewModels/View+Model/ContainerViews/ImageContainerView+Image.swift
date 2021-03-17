@@ -15,9 +15,12 @@ extension ImageContainerView {
     ///
     /// - Parameters:
     ///   - image: `Image`
-    ///   - completion: `ImageCompletion`
+    ///   - completion: `ImageDownloadCompletion`
     @discardableResult
-    func setImage(_ image: Image?, completion: ImageCompletion?) -> DownloadTask? {
+    func setImage(
+        _ image: Image?,
+        completion: ImageDownloadCompletion?
+    ) -> DownloadTask? {
         // `fixedSize`
         subview.fixedSize = image?.fixedSize
 
@@ -25,13 +28,6 @@ extension ImageContainerView {
         setViewModel(image)
 
         // `src`
-        imageView.kf.cancelDownloadTask()
-        if let uiImage = image?.remoteImage?.image {
-            imageView.image = uiImage
-            return nil
-        }
-
-        imageView.image = nil
-        return image?.remoteImage?.load(in: imageView, completion: completion)
+        return imageView.loadRemoteImage(image?.remoteImage, completion: completion)
     }
 }

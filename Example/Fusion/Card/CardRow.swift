@@ -16,6 +16,12 @@ class CardRow: FusionRow<CardTableViewCell> {
     /// `Card` model to drive UI
     private let card: Card
 
+    /// `RemoteImage` for the `card`'s `image`
+    private lazy var remoteImage: RemoteImage? = {
+        guard let url = card.image?.toURL() else { return nil }
+        return RemoteImage(url: url)
+    }()
+
     // MARK: - Init
 
     /// Initialize with a `card`
@@ -62,10 +68,26 @@ class CardRow: FusionRow<CardTableViewCell> {
         cell.titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         cell.titleLabel.text = card.title
         cell.titleLabel.isHidden = cell.titleLabel.text == nil
+        cell.titleLabel.insets = UIEdgeInsets(
+            top: 10, left: 15, bottom: 4, right: 15
+        )
 
         // `subtitleLabel`
         cell.subtitleLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         cell.subtitleLabel.text = card.subtitle
         cell.subtitleLabel.isHidden = cell.subtitleLabel.text == nil
+        cell.subtitleLabel.insets = UIEdgeInsets(
+            top: 4, left: 15, bottom: 15, right: 15
+        )
+
+        // `cellImageView`
+        cell.cellImageView.contentMode = .scaleAspectFit
+        let imageBefore = remoteImage?.image
+        cell.cellImageView?.loadRemoteImage(
+            remoteImage
+        ) { [weak self, weak tableViewController] _, _ in
+            guard let self = self, self.remoteImage?.image != imageBefore else { return }
+            (tableViewController as? RowUpdateListener)?.rowRequestedUpdate(self)
+        }
     }
 }

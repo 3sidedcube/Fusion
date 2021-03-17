@@ -28,7 +28,7 @@ public struct Entry: Codable {
 
 // MARK: - Extensions
 
-extension Entry {
+public extension Entry {
 
     /// Convert `url` to `URL`
     func toURL() -> URL? {

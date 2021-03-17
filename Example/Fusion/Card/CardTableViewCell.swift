@@ -24,10 +24,10 @@ class CardTableViewCell: UITableViewCell {
     @IBOutlet private(set) var cellImageView: AdjustableImageView!
 
     /// `UILabel` for drawing title
-    @IBOutlet private(set) var titleLabel: UILabel!
+    @IBOutlet private(set) var titleLabel: InsetLabel!
 
     /// `UILabel` for drawing subtitle
-    @IBOutlet private(set) var subtitleLabel: UILabel!
+    @IBOutlet private(set) var subtitleLabel: InsetLabel!
 
     // MARK: - Computed
 

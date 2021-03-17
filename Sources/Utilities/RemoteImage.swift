@@ -10,22 +10,22 @@ import UIKit // Shouldn't usually with a "model" but required here
 import Kingfisher
 
 /// `Result` the image fetch task completes with
-typealias ImageResult = Result<RetrieveImageResult, KingfisherError>
+public typealias ImageDownloadResult = Result<RetrieveImageResult, KingfisherError>
 
-/// Completion closure with a `RemoteImage`
-typealias ImageCompletion = (RemoteImage, ImageResult) -> Void
+/// Completion closure the image fetch task completes with
+public typealias ImageDownloadCompletion = (RemoteImage, ImageDownloadResult) -> Void
 
 /// Wrap a `UIImage` by loading a `URL` using `Kingfisher`
-final class RemoteImage {
+open class RemoteImage {
 
     /// Remote image `URL`
-    let url: URL
+    public let url: URL
 
-    /// `UIImage` once fetched from the remote URL or cache
-    private(set) var result: ImageResult?
+    /// `ImageDownloadResult` the image fetch task completed with
+    public private(set) var result: ImageDownloadResult?
 
     /// If the `result` is `success`, return the `image`
-    var image: UIImage? {
+    open var image: UIImage? {
         return result?.success?.image
     }
 
@@ -34,7 +34,7 @@ final class RemoteImage {
     /// Initialize with `url`
     ///
     /// - Parameter url: `url`
-    init(url: URL) {
+    public init(url: URL) {
         self.url = url
     }
 
@@ -46,9 +46,9 @@ final class RemoteImage {
     ///   - imageView: `UIImageView` to load `UIImage` into
     ///   - placeholder: `UIImage` placeholder
     ///   - remoteOptions: `KingfisherOptionsInfo`
-    ///   - completion: `ImageCompletion`
+    ///   - completion: `ImageDownloadCompletion`
     @discardableResult
-    func load(
+    open func load(
         in imageView: UIImageView,
         placeholder: UIImage? = nil,
         remoteOptions: KingfisherOptionsInfo? = [
@@ -56,7 +56,7 @@ final class RemoteImage {
             .scaleFactor(UIScreen.main.scale),
             .cacheOriginalImage
         ],
-        completion: ImageCompletion?
+        completion: ImageDownloadCompletion?
     ) -> DownloadTask? {
         imageView.kf.indicatorType = .activity
         return imageView.kf.setImage(
