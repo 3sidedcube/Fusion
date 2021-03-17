@@ -58,7 +58,9 @@ class CardRow: FusionRow<CardTableViewCell> {
         cell.labels.forEach {
             $0.text = nil
             $0.backgroundColor = .clear
-            $0.textColor = .darkGray
+            $0.textColor = UIColor(
+                red: 68 / 255, green: 68 / 255, blue: 68 / 255, alpha: 1
+            )
             $0.textAlignment = .center
             $0.numberOfLines = 0
             $0.lineBreakMode = .byWordWrapping
