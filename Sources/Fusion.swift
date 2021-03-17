@@ -89,18 +89,9 @@ open class Fusion: ActionHandler {
     ///
     /// - Parameter pageURL: `URL` to fetch `Page` from
     open func httpRequestForPageURL(_ pageURL: URL) throws -> HTTPRequest {
-        // Create `URLComponents` from `URL` by resolving against the base URL
-        guard let urlComponents = URLComponents(
-            url: pageURL,
-            resolvingAgainstBaseURL: true
-        ) else {
-            throw FusionError.invalidURL(pageURL)
-        }
-
-        // Create `HTTPRequest`
-        return HTTPRequest(
+        return try HTTPRequest(
             method: .get,
-            urlComponents: urlComponents,
+            urlComponents: pageURL.toURLComponents(),
             additionalHeaders: HTTPHeaders([.acceptJSON])
         )
     }
@@ -141,13 +132,4 @@ open class Fusion: ActionHandler {
     ) where T: UITableViewCell {
         // Subclasses can override
     }
-}
-
-// MARK: - FusionError
-
-/// An `Error` in `Fusion`
-public enum FusionError: Error {
-
-    /// Failed to create `URLComponents` from the given `URL`
-    case invalidURL(URL)
 }

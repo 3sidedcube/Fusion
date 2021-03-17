@@ -11,7 +11,6 @@ import UIKit
 import ThunderTable
 import HTTPRequest
 import Alamofire
-import OSLog
 
 /// A `TemplateViewController` where a `TableViewController` child `UIViewController`
 /// is embedded in `contentView`.
