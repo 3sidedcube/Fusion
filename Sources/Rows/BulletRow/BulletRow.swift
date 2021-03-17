@@ -15,13 +15,16 @@ import ThunderTable
 /// This might be used for, say, a numbered list in a CMS `Page` where each `BulletRow` represents 1 item.
 class BulletRow: ListItemRow, CellDisplayable {
 
-    /// Define how the number of the `BulletRow` is determined
+    /// Define how the number of the `BulletRow` is determined.
+    ///
+    /// - Note:
+    /// If text has already been specified by the model, then do not overwrite.
     enum NumberStyle {
 
-        /// No attempt made to set the number of the `BulletRow` instance
+        /// No attempt made to set the number of the `BulletRow` instance.
         case none
 
-        /// Define the number of the `BulletRow` instance explicitly
+        /// Define the number of the `BulletRow` instance explicitly.
         case explicit(Int)
 
         /// Calculate the number of the `BulletRow` instance  by working out its position
@@ -64,11 +67,6 @@ class BulletRow: ListItemRow, CellDisplayable {
         // Create a `NumberContainerView` instance and add to UI
         let numberContainerView = NumberContainerView()
         listItemView.hStackView.insertArrangedSubview(numberContainerView, at: 0)
-        numberContainerView.label.setContent(
-            hugging: 800,
-            compressionResistance: 800,
-            axis: [.horizontal, .vertical]
-        )
 
         // Configure `numberContainerView`
         numberContainerView.setText(bullet.bullet)
@@ -123,11 +121,16 @@ class BulletRow: ListItemRow, CellDisplayable {
         let number = self.number(for: indexPath, in: section) ?? 0
 
         // `UILabel` to set number text
-        let numberContainerView: NumberContainerView? =
-            cell.listItemContainerView.listItemView.firstSubviewOfType()
+        guard let numberContainerView: NumberContainerView =
+                cell.listItemContainerView.listItemView.firstSubviewOfType() else {
+            return
+        }
+
+        // Ensure we are not overwriting text
+        guard !numberContainerView.hasText else { return }
 
         // Set `text` of `UILabel`
-        numberContainerView?.label.text = String(number)
+        numberContainerView.label.text = String(number)
     }
 }
 
@@ -135,6 +138,17 @@ class BulletRow: ListItemRow, CellDisplayable {
 
 /// Defined so we can filter by type
 class NumberContainerView: LabelContainerView {
+
+    /// Shared initialization code
+    override func setup() {
+        super.setup()
+
+        label.setContent(
+            hugging: 800,
+            compressionResistance: 800,
+            axis: [.horizontal, .vertical]
+        )
+    }
 
     /// Is the `text` of `label` non-empty after trimming
     var hasText: Bool {
