@@ -61,7 +61,8 @@ open class BulletRow: ListItemRow {
         // Replace `imageContainerView` with `NumberContainerView` and
         // handle subview re-use
         listItemView.imageContainerView.removeFromSuperview()
-        let numberContainerViews: [NumberContainerView] = listItemView.subviewsOfType()
+        let numberContainerViews: [NumberContainerView] =
+            listItemView.subviewsOfTypeRecursive()
         numberContainerViews.forEach { $0.removeFromSuperview() }
 
         // Create a `NumberContainerView` instance and add to UI

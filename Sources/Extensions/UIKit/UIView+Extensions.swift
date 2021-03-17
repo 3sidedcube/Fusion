@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
 
     /// Remove all subviews in the subview hierarchy recursively
     func removeSubviewsRecursive() {
@@ -31,13 +31,32 @@ extension UIView {
         compressionResistance: Float,
         axis: [NSLayoutConstraint.Axis]
     ) {
+        setContent(
+            hugging: UILayoutPriority(hugging),
+            compressionResistance: UILayoutPriority(compressionResistance),
+            axis: axis
+        )
+    }
+
+    /// Set content `hugging` priority and content `compressionResistance` priority on the
+    /// given `axis`
+    ///
+    /// - Parameters:
+    ///   - hugging: `UILayoutPriority`
+    ///   - compressionResistance: `UILayoutPriority`
+    ///   - axis: `[NSLayoutConstraint.Axis]`
+    func setContent(
+        hugging: UILayoutPriority,
+        compressionResistance: UILayoutPriority,
+        axis: [NSLayoutConstraint.Axis]
+    ) {
         axis.forEach {
             setContentHuggingPriority(
-                .init(hugging),
+                hugging,
                 for: $0
             )
             setContentCompressionResistancePriority(
-                .init(compressionResistance),
+                compressionResistance,
                 for: $0
             )
         }
@@ -69,14 +88,14 @@ extension UIView {
     }
 
     /// Get all `subviews` of type `T`
-    func subviewsOfType<T>() -> [T] {
+    func subviewsOfTypeRecursive<T>() -> [T] {
         var views = [T]()
 
         for subview in subviews {
             if let view = subview as? T {
                 views.append(view)
             }
-            views.append(contentsOf: subview.subviewsOfType())
+            views.append(contentsOf: subview.subviewsOfTypeRecursive())
         }
 
         return views

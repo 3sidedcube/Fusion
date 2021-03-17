@@ -100,15 +100,25 @@ open class Fusion: ActionHandler {
 
     /// Message sent when the `row` finished configuring
     ///
-    /// - Parameter row: `FusionRow<T>` where `T` is a `UITableViewCell`
-    open func rowDidConfigure<T>(_ row: FusionRow<T>) where T: UITableViewCell {
+    /// - Parameters:
+    ///   - row: `FusionRow<T>`
+    ///   - cell: `T` is a `UITableViewCell`
+    open func rowDidConfigure<T>(
+        _ row: FusionRow<T>,
+        cell: T
+    ) where T: UITableViewCell {
         // Subclasses can override
     }
 
     /// Message sent when the `row` finished "willDisplay"
     ///
-    /// - Parameter row: `FusionRow<T>` where `T` is a `UITableViewCell`
-    open func rowWillDisplay<T>(_ row: FusionRow<T>) where T: UITableViewCell {
+    /// - Parameters:
+    ///   - row: `FusionRow<T>`
+    ///   - cell: `T` is a `UITableViewCell`
+    open func rowWillDisplay<T>(
+        _ row: FusionRow<T>,
+        cell: T
+    ) where T: UITableViewCell {
         // Subclasses can override
     }
 }

@@ -21,6 +21,27 @@ public struct Padding: Codable {
 
     /// Bottom padding
     public var bottom: Float
+
+    // MARK: - Init
+
+    /// Default public memberwise initializer
+    ///
+    /// - Parameters:
+    ///   - top: `Float`
+    ///   - left: `Float`
+    ///   - right: `Float`
+    ///   - bottom: `Float`
+    public init(
+        top: Float,
+        left: Float,
+        right: Float,
+        bottom: Float
+    ) {
+        self.top = top
+        self.left = left
+        self.right = right
+        self.bottom = bottom
+    }
 }
 
 // MARK: - Margins

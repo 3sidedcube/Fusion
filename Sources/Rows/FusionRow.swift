@@ -53,7 +53,7 @@ open class FusionRow<T>: Row, CellHeightConfigurable, CellDisplayable,
         configureCell(cell, at: indexPath, in: tableViewController)
 
         // Inform the `Fusion` the row finished configuration
-        Fusion.shared.rowDidConfigure(self)
+        Fusion.shared.rowDidConfigure(self, cell: cell)
     }
 
     open func configureCell(
@@ -86,7 +86,7 @@ open class FusionRow<T>: Row, CellHeightConfigurable, CellDisplayable,
         willDisplayCell(cell, forRowAt: indexPath, in: tableViewController)
 
         // Inform the `Fusion` the row finished "willDisplay"
-        Fusion.shared.rowWillDisplay(self)
+        Fusion.shared.rowWillDisplay(self, cell: cell)
     }
 
     open func willDisplayCell(

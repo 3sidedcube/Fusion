@@ -23,7 +23,7 @@ extension UITableView {
         cell.contentView.bounds = cell.bounds
         cell.layoutIfNeeded()
 
-        var labels: [UILabel] = cell.subviewsOfType()
+        var labels: [UILabel] = cell.subviewsOfTypeRecursive()
         labels = labels.filter { $0.numberOfLines == 0 }
         labels.forEach {
             $0.preferredMaxLayoutWidth = $0.frame.size.width
