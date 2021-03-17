@@ -21,8 +21,4 @@ class ListItemTableViewCell: ContainerTableViewCell {
         return subview as! ListItemContainerView
     }
     // swiftlint:enable force_cast
-
-    override func setup() {
-        super.setup()
-    }
 }
