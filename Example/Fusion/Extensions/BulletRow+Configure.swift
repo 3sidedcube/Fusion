@@ -54,7 +54,7 @@ extension BulletRow {
         let separatorColor = UIColor(
             red: 238 / 255, green: 238 / 255, blue: 238 / 255, alpha: 1
         )
-        cell.separators = [TableSeparator(
+        cell.separators = [LineSeparator(
             position: .bottom, strokeWidth: 2, strokeColor: separatorColor)
         ]
     }

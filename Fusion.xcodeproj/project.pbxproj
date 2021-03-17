@@ -32,6 +32,8 @@
 		B826243026021307009AD57D /* Bullet+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826242F26021307009AD57D /* Bullet+RowConvertible.swift */; };
 		B8262490260298D9009AD57D /* BulletRow+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826248F260298D9009AD57D /* BulletRow+Configure.swift */; };
 		B82624BF2602B353009AD57D /* URL+URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82624A72602B1B4009AD57D /* URL+URLComponents.swift */; };
+		B82625062602BB9B009AD57D /* Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82624D62602B498009AD57D /* Separator.swift */; };
+		B826251D2602BBA5009AD57D /* LineSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82624E32602B519009AD57D /* LineSeparator.swift */; };
 		B82C473125F0D17A0013B02C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C472E25F0D17A0013B02C /* Page.swift */; };
 		B82C473225F0D17A0013B02C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C472F25F0D17A0013B02C /* Screen.swift */; };
 		B82C473E25F0D1B70013B02C /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C473D25F0D1B70013B02C /* Identifiable.swift */; };
@@ -121,7 +123,6 @@
 		B867DA0625F9009E0063F988 /* CALayer+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA0525F9009E0063F988 /* CALayer+CornerRadius.swift */; };
 		B867DA4825F912CE0063F988 /* BulletGroup+RowArrayConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA4725F912CE0063F988 /* BulletGroup+RowArrayConvertible.swift */; };
 		B867DA6A25F915570063F988 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA6925F915570063F988 /* UIView+Extensions.swift */; };
-		B867DA7825F91B7D0063F988 /* TableSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA7625F91B7D0063F988 /* TableSeparator.swift */; };
 		B867DA7925F91B7D0063F988 /* SeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA7725F91B7D0063F988 /* SeparatorTableViewCell.swift */; };
 		B867DA9A25F932570063F988 /* ButtonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DA9925F932570063F988 /* ButtonContainerView.swift */; };
 		B867DAB025F932D10063F988 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867DAAF25F932D10063F988 /* ButtonRow.swift */; };
@@ -321,6 +322,8 @@
 		B826242F26021307009AD57D /* Bullet+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bullet+RowConvertible.swift"; sourceTree = "<group>"; };
 		B826248F260298D9009AD57D /* BulletRow+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BulletRow+Configure.swift"; sourceTree = "<group>"; };
 		B82624A72602B1B4009AD57D /* URL+URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+URLComponents.swift"; sourceTree = "<group>"; };
+		B82624D62602B498009AD57D /* Separator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Separator.swift; sourceTree = "<group>"; };
+		B82624E32602B519009AD57D /* LineSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSeparator.swift; sourceTree = "<group>"; };
 		B82C472E25F0D17A0013B02C /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		B82C472F25F0D17A0013B02C /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		B82C473D25F0D1B70013B02C /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -411,7 +414,6 @@
 		B867DA0525F9009E0063F988 /* CALayer+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+CornerRadius.swift"; sourceTree = "<group>"; };
 		B867DA4725F912CE0063F988 /* BulletGroup+RowArrayConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BulletGroup+RowArrayConvertible.swift"; sourceTree = "<group>"; };
 		B867DA6925F915570063F988 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		B867DA7625F91B7D0063F988 /* TableSeparator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSeparator.swift; sourceTree = "<group>"; };
 		B867DA7725F91B7D0063F988 /* SeparatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewCell.swift; sourceTree = "<group>"; };
 		B867DA9925F932570063F988 /* ButtonContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainerView.swift; sourceTree = "<group>"; };
 		B867DAAF25F932D10063F988 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
@@ -841,8 +843,9 @@
 		B867DA7525F91B660063F988 /* SeparatorTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				B82624D62602B498009AD57D /* Separator.swift */,
+				B82624E32602B519009AD57D /* LineSeparator.swift */,
 				B867DA7725F91B7D0063F988 /* SeparatorTableViewCell.swift */,
-				B867DA7625F91B7D0063F988 /* TableSeparator.swift */,
 			);
 			path = SeparatorTableViewCell;
 			sourceTree = "<group>";
@@ -1538,6 +1541,7 @@
 				B82C475625F0D3580013B02C /* JSON+Row.swift in Sources */,
 				B867D6D025F798420063F988 /* UIImage+Extensions.swift in Sources */,
 				B859FBCE25F296C90058EDAC /* Font+UIFont.swift in Sources */,
+				B82625062602BB9B009AD57D /* Separator.swift in Sources */,
 				B8C11DA925F04CB500E2AC5E /* PageViewController.swift in Sources */,
 				B8C1B1FA25FA848400628649 /* ContainerTableViewCell.swift in Sources */,
 				B82C477825F0DB330013B02C /* UIViewController+Extensions.swift in Sources */,
@@ -1576,6 +1580,7 @@
 				B867D80F25F7D0170063F988 /* UIColor+Defaults.swift in Sources */,
 				B859FCBE25F618700058EDAC /* CALayer+Shadow.swift in Sources */,
 				B8C1B1A925FA6E5400628649 /* Insettable.swift in Sources */,
+				B826251D2602BBA5009AD57D /* LineSeparator.swift in Sources */,
 				B867D63925F782A30063F988 /* DividerRow.swift in Sources */,
 				B867D68E25F785A70063F988 /* ImageRow.swift in Sources */,
 				B8C11DD125F04EDD00E2AC5E /* EmailAction.swift in Sources */,
@@ -1604,7 +1609,6 @@
 				B867D80025F7CE100063F988 /* Highlightable.swift in Sources */,
 				B8C11DBF25F04E9200E2AC5E /* UINavigationController+Action.swift in Sources */,
 				B859FBB525F294590058EDAC /* Text.swift in Sources */,
-				B867DA7825F91B7D0063F988 /* TableSeparator.swift in Sources */,
 				B867DA6A25F915570063F988 /* UIView+Extensions.swift in Sources */,
 				B859FC4C25F37BB30058EDAC /* InsetLabel.swift in Sources */,
 				B867D7E425F7CCF40063F988 /* ListItemRow.swift in Sources */,

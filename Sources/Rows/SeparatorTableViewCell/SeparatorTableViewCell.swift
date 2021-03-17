@@ -14,25 +14,22 @@ import ThunderTable
 
 /// Sometimes the provided separators on a `UITableViewCell` are not enough.
 /// `SeparatorTableViewCell` allows us to stroke custom paths according to the
-/// `separators` (`TableSeparator`s) property.
+/// `separators` (`Separator`s) property.
 ///
-/// How it works:
-/// Define `separators` (which are `TableSeparator`s).
-/// These are wrappers around a `CAShapeLayer` which will be added as a sublayer
-/// to `layer`. They are also are responsible for how the path of this layer is drawn.
-/// When calling `updatePath()`, the `separators` are asked to update their path
-/// (the path of the `CAShapeLayer`).
+/// Define `separators` (which conform to `Separator`).
+/// These are wrappers around a `CALayer` which will be added as a sublayer to `layer`.
+/// When the appropriate lifecycle methods are triggered,  the `separators` receive a message to
+/// prepare for the appropriate drawing.
 open class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
 
     /// Get and set `TableSeparator`s
-    open var separators = [TableSeparator]() {
+    open var separators = [Separator]() {
         didSet {
             updateSeparators(oldValue: oldValue)
         }
     }
 
     // MARK: - Init
-
     override public init(
         style: UITableViewCell.CellStyle,
         reuseIdentifier: String?
@@ -46,16 +43,12 @@ open class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
         setup()
     }
 
+    /// Shared initializer functionality
     open func setup() {
         updateSeparators(oldValue: separators)
     }
 
     // MARK: - Lifecycle
-
-    override open func awakeFromNib() {
-        super.awakeFromNib()
-        setup()
-    }
 
     override open func prepareForReuse() {
         super.prepareForReuse()
@@ -66,7 +59,7 @@ open class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
 
     override open func layoutSubviews() {
         super.layoutSubviews()
-        updatePath()
+        updateSeparatorsPath()
     }
 
     // MARK: - Path
@@ -76,20 +69,20 @@ open class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
     /// Update path.
     ///
     /// - Parameter oldValue: `[TableSeparator]`
-    private func updateSeparators(oldValue: [TableSeparator]) {
+    private func updateSeparators(oldValue: [Separator]) {
         oldValue.forEach {
             $0.removeFromSuperlayer()
         }
         separators.forEach {
             $0.removeFromSuperlayer()
-            $0.addToLayer(layer: layer)
+            layer.addSublayer($0)
         }
 
-        updatePath()
+        updateSeparatorsPath()
     }
 
     /// Update the path for each of the `separators`
-    private func updatePath() {
+    private func updateSeparatorsPath() {
         separators.forEach {
             $0.bringToFront()
             $0.updatePath()
@@ -104,7 +97,19 @@ open class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
         in tableViewController: TableViewController
     ) {
         guard !separators.isEmpty else { return }
-        layoutIfNeeded() // Path using bounds
-        updatePath()
+        layoutIfNeeded() // Ensure `bounds` is set for paths
+        updateSeparatorsPath()
+    }
+}
+
+// MARK: - CALayer+Extensions
+
+extension CALayer {
+
+    /// Remove from `superlayer` and add `self` again as a sublayer
+    func bringToFront() {
+        guard let superLayer = superlayer else { return }
+        removeFromSuperlayer()
+        superLayer.addSublayer(self)
     }
 }
