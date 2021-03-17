@@ -15,6 +15,8 @@ import ThunderTable
 /// If a `Row` can not be created it should `throw`.
 /// I.e. `nil` is not an acceptable state; this entity should correspond to a  `Row`
 /// unless there is an `Error`.
+///
+/// This is also where this protocol distinguishes from simply conforming to `Row`.
 public protocol RowConvertible {
 
     /// Convert to a `Row`
