@@ -10,38 +10,38 @@ import Foundation
 
 /// An `Element` where the setter can be locked.
 /// For example, in a `didSet`, is should only apply when in a particular state
-struct Lock<Element> {
+public struct Lock<Element> {
 
     /// `Element` where the
-    private(set) var element: Element
+    public private(set) var element: Element
 
     /// Whether `element` is locked
-    private(set) var isLocked: Bool
+    public var isLocked: Bool
 
     /// Default memberwise initializer
     ///
     /// - Parameters:
     ///   - element: `Element`
     ///   - isLocked: `Bool`
-    init(element: Element, isLocked: Bool = false) {
+    public init(element: Element, isLocked: Bool = false) {
         self.element = element
         self.isLocked = isLocked
     }
 
     /// Lock `element`
-    mutating func lock() {
+    public mutating func lock() {
         isLocked = true
     }
 
     /// Unlock `element`
-    mutating func unlock() {
+    public mutating func unlock() {
         isLocked = false
     }
 
     /// Set `self.element` to the given `element` if it is not locked
     ///
     /// - Parameter element: `Element` to set `element` to
-    mutating func setElement(_ element: Element) {
+    public mutating func setElement(_ element: Element) {
         guard !isLocked else { return }
         self.element = element
     }

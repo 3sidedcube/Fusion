@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension ButtonContainerView {
+public extension ButtonContainerView {
 
     /// Set the given `button`
     ///

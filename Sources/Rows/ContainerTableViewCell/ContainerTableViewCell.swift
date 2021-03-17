@@ -18,17 +18,17 @@ import UIKit
 ///
 /// - Note:
 /// Ideally we use generics here but unfortunately that doesn't work nicely with Objective-C!
-class ContainerTableViewCell: SeparatorTableViewCell {
+open class ContainerTableViewCell: SeparatorTableViewCell {
 
     // swiftlint:disable unavailable_function
     /// Subclasses create the subview
-    func createSubview() -> UIView {
+    open func createSubview() -> UIView {
         fatalError("Abstract: subclasses should override \(#function)")
     }
     // swiftlint:enable unavailable_function
 
     /// `UIView` subview
-    private(set) var subview: UIView!
+    public private(set) var subview: UIView!
 
     /// `EdgeConstraints` of `subview` to `contentView`
     private var edgeConstraints: EdgeConstraints!
@@ -36,7 +36,7 @@ class ContainerTableViewCell: SeparatorTableViewCell {
     // MARK: - Insets
 
     /// `UIEdgeInsets` of `edgeConstraints`
-    var insets: UIEdgeInsets {
+    open var insets: UIEdgeInsets {
         get {
             return edgeConstraints.insets
         }
@@ -47,7 +47,7 @@ class ContainerTableViewCell: SeparatorTableViewCell {
 
     // MARK: - Setup
 
-    override func setup() {
+    override open func setup() {
         super.setup()
 
         addSubviews()
@@ -72,7 +72,7 @@ class ContainerTableViewCell: SeparatorTableViewCell {
 
     // MARK: - Lifecycle
 
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
 
         updateHighlighted(animated: false)

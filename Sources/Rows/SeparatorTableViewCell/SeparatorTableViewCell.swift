@@ -22,10 +22,10 @@ import ThunderTable
 /// to `layer`. They are also are responsible for how the path of this layer is drawn.
 /// When calling `updatePath()`, the `separators` are asked to update their path
 /// (the path of the `CAShapeLayer`).
-class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
+open class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
 
     /// Get and set `TableSeparator`s
-    var separators = [TableSeparator]() {
+    open var separators = [TableSeparator]() {
         didSet {
             updateSeparators(oldValue: oldValue)
         }
@@ -33,7 +33,7 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
 
     // MARK: - Init
 
-    override init(
+    override public init(
         style: UITableViewCell.CellStyle,
         reuseIdentifier: String?
     ) {
@@ -41,30 +41,30 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
         setup()
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
 
-    func setup() {
+    open func setup() {
         updateSeparators(oldValue: separators)
     }
 
     // MARK: - Lifecycle
 
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
 
-    override func prepareForReuse() {
+    override open func prepareForReuse() {
         super.prepareForReuse()
         updateSeparators(oldValue: separators)
     }
 
     // MARK: - Layout
 
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         updatePath()
     }
@@ -89,7 +89,7 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
     }
 
     /// Update the path for each of the `separators`
-    func updatePath() {
+    private func updatePath() {
         separators.forEach {
             $0.bringToFront()
             $0.updatePath()
@@ -98,7 +98,7 @@ class SeparatorTableViewCell: UITableViewCell, CellDisplayable {
 
     // MARK: - CellDisplayable
 
-    func willDisplayCell(
+    open func willDisplayCell(
         _ cell: UITableViewCell,
         forRowAt indexPath: IndexPath,
         in tableViewController: TableViewController

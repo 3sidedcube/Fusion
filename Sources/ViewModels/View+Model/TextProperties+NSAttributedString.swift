@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension TextProperties {
+public extension TextProperties {
 
     /// Map this `TextProperties` instance to `NSAttributedString`
     var attributedString: NSAttributedString {

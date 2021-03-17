@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 /// Wrap a `CAShapeLayer` for drawing a separator in a `UITableViewCell`
-class TableSeparator {
+open class TableSeparator {
 
     // MARK: - Position
 
     /// Position of a `TableSeparator`
-    enum Position: Int {
+    public enum Position: Int {
 
         /// Top of a `UIView`
         case top
@@ -37,28 +37,28 @@ class TableSeparator {
     }()
 
     /// `CGFloat` width of the stroked path
-    var strokeWidth: CGFloat {
+    open var strokeWidth: CGFloat {
         didSet {
             updateStrokeWidth()
         }
     }
 
     /// `UIColor` of the stroked path
-    var strokeColor: UIColor {
+    open var strokeColor: UIColor {
         didSet {
             updateStrokeColor()
         }
     }
 
     /// `Position` to draw path relative to `shapeLayer.superlayer`
-    var position: Position {
+    open var position: Position {
         didSet {
             updatePath()
         }
     }
 
     /// `UIBezierPath` of `shapeLayer`'s path
-    var path: UIBezierPath? {
+    open var path: UIBezierPath? {
         get {
             guard let path = shapeLayer.path else { return nil }
             return UIBezierPath(cgPath: path)
@@ -70,7 +70,7 @@ class TableSeparator {
 
     // MARK: - Init
 
-    init (
+    public init (
         position: Position,
         strokeWidth: CGFloat = 1,
         strokeColor: UIColor = .defaultSeparatorColor
@@ -86,16 +86,16 @@ class TableSeparator {
 
     // MARK: - Layer
 
-    func addToLayer(layer: CALayer) {
+    open func addToLayer(layer: CALayer) {
         layer.addSublayer(shapeLayer)
         updatePath()
     }
 
-    func removeFromSuperlayer() {
+    open func removeFromSuperlayer() {
         shapeLayer.removeFromSuperlayer()
     }
 
-    func bringToFront() {
+    open func bringToFront() {
         guard let superlayer = shapeLayer.superlayer else { return }
         removeFromSuperlayer()
         addToLayer(layer: superlayer)
@@ -114,12 +114,12 @@ class TableSeparator {
     // MARK: - Path
 
     /// Reset the path of the layer
-    func resetPath() {
+    open func resetPath() {
         path = UIBezierPath()
     }
 
     /// Update the path of `shapeLayer`, based on the `bounds` of its parent layer
-    func updatePath() {
+    open func updatePath() {
         guard let superLayer = shapeLayer.superlayer else { return }
 
         let width = superLayer.bounds.width

@@ -11,10 +11,10 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `ListItem`
-class ListItemRow: FusionRow<ListItemTableViewCell> {
+open class ListItemRow: FusionRow<ListItemTableViewCell> {
 
     /// `ListItem` to drive UI
-    private(set) var listItem: ListItem
+    public private(set) var listItem: ListItem
 
     // MARK: - Init
 
@@ -22,14 +22,14 @@ class ListItemRow: FusionRow<ListItemTableViewCell> {
     ///
     /// - Parameters:
     ///   - listItem: `ListItem`
-    init(listItem: ListItem) {
+    public init(listItem: ListItem) {
         self.listItem = listItem
     }
 
     // MARK: - Row
 
     /// `SelectionHandler`
-    override var selectionHandler: SelectionHandler? {
+    override open var selectionHandler: SelectionHandler? {
         guard let action = try? listItem.action?.toAction() else { return nil }
         return { [weak self] _, _, _, _ in
             self?.actionHandler?.handleAction(action)
@@ -38,7 +38,7 @@ class ListItemRow: FusionRow<ListItemTableViewCell> {
 
     // MARK: - Configure
 
-    override func configureCell(
+    override open func configureCell(
         _ cell: ListItemTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController

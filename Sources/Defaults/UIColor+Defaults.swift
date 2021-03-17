@@ -29,5 +29,5 @@ extension UIColor {
     static let placeholder = UIColor(white255: 63).withAlphaComponent(0.1)
 
     /// Default stroke color of separators
-    static let defaultSeparatorColor = UIColor(white255: 238)
+    public static let defaultSeparatorColor = UIColor(white255: 238)
 }

@@ -12,15 +12,15 @@ import UIKit
 ///
 /// This enables conformance to `Insettable` where the subview handles the `Padding` and
 /// this `ContainerView` handles the `Margins`.
-class ContainerView<T>: UIView, Insettable where T: UIView, T: Padded {
+open class ContainerView<T>: UIView, Insettable where T: UIView, T: Padded {
 
     /// Create the `subview` of type `T`
-    func createSubview() -> T {
+    open func createSubview() -> T {
         return T()
     }
 
     /// Get and set `Padding` on `subview`
-    var padding: Padding {
+    open var padding: Padding {
         get {
             return subview.padding
         }
@@ -30,7 +30,7 @@ class ContainerView<T>: UIView, Insettable where T: UIView, T: Padded {
     }
 
     /// Get and set `Margins` by setting the `UIEdgeInsets` on `edgeConstraints`
-    var margins: Margins {
+    open var margins: Margins {
         get {
             return Margins(insets: edgeConstraints.insets)
         }
@@ -44,25 +44,25 @@ class ContainerView<T>: UIView, Insettable where T: UIView, T: Padded {
     private(set) lazy var subview = createSubview()
 
     /// `EdgeConstraints` of `subview` to `self`
-    private(set) var edgeConstraints: EdgeConstraints!
+    private var edgeConstraints: EdgeConstraints!
 
     // MARK: - Init
 
-    convenience init() {
+    public convenience init() {
         self.init(frame: .zero)
     }
 
-    override init (frame: CGRect) {
+    override public init (frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
 
-    func setup() {
+    open func setup() {
         backgroundColor = .clear
 
         addSubviews()
@@ -90,7 +90,7 @@ class ContainerView<T>: UIView, Insettable where T: UIView, T: Padded {
     /// insets of the `subview` relative to `self`. Which ultimately is the purpose of this class.
     ///
     /// - Parameter viewModel: `ViewModel`
-    func setViewModel(_ viewModel: ViewModel?) {
+    open func setViewModel(_ viewModel: ViewModel?) {
         // `backgroundColor`
         let backgroundColor = viewModel?.backgroundColor?.hexColor
         subview.backgroundColor = backgroundColor ?? .defaultBackgroundColor
@@ -118,7 +118,7 @@ class ContainerView<T>: UIView, Insettable where T: UIView, T: Padded {
     /// - Note:
     /// `padding` should be handled in the `intrinsicContentSize` of the subview as `padding`
     /// refers to inset of own content
-    override var intrinsicContentSize: CGSize {
+    override open var intrinsicContentSize: CGSize {
         let intrinsicContentSize = subview.intrinsicContentSize
         var width = intrinsicContentSize.width
         if width >= 0 {

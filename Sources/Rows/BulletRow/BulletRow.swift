@@ -13,13 +13,13 @@ import ThunderTable
 /// A `ListItemRow` where the `ImageContainerView` is replaced by a `LabelContainerView`.
 ///
 /// This might be used for, say, a numbered list in a CMS `Page` where each `BulletRow` represents 1 item.
-class BulletRow: ListItemRow {
+open class BulletRow: ListItemRow {
 
     /// Define how the number of the `BulletRow` is determined.
     ///
     /// - Note:
     /// If text has already been specified by the model, then do not overwrite.
-    enum NumberStyle {
+    public enum NumberStyle {
 
         /// No attempt made to set the number of the `BulletRow` instance.
         case none
@@ -33,22 +33,22 @@ class BulletRow: ListItemRow {
     }
 
     /// `Bullet` model to drive UI
-    private let bullet: Bullet
+    public let bullet: Bullet
 
     /// Define a `NumberStyle`
-    var numberStyle: NumberStyle = .neighbourhood
+    open var numberStyle: NumberStyle = .neighbourhood
 
     /// Initialize with `bullet`
     ///
     /// - Parameter bullet: `Bullet`
-    init(bullet: Bullet) {
+    public init(bullet: Bullet) {
         self.bullet = bullet
         super.init(listItem: bullet.listItem)
     }
 
     // MARK: - Row
 
-    override func configureCell(
+    override open func configureCell(
         _ cell: ListItemTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
@@ -104,7 +104,7 @@ class BulletRow: ListItemRow {
 
     // MARK: - CellDisplayable
 
-    override func willDisplayCell(
+    override open func willDisplayCell(
         _ cell: ListItemTableViewCell,
         forRowAt indexPath: IndexPath,
         in tableViewController: TableViewController
@@ -136,10 +136,10 @@ class BulletRow: ListItemRow {
 // MARK: - NumberContainerView
 
 /// Defined so we can filter by type
-class NumberContainerView: LabelContainerView {
+open class NumberContainerView: LabelContainerView {
 
     /// Shared initialization code
-    override func setup() {
+    override open func setup() {
         super.setup()
 
         label.setContent(
@@ -150,7 +150,7 @@ class NumberContainerView: LabelContainerView {
     }
 
     /// Is the `text` of `label` non-empty after trimming
-    var hasText: Bool {
+    open var hasText: Bool {
         return !(label.text?.trimmed ?? "").isEmpty
     }
 }

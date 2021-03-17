@@ -15,18 +15,18 @@ import Kingfisher
 ///
 /// - Note:
 /// The height of the `ImageRow` should be determined by the `size` of the `UIImage`
-class ImageRow: FusionRow<ImageTableViewCell> {
+open class ImageRow: FusionRow<ImageTableViewCell> {
 
     /// `Image` to drive UI
-    private(set) var image: Image
+    public private(set) var image: Image
 
     /// Return `image` of `remoteImage`
-    private var uiImage: UIImage? {
+    public var uiImage: UIImage? {
         return image.remoteImage?.image
     }
 
     /// `DownloadTask` for fetching the image
-    private var downloadTask: DownloadTask?
+    public private(set) var downloadTask: DownloadTask?
 
     // MARK: - Init
 
@@ -34,7 +34,7 @@ class ImageRow: FusionRow<ImageTableViewCell> {
     ///
     /// - Parameters:
     ///   - image: `Image`
-    init(image: Image) {
+    public init(image: Image) {
         self.image = image
     }
 
@@ -44,7 +44,7 @@ class ImageRow: FusionRow<ImageTableViewCell> {
     /// to the aspect ratio of the `rowImage`
     ///
     /// - Parameter targetWidth: `CGFloat` width to force
-    func imageHeight(for targetWidth: CGFloat) -> CGFloat {
+    private func imageHeight(for targetWidth: CGFloat) -> CGFloat {
         if let image = uiImage {
             return min(image.imageHeight(for: targetWidth), image.size.height)
         }
@@ -53,13 +53,13 @@ class ImageRow: FusionRow<ImageTableViewCell> {
     }
 
     /// Return `imageHeight`
-    var estimatedHeight: CGFloat? {
+    open var estimatedHeight: CGFloat? {
         return imageHeight(for: UIScreen.main.bounds.width)
     }
 
     // MARK: - Configure
 
-    override func configureCell(
+    override open func configureCell(
         _ cell: ImageTableViewCell,
         at indexPath: IndexPath,
         in controller: TableViewController
@@ -104,7 +104,9 @@ class ImageRow: FusionRow<ImageTableViewCell> {
     }
 }
 
-extension DownloadTask {
+// MARK: - DownloadTask
+
+private extension DownloadTask {
 
     /// Check if the `URLSessionDataTask` has a `state` equal to `.running`
     var isRunning: Bool {

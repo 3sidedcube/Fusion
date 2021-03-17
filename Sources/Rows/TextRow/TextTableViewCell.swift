@@ -9,14 +9,14 @@
 import UIKit
 
 /// `UITableViewCell` with a `LabelContainerView`
-class TextTableViewCell: ContainerTableViewCell {
+open class TextTableViewCell: ContainerTableViewCell {
 
-    override func createSubview() -> UIView {
+    override open func createSubview() -> UIView {
         return LabelContainerView()
     }
 
     // swiftlint:disable force_cast
-    var labelContainerView: LabelContainerView {
+    open var labelContainerView: LabelContainerView {
         return subview as! LabelContainerView
     }
     // swiftlint:enable force_cast

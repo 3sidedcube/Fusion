@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension LabelContainerView {
+public extension LabelContainerView {
 
     /// Set the given `text`
     /// 

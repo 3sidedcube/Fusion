@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension ListItemContainerView {
+public extension ListItemContainerView {
 
     /// Set the given `listItem`
     ///

@@ -72,7 +72,7 @@ open class PageViewController: BaseViewController {
     }
 
     /// Is the `Page` currently being refreshed
-    private(set) var isRefreshing = false
+    public private(set) var isRefreshing = false
 
     // MARK: - Init
 
@@ -185,7 +185,7 @@ open class PageViewController: BaseViewController {
 
     /// Start animating `activityIndicator` unless the `tableViewController` defines
     /// a `UIRefreshControl`
-    func beginRefreshing() {
+    private func beginRefreshing() {
         isRefreshing = true
         tableViewController.beginRefreshing()
         if tableViewController.refreshControl == nil {
@@ -194,7 +194,7 @@ open class PageViewController: BaseViewController {
     }
 
     /// Stop animating `activityIndicator`
-    func endRefreshing() {
+    private func endRefreshing() {
         isRefreshing = false
         tableViewController.endRefreshing()
         activityIndicator.stopAnimating()

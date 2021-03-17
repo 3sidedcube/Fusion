@@ -9,7 +9,7 @@ import Foundation
 
 /// Properties which apply on the `UIView` level.
 /// All models which drive a `UIView` should share these properties and handle them accordingly
-protocol ViewModel {
+public protocol ViewModel {
 
     /// `RGBAHex` color of the background
     var backgroundColor: RGBAHex? { get }

@@ -11,10 +11,10 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `Text`
-class TextRow: FusionRow<TextTableViewCell> {
+open class TextRow: FusionRow<TextTableViewCell> {
 
     /// `Text` to drive UI
-    let text: Text
+    public let text: Text
 
     // MARK: - Init
 
@@ -22,13 +22,13 @@ class TextRow: FusionRow<TextTableViewCell> {
     ///
     /// - Parameters:
     ///   - text: `Text`
-    init(text: Text) {
+    public init(text: Text) {
         self.text = text
     }
 
     // MARK: - Configure
 
-    override func configureCell(
+    override open func configureCell(
         _ cell: TextTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController

@@ -10,10 +10,10 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `Button`
-class ButtonRow: FusionRow<ButtonTableViewCell> {
+open class ButtonRow: FusionRow<ButtonTableViewCell> {
 
     /// `Button` to drive UI
-    let button: Button
+    public let button: Button
 
     // MARK: - Init
 
@@ -21,13 +21,13 @@ class ButtonRow: FusionRow<ButtonTableViewCell> {
     ///
     /// - Parameters:
     ///   - button: `Button`
-    init(button: Button) {
+    public init(button: Button) {
         self.button = button
     }
 
     // MARK: - Configure
 
-    override func configureCell(
+    override open func configureCell(
         _ cell: ButtonTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController

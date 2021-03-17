@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-extension ImageContainerView {
+public extension ImageContainerView {
 
     /// Set the given `image`
     ///

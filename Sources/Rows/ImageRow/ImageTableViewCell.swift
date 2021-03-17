@@ -9,14 +9,14 @@
 import UIKit
 
 /// `UITableViewCell` with a `ImageContainerView`
-class ImageTableViewCell: ContainerTableViewCell {
+open class ImageTableViewCell: ContainerTableViewCell {
 
-    override func createSubview() -> UIView {
+    override open func createSubview() -> UIView {
         return ImageContainerView()
     }
 
     // swiftlint:disable force_cast
-    var imageContainerView: ImageContainerView {
+    open var imageContainerView: ImageContainerView {
         return subview as! ImageContainerView
     }
     // swiftlint:enable force_cast

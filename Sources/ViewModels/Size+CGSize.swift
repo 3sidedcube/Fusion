@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension Size {
+public extension Size {
 
     /// Map `Size` to `CGSize`
     var cgSize: CGSize? {

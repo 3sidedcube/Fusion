@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension DividerContainerView {
+public extension DividerContainerView {
 
     /// Set the given `divider`
     ///

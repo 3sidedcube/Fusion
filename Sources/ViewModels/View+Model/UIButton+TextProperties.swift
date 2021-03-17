@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIButton {
+public extension UIButton {
 
     /// Set the given `textProperties`
     ///

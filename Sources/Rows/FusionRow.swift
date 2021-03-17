@@ -66,7 +66,7 @@ open class FusionRow<T>: Row, CellHeightConfigurable, CellDisplayable,
 
     // MARK: - CellHeightConfigurable
 
-    public func heightForRowAtIndexPath(
+    open func heightForRowAtIndexPath(
         _ indexPath: IndexPath,
         in tableViewController: TableViewController
     ) -> CGFloat {

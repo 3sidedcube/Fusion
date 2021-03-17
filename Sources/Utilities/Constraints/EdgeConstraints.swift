@@ -18,7 +18,7 @@ import UIKit
 /// - Note:
 /// When talking about `UIEdgeInsets` for trailing and bottom, the value of `c` would refer to
 /// the opposite direction
-struct EdgeConstraints: Constrainable {
+public struct EdgeConstraints: Constrainable {
 
     /// Leading anchor
     var leading: NSLayoutConstraint

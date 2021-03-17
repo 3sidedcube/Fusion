@@ -8,13 +8,18 @@
 import Foundation
 import UIKit
 
-extension CALayer {
+public extension CALayer {
 
     /// Set `cornerRadius`
     ///
-    /// - Parameter cornerRadius: `Float`
-    func setCornerRadius(_ cornerRadius: Float?) {
+    /// - Parameters:
+    ///   - cornerRadius: `Float`
+    ///   - cornerCurve: `CALayerCornerCurve`
+    func setCornerRadius(
+        _ cornerRadius: Float?,
+        cornerCurve: CALayerCornerCurve = .continuous
+    ) {
         self.cornerRadius = CGFloat(cornerRadius ?? 0)
-        cornerCurve = .continuous
+        self.cornerCurve = cornerCurve
     }
 }

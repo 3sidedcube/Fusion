@@ -8,14 +8,14 @@
 import UIKit
 
 /// `UITableViewCell` with a `DividerContainerView`
-class DividerTableViewCell: ContainerTableViewCell {
+open class DividerTableViewCell: ContainerTableViewCell {
 
-    override func createSubview() -> UIView {
+    override open func createSubview() -> UIView {
         return DividerContainerView()
     }
 
     // swiftlint:disable force_cast
-    var dividerContainerView: DividerContainerView {
+    open var dividerContainerView: DividerContainerView {
         return subview as! DividerContainerView
     }
     // swiftlint:enable force_cast

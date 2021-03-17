@@ -9,18 +9,18 @@ import Foundation
 import UIKit
 
 /// `ContainerView` wrapping a `ListItemView` subview.
-class ListItemContainerView: ContainerView<ListItemView> {
+open class ListItemContainerView: ContainerView<ListItemView> {
 
-    var listItemView: ListItemView {
+    open var listItemView: ListItemView {
         return subview
     }
 }
 
 /// List item `UIView` cell structure
-class ListItemView: HighlightableView, Padded {
+open class ListItemView: HighlightableView, Padded {
 
     /// `Padding` of `hStackViewEdgeConstraints`
-    var padding: Padding {
+    open var padding: Padding {
         get {
             return Padding(insets: hStackViewEdgeConstraints.insets)
         }
@@ -30,7 +30,7 @@ class ListItemView: HighlightableView, Padded {
     }
 
     /// `UIStackView` for `imageContainerView` and `vStackView`
-    private(set) lazy var hStackView: UIStackView = {
+    public private(set) lazy var hStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fill
@@ -40,15 +40,15 @@ class ListItemView: HighlightableView, Padded {
     }()
 
     /// `ImageContainerView` for image
-    private(set) lazy var imageContainerView = ImageContainerView()
+    public private(set) lazy var imageContainerView = ImageContainerView()
 
     /// `subview` of `imageContainerView`
-    var imageView: UIImageView {
+    public var imageView: UIImageView {
         return imageContainerView.subview.imageView
     }
 
     /// `UIStackView` for `titleLabelContainerView` and `subtitleLabelContainerView`
-    private(set) lazy var vStackView: UIStackView = {
+    public private(set) lazy var vStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fill
@@ -58,18 +58,18 @@ class ListItemView: HighlightableView, Padded {
     }()
 
     /// `LabelContainerView` for title
-    private(set) lazy var titleLabelContainerView = LabelContainerView()
+    public private(set) lazy var titleLabelContainerView = LabelContainerView()
 
     /// `subview` of `titleLabelContainerView`
-    var titleLabel: UILabel {
+    public var titleLabel: UILabel {
         return titleLabelContainerView.subview
     }
 
     /// `LabelContainerView` for subtitle
-    private(set) lazy var subtitleLabelContainerView = LabelContainerView()
+    public private(set) lazy var subtitleLabelContainerView = LabelContainerView()
 
     /// `subview` of `subtitleLabelContainerView`
-    var subtitleLabel: UILabel {
+    public var subtitleLabel: UILabel {
         return subtitleLabelContainerView.subview
     }
 
@@ -77,22 +77,22 @@ class ListItemView: HighlightableView, Padded {
     private var hStackViewEdgeConstraints: EdgeConstraints!
 
     /// `titleLabel` and `subtitleLabel`
-    var labels: [UILabel] {
+    public var labels: [UILabel] {
         return [titleLabel, subtitleLabel]
     }
 
     // MARK: - Init
 
-    convenience init() {
+    public convenience init() {
         self.init(frame: .zero)
     }
 
-    override init (frame: CGRect) {
+    override public init (frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }

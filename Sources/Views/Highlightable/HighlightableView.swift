@@ -8,57 +8,60 @@
 import UIKit
 
 /// A `UIView` which conforms to `Highlightable`
-class HighlightableView: UIView, Highlightable {
-
-    // MARK: - Highlightable
+open class HighlightableView: UIView, Highlightable {
 
     /// Toggle whether highlighting behavior is enabled
-    var isHighlightable = true
+    open var isHighlightable = true
+
+    /// Set color to highlight
+    open var highlightedColor: UIColor = .defaultHighlightedColor
+
+    /// Stores the "real" `backgroundColor` property of the `viewToHighlight`.
+    ///
+    /// Wrapped around a `Lock` when mutated by `isHighlighted` to store and
+    /// return to its original value
+    public private(set) lazy var backgroundColorLock =
+        Lock<UIColor?>(element: backgroundColor)
+
+    /// Listen for `backgroundColor` set events
+    override open var backgroundColor: UIColor? {
+        didSet {
+            backgroundColorLock.setElement(backgroundColor)
+        }
+    }
+
+    // MARK: - Highlightable
 
     /// Set `highlighted` state
     ///
     /// - Parameters:
     ///   - highlighted: `Bool`
     ///   - animated: `Bool`
-    func setHighlighted(_ highlighted: Bool, animated: Bool) {
+    open func setHighlighted(_ highlighted: Bool, animated: Bool) {
         guard isHighlightable else { return }
         UIView.animate(withDuration: animated ? 0.2 : 0.0) {
+            self.backgroundColorLock.isLocked = highlighted
             if highlighted {
-                self.backgroundColorLock.lock()
-                self.backgroundColor = .defaultHighlightedColor
+                self.backgroundColor = self.highlightedColor
             } else {
-                self.backgroundColorLock.unlock()
                 self.backgroundColor = self.backgroundColorLock.element
             }
         }
     }
 
-    /// Stores the "real" `backgroundColor` property of the `viewToHighlight`.
-    ///
-    /// Wrapped around a `Lock` when mutated by `isHighlighted` to store and
-    /// return to its original value
-    private lazy var backgroundColorLock = Lock<UIColor?>(element: backgroundColor)
-
-    /// Listen for `backgroundColor` set events
-    override var backgroundColor: UIColor? {
-        didSet {
-            backgroundColorLock.setElement(backgroundColor)
-        }
-    }
-
     // MARK: - Touches
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         setHighlighted(true, animated: true)
     }
 
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         setHighlighted(false, animated: true)
     }
 
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         setHighlighted(false, animated: true)
     }

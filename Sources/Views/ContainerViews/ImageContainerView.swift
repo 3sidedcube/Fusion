@@ -8,21 +8,25 @@
 import Foundation
 import UIKit
 
-/// `ContainerView` wrapping a `InsetLabel` subview.
-class ImageContainerView: ContainerView<PaddedImageView> {
+/// `ContainerView` wrapping a `PaddedImageView` subview.
+open class ImageContainerView: ContainerView<PaddedImageView> {
 
-    var imageView: AdjustableImageView {
-        return subview.imageView
+    open var paddedImageView: PaddedImageView {
+        return subview
+    }
+
+    open var imageView: AdjustableImageView {
+        return paddedImageView.imageView
     }
 }
 
 // MARK: - PaddedImageView
 
 /// `UIView` wrapping a `UIImageView` to support `Padding`
-class PaddedImageView: UIView, Padded {
+open class PaddedImageView: UIView, Padded {
 
     /// `AdjustableImageView` to draw `UIImage`
-    let imageView: AdjustableImageView = {
+    public let imageView: AdjustableImageView = {
         let imageView = AdjustableImageView(image: nil)
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .placeholder
@@ -30,16 +34,16 @@ class PaddedImageView: UIView, Padded {
     }()
 
     /// `EdgeConstraints` of `imageView`
-    private(set) var imageViewEdgeConstraints: EdgeConstraints!
+    private var imageViewEdgeConstraints: EdgeConstraints!
 
     /// `NSLayoutConstraint` to fix the `imageView` width
-    private(set) var imageViewWidthConstraint: NSLayoutConstraint?
+    private var imageViewWidthConstraint: NSLayoutConstraint?
 
     /// `NSLayoutConstraint` to fix the `imageView` height
-    private(set) var imageViewHeightConstraint: NSLayoutConstraint?
+    private var imageViewHeightConstraint: NSLayoutConstraint?
 
     /// Fixed a `CGSize` for the `imageView`.
-    var fixedSize: Size? {
+    open var fixedSize: Size? {
         get {
             return getFixedSize()
         }
@@ -50,16 +54,16 @@ class PaddedImageView: UIView, Padded {
 
     // MARK: - Init
 
-    convenience init() {
+    public convenience init() {
         self.init(frame: .zero)
     }
 
-    override init (frame: CGRect) {
+    override public init (frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
@@ -94,7 +98,7 @@ class PaddedImageView: UIView, Padded {
 
     // MARK: - Padded
 
-    var padding: Padding {
+    open var padding: Padding {
         get {
             return Padding(insets: imageViewEdgeConstraints.insets)
         }

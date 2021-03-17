@@ -11,7 +11,7 @@ import UIKit
 import ThunderTable
 
 /// A protocol which allows anything to be "highlighted"
-protocol Highlightable: AnyObject {
+public protocol Highlightable: AnyObject {
 
     /// Update `highlighted` state
     ///
@@ -28,7 +28,7 @@ extension UITableViewCell: Highlightable {
     /// `setHighlighted(_:animated)` passing the `isHighlighted` property
     /// 
     /// - Parameter animated: `Bool`
-    func updateHighlighted(animated: Bool) {
+    public func updateHighlighted(animated: Bool) {
         setHighlighted(isHighlighted, animated: animated)
     }
 }

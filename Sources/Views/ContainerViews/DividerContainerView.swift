@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 
 /// `ContainerView` wrapping a `DividerView` subview.
-class DividerContainerView: ContainerView<DividerView> {
+open class DividerContainerView: ContainerView<DividerView> {
 
     /// `subview` where `subview` is a `DividerView`
-    var dividerView: DividerView {
+    open var dividerView: DividerView {
         return subview
     }
 
-    override func setViewModel(_ viewModel: ViewModel?) {
+    override open func setViewModel(_ viewModel: ViewModel?) {
         super.setViewModel(viewModel)
 
         // Overwrite `backgroundColor` to apply to the actual divider rather
@@ -32,10 +32,10 @@ class DividerContainerView: ContainerView<DividerView> {
 }
 
 /// Container of a `UIView` divider.
-class DividerView: UIView, Padded {
+open class DividerView: UIView, Padded {
 
     /// Set the `Padding`
-    var padding: Padding {
+    open var padding: Padding {
         get {
             return Padding(insets: dividerViewEdgeConstraints.insets)
         }
@@ -45,7 +45,7 @@ class DividerView: UIView, Padded {
     }
 
     /// Height of the `dividerView` (horizontally stroked line)
-    var strokeWidth: CGFloat {
+    open var strokeWidth: CGFloat {
         get {
             return dividerViewHeightConstraint.constant
         }
@@ -55,30 +55,30 @@ class DividerView: UIView, Padded {
     }
 
     /// `UIView` divider
-    let dividerView: UIView = {
+    public let dividerView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
         return view
     }()
 
     /// `EdgeConstraints` of `dividerView`
-    private(set) var dividerViewEdgeConstraints: EdgeConstraints!
+    private var dividerViewEdgeConstraints: EdgeConstraints!
 
     /// `NSLayoutConstraint` of `dividerView` height
-    private(set) var dividerViewHeightConstraint: NSLayoutConstraint!
+    private var dividerViewHeightConstraint: NSLayoutConstraint!
 
     // MARK: - Init
 
-    convenience init() {
+    public convenience init() {
         self.init(frame: .zero)
     }
 
-    override init (frame: CGRect) {
+    override public init (frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }

@@ -10,14 +10,14 @@ import UIKit
 import ThunderTable
 
 /// `UITableViewCell` with a `ListItemContainerView`
-class ListItemTableViewCell: ContainerTableViewCell {
+open class ListItemTableViewCell: ContainerTableViewCell {
 
-    override func createSubview() -> UIView {
+    override open func createSubview() -> UIView {
         return ListItemContainerView()
     }
 
     // swiftlint:disable force_cast
-    var listItemContainerView: ListItemContainerView {
+    open var listItemContainerView: ListItemContainerView {
         return subview as! ListItemContainerView
     }
     // swiftlint:enable force_cast

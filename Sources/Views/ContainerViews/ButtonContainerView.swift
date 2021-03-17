@@ -9,21 +9,21 @@ import Foundation
 import UIKit
 
 /// The given `UIButton` sent its target an action
-typealias ButtonAction = (UIButton) -> Void
+public typealias ButtonAction = (UIButton) -> Void
 
 /// `ContainerView` wrapping a `UIButton` subview.
-class ButtonContainerView: ContainerView<UIButton> {
+open class ButtonContainerView: ContainerView<UIButton> {
 
     /// Set the `ButtonAction`
-    var onButtonTouchUpInside: ButtonAction?
+    open var onButtonTouchUpInside: ButtonAction?
 
     /// Shorthand to `subview` where `subview` is a `UIButton`
-    var button: UIButton {
+    open var button: UIButton {
         return subview
     }
 
     /// Create the `UIButton` instance
-    override func createSubview() -> UIButton {
+    override open func createSubview() -> UIButton {
         let button = UIButton(type: .system)
         button.addTarget(
             self,
@@ -36,7 +36,7 @@ class ButtonContainerView: ContainerView<UIButton> {
     // MARK: - Action
 
     /// Remove all targets and actions on `button`
-    func removeButtonTargetActions() {
+    public func removeButtonTargetActions() {
         button.removeTarget(nil, action: nil, for: .allEvents)
     }
 

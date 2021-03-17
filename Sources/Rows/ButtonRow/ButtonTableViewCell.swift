@@ -8,14 +8,14 @@
 import UIKit
 
 /// `UITableViewCell` with a `ButtonContainerView`
-class ButtonTableViewCell: ContainerTableViewCell {
+open class ButtonTableViewCell: ContainerTableViewCell {
 
-    override func createSubview() -> UIView {
+    override open func createSubview() -> UIView {
         return ButtonContainerView()
     }
 
     // swiftlint:disable force_cast
-    var buttonContainerView: ButtonContainerView {
+    open var buttonContainerView: ButtonContainerView {
         return subview as! ButtonContainerView
     }
     // swiftlint:enable force_cast

@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 /// `ContainerView` wrapping a `InsetLabel` subview.
-class LabelContainerView: ContainerView<InsetLabel> {
+open class LabelContainerView: ContainerView<InsetLabel> {
 
-    var label: InsetLabel {
+    open var label: InsetLabel {
         return subview
     }
 }

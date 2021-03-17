@@ -50,7 +50,7 @@ open class BaseViewController: UIViewController, ActionHandler {
     ///
     /// - Parameter action: `Action`
     @discardableResult
-    public func handleAction(_ action: Action) -> Bool {
+    open func handleAction(_ action: Action) -> Bool {
         return navigationController?.pushAction(action) ?? false
     }
 }

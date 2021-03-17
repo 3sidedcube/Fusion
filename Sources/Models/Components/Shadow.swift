@@ -31,7 +31,7 @@ public struct Shadow: Codable {
 
 // MARK: - Shadow + SketchShadow
 
-extension Shadow {
+public extension Shadow {
 
     /// Map to `SketchShadow`
     var sketchShadow: SketchShadow {
