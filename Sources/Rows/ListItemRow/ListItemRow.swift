@@ -11,7 +11,7 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `ListItem`
-class ListItemRow: FusionRow<ListItemTableViewCell>, RowActionable {
+class ListItemRow: FusionRow<ListItemTableViewCell> {
 
     /// `ListItem` to drive UI
     private(set) var listItem: ListItem
@@ -56,9 +56,4 @@ class ListItemRow: FusionRow<ListItemTableViewCell>, RowActionable {
             (tableViewController as? RowUpdateListener)?.rowRequestedUpdate(self)
         }
     }
-
-    // MARK: - RowActionable
-
-    /// `ActionHandler` to handle `Action`s
-    weak var actionHandler: ActionHandler?
 }

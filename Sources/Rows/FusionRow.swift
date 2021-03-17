@@ -10,8 +10,8 @@ import UIKit
 import ThunderTable
 
 /// Base `Row` for other `Row`s in this project
-open class FusionRow<T>: Row, CellHeightConfigurable, CellDisplayable
-    where T: UITableViewCell {
+open class FusionRow<T>: Row, CellHeightConfigurable, CellDisplayable,
+    RowActionable where T: UITableViewCell {
 
     // MARK: - Init
 
@@ -96,4 +96,9 @@ open class FusionRow<T>: Row, CellHeightConfigurable, CellDisplayable
     ) {
         // Subclasses may override
     }
+
+    // MARK: - RowActionable
+
+    /// `ActionHandler` to handle `Action`s
+    open weak var actionHandler: ActionHandler?
 }

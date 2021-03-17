@@ -26,11 +26,7 @@ class ListItemTableViewCell: ContainerTableViewCell {
         super.setup()
 
         // fix to stop (multiline) labels being truncated in cell
-        let labels = [
-            listItemContainerView.listItemView.titleLabel,
-            listItemContainerView.listItemView.subtitleLabel
-        ]
-        labels.forEach {
+        listItemContainerView.listItemView.labels.forEach {
             $0.setContent(
                 hugging: 250,
                 compressionResistance: 750,

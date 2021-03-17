@@ -71,6 +71,11 @@ class ListItemView: HighlightableView, Padded {
     /// `EdgeConstraints` of the `hStackView`
     private var hStackViewEdgeConstraints: EdgeConstraints!
 
+    /// `titleLabel` and `subtitleLabel`
+    var labels: [UILabel] {
+        return [titleLabel, subtitleLabel]
+    }
+
     // MARK: - Init
 
     convenience init() {

@@ -10,7 +10,7 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `Button`
-class ButtonRow: FusionRow<ButtonTableViewCell>, RowActionable {
+class ButtonRow: FusionRow<ButtonTableViewCell> {
 
     /// `Button` to drive UI
     let button: Button
@@ -41,9 +41,4 @@ class ButtonRow: FusionRow<ButtonTableViewCell>, RowActionable {
             self?.tryHandleAction(self?.button.action)
         }
     }
-
-    // MARK: - RowActionable
-
-    /// `ActionHandler` to handle `Action`s
-    weak var actionHandler: ActionHandler?
 }
