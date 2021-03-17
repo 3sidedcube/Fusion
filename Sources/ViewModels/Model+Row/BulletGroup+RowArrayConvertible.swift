@@ -17,7 +17,7 @@ extension BulletGroup: RowArrayConvertible {
             .compactMap {
                 let number = $0.offset + 1
                 let row = try? $0.element.toRow()
-                (row as? BulletRow)?.number = number
+                (row as? BulletRow)?.numberStyle = .explicit(number)
                 return row
             }
     }

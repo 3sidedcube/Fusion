@@ -15,14 +15,25 @@ import ThunderTable
 /// This might be used for, say, a numbered list in a CMS `Page` where each `BulletRow` represents 1 item.
 class BulletRow: ListItemRow, CellDisplayable {
 
-    /// Explicitly provide a number for label text
-    var number: Int?
+    /// Define how the number of the `BulletRow` is determined
+    enum NumberStyle {
+
+        /// No attempt made to set the number of the `BulletRow` instance
+        case none
+
+        /// Define the number of the `BulletRow` instance explicitly
+        case explicit(Int)
+
+        /// Calculate the number of the `BulletRow` instance  by working out its position
+        /// in the neighbourhood of other adjacent `BulletRow`s.
+        case neighbourhood
+    }
 
     /// `Bullet` model to drive UI
     private let bullet: Bullet
 
-    /// Get the number of the `BulletRow` from its neighbourhood of `BulletRow`s
-    var numberFromNeighbourhood = false
+    /// Define a `NumberStyle`
+    var numberStyle: NumberStyle = .neighbourhood
 
     /// Initialize with `bullet`
     ///
@@ -63,12 +74,12 @@ class BulletRow: ListItemRow, CellDisplayable {
         numberContainerView.setText(bullet.bullet)
 
         // If `number` is defined and no value is specified, set the number
-        if !numberContainerView.hasText, let number = number {
+        if case .explicit(let number) = numberStyle, !numberContainerView.hasText {
             numberContainerView.label.text = "\(number)"
         }
     }
 
-    /// Get the index of `self` in its `Section` of other `NumberRow` instances
+    /// Get the index of `self` in its `Section` of other `BulletRow` instances
     ///
     /// - Parameters:
     ///   - indexPath: `IndexPath`
@@ -83,7 +94,7 @@ class BulletRow: ListItemRow, CellDisplayable {
         // Index of this `Row`
         let rowIndex = indexPath.row
 
-        // Find the index before the first adjacent `NumberRow` to count from or 0
+        // Find the index before the first adjacent `BulletRow` to count from or 0
         var startIndex = rowIndex
         while startIndex > 0 {
             guard rows[startIndex] is Self else { break }
@@ -101,14 +112,14 @@ class BulletRow: ListItemRow, CellDisplayable {
         forRowAt indexPath: IndexPath
     ) {
         guard
-            numberFromNeighbourhood,
+            case .neighbourhood = numberStyle,
             let cell = cell as? ListItemTableViewCell,
             let section = tableViewController[indexPath]?.section
         else {
             return
         }
 
-        // Number of the `NumberRow`
+        // Number of the `BulletRow`
         let number = self.number(for: indexPath, in: section) ?? 0
 
         // `UILabel` to set number text
