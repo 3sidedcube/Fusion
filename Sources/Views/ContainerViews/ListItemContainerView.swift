@@ -42,6 +42,11 @@ class ListItemView: HighlightableView, Padded {
     /// `ImageContainerView` for image
     private(set) lazy var imageContainerView = ImageContainerView()
 
+    /// `subview` of `imageContainerView`
+    var imageView: UIImageView {
+        return imageContainerView.subview.imageView
+    }
+
     /// `UIStackView` for `titleLabelContainerView` and `subtitleLabelContainerView`
     private(set) lazy var vStackView: UIStackView = {
         let stackView = UIStackView()
@@ -123,14 +128,31 @@ class ListItemView: HighlightableView, Padded {
         // `hStackViewEdgeConstraints`
         hStackViewEdgeConstraints = hStackView.edgeConstraints(to: self)
 
+        // `titleLabel`
+        titleLabel.setContent(
+            hugging: 250,
+            compressionResistance: 1000, // Never squash vertically
+            axis: [.vertical]
+        )
+
+        // `subtitleLabel`
+        subtitleLabel.setContent(
+            hugging: 249, // Prefer to be stretched than `titleLabel`
+            compressionResistance: 1000, // Never squash vertically
+            axis: [.vertical]
+        )
+
         // `imageView`
-        let imageView = imageContainerView.imageView
         imageView.setContent(
             hugging: 800,
             compressionResistance: 800,
+            axis: [.horizontal]
+        )
+        imageView.setContent(
+            hugging: 800,
+            compressionResistance: 1000, // Never squash vertically
             axis: [.vertical, .horizontal]
         )
-
         imageView.translatesAutoresizingMaskIntoConstraints = false
         let widthConstraint = imageView.widthAnchor.constraint(
             lessThanOrEqualToConstant: .defaultViewImageMaxWidth

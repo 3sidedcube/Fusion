@@ -24,19 +24,5 @@ class ListItemTableViewCell: ContainerTableViewCell {
 
     override func setup() {
         super.setup()
-
-        // fix to stop (multiline) labels being truncated in cell
-        listItemContainerView.listItemView.labels.forEach {
-            $0.setContent(
-                hugging: 250,
-                compressionResistance: 750,
-                axis: [.horizontal]
-            )
-            $0.setContent(
-                hugging: 1000,
-                compressionResistance: 1000,
-                axis: [.vertical]
-            )
-        }
     }
 }
