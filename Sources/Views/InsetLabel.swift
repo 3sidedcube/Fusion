@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// A `UILabel` where the drawn text can be inset
-open class InsetLabel: UILabel {
+open class InsetLabel: UILabel, Padded {
 
     /// `UIEdgeInsets` to inset text
     public var insets: UIEdgeInsets = .zero {
@@ -48,5 +48,17 @@ open class InsetLabel: UILabel {
         let width = size.width + insets.left + insets.right
         let height = size.height + insets.top + insets.bottom
         return CGSize(width: width, height: height)
+    }
+
+    // MARK: - Padded
+
+    /// Get and set `Padding` by mapping to and from `insets`
+    public var padding: Padding {
+        get {
+            return Padding(insets: insets)
+        }
+        set {
+            insets = newValue.insets
+        }
     }
 }

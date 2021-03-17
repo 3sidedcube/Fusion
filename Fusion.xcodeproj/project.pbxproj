@@ -170,7 +170,6 @@
 		B8C1B19325FA6D6900628649 /* Margined.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B19225FA6D6900628649 /* Margined.swift */; };
 		B8C1B1A925FA6E5400628649 /* Insettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B1A825FA6E5400628649 /* Insettable.swift */; };
 		B8C1B1BF25FA72F000628649 /* UIButton+Padded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B1BE25FA72F000628649 /* UIButton+Padded.swift */; };
-		B8C1B1CB25FA731500628649 /* InsetLabel+Padded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B1CA25FA731500628649 /* InsetLabel+Padded.swift */; };
 		B8C1B1FA25FA848400628649 /* ContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B1F825FA848400628649 /* ContainerTableViewCell.swift */; };
 		B8C1B27825FA98E200628649 /* ListItem+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B27725FA98E200628649 /* ListItem+RowConvertible.swift */; };
 		OBJ_100 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* AFError.swift */; };
@@ -458,7 +457,6 @@
 		B8C1B19225FA6D6900628649 /* Margined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margined.swift; sourceTree = "<group>"; };
 		B8C1B1A825FA6E5400628649 /* Insettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insettable.swift; sourceTree = "<group>"; };
 		B8C1B1BE25FA72F000628649 /* UIButton+Padded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Padded.swift"; sourceTree = "<group>"; };
-		B8C1B1CA25FA731500628649 /* InsetLabel+Padded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsetLabel+Padded.swift"; sourceTree = "<group>"; };
 		B8C1B1F825FA848400628649 /* ContainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewCell.swift; sourceTree = "<group>"; };
 		B8C1B27725FA98E200628649 /* ListItem+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListItem+RowConvertible.swift"; sourceTree = "<group>"; };
 		"Fusion::Fusion::Product" /* Fusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -687,6 +685,7 @@
 				B867D8B725F7F0AC0063F988 /* UIFont+UIFontDescriptor.swift */,
 				B867DA6925F915570063F988 /* UIView+Extensions.swift */,
 				B84D044125FB91AF00DE4935 /* UITableView+Bug.swift */,
+				B8C1B1BE25FA72F000628649 /* UIButton+Padded.swift */,
 				B82624212601F29C009AD57D /* UIImageView+RemoteImage.swift */,
 			);
 			path = UIKit;
@@ -861,7 +860,6 @@
 		B8C11C5225EFD95B00E2AC5E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B8C1B1D625FA736000628649 /* Padded */,
 				B859FD6225F62CC60058EDAC /* UIKit */,
 				B82C475325F0D3580013B02C /* Page+Data.swift */,
 				B82C475425F0D3580013B02C /* JSON+Row.swift */,
@@ -956,15 +954,6 @@
 				B8C1B1A825FA6E5400628649 /* Insettable.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		B8C1B1D625FA736000628649 /* Padded */ = {
-			isa = PBXGroup;
-			children = (
-				B8C1B1BE25FA72F000628649 /* UIButton+Padded.swift */,
-				B8C1B1CA25FA731500628649 /* InsetLabel+Padded.swift */,
-			);
-			path = Padded;
 			sourceTree = "<group>";
 		};
 		B8C1B1EB25FA738200628649 /* Action */ = {
@@ -1636,7 +1625,6 @@
 				B867D91725F803900063F988 /* ImageContainerView.swift in Sources */,
 				B8C1B1BF25FA72F000628649 /* UIButton+Padded.swift in Sources */,
 				B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */,
-				B8C1B1CB25FA731500628649 /* InsetLabel+Padded.swift in Sources */,
 				B8C1B17225FA655500628649 /* ContainerView.swift in Sources */,
 				B859FB5F25F22DF20058EDAC /* EdgeConstraints.swift in Sources */,
 				B867D81C25F7D09A0063F988 /* CGFloat+Defaults.swift in Sources */,
