@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
 
     /// # Radius
     /// Set the radius on the layer and remove any circle constraints

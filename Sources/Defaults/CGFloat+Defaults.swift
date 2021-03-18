@@ -13,13 +13,19 @@ import UIKit
 extension CGFloat {
 
     /// Default text size
-    static let defaultTextSize: CGFloat = 12
+    static let defaultTextSize: CGFloat = 14
 
     /// Max width of `UIImageView` in `DefaultView`
     static let defaultViewImageMaxWidth: CGFloat = 100
 
     /// Max height of `UIImageView` in `DefaultView`
     static let defaultViewImageMaxHeight: CGFloat = 100
+
+    /// Default line height
+    static let defaultLineHeight: CGFloat = 24
+
+    /// Default letter spacing
+    static let defaultLetterSpacing: CGFloat = 0
 }
 
 // MARK: - Float + CGFloat

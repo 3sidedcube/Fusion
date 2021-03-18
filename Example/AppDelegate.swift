@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: LaunchOptions?
     ) -> Bool {
-        // Turn on HTTPRequest logging
+        // Configure HTTPRequest logging
         HTTPRequest.Configuration.shared.responseLogging = false
 
         // Set `Fusion` singleton instance

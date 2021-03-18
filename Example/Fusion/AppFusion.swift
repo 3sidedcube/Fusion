@@ -31,4 +31,13 @@ class AppFusion: Fusion {
             bulletRow.configure(cell: cell)
         }
     }
+
+    override func rowWillDisplay<CellClass>(
+        _ row: FusionRow<CellClass>,
+        cell: CellClass
+    ) where CellClass: UITableViewCell {
+        if let bulletRow = row as? BulletRow {
+            bulletRow.willDisplay(cell: cell)
+        }
+    }
 }

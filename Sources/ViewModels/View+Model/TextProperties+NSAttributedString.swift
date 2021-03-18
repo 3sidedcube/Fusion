@@ -25,37 +25,29 @@ public extension TextProperties {
         paragraphStyle.lineBreakMode = .byTruncatingTail
 
         // `backgroundColor`
-        if let backgroundColor = backgroundColor?.hexColor {
-            attributed.addAttribute(.backgroundColor, value: backgroundColor, range: range)
-        }
+        let backgroundColor = self.backgroundColor?.hexColor ?? .defaultBackgroundColor
+        attributed.addAttribute(.backgroundColor, value: backgroundColor, range: range)
 
         // `textColor`
-        if let textColor = textColor?.hexColor {
-            attributed.addAttribute(.foregroundColor, value: textColor, range: range)
-        }
+        let textColor = self.textColor?.hexColor ?? .defaultTextColor
+        attributed.addAttribute(.foregroundColor, value: textColor, range: range)
 
         // `font`
-        let uiFont = font?.uiFont
-        if let font = uiFont {
-            attributed.addAttribute(.font, value: font, range: range)
-        }
+        let font = self.font?.uiFont ?? .default
+        attributed.addAttribute(.font, value: font, range: range)
 
         // `textAlignment`
-        if let textAlignment = textAlignment?.nsTextAlignment {
-            paragraphStyle.alignment = textAlignment
-        }
+        let textAlignment = self.textAlignment?.nsTextAlignment ?? .default
+        paragraphStyle.alignment = textAlignment
 
         // `lineHeight`
-        if let lineHeight = lineHeight, let font = uiFont {
-            paragraphStyle.lineHeightMultiple = 1
-            paragraphStyle.lineSpacing = CGFloat(lineHeight) - font.lineHeight
-        }
+        let lineHeight = self.lineHeight ?? CGFloat.defaultLineHeight.float
+        paragraphStyle.lineHeightMultiple = 1
+        paragraphStyle.lineSpacing = CGFloat(lineHeight) - font.lineHeight
 
         // `letterSpacing`
-        if let letterSpacing = letterSpacing {
-            let value = CGFloat(letterSpacing)
-            attributed.addAttribute(.kern, value: value, range: range)
-        }
+        let letterSpacing = self.letterSpacing ?? CGFloat.defaultLetterSpacing.float
+        attributed.addAttribute(.kern, value: CGFloat(letterSpacing), range: range)
 
         // Commit attributes and set `attributedText`
         attributed.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)

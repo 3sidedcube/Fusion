@@ -19,22 +19,16 @@ extension BulletRow {
         guard let cell = cell as? ListItemTableViewCell else { return }
 
         // listItemView
-        let listItemView = cell.listItemContainerView.listItemView
-        listItemView.padding = .init(top: 13, left: 20, right: 20, bottom: 18)
+        cell.listItemView.padding = .init(top: 13, left: 20, right: 20, bottom: 18)
 
         // titleLabel
-        let titleContainerView = listItemView.titleLabelContainerView
-        let titleLabel = titleContainerView.label
-        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        cell.titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
 
         // subtitleLabel
-        let subtitleContainerView = listItemView.subtitleLabelContainerView
-        let subtitleLabel = subtitleContainerView.label
-        subtitleLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        cell.subtitleLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
 
         // numberLabel
-        let numberContainerView: NumberContainerView? = listItemView.firstSubviewOfType()
-        let numberLabel = numberContainerView?.label
+        let numberLabel = cell.numberLabel
         numberLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         numberLabel?.backgroundColor = UIColor(
             red: 247 / 255, green: 241 / 255, blue: 247 / 255, alpha: 1
@@ -43,14 +37,14 @@ extension BulletRow {
             red: 123 / 255, green: 63 / 255, blue: 155 / 255, alpha: 1
         )
         numberLabel?.insets = .init(top: 2, left: 2, bottom: 2, right: 2)
+        numberLabel?.textAlignment = .center
 
         // hStackView
-        let hStackView = listItemView.hStackView
-        hStackView.spacing = 8
+        cell.hStackView.spacing = 8
+        cell.hStackView.alignment = .top
 
         // vStackView
-        let vStackView = listItemView.vStackView
-        vStackView.spacing = 4
+        cell.vStackView.spacing = 4
 
         let separatorColor = UIColor(
             red: 238 / 255, green: 238 / 255, blue: 238 / 255, alpha: 1
@@ -58,5 +52,63 @@ extension BulletRow {
         cell.separators = [LineSeparator(
             position: .bottom, strokeWidth: 2, strokeColor: separatorColor)
         ]
+    }
+
+    func willDisplay(cell: UITableViewCell) {
+        guard
+            let cell = cell as? ListItemTableViewCell,
+            let numberLabel = cell.numberLabel
+        else {
+            return
+        }
+
+        numberLabel.layer.masksToBounds = true
+        numberLabel.updateCorners(.circular)
+
+        numberLabel.setNeedsLayout()
+        numberLabel.layoutIfNeeded()
+
+        numberLabel.updateCorners(.circular)
+    }
+}
+
+// MARK: - ListItemTableViewCell + UI
+
+extension ListItemTableViewCell {
+
+    var listItemView: ListItemView {
+        return listItemContainerView.listItemView
+    }
+
+    var hStackView: UIStackView {
+        return listItemView.hStackView
+    }
+
+    var vStackView: UIStackView {
+        return listItemView.vStackView
+    }
+
+    var titleContainerView: LabelContainerView {
+        return listItemView.titleLabelContainerView
+    }
+
+    var titleLabel: InsetLabel {
+        return titleContainerView.label
+    }
+
+    var subtitleContainerView: LabelContainerView {
+        return listItemView.subtitleLabelContainerView
+    }
+
+    var subtitleLabel: InsetLabel {
+        return subtitleContainerView.label
+    }
+
+    var numberContainerView: NumberContainerView? {
+        return listItemView.firstSubviewOfType()
+    }
+
+    var numberLabel: InsetLabel? {
+        return numberContainerView?.label
     }
 }
