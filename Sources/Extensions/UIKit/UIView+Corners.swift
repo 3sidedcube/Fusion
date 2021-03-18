@@ -25,7 +25,7 @@ extension UIView {
         layer.setCorners(corners)
 
         // Unique identifier for the width-height constraint
-        let identifier = "com.fusion.circleConstraint"
+        let identifier = "com.fusion.circular"
 
         // Constraint setting width equal to height when making the view circular
         let circleConstraint = constraints.first { $0.identifier == identifier }
