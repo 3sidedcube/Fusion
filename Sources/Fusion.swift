@@ -11,6 +11,7 @@ import UIKit
 import HTTPRequest
 import Alamofire
 import OSLog
+import ThunderTable
 
 /// Overridable configuration properties.
 ///
@@ -108,6 +109,19 @@ open class Fusion: ActionHandler {
     }
 
     // MARK: - Row
+
+    /// Override the `Row` which is returned for the given `model`.
+    ///
+    /// - Warning:
+    /// This method should be used sparingly, other more common alternatives include:
+    ///   - Update configuration properties on the default `Row` or `UITableViewCell`
+    ///   - Create your own `JSONModel`
+    ///
+    /// - Parameter model: `JSONModel`
+    /// - Returns: Returning `nil` doesn't specify an override and will have default behaviour
+    open func rowForModel(_ model: JSONModel) -> Row? {
+        return nil
+    }
 
     /// Message sent when the `row` finished configuring
     ///

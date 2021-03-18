@@ -13,9 +13,18 @@ import ThunderTable
 extension JSON {
 
     /// Parse this `JSON` instance into a `JSONModel` then convert to an `[Row]`
+    ///
+    /// - Note:
+    /// Occasionally (rarely) a `JSON` would instantiate an `Array` of `Row`, hence this
+    /// method returns `[Row]`.
     var rows: [Row] {
         // Load this `JSON` instance into a `JSONModel`
-        let jsonModel: JSONModel? = self.jsonModel()
+        guard let jsonModel: JSONModel = self.jsonModel() else { return [] }
+
+        // Check if the app specifies it's own row for this model
+        if let row = Fusion.shared.rowForModel(jsonModel) {
+            return [row]
+        }
 
         // Try `RowArrayConvertible` cast
         if let rows = try? (jsonModel as? RowArrayConvertible)?.toRows() {
