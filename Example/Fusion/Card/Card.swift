@@ -8,7 +8,7 @@
 import Foundation
 import Fusion
 
-/// A model which drives the UI for a `CardRow`
+/// A model which drives a card UI
 struct Card: Codable, JSONModel {
 
     /// `Image` to fetch from remote API

@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import ThunderTable
 
 /// A protocol which allows anything to be "highlighted"
 public protocol Highlightable: AnyObject {

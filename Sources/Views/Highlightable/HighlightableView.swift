@@ -26,6 +26,7 @@ open class HighlightableView: UIView, Highlightable {
     /// Listen for `backgroundColor` set events
     override open var backgroundColor: UIColor? {
         didSet {
+            // Set element of `backgroundColorLock` unless it is locked
             backgroundColorLock.setElement(backgroundColor)
         }
     }

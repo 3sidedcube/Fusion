@@ -10,7 +10,7 @@ import UIKit
 import ThunderTable
 import Fusion
 
-/// `Row` which draws a `Card`
+/// `Row` which draws the UI for a `Card` model
 class CardRow: FusionRow<CardTableViewCell> {
 
     /// `Card` model to drive UI

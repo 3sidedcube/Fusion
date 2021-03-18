@@ -11,10 +11,14 @@ import UIKit
 /// Define how set corners on a `CALayer`
 public enum Corners {
 
-    /// Set an explicit cornerRadius for the specified corners
+    /// Set an explicit value for `cornerRadius` and for the given `mask`.
     case radius(CGFloat, mask: CACornerMask = .all)
 
-    /// Set cornerRadius relative to `bounds` such that it forms a circle
+    /// Set cornerRadius relative to `bounds` such that it forms a circle.
+    ///
+    /// # Note:
+    /// This should be updated every time `bounds` update. This is because the `cornerRadius`
+    /// is set to `0.5 * min(bounds.width, bounds.height)`
     case circle
 }
 
@@ -31,7 +35,7 @@ public extension CACornerMask {
     ]
 }
 
-extension CALayer {
+public extension CALayer {
 
     /// Apply `corners` to this instance
     /// 
@@ -45,22 +49,13 @@ extension CALayer {
         }
     }
 
-    /// Copy corner properties from `layer`
-    ///
-    /// - Parameter layer: `CALayer`
-    func copyCorners(of layer: CALayer) {
-        cornerRadius = layer.cornerRadius
-        cornerCurve = layer.cornerCurve
-        maskedCorners = layer.maskedCorners
-    }
-
     /// Set corner properties on this `CALayer` according to the given `cornerRadius`
     /// and `cornerMask`
     ///
     /// - Parameters:
     ///   - cornerRadius: `CGFloat`
     ///   - cornerMask: `CACornerMask`
-    func setCornerRadius(
+    private func setCornerRadius(
         _ cornerRadius: CGFloat,
         mask: CACornerMask
     ) {
@@ -70,7 +65,7 @@ extension CALayer {
     }
 
     /// Set corner properties to make this `CALayer` instance circular
-    func setCircularCornerRadius() {
+    private func setCircularCornerRadius() {
         cornerRadius = 0.5 * min(bounds.width, bounds.height)
         cornerCurve = .circular
         maskedCorners = .all
