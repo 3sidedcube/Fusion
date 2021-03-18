@@ -19,7 +19,7 @@ public enum Corners {
     /// # Note:
     /// This should be updated every time `bounds` update. This is because the `cornerRadius`
     /// is set to `0.5 * min(bounds.width, bounds.height)`
-    case circle
+    case circular
 }
 
 // MARK: - CACornerMask
@@ -44,7 +44,7 @@ public extension CALayer {
         switch corners {
         case let .radius(cornerRadius, cornerMask):
             setCornerRadius(cornerRadius, mask: cornerMask)
-        case .circle:
+        case .circular:
             setCircularCornerRadius()
         }
     }
