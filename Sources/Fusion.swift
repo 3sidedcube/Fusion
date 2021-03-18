@@ -113,9 +113,12 @@ open class Fusion: ActionHandler {
     /// Override the `Row` which is returned for the given `model`.
     ///
     /// - Warning:
-    /// This method should be used sparingly, other more common alternatives include:
-    ///   - Update configuration properties on the default `Row` or `UITableViewCell`
+    /// This method is often not what you need, other more common alternatives include:
     ///   - Create your own `JSONModel`
+    ///   - Update configuration properties on the `Fusion` default `Row` or `UITableViewCell`
+    ///
+    /// If a new `JSONModel` seems unnecessary and what can be configured on the default is not enough
+    /// then use this method.
     ///
     /// - Parameter model: `JSONModel`
     /// - Returns: Returning `nil` doesn't specify an override and will have default behaviour

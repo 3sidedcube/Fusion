@@ -11,7 +11,7 @@ import UIKit
 /// Define how set corners on a `CALayer`
 public enum Corners {
 
-    /// Set an explicit value for `cornerRadius` and for the given `mask`.
+    /// Set an explicit value for `cornerRadius` with the given `mask`.
     case radius(CGFloat, mask: CACornerMask = .all)
 
     /// Set cornerRadius relative to `bounds` such that it forms a circle.
@@ -42,8 +42,8 @@ public extension CALayer {
     /// - Parameter corners: `Corners`
     func setCorners(_ corners: Corners) {
         switch corners {
-        case let .radius(cornerRadius, cornerMask):
-            setCornerRadius(cornerRadius, mask: cornerMask)
+        case let .radius(radius, mask):
+            setCornerRadius(radius, mask: mask)
         case .circular:
             setCircularCornerRadius()
         }

@@ -13,7 +13,7 @@ extension UIViewController {
 
     // MARK: - ChildViewControllers
 
-    /// Add a child `UIViewController` and set it's `view`s `frame` to its `parent`s `bounds`.
+    /// Add a child `UIViewController` and set its `view`s `frame` to its `parent`s `bounds`.
     /// - Parameters:
     ///   - viewController: Child `UIViewController` to add
     ///   - view: `UIView` to add child `viewController` to
@@ -38,7 +38,7 @@ extension UIViewController {
         viewController.didMove(toParent: self)
     }
 
-    /// Remove a child `UIViewController` from it's parent.
+    /// Remove a child `UIViewController` from its parent.
     ///
     /// - Note:
     /// The name `removeFromParent` is already taken

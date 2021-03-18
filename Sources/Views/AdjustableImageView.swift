@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 /// `AdjustableImageView` is a `UIImageView` which should have a fixed width or height.
-/// It will add an `NSLayoutConstraint` such that it's width/height (aspect) ratio matches the
+/// It will add an `NSLayoutConstraint` such that its width/height (aspect) ratio matches the
 /// `image` width/height ratio.
 open class AdjustableImageView: UIImageView {
 
     /// When `true`, add an `NSLayoutConstraint` to this `UIImageView` so that
-    /// it's width/height (aspect) ratio matches that of the `image`
+    /// its width/height (aspect) ratio matches that of the `image`
     open var isResizingEnabled = true {
         didSet {
             updateAspectRatioConstraint()

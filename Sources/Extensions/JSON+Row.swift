@@ -21,7 +21,7 @@ extension JSON {
         // Load this `JSON` instance into a `JSONModel`
         guard let jsonModel: JSONModel = self.jsonModel() else { return [] }
 
-        // Check if the app specifies it's own row for this model
+        // Check if the app specifies its own `Row` for this `jsonModel`
         if let row = Fusion.shared.rowForModel(jsonModel) {
             return [row]
         }
