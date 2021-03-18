@@ -14,12 +14,14 @@ import UIKit
 /// this `ContainerView` handles the `Margins`.
 open class ContainerView<T>: UIView, Insettable where T: UIView, T: Padded {
 
-    /// Create the `subview` of type `T`
+    /// Create the `subview` of type `T`.
+    ///
+    /// Called when `subview` is first lazily instantiated.
     open func createSubview() -> T {
         return T()
     }
 
-    /// Get and set `Padding` on `subview`
+    /// Get and set `Padding` on `subview` which is `Padded`
     open var padding: Padding {
         get {
             return subview.padding

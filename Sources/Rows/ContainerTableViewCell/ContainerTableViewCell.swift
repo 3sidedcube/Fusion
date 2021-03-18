@@ -17,7 +17,8 @@ import UIKit
 /// ```
 ///
 /// - Note:
-/// Ideally we use generics here but unfortunately that doesn't work nicely with Objective-C!
+/// Ideally we use generics here (for `subview`) but unfortunately that doesn't work nicely with Objective-C
+/// for ThunderTable using xib!
 open class ContainerTableViewCell: SeparatorTableViewCell {
 
     // swiftlint:disable unavailable_function

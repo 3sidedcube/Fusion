@@ -14,12 +14,7 @@ public extension CALayer {
     ///
     /// - Parameters:
     ///   - cornerRadius: `Float`
-    ///   - cornerCurve: `CALayerCornerCurve`
-    func setCornerRadius(
-        _ cornerRadius: Float?,
-        cornerCurve: CALayerCornerCurve = .continuous
-    ) {
-        self.cornerRadius = CGFloat(cornerRadius ?? 0)
-        self.cornerCurve = cornerCurve
+    func setCornerRadius(_ cornerRadius: Float?) {
+        setCorners(.radius(CGFloat(cornerRadius ?? 0)))
     }
 }
