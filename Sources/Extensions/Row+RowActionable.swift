@@ -16,9 +16,9 @@ extension Row where Self: RowActionable {
     /// - Parameter actionJSON: `ActionJSON`
     @discardableResult
     func handleAction(_ actionJSON: ActionJSON?) throws -> Bool {
+        guard let actionHandler = actionHandler else { return false }
         guard let action = try actionJSON?.toAction() else { return false }
-        actionHandler?.handleAction(action)
-        return true
+        return actionHandler.handleAction(action)
     }
 
     /// Execute `handleAction(_:)` returning `false` on throw
