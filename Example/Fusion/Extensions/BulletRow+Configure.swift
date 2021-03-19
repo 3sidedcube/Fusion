@@ -22,14 +22,14 @@ extension BulletRow {
         cell.listItemView.padding = .init(top: 13, left: 20, right: 20, bottom: 18)
 
         // titleLabel
-        cell.titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        cell.titleLabel.font = .cellTitleFont
 
         // subtitleLabel
-        cell.subtitleLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        cell.subtitleLabel.font = .cellSubtitleFont
 
         // numberLabel
         let numberLabel = cell.numberLabel
-        numberLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        numberLabel?.font = .cellTitleFont
         numberLabel?.backgroundColor = .paleMauve
         numberLabel?.textColor = .mediumPurple
         numberLabel?.insets = .init(top: 2, left: 2, bottom: 2, right: 2)
