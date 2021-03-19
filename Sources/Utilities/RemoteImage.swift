@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit // Shouldn't usually with a "model" but required here
+import UIKit
 import Kingfisher
 
 /// `Result` the image fetch task completes with
