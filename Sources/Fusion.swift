@@ -105,6 +105,20 @@ open class Fusion: ActionHandler {
     /// - Parameter action: `Action`
     /// - Returns: Return `false` by default (i.e. does not handle the `action`)
     open func handleAction(_ action: Action) -> Bool {
+        if let nativeAction = action as? NativeAction {
+            return handleNativeAction(nativeAction)
+        }
+        return false
+    }
+
+    /// Handle the given `nativeAction`.
+    ///
+    /// - Note:
+    /// This method is explicitly provided (opposed to the other `Action`s) as, by definition,
+    /// it should be handled by the app.
+    ///
+    /// - Parameter nativeAction: `NativeAction`
+    open func handleNativeAction(_ nativeAction: NativeAction) -> Bool {
         return false
     }
 

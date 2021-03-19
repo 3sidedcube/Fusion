@@ -72,7 +72,7 @@ extension UINavigationController {
     /// - Parameters:
     ///   - nativeAction: `NativeAction`
     private func pushNativeAction(_ nativeAction: NativeAction) -> Bool {
-        return false // do nothing
+        return false // do nothing - user should catch action in `Fusion`
     }
 
     // MARK: - LinkAction

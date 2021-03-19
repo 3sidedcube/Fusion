@@ -10,14 +10,13 @@ github "3sidedcube/Fusion" "develop"
 ```
 It's recommended you build with `xcframework`s.
 
-
 ## Make your own model
 It's extremely likely an app using this framework will want to add its own model driven dynamic UI.
 Doing so is, more or less, as simple as creating a `JSONModel` and hooking it up to a `Row` so the framework knows how to draw it.
 
 1. Create your `JSONModel`
 ```swift
-/// A model which drives the UI for a `CardRow`
+/// A model which drives card UI`
 struct Card: Codable, JSONModel {
 
     /// Title of the card 
@@ -84,6 +83,49 @@ This framework can use these models to draw a `UIView`s in a `UITableView`.
 
 ### Inheritance
 It would make sense for a lot of the `JSONModel`s to share properties. E.g. properties on a `UIView` such as `backgroundColor`, or `cornerRadius`. `Decodable` doesn't work with inheritance out of the box, so currently all `JSONModel`s are `struct`s which specify all of the properties required to draw the `UIView`.
+
+## Actions
+Actions are `JSONModel`s which trigger functionality in the app. For example, clicking a `UIButton` should open a webpage.
+
+The default provided `Action`s are:
+1. `PageAction` - open another data driven `Page`
+2. `LinkAction` - open a web page
+3. `NativeAction` - app should handle according to an `identifier`
+4. `EmailAction` - open an email compose
+
+### Handling `NativeAction`
+Any `NativeAction`s returned in the data will, by definition, need to be handled by the app. To do this, override the `NativeAction` method in the Fusion and handle according to its identifier.
+```swift
+override func handleNativeAction(_ nativeAction: NativeAction) -> Bool {
+    guard let identifier = nativeAction.identifier else { return false }
+    // Handle identifier
+    return true
+}
+```
+
+### Create your own `Action`
+Like with `JSONModel`s, you can create and handle your own. Simply conform your model to `Action` :
+```swift
+struct MyAction: Action {
+    // Properties from `JSON`
+}
+```
+Register in the `Fusion`:
+```swift
+/// Override providing custom `Action`s
+override var actionTypes: [Action.Type] {
+    return super.jsonModelTypes + [MyAction.self]
+}
+```
+And handle the `Action` by overriding the `handleAction(_:)` in the Fusion:
+```swift
+override func handleAction(_ action: Action) -> Bool {
+    let didHandle = super.handleAction(action)
+    guard !didHandle else { return didHandle }
+    // Handle action
+    return false // true if handled
+}
+```
 
 ## Development
 To install dependencies, simply run the `install.sh` script.

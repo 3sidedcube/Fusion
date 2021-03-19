@@ -13,10 +13,29 @@ import Fusion
 /// Provide an override of `Fusion` to provide app specific configuration
 class AppFusion: Fusion {
 
+    // MARK: - JSONModel
+
     /// Override providing custom `JSONModel`s
     override var jsonModelTypes: [JSONModel.Type] {
         return super.jsonModelTypes + [Card.self]
     }
+
+    // MARK: - Action
+
+    override func handleAction(_ action: Action) -> Bool {
+        let didHandle = super.handleAction(action)
+        guard !didHandle else { return didHandle }
+        debugPrint("Handle \(Action.self) \(action)")
+        return false
+    }
+
+    override func handleNativeAction(_ nativeAction: NativeAction) -> Bool {
+        guard let identifier = nativeAction.identifier else { return false }
+        debugPrint("Handle \(NativeAction.self) identifier \(identifier)")
+        return false
+    }
+
+    // MARK: - Row
 
     /// Add app specific customization `Row`s created in `Fusion`
     ///
