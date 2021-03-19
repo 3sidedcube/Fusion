@@ -28,6 +28,13 @@ open class Fusion: ActionHandler {
     public init() {
     }
 
+    // MARK: - Configuration
+
+    /// Add pull to refresh functionality to the `PageViewController`
+    open var pullPageToRefresh: Bool {
+        return false
+    }
+
     // MARK: - Logging
 
     /// Are `OSLog`s enabled

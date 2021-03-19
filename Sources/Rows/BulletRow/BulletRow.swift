@@ -48,25 +48,40 @@ open class BulletRow: ListItemRow {
 
     // MARK: - Row
 
+    /// Prepare re-used `cell`
+    ///
+    /// - Warning:
+    /// This is hacky, but it's required if we want to re-use `ListItemTableViewCell`
+    /// for the `BulletRow` since, I believe, `ThunderTable` can't yet support cell subclasses
+    /// from a parent xib like this which would stop the undesired ru-use.
+    ///
+    /// - Parameter cell: `ListItemTableViewCell`
+    static func prepareForReuse(cell: ListItemTableViewCell) {
+        // Remove any `NumberContainerView` subviews
+        let numberContainerViews: [NumberContainerView] =
+            cell.listItemView.subviewsOfTypeRecursive()
+        numberContainerViews.forEach { $0.removeFromSuperview() }
+
+        // Add `imageContainerView` again as first subview if required
+        if cell.imageContainerView.superview == nil {
+            cell.hStackView.insertArrangedSubview(cell.imageContainerView, at: 0)
+        }
+    }
+
     override open func configureCell(
         _ cell: ListItemTableViewCell,
         at indexPath: IndexPath,
         in tableViewController: TableViewController
     ) {
         super.configureCell(cell, at: indexPath, in: tableViewController)
+        Self.prepareForReuse(cell: cell)
 
         // `listItemContainerView`
         let listItemView = cell.listItemContainerView.listItemView
 
-        // Replace `imageContainerView` with `NumberContainerView` and
-        // handle subview re-use
-        listItemView.imageContainerView.removeFromSuperview()
-        let numberContainerViews: [NumberContainerView] =
-            listItemView.subviewsOfTypeRecursive()
-        numberContainerViews.forEach { $0.removeFromSuperview() }
-
         // Create a `NumberContainerView` instance and add to UI
         let numberContainerView = NumberContainerView()
+        listItemView.imageContainerView.removeFromSuperview()
         listItemView.hStackView.insertArrangedSubview(numberContainerView, at: 0)
 
         // Configure `numberContainerView`

@@ -65,7 +65,7 @@ open class PageViewController: BaseViewController {
     }
 
     /// Refresh the `Page` on pull
-    public var pullToRefresh = false {
+    public var pullToRefresh = Fusion.shared.pullPageToRefresh {
         didSet {
             didSetPullToRefresh()
         }

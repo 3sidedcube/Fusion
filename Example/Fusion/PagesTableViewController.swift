@@ -68,7 +68,6 @@ class PagesTableViewController: BaseTableViewController {
         guard let apiURL = page.apiUrl else { return }
         guard let pageURL = URL(string: apiURL) else { return }
         let viewController = PageViewController(pageURL: pageURL)
-        viewController.pullToRefresh = true
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

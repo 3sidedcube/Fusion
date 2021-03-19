@@ -20,18 +20,24 @@ class AppFusion: Fusion {
         return super.jsonModelTypes + [Card.self]
     }
 
+    // MARK: - Configuration
+
+    override var pullPageToRefresh: Bool {
+        return true
+    }
+
     // MARK: - Action
 
     override func handleAction(_ action: Action) -> Bool {
         let didHandle = super.handleAction(action)
-        guard !didHandle else { return didHandle }
-        debugPrint("Handle \(Action.self) \(action)")
+        guard !didHandle else { return didHandle /* true */ }
+        // Handle action
         return false
     }
 
     override func handleNativeAction(_ nativeAction: NativeAction) -> Bool {
-        guard let identifier = nativeAction.identifier else { return false }
-        debugPrint("Handle \(NativeAction.self) identifier \(identifier)")
+        guard nativeAction.identifier != nil else { return false }
+        // Handle native identifier
         return false
     }
 

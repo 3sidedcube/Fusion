@@ -22,6 +22,16 @@ open class ListItemTableViewCell: ContainerTableViewCell {
     }
     // swiftlint:enable force_cast
 
+    // MARK: - Lifecycle
+
+    /// - Warning:
+    /// Because the `BulletRow` reuses the `ListItemTableViewCell` and we can't create
+    /// a custom cell subclass, we must 
+    override open func prepareForReuse() {
+        super.prepareForReuse()
+        BulletRow.prepareForReuse(cell: self)
+    }
+
     // MARK: - Shorthand
 
     open var listItemView: ListItemView {
@@ -34,6 +44,14 @@ open class ListItemTableViewCell: ContainerTableViewCell {
 
     open var vStackView: UIStackView {
         return listItemView.vStackView
+    }
+
+    open var imageContainerView: ImageContainerView {
+        return listItemView.imageContainerView
+    }
+
+    open var cellImageView: AdjustableImageView {
+        return imageContainerView.imageView
     }
 
     open var titleContainerView: LabelContainerView {

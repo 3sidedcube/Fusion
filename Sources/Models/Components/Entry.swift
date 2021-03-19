@@ -36,4 +36,10 @@ public extension Entry {
         guard let url = url else { return nil }
         return URL(string: url)
     }
+
+    /// Convert `apiUrl` to `URL`
+    func toApiURL() -> URL? {
+        guard let url = apiUrl else { return nil }
+        return URL(string: url)
+    }
 }
