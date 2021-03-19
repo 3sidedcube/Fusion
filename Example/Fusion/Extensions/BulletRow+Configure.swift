@@ -48,6 +48,9 @@ extension BulletRow {
         )]
     }
 
+    /// Handle the display of `cell`
+    ///
+    /// - Parameter cell: `UITableViewCell`
     func willDisplay(cell: UITableViewCell) {
         guard
             let cell = cell as? ListItemTableViewCell,
@@ -57,11 +60,8 @@ extension BulletRow {
         }
 
         numberLabel.layer.masksToBounds = true
-        numberLabel.updateCorners(.circular)
-
-        numberLabel.setNeedsLayout()
+        numberLabel.updateCorners(.circular) // Add constraints if needed
         numberLabel.layoutIfNeeded()
-
         numberLabel.updateCorners(.circular)
     }
 }
