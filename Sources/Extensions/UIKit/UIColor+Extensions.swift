@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-extension UIColor {
+public extension UIColor {
 
-    /// Red, green, blue alpha color components
+    /// Red, green, blue alpha color components.
+    /// Components in the range [0, 1]
     struct RGBA {
 
         /// Red component
@@ -27,63 +28,84 @@ extension UIColor {
         var alpha: CGFloat
     }
 
-    /// Shorthand for creating a `UIColor` with RGB ranges in [0, 255].
+    /// Shorthand for creating a `UIColor` with RGBA ranges in [0, 255].
+    ///
+    /// - Note:
+    /// Named consistently with `init(displayP3Red:green:blue:alpha:)`
     ///
     /// - Parameters:
-    ///   - displayP3Red255: Red P3 component in [0, 255]
-    ///   - green255: Green P3 component in [0, 255]
-    ///   - blue255: Blue P3 component in [0, 255]
-    ///   - alpha: Alpha in [0, 1]
+    ///   - red: Red component in [0, 255]
+    ///   - green: Green component in [0, 255]
+    ///   - blue: Blue component in [0, 255]
+    ///   - alpha: Alpha component in [0, 255]
     convenience init(
-        red255: CGFloat,
-        green255: CGFloat,
-        blue255: CGFloat,
-        alpha: CGFloat = 1
+        red255 red: CGFloat,
+        green: CGFloat,
+        blue: CGFloat,
+        alpha: CGFloat = 255
     ) {
         self.init(
-            red: red255 / 255,
-            green: green255 / 255,
-            blue: blue255 / 255,
-            alpha: alpha
+            red: red / 255,
+            green: green / 255,
+            blue: blue / 255,
+            alpha: alpha / 255
         )
     }
 
     /// Shorthand for creating a `UIColor` with white in [0, 255].
     ///
     /// - Parameters:
-    ///   - white255: White component in [0, 255]
-    ///   - alpha: Alpha in [0, 1]
+    ///   - white: White component in [0, 255]
+    ///   - alpha: Alpha component in [0, 255]
     convenience init(
-        white255: CGFloat,
-        alpha: CGFloat = 1
+        white255 white: CGFloat,
+        alpha: CGFloat = 255
     ) {
         self.init(
-            white: white255 / 255,
-            alpha: alpha
+            white: white / 255,
+            alpha: alpha / 255
         )
     }
 
     // MARK: - Hex
 
-    /// Initialize `UIColor` with the given HEX `string`
+    /// Initialize `UIColor` with the given HEX `string`.
+    ///
+    /// The `string` can be of the form:
+    /// - RGB (12-bit)
+    /// - RGB (24-bit)
+    /// - RGBA (32-bit)
     ///
     /// - Parameter string: `String` hex formatted color
     convenience init? (hexString string: String) {
-        var hex = string.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        if hex.hasPrefix("#") {
-            hex = String(hex.dropFirst())
-        }
+        let notAlphaNumerics = CharacterSet.alphanumerics.inverted
+        let hex = string.trimmingCharacters(in: notAlphaNumerics)
 
         var int = UInt64()
         Scanner(string: hex).scanHexInt64(&int)
         let a, r, g, b: UInt64
         switch hex.count {
         case 3: // RGB (12-bit)
-            (r, g, b, a) = ((int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17, 255)
+            (r, g, b, a) = (
+                (int >> 8) * 17, // r
+                (int >> 4 & 0xF) * 17, // g
+                (int & 0xF) * 17, // b
+                255 // a
+            )
         case 6: // RGB (24-bit)
-            (r, g, b, a) = (int >> 16, int >> 8 & 0xFF, int & 0xFF, 255)
+            (r, g, b, a) = (
+                int >> 16, // r
+                int >> 8 & 0xFF, // g
+                int & 0xFF, // b
+                255 // a
+            )
         case 8: // RGBA (32-bit)
-            (r, g, b, a) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+            (r, g, b, a) = (
+                int >> 24, // r
+                int >> 16 & 0xFF, // g
+                int >> 8 & 0xFF, // b
+                int & 0xFF // a
+            )
         default:
             return nil
         }
@@ -96,7 +118,7 @@ extension UIColor {
         )
     }
 
-    /// Get RGBA components from `UIColor`
+    /// Get `RGBA` components from `UIColor`
     var rgba: RGBA {
         var red: CGFloat = 0.0
         var green: CGFloat = 0.0
@@ -108,12 +130,23 @@ extension UIColor {
     }
 
     /// `UIColor` to RGB HEX `String`
-    var hexString: String {
+    ///
+    /// - Parameter includeAlpha: Include the alpha
+    func hexString(includeAlpha: Bool = true) -> String {
         let rgba = self.rgba
-        let rgb: Int = (Int)(rgba.red * 255) << 16 |
-            (Int)(rgba.green * 255) << 8 |
-            (Int)(rgba.blue * 255) << 0
-        return String(format: "#%06x", rgb)
+
+        var hex = String(
+            format: "#%02X%02X%02X",
+            Int(round(rgba.red * 255)),
+            Int(round(rgba.green * 255)),
+            Int(round(rgba.blue * 255))
+        )
+
+        if includeAlpha {
+            hex += String(format: "%02X", Int(round(rgba.alpha * 255)))
+        }
+
+        return hex
     }
 }
 

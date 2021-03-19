@@ -13,15 +13,10 @@ import UIKit
 extension UIColor {
 
     /// Default value for `highlightedColor`
-    static let defaultHighlightedColor = UIColor(
-        red255: 247, green255: 241, blue255: 247
-    )
-
-    /// Default value for `unhighlightedColor`
-    static let defaultUnhighlightedColor: UIColor = .clear
+    static let defaultHighlightedColor = UIColor(red255: 247, green: 241, blue: 247)
 
     /// Default text `UIColor`
-    static let defaultTextColor = UIColor(red255: 68, green255: 68, blue255: 68)
+    static let defaultTextColor = UIColor(red255: 68, green: 68, blue: 68)
 
     /// Default `UIView` background `UIColor`
     static let defaultBackgroundColor: UIColor = .clear

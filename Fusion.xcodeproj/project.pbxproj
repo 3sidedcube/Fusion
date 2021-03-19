@@ -140,6 +140,8 @@
 		B887DD9C25FC43670053FDB4 /* PagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887DD9B25FC43670053FDB4 /* PagesTableViewController.swift */; };
 		B88D1F3426034A9800114AA0 /* Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D1F3326034A9800114AA0 /* Corners.swift */; };
 		B88D1F53260360D400114AA0 /* UIView+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D1F52260360D400114AA0 /* UIView+Corners.swift */; };
+		B8A0847926049DC20058CEC3 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0847826049DC20058CEC3 /* UIColor+Colors.swift */; };
+		B8A084BE2604A6DA0058CEC3 /* UIColorExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0849B2604A26E0058CEC3 /* UIColorExtensionsTests.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -432,6 +434,8 @@
 		B887DD9B25FC43670053FDB4 /* PagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesTableViewController.swift; sourceTree = "<group>"; };
 		B88D1F3326034A9800114AA0 /* Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Corners.swift; sourceTree = "<group>"; };
 		B88D1F52260360D400114AA0 /* UIView+Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corners.swift"; sourceTree = "<group>"; };
+		B8A0847826049DC20058CEC3 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
+		B8A0849B2604A26E0058CEC3 /* UIColorExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsTests.swift; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -788,9 +792,9 @@
 			isa = PBXGroup;
 			children = (
 				B867D7A225F7C5F10063F988 /* Fusion */,
+				B8A0847726049DB10058CEC3 /* Assets */,
 				B867D73125F7C4780063F988 /* AppDelegate.swift */,
 				B867D73325F7C4780063F988 /* SceneDelegate.swift */,
-				B867D73A25F7C47A0063F988 /* Assets.xcassets */,
 				B867D73C25F7C47A0063F988 /* LaunchScreen.storyboard */,
 				B867D73F25F7C47A0063F988 /* Info.plist */,
 			);
@@ -877,6 +881,15 @@
 				B867DABD25F932E80063F988 /* ButtonTableViewCell.xib */,
 			);
 			path = ButtonRow;
+			sourceTree = "<group>";
+		};
+		B8A0847726049DB10058CEC3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B867D73A25F7C47A0063F988 /* Assets.xcassets */,
+				B8A0847826049DC20058CEC3 /* UIColor+Colors.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		B8C11C5225EFD95B00E2AC5E /* Extensions */ = {
@@ -1055,6 +1068,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* FusionTests.swift */,
+				B8A0849B2604A26E0058CEC3 /* UIColorExtensionsTests.swift */,
 				OBJ_15 /* XCTestManifests.swift */,
 			);
 			name = FusionTests;
@@ -1512,6 +1526,7 @@
 				B826232F25FF7A24009AD57D /* Card.swift in Sources */,
 				B826238E25FF7B34009AD57D /* CardTableViewCell.swift in Sources */,
 				B8262490260298D9009AD57D /* BulletRow+Configure.swift in Sources */,
+				B8A0847926049DC20058CEC3 /* UIColor+Colors.swift in Sources */,
 				B867D78B25F7C5EA0063F988 /* StatamicEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1677,6 +1692,7 @@
 			files = (
 				OBJ_175 /* FusionTests.swift in Sources */,
 				OBJ_176 /* XCTestManifests.swift in Sources */,
+				B8A084BE2604A6DA0058CEC3 /* UIColorExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

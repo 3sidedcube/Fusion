@@ -30,12 +30,8 @@ extension BulletRow {
         // numberLabel
         let numberLabel = cell.numberLabel
         numberLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        numberLabel?.backgroundColor = UIColor(
-            red: 247 / 255, green: 241 / 255, blue: 247 / 255, alpha: 1
-        )
-        numberLabel?.textColor = UIColor(
-            red: 123 / 255, green: 63 / 255, blue: 155 / 255, alpha: 1
-        )
+        numberLabel?.backgroundColor = .paleMauve
+        numberLabel?.textColor = .mediumPurple
         numberLabel?.insets = .init(top: 2, left: 2, bottom: 2, right: 2)
         numberLabel?.textAlignment = .center
 
@@ -46,12 +42,10 @@ extension BulletRow {
         // vStackView
         cell.vStackView.spacing = 4
 
-        let separatorColor = UIColor(
-            red: 238 / 255, green: 238 / 255, blue: 238 / 255, alpha: 1
-        )
+        // separators
         cell.separators = [LineSeparator(
-            position: .bottom, strokeWidth: 2, strokeColor: separatorColor)
-        ]
+            position: .bottom, strokeWidth: 2, strokeColor: .separatorColor
+        )]
     }
 
     func willDisplay(cell: UITableViewCell) {
