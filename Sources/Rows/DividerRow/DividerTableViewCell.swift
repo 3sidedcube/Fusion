@@ -20,4 +20,10 @@ open class DividerTableViewCell: ContainerTableViewCell {
         return subview as! DividerContainerView
     }
     // swiftlint:enable force_cast
+
+    // MARK: - Shorthand
+
+    open var dividerView: DividerView {
+        return dividerContainerView.dividerView
+    }
 }

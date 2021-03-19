@@ -20,4 +20,10 @@ open class ButtonTableViewCell: ContainerTableViewCell {
         return subview as! ButtonContainerView
     }
     // swiftlint:enable force_cast
+
+    // MARK: - Shorthand
+
+    open var button: UIButton {
+        return buttonContainerView.button
+    }
 }

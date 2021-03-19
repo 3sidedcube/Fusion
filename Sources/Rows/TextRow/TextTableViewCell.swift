@@ -20,4 +20,10 @@ open class TextTableViewCell: ContainerTableViewCell {
         return subview as! LabelContainerView
     }
     // swiftlint:enable force_cast
+
+    // MARK: - Shorthand
+
+    open var label: InsetLabel {
+        return labelContainerView.label
+    }
 }

@@ -20,4 +20,10 @@ open class ImageTableViewCell: ContainerTableViewCell {
         return subview as! ImageContainerView
     }
     // swiftlint:enable force_cast
+
+    // MARK: - Shorthand
+
+    open var cellImageView: AdjustableImageView {
+        return imageContainerView.imageView
+    }
 }
