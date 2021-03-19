@@ -127,6 +127,10 @@ override func handleAction(_ action: Action) -> Bool {
 }
 ```
 
+## Multiple Languages
+API dependent but the language of the `JSON` returned by the server depends on the endpoint that is hit. So, to change the language which is served, simply update the api endpoint to point at the desired language.
+Potentially in the future it will be driven purely by the HTTP header `Accept-Language`. 
+
 ## Development
 To install dependencies, simply run the `install.sh` script.
 The script will, using [Carthage](https://github.com/Carthage/Carthage), fetch and build the
