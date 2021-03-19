@@ -70,6 +70,7 @@ open class ImageRow: FusionRow<ImageTableViewCell> {
             image
         ) { [weak self, weak controller] _, _ in
             guard let self = self, self.uiImage != imageBefore else { return }
+            self.redrawUI(cell) // Task will be cancelled if cell updates
             (controller as? RowUpdateListener)?.rowRequestedUpdate(self)
         }
 
