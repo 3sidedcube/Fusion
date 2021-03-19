@@ -61,6 +61,7 @@ extension BulletRow {
 
         numberLabel.layer.masksToBounds = true
         numberLabel.updateCorners(.circular) // Add constraints if needed
+        numberLabel.setNeedsLayout()
         numberLabel.layoutIfNeeded()
         numberLabel.updateCorners(.circular)
     }
