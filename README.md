@@ -128,7 +128,7 @@ override func handleAction(_ action: Action) -> Bool {
 ```
 
 ## Multiple Languages
-API dependent but the language of the `JSON` returned by the server depends on the endpoint that is hit. So, to change the language which is served, simply update the api endpoint to point at the desired language.
+API dependent, but the language of the `JSON` returned by the server depends on the endpoint that is hit. So, to change the language which is served, simply update the api endpoint to point at the desired language.
 Potentially in the future it will be driven purely by the HTTP header `Accept-Language`. 
 
 ## Development
@@ -154,7 +154,7 @@ Indeed, the `Text` model ultimately drives the `UILabel` (a `UIView` subclass) b
 ### Why make `ImageContainerView` and `LabelContainerView`, just use `UIImageView` and `UILabel` respectively?
 These are created to handle the `padding` and `margin` properties found on most models which drive the views (`UIView` properties). These are, when phrased like this, more of an Android thing. The iOS equivalent for `margins` is `UIEdgeInsets` which set the `constant` property on `NSLayoutConstraint`s, `padding` can vary but is much the same. The `LabelContainerView`, essentially, wraps an iOS `UILabel` in a container `UIView` where the `padding` and `margin` can be set, like a `TextView` does out of the box in Android.
 
-### Why the name "Fusion"?
+### What motivated the name "Fusion"?
 Fusion here means to bring together two platforms, iOS and Android, powered by a single server-side API.  
 For web-server apps, the business logic should sit server-side as much as possible.
 Fusion aims to be as simple as "server tell me what to draw and I'll draw it".

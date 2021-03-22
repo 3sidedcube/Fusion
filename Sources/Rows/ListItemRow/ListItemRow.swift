@@ -36,7 +36,12 @@ open class ListItemRow: FusionRow<ListItemTableViewCell>, MappedAccessoryType {
         }
     }
 
-    /// Always return `.none` for `UITableViewCell.AccessoryType`
+    /// Always return `none` and handle the `accessoryType` manually with
+    /// `mappedAccessoryType`.
+    ///
+    /// This is because the cell may be inset for design reasons by `Margins`.
+    /// The `accessoryView` is not contained in the `ContainerView` and thus
+    /// will not be inset when required.
     override open var accessoryType: UITableViewCell.AccessoryType? {
         return UITableViewCell.AccessoryType.none
     }
