@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B81DE32C26089F2400BC80EF /* MappedAccessoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DE32B26089F2400BC80EF /* MappedAccessoryType.swift */; };
+		B81DE3512608AFEF00BC80EF /* UIImage+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DE3502608AFEF00BC80EF /* UIImage+Images.swift */; };
 		B826232025FF79CB009AD57D /* AppFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826231F25FF79CB009AD57D /* AppFusion.swift */; };
 		B826232F25FF7A24009AD57D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826232E25FF7A24009AD57D /* Card.swift */; };
 		B826236825FF7A69009AD57D /* CardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B826236725FF7A69009AD57D /* CardRow.swift */; };
@@ -143,7 +145,6 @@
 		B8A0847926049DC20058CEC3 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0847826049DC20058CEC3 /* UIColor+Colors.swift */; };
 		B8A084BE2604A6DA0058CEC3 /* UIColorExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0849B2604A26E0058CEC3 /* UIColorExtensionsTests.swift */; };
 		B8A084D62604ABCD0058CEC3 /* UIFont+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A084D52604ABCD0058CEC3 /* UIFont+Fonts.swift */; };
-		B8A084E42604C0AC0058CEC3 /* MappedAccessoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A084E32604C0AC0058CEC3 /* MappedAccessoryType.swift */; };
 		B8B379F525F19E7C002B866A /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B379F425F19E7C002B866A /* PageSource.swift */; };
 		B8B37A0B25F1A1AC002B866A /* CMSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A0A25F1A1AC002B866A /* CMSObject.swift */; };
 		B8B37A3725F1A6BD002B866A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */; };
@@ -317,6 +318,8 @@
 
 /* Begin PBXFileReference section */
 		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B81DE32B26089F2400BC80EF /* MappedAccessoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappedAccessoryType.swift; sourceTree = "<group>"; };
+		B81DE3502608AFEF00BC80EF /* UIImage+Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Images.swift"; sourceTree = "<group>"; };
 		B826231F25FF79CB009AD57D /* AppFusion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFusion.swift; sourceTree = "<group>"; };
 		B826232E25FF7A24009AD57D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B826236725FF7A69009AD57D /* CardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRow.swift; sourceTree = "<group>"; };
@@ -439,7 +442,6 @@
 		B8A0847826049DC20058CEC3 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		B8A0849B2604A26E0058CEC3 /* UIColorExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsTests.swift; sourceTree = "<group>"; };
 		B8A084D52604ABCD0058CEC3 /* UIFont+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Fonts.swift"; sourceTree = "<group>"; };
-		B8A084E32604C0AC0058CEC3 /* MappedAccessoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappedAccessoryType.swift; sourceTree = "<group>"; };
 		B8B379F425F19E7C002B866A /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		B8B37A0A25F1A1AC002B866A /* CMSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSObject.swift; sourceTree = "<group>"; };
 		B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -728,7 +730,6 @@
 				B84D03A525FB5F4100DE4935 /* SafariDelegate.swift */,
 				B826239B25FF7EEB009AD57D /* SketchShadow.swift */,
 				B88D1F3326034A9800114AA0 /* Corners.swift */,
-				B8A084E32604C0AC0058CEC3 /* MappedAccessoryType.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -894,6 +895,7 @@
 				B867D73A25F7C47A0063F988 /* Assets.xcassets */,
 				B8A0847826049DC20058CEC3 /* UIColor+Colors.swift */,
 				B8A084D52604ABCD0058CEC3 /* UIFont+Fonts.swift */,
+				B81DE3502608AFEF00BC80EF /* UIImage+Images.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -927,10 +929,11 @@
 		B8C11C9F25EFEADB00E2AC5E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B82C473D25F0D1B70013B02C /* Identifiable.swift */,
 				B8C1B1EC25FA738700628649 /* Row */,
 				B8C1B1EB25FA738200628649 /* Action */,
 				B8C1B18725FA6D4400628649 /* ViewModel */,
+				B82C473D25F0D1B70013B02C /* Identifiable.swift */,
+				B81DE32B26089F2400BC80EF /* MappedAccessoryType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1523,6 +1526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B887DD9C25FC43670053FDB4 /* PagesTableViewController.swift in Sources */,
+				B81DE3512608AFEF00BC80EF /* UIImage+Images.swift in Sources */,
 				B867D7BA25F7C7420063F988 /* URLComponents+StatamicAPI.swift in Sources */,
 				B826236825FF7A69009AD57D /* CardRow.swift in Sources */,
 				B867D73225F7C4780063F988 /* AppDelegate.swift in Sources */,
@@ -1532,7 +1536,6 @@
 				B82623A925FF84E7009AD57D /* Card+RowConvertible.swift in Sources */,
 				B826232F25FF7A24009AD57D /* Card.swift in Sources */,
 				B826238E25FF7B34009AD57D /* CardTableViewCell.swift in Sources */,
-				B8A084E42604C0AC0058CEC3 /* MappedAccessoryType.swift in Sources */,
 				B8262490260298D9009AD57D /* BulletRow+Configure.swift in Sources */,
 				B8A0847926049DC20058CEC3 /* UIColor+Colors.swift in Sources */,
 				B867D78B25F7C5EA0063F988 /* StatamicEnvironment.swift in Sources */,
@@ -1655,6 +1658,7 @@
 				B8C11CA625EFEAEE00E2AC5E /* RowConvertible.swift in Sources */,
 				B887804C25FA3A3C0010B73C /* NSLineBreakMode+Defaults.swift in Sources */,
 				B867DA0625F9009E0063F988 /* CALayer+CornerRadius.swift in Sources */,
+				B81DE32C26089F2400BC80EF /* MappedAccessoryType.swift in Sources */,
 				B867D70A25F7A0240063F988 /* Image+RowConvertible.swift in Sources */,
 				B859FD1725F621930058EDAC /* Button.swift in Sources */,
 				B867D99925F8F2910063F988 /* FusionRow.swift in Sources */,

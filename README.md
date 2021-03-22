@@ -12,7 +12,7 @@ It's recommended you build with `xcframework`s.
 
 ## Make your own model
 It's extremely likely an app using this framework will want to add its own model driven dynamic UI.
-Doing so is, more or less, as simple as creating a `JSONModel` and hooking it up to a `Row` so the framework knows how to draw it.
+Doing so is more or less as simple as creating a `JSONModel` and hooking it up to a `Row`. The model properties probably don't need to be as configurable (as say `Text`) because the app styling is already known.
 
 1. Create your `JSONModel`
 ```swift
@@ -20,7 +20,7 @@ Doing so is, more or less, as simple as creating a `JSONModel` and hooking it up
 struct Card: Codable, JSONModel {
 
     /// Title of the card 
-    var title: String?
+    var title: String? // Don't need `Text` as styling is fixed
     
     // etc...
 }
@@ -149,7 +149,7 @@ standard we will update dependencies and add full support here.
 
 ### Why call the model `Text` instead of `TextView`?
 The `Text` represents the model/data read from the API. A "View" is an instance of a `UIView`.
-Indeed, the `Text` model ultimately drives the `UIView` (e.g. `UILabel`) defining how it's properties should look, but it is not a `UIView` itself.
+Indeed, the `Text` model ultimately drives the `UILabel` (a `UIView` subclass) by defining how the `UILabel`s properties should look, but is not a `UIView` itself.
 
 ### Why make `ImageContainerView` and `LabelContainerView`, just use `UIImageView` and `UILabel` respectively?
 These are created to handle the `padding` and `margin` properties found on most models which drive the views (`UIView` properties). These are, when phrased like this, more of an Android thing. The iOS equivalent for `margins` is `UIEdgeInsets` which set the `constant` property on `NSLayoutConstraint`s, `padding` can vary but is much the same. The `LabelContainerView`, essentially, wraps an iOS `UILabel` in a container `UIView` where the `padding` and `margin` can be set, like a `TextView` does out of the box in Android.

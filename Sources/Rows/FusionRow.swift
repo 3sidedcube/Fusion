@@ -38,6 +38,12 @@ open class FusionRow<T>: Row, CellHeightConfigurable, CellDisplayable,
         return nil
     }
 
+    /// `UITableViewCell.AccessoryType`
+    open var accessoryType: UITableViewCell.AccessoryType? {
+        guard selectionHandler != nil else { return UITableViewCell.AccessoryType.none }
+        return UITableViewCell.AccessoryType.disclosureIndicator
+    }
+
     // MARK: - Configure
 
     open func configure(

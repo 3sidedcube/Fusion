@@ -48,6 +48,14 @@ open class ListItemView: HighlightableView, Padded {
         return imageContainerView.subview.imageView
     }
 
+    /// `ImageContainerView` for accessory image
+    public private(set) lazy var accessoryContainerView = ImageContainerView()
+
+    /// `subview` of `accessoryContainerView`
+    public var accessoryImageView: UIImageView {
+        return accessoryContainerView.subview.imageView
+    }
+
     /// `UIStackView` for `titleLabelContainerView` and `subtitleLabelContainerView`
     public private(set) lazy var vStackView: UIStackView = {
         let stackView = UIStackView()
@@ -105,7 +113,16 @@ open class ListItemView: HighlightableView, Padded {
         addSubviews()
         addConstraints()
 
-        imageContainerView.imageView.contentMode = .scaleAspectFit
+        // `imageView`
+        imageView.contentMode = .scaleAspectFit
+
+        // `accessoryImageView`
+        accessoryImageView.backgroundColor = .clear
+        accessoryImageView.contentMode = .scaleAspectFit
+        accessoryImageView.isHidden = true
+
+        // `hStackView`
+        hStackView.setCustomSpacing(.defaultAccessorySpacing, after: vStackView)
     }
 
     // MARK: - Subviews and Constraints
@@ -119,6 +136,7 @@ open class ListItemView: HighlightableView, Padded {
         // `hStackView`
         hStackView.addArrangedSubview(imageContainerView)
         hStackView.addArrangedSubview(vStackView)
+        hStackView.addArrangedSubview(accessoryImageView)
 
         // `self`
         addSubview(hStackView)
@@ -143,16 +161,28 @@ open class ListItemView: HighlightableView, Padded {
             axis: [.vertical]
         )
 
+        // `accessoryImageView`
+        accessoryImageView.setContent(
+            hugging: 900,
+            compressionResistance: 900,
+            axis: [.horizontal]
+        )
+        accessoryImageView.setContent(
+            hugging: 900,
+            compressionResistance: 1000, // Never squash vertically
+            axis: [.vertical]
+        )
+
         // `imageView`
         imageView.setContent(
             hugging: 800,
-            compressionResistance: 800,
+            compressionResistance: 1000, // Never squash horizontally
             axis: [.horizontal]
         )
         imageView.setContent(
             hugging: 800,
             compressionResistance: 1000, // Never squash vertically
-            axis: [.vertical, .horizontal]
+            axis: [.vertical]
         )
         imageView.translatesAutoresizingMaskIntoConstraints = false
         let widthConstraint = imageView.widthAnchor.constraint(

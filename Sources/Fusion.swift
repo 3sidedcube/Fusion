@@ -121,7 +121,7 @@ open class Fusion: ActionHandler {
     /// Handle the given `nativeAction`.
     ///
     /// - Note:
-    /// This method is explicitly provided (opposed to the other `Action`s) as, by definition,
+    /// This method is explicitly provided (opposed to the other `Action`s) because, by definition,
     /// it should be handled by the app.
     ///
     /// - Parameter nativeAction: `NativeAction`
@@ -169,5 +169,21 @@ open class Fusion: ActionHandler {
         cell: T
     ) where T: UITableViewCell {
         // Subclasses can override
+    }
+
+    // MARK: - UI
+
+    /// Return a `UIImage` for the given `accessoryType`
+    ///
+    /// As `UITableViewCell` content can be inset with `Margins`, the system provided
+    /// `accessoryView` is often not what we want. Instead, a `UITableViewCell` could
+    /// conform to `MappedAccessoryType` to say that it will handle the `accessoryType` inline
+    /// with its own design.
+    ///
+    /// - Parameter accessoryType: `UITableViewCell.AccessoryType`
+    open func imageForAccessoryType(
+        _ accessoryType: UITableViewCell.AccessoryType
+    ) -> UIImage? {
+        return nil
     }
 }

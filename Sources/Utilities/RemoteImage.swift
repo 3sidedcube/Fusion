@@ -22,7 +22,8 @@ open class RemoteImage {
     /// Remote image `URL`
     public let url: URL
 
-    /// `ImageDownloadResult` the image fetch task completed with
+    /// `ImageDownloadResult` the image fetch task completed with.
+    /// `nil` if the `DownloadTask` hasn't been executed yet.
     public private(set) var result: ImageDownloadResult?
 
     /// If the `result` is `success`, return the `image`
@@ -52,7 +53,7 @@ open class RemoteImage {
     open func load(
         in imageView: UIImageView,
         placeholder: UIImage? = nil,
-        remoteOptions: KingfisherOptionsInfo? = [
+        options: KingfisherOptionsInfo? = [
             .transition(.fade(0.5)),
             .scaleFactor(UIScreen.main.scale),
             .cacheOriginalImage
@@ -63,7 +64,7 @@ open class RemoteImage {
         return imageView.kf.setImage(
             with: url,
             placeholder: placeholder,
-            options: remoteOptions,
+            options: options,
             completionHandler: { result in // retain self
                 // The `UIImage` is set on the `UIImageView` by Kingfisher
                 self.result = result

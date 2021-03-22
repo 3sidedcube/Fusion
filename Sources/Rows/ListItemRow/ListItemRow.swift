@@ -11,7 +11,7 @@ import UIKit
 import ThunderTable
 
 /// A `Row` which draws a `ListItem`
-open class ListItemRow: FusionRow<ListItemTableViewCell> {
+open class ListItemRow: FusionRow<ListItemTableViewCell>, MappedAccessoryType {
 
     /// `ListItem` to drive UI
     public private(set) var listItem: ListItem
@@ -36,6 +36,16 @@ open class ListItemRow: FusionRow<ListItemTableViewCell> {
         }
     }
 
+    /// Always return `.none` for `UITableViewCell.AccessoryType`
+    override open var accessoryType: UITableViewCell.AccessoryType? {
+        return UITableViewCell.AccessoryType.none
+    }
+
+    /// Return the "real" `UITableViewCell.AccessoryType` here to handle custom `accessoryView`
+    open var mappedAccessoryType: UITableViewCell.AccessoryType {
+        return super.accessoryType ?? UITableViewCell.AccessoryType.none
+    }
+
     // MARK: - Configure
 
     override open func configureCell(
@@ -55,5 +65,8 @@ open class ListItemRow: FusionRow<ListItemTableViewCell> {
             guard let self = self, remoteImage.image != imageBefore else { return }
             (tableViewController as? RowUpdateListener)?.rowRequestedUpdate(self)
         }
+
+        // Update the `accessoryView`
+        applyAccessoryType(to: cell.accessoryImageView, in: cell)
     }
 }

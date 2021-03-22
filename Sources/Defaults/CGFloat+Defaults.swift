@@ -26,6 +26,9 @@ extension CGFloat {
 
     /// Default letter spacing
     static let defaultLetterSpacing: CGFloat = 0
+
+    /// Spacing before accessory view
+    static let defaultAccessorySpacing: CGFloat = 20
 }
 
 // MARK: - Float + CGFloat

@@ -65,4 +65,13 @@ class AppFusion: Fusion {
             bulletRow.willDisplay(cell: cell)
         }
     }
+
+    // MARK: - UI
+
+    override func imageForAccessoryType(
+        _ accessoryType: UITableViewCell.AccessoryType
+    ) -> UIImage? {
+        guard case .disclosureIndicator = accessoryType else { return nil }
+        return .chevron
+    }
 }

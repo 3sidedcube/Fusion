@@ -77,4 +77,12 @@ open class ListItemTableViewCell: ContainerTableViewCell {
     open var numberLabel: InsetLabel? {
         return numberContainerView?.label
     }
+
+    open var accessoryContainerView: ImageContainerView {
+        return listItemView.accessoryContainerView
+    }
+
+    open var accessoryImageView: AdjustableImageView {
+        return accessoryContainerView.imageView
+    }
 }
