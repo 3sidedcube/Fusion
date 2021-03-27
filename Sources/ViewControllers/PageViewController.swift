@@ -96,7 +96,7 @@ open class PageViewController: BaseViewController {
     ///
     /// - Parameters:
     ///   - configuration: `Configuration`
-    private init(configuration: Configuration) {
+    public init(configuration: Configuration) {
         self.configuration = configuration
         if case .page(let page) = configuration {
             self.page = page
@@ -113,9 +113,6 @@ open class PageViewController: BaseViewController {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-
-        // Configure `view`
-        view.backgroundColor = .white
 
         // `tableView`
         tableView.alwaysBounceVertical = false

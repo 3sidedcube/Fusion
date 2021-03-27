@@ -42,7 +42,7 @@ open class BaseViewController: UIViewController, ActionHandler {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .defaultViewControllerBackgroundColor
     }
 
     // MARK: - ActionHandler

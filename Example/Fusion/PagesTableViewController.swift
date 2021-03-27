@@ -65,9 +65,7 @@ class PagesTableViewController: BaseTableViewController {
     ///
     /// - Parameter page: `Page`
     private func push(page: Page) {
-        guard let apiURL = page.apiUrl else { return }
-        guard let pageURL = URL(string: apiURL) else { return }
-        let viewController = PageViewController(pageURL: pageURL)
-        navigationController?.pushViewController(viewController, animated: true)
+        guard let apiURL = page.apiURL() else { return }
+        navigationController?.pushPageURL(apiURL)
     }
 }

@@ -61,7 +61,7 @@ extension UINavigationController {
     ///   - pageAction: `PageAction`
     private func pushPageAction(_ pageAction: PageAction) -> Bool {
         guard let pageURL = pageAction.entry?.toApiURL() else { return false }
-        push(PageViewController(pageURL: pageURL))
+        pushPageURL(pageURL)
         return true
     }
 
@@ -115,19 +115,5 @@ extension UINavigationController {
     ///   - emailAction: `EmailAction`
     private func presentEmailAction(_ emailAction: EmailAction) -> Bool {
         return presentEmailCompose(for: emailAction.email)
-    }
-
-    // MARK: - Push
-
-    /// Push a `viewController` hiding the bottom bar if it should.
-    ///
-    /// - Parameters:
-    ///   - viewController: `UIViewController`
-    private func push(_ viewController: UIViewController) {
-        // Pushing `action` should always hide the bottom tab bar
-        viewController.hidesBottomBarWhenPushed = shouldHideBottomBarWhenPushed()
-
-        // Push `viewController` on the `UINavigationController` stack
-        pushViewController(viewController)
     }
 }

@@ -61,11 +61,6 @@ open class Fusion: ActionHandler {
         return JSONDecoder.snakeCase
     }
 
-    /// `JSONEncoder` to use for JSON encoding
-    open var jsonEncoder: JSONEncoder {
-        return JSONEncoder.snakeCase
-    }
-
     // MARK: - JSONModel
 
     /// `JSONModel`s to dynamically decode from `JSON`
@@ -150,24 +145,24 @@ open class Fusion: ActionHandler {
     /// Message sent when the `row` finished configuring
     ///
     /// - Parameters:
-    ///   - row: `FusionRow<T>`
-    ///   - cell: `T` is a `UITableViewCell`
-    open func rowDidConfigure<T>(
-        _ row: FusionRow<T>,
-        cell: T
-    ) where T: UITableViewCell {
+    ///   - row: `FusionRow<CellClass>`
+    ///   - cell: `CellClass` is a `UITableViewCell`
+    open func rowDidConfigure<CellClass>(
+        _ row: FusionRow<CellClass>,
+        cell: CellClass
+    ) where CellClass: UITableViewCell {
         // Subclasses can override
     }
 
     /// Message sent when the `row` finished "willDisplay"
     ///
     /// - Parameters:
-    ///   - row: `FusionRow<T>`
-    ///   - cell: `T` is a `UITableViewCell`
-    open func rowWillDisplay<T>(
-        _ row: FusionRow<T>,
-        cell: T
-    ) where T: UITableViewCell {
+    ///   - row: `FusionRow<CellClass>`
+    ///   - cell: `CellClass` is a `UITableViewCell`
+    open func rowWillDisplay<CellClass>(
+        _ row: FusionRow<CellClass>,
+        cell: CellClass
+    ) where CellClass: UITableViewCell {
         // Subclasses can override
     }
 
@@ -185,5 +180,17 @@ open class Fusion: ActionHandler {
         _ accessoryType: UITableViewCell.AccessoryType
     ) -> UIImage? {
         return nil
+    }
+
+    // MARK: - Page
+
+    /// Create a `PageViewController` instance with the given `configuration`
+    ///
+    /// - Parameter configuration: `PageViewController`
+    open func createPageViewController(
+        configuration: PageViewController.Configuration
+    ) -> PageViewController {
+        // Return a `PageViewController`, subclasses may provide their own instance
+        return PageViewController(configuration: configuration)
     }
 }

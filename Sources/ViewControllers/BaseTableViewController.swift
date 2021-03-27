@@ -51,7 +51,7 @@ open class BaseTableViewController: TableViewController,
     override open func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .defaultViewControllerBackgroundColor
         tableView.separatorStyle = .none
         tableView.tableHeaderView = UIView(frame: CGRect(
             x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude

@@ -182,6 +182,7 @@
 		B8C1B1BF25FA72F000628649 /* UIButton+Padded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B1BE25FA72F000628649 /* UIButton+Padded.swift */; };
 		B8C1B1FA25FA848400628649 /* ContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B1F825FA848400628649 /* ContainerTableViewCell.swift */; };
 		B8C1B27825FA98E200628649 /* ListItem+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B27725FA98E200628649 /* ListItem+RowConvertible.swift */; };
+		B8C64E6D260FC3D0001ABCF5 /* UINavigationController+Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C64E6C260FC3D0001ABCF5 /* UINavigationController+Page.swift */; };
 		OBJ_100 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* AFError.swift */; };
 		OBJ_101 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Alamofire.swift */; };
 		OBJ_102 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* AlamofireExtended.swift */; };
@@ -479,6 +480,7 @@
 		B8C1B1BE25FA72F000628649 /* UIButton+Padded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Padded.swift"; sourceTree = "<group>"; };
 		B8C1B1F825FA848400628649 /* ContainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewCell.swift; sourceTree = "<group>"; };
 		B8C1B27725FA98E200628649 /* ListItem+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListItem+RowConvertible.swift"; sourceTree = "<group>"; };
+		B8C64E6C260FC3D0001ABCF5 /* UINavigationController+Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Page.swift"; sourceTree = "<group>"; };
 		"Fusion::Fusion::Product" /* Fusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Fusion::FusionTests::Product" /* FusionTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FusionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"HTTPRequest::HTTPRequest::Product" /* HTTPRequest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HTTPRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -706,6 +708,7 @@
 			children = (
 				B859FC1C25F29B190058EDAC /* UIColor+Extensions.swift */,
 				B82C477725F0DB330013B02C /* UIViewController+Extensions.swift */,
+				B8C64E6C260FC3D0001ABCF5 /* UINavigationController+Page.swift */,
 				B8C11DBE25F04E9200E2AC5E /* UINavigationController+Action.swift */,
 				B8B37A3625F1A6BD002B866A /* UINavigationController+Extensions.swift */,
 				B867D6CF25F798420063F988 /* UIImage+Extensions.swift */,
@@ -1660,6 +1663,7 @@
 				B867DA0625F9009E0063F988 /* CALayer+CornerRadius.swift in Sources */,
 				B81DE32C26089F2400BC80EF /* MappedAccessoryType.swift in Sources */,
 				B867D70A25F7A0240063F988 /* Image+RowConvertible.swift in Sources */,
+				B8C64E6D260FC3D0001ABCF5 /* UINavigationController+Page.swift in Sources */,
 				B859FD1725F621930058EDAC /* Button.swift in Sources */,
 				B867D99925F8F2910063F988 /* FusionRow.swift in Sources */,
 				B8C11DE525F04F0200E2AC5E /* EmailClient.swift in Sources */,

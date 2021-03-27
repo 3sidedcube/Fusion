@@ -38,3 +38,14 @@ public struct Page: Codable, Identifiable {
     /// "screen_view" for analytics screen tracking
     public var analyticsScreenView: String?
 }
+
+// MARK: - Extensions
+
+public extension Page {
+
+    /// `URL` for API
+    func apiURL() -> URL? {
+        guard let apiUrl = apiUrl else { return nil }
+        return URL(string: apiUrl)
+    }
+}

@@ -11,14 +11,6 @@ import UIKit
 
 extension UINavigationController {
 
-    /// `pushViewController(_:animated:)` with `animated` set to `true`.
-    /// To provide  the `animated` argument, use the original method.
-    ///
-    /// - Parameter viewController: `UIViewController` to push on the navigation stack
-    func pushViewController(_ viewController: UIViewController) {
-        pushViewController(viewController, animated: true)
-    }
-
     /// # Context
     /// If a `UIViewController` is being pushed on the navigation controller stack and we
     /// do not want the tab bar at the bottom of the screen we set

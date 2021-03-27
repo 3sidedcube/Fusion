@@ -21,6 +21,9 @@ extension UIColor {
     /// Default `UIView` background `UIColor`
     static let defaultBackgroundColor: UIColor = .clear
 
+    /// Default `UIViewController` background `UIColor`
+    static let defaultViewControllerBackgroundColor: UIColor = .white
+
     /// Placeholder color before remote image has loaded
     static let placeholder = UIColor(white255: 63).withAlphaComponent(0.1)
 
