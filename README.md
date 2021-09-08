@@ -136,7 +136,7 @@ To install dependencies, simply run the `install.sh` script.
 The script will, using [Carthage](https://github.com/Carthage/Carthage), fetch and build the
 `.xcframework`s linked in the `.xcodeproj`.
 ```bash
-./install.sh
+./scripts/install.sh
 ``` 
 
 ## Swift Package Manager
