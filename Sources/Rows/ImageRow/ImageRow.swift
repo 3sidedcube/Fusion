@@ -45,11 +45,8 @@ open class ImageRow: FusionRow<ImageTableViewCell> {
     ///
     /// - Parameter targetWidth: `CGFloat` width to force
     private func imageHeight(for targetWidth: CGFloat) -> CGFloat {
-        if let image = uiImage {
-            return min(image.imageHeight(for: targetWidth), image.size.height)
-        }
-
-        return 0
+        guard let image = uiImage else { return 0 }
+        return min(image.imageHeight(for: targetWidth), image.size.height)
     }
 
     /// Return `imageHeight`
@@ -86,7 +83,7 @@ open class ImageRow: FusionRow<ImageTableViewCell> {
         let margins: Margins
 
         if let task = downloadTask, task.isRunning {
-            // Task in progress - ad padding to show activity indicator
+            // Task in progress - add padding to show activity indicator
             padding = .init(top: 20, left: 0, right: 0, bottom: 20)
             margins = .zero
         } else if uiImage != nil {
