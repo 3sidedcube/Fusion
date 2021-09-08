@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: LaunchOptions?
     ) -> Bool {
         // Configure HTTPRequest logging
-        HTTPRequest.Configuration.shared.responseLogging = false
+        HTTPRequest.Configuration.shared.logging = false
 
         // Set `Fusion` singleton instance
         Fusion.shared = AppFusion()
