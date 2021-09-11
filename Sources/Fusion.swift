@@ -186,11 +186,11 @@ open class Fusion: ActionHandler {
 
     /// Create a `PageViewController` instance with the given `configuration`
     ///
-    /// - Parameter configuration: `PageViewController`
+    /// - Parameter configuration: `ModelSource<URL, Page>`
     open func createPageViewController(
-        configuration: PageViewController.Configuration
+        state: ModelSource<URL, Page>
     ) -> PageViewController {
         // Return a `PageViewController`, subclasses may provide their own instance
-        return PageViewController(configuration: configuration)
+        return PageViewController(state: state)
     }
 }

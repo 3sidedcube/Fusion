@@ -20,21 +20,11 @@ import Alamofire
 /// `BaseTableViewController` subclass
 open class PageViewController: BaseViewController {
 
-    /// Provide a `page` if known, otherwise the means of which to fetch it
-    public enum Configuration {
-
-        /// `Page` model to drive UI
-        case page(Page)
-
-        /// `URL` to fetch the `Page` model.
-        case pageURL(URL)
-    }
-
-    /// `Configuration` this `PageViewController` is initialized with
-    public let configuration: Configuration
-
-    /// `Page` model loaded from the API
-    open var page: Page? {
+    /// `Page` model source
+    ///
+    /// - Note:
+    /// Recall: this `didSet` is not called on `init`
+    private var state: ModelSource<URL, Page> {
         didSet {
             redraw()
         }
@@ -81,7 +71,7 @@ open class PageViewController: BaseViewController {
     /// - Parameters:
     ///   - page: `Page`
     public convenience init(page: Page) {
-        self.init(configuration: .page(page))
+        self.init(state: .model(page))
     }
 
     /// Initialize with `pageURL`
@@ -89,18 +79,15 @@ open class PageViewController: BaseViewController {
     /// - Parameters:
     ///   - pageURL: `URL`
     public convenience init(pageURL: URL) {
-        self.init(configuration: .pageURL(pageURL))
+        self.init(state: .source(pageURL))
     }
 
-    /// Initialize with `configuration`
+    /// Initialize with `state`
     ///
     /// - Parameters:
-    ///   - configuration: `Configuration`
-    public init(configuration: Configuration) {
-        self.configuration = configuration
-        if case .page(let page) = configuration {
-            self.page = page
-        }
+    ///   - state: `ModelSource<URL, Page>`
+    public init(state: ModelSource<URL, Page>) {
+        self.state = state
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -131,6 +118,7 @@ open class PageViewController: BaseViewController {
         redraw()
 
         // Load the `Page`
+        guard case .source = state else { return }
         refresh()
     }
 
@@ -161,6 +149,7 @@ open class PageViewController: BaseViewController {
     open func redraw() {
         guard isViewLoaded else { return }
 
+        let page = state.model
         title = page?.title
         tableViewController.data = page?.data ?? []
     }
@@ -200,23 +189,48 @@ open class PageViewController: BaseViewController {
     /// Load the `Page` from the API if the `Page` can be fetched from a `URL`
     @objc
     private func refresh() {
+        // Check if we are already refreshing
+        guard !isRefreshing else { return }
+
+        // Check the page needs fetching
         guard
-            case .pageURL(let pageURL) = configuration,
+            let pageURL = state.source ?? state.model?.apiURL(),
             let httpRequest = httpRequestForPageURLOrLog(pageURL)
         else {
             return
         }
 
-        // Check if we are already refreshing
-        guard !isRefreshing else { return }
-
         // Hit API to fetch `Page`
         beginRefreshing()
         AF.request(httpRequest) { [weak self] result in
             self?.endRefreshing()
-            self?.page = try? result.cmsObjectOrThrow().data
+
+            let modelResult: ModelResult<Page> = result.toModelResult()
+            switch modelResult {
+            case let .success(page):
+                self?.onFetchPageAPISuccess(page)
+            case let .failure(error):
+                self?.onFetchPageAPIFailure(error)
+            }
         }
     }
+
+    // MARK: - API
+
+    /// Called when the fetch page API completes with success
+    ///
+    /// - Parameter post: `Post`
+    private func onFetchPageAPISuccess(_ page: Page) {
+        state = .model(page)
+    }
+
+    /// Called when the fetch page API completes with failure
+    ///
+    /// - Parameter error: `Error`
+    private func onFetchPageAPIFailure(_ error: Error) {
+        // do nothing
+    }
+
 
     // MARK: - HTTPRequest
 

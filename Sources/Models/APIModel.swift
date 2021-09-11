@@ -1,5 +1,5 @@
 //
-//  CMSObject.swift
+//  APIModel.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 07/12/2020.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-/// An object returned from the CMS that is wrapped in a `CMSObject` structure
-public struct CMSObject<T>: Codable where T: Codable {
+/// A model returned from the API
+public struct APIModel<T>: Codable where T: Codable {
 
     /// An object `T` wrapped in `"data"`
     public var data: T

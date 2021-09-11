@@ -17,7 +17,7 @@ public extension UINavigationController {
     ///   - pageURL: `pageURL`
     ///   - animated: `Bool`
     func pushPageURL(_ pageURL: URL, animated: Bool = true) {
-        pushPage(.pageURL(pageURL), animated: animated)
+        pushPage(.source(pageURL), animated: animated)
     }
 
     /// `pushPage(_:animated:)` with the given `page`
@@ -26,21 +26,21 @@ public extension UINavigationController {
     ///   - page: `page`
     ///   - animated: `Bool`
     func pushPage(_ page: Page, animated: Bool = true) {
-        pushPage(.page(page), animated: animated)
+        pushPage(.model(page), animated: animated)
     }
 
     /// Push a `PageViewController` on this `UINavigationController` stack with the
     /// given `configuration`
     ///
     /// - Parameters:
-    ///   - configuration: `PageViewController.Configuration`
+    ///   - state: `ModelSource<URL, Page>`
     ///   - animated: `Bool`
     func pushPage(
-        _ configuration: PageViewController.Configuration,
+        _ state: ModelSource<URL, Page>,
         animated: Bool = true
     ) {
         let viewController = Fusion.shared
-            .createPageViewController(configuration: configuration)
+            .createPageViewController(state: state)
 
         // Pushing should hide the bottom tab bar
         viewController.hidesBottomBarWhenPushed = shouldHideBottomBarWhenPushed()
