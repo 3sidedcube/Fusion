@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import UIKit
 import HTTPRequest
 import Alamofire
 import OSLog
-import ThunderTable
+import SwiftUI
 
 /// Overridable configuration properties.
 ///
@@ -26,13 +25,6 @@ open class Fusion: ActionHandler {
 
     /// Default initializer
     public init() {
-    }
-
-    // MARK: - Configuration
-
-    /// Add pull to refresh functionality to the `PageViewController`
-    open var pullPageToRefresh: Bool {
-        return false
     }
 
     // MARK: - Logging
@@ -66,23 +58,23 @@ open class Fusion: ActionHandler {
     /// `JSONModel`s to dynamically decode from `JSON`
     open var jsonModelTypes: [JSONModel.Type] {
         return [
-            Text.self,
-            Image.self,
-            Button.self,
-            Divider.self,
-            ListItem.self,
-            Bullet.self,
-            BulletGroup.self
+            BulletGroupModel.self,
+            BulletModel.self,
+            ButtonModel.self,
+            DividerModel.self,
+            ImageModel.self,
+            ListItemModel.self,
+            TextModel.self
         ]
     }
 
     /// `Action`s to dynamically decode from `JSON`
     open var actionTypes: [Action.Type] {
         return [
-            PageAction.self,
+            EmailAction.self,
             LinkAction.self,
             NativeAction.self,
-            EmailAction.self
+            PageAction.self
         ]
     }
 
@@ -107,10 +99,8 @@ open class Fusion: ActionHandler {
     /// - Parameter action: `Action`
     /// - Returns: Return `false` by default (i.e. does not handle the `action`)
     open func handleAction(_ action: Action) -> Bool {
-        if let nativeAction = action as? NativeAction {
-            return handleNativeAction(nativeAction)
-        }
-        return false
+        guard let nativeAction = action as? NativeAction else { return false }
+        return handleNativeAction(nativeAction)
     }
 
     /// Handle the given `nativeAction`.
@@ -124,62 +114,24 @@ open class Fusion: ActionHandler {
         return false
     }
 
-    // MARK: - Row
+    // MARK: - View
 
-    /// Override the `Row` which is returned for the given `model`.
+    /// Override the `FusionView` which is returned for the given `model`.
     ///
     /// - Warning:
-    /// This method is often not what you need, other more common alternatives include:
-    ///   - Create your own `JSONModel`
-    ///   - Update configuration properties on the `Fusion` default `Row` or `UITableViewCell`
-    ///
+    /// More often than not it's preferable to simply create your own `JSONModel`.
     /// If a new `JSONModel` seems unnecessary and what can be configured on the default is not enough
     /// then use this method.
     ///
     /// - Parameter model: `JSONModel`
-    /// - Returns: Returning `nil` doesn't specify an override and will have default behaviour
-    open func rowForModel(_ model: JSONModel) -> Row? {
-        return nil
-    }
-
-    /// Message sent when the `row` finished configuring
-    ///
-    /// - Parameters:
-    ///   - row: `FusionRow<CellClass>`
-    ///   - cell: `CellClass` is a `UITableViewCell`
-    open func rowDidConfigure<CellClass>(
-        _ row: FusionRow<CellClass>,
-        cell: CellClass
-    ) where CellClass: UITableViewCell {
-        // Subclasses can override
-    }
-
-    /// Message sent when the `row` finished "willDisplay"
-    ///
-    /// - Parameters:
-    ///   - row: `FusionRow<CellClass>`
-    ///   - cell: `CellClass` is a `UITableViewCell`
-    open func rowWillDisplay<CellClass>(
-        _ row: FusionRow<CellClass>,
-        cell: CellClass
-    ) where CellClass: UITableViewCell {
-        // Subclasses can override
-    }
-
-    // MARK: - UI
-
-    /// Return a `UIImage` for the given `accessoryType`
-    ///
-    /// As `UITableViewCell` content can be inset with `Margins`, the system provided
-    /// `accessoryView` is often not what we want. Instead, a `UITableViewCell` could
-    /// conform to `MappedAccessoryType` to say that it will handle the `accessoryType` inline
-    /// with its own design.
-    ///
-    /// - Parameter accessoryType: `UITableViewCell.AccessoryType`
-    open func imageForAccessoryType(
-        _ accessoryType: UITableViewCell.AccessoryType
-    ) -> UIImage? {
-        return nil
+    /// - Returns: `FusionView`
+    open func view(for model: JSONModel) -> some FusionView {
+        if model is FusionView {
+            return model
+        }
+        if let fusionView = model as? FusionView {
+            return fusionView
+        }
     }
 
     // MARK: - Page

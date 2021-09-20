@@ -22,6 +22,11 @@ public struct Email {
 
         // MARK: - Init
 
+        /// Default public memberwise initializer
+        ///
+        /// - Parameters:
+        ///   - content: `String`
+        ///   - isHTML: `Bool`
         public init(content: String, isHTML: Bool) {
             self.content = content
             self.isHTML = isHTML
@@ -29,13 +34,13 @@ public struct Email {
     }
 
     /// Email addresses to send to
-    public var toAddresses: [String]
+    public var to: [String]
 
     /// Email addresses to copy in
-    public var ccAddresses: [String]
+    public var cc: [String]
 
     /// Email addresses to blind copy in
-    public var bccAddresses: [String]
+    public var bcc: [String]
 
     /// Email subject
     public var subject: String?
@@ -48,21 +53,21 @@ public struct Email {
     /// Default `public` memberwise initializer
     /// 
     /// - Parameters:
-    ///   - toAddresses: `[String]`
-    ///   - ccAddresses: `[String]`
-    ///   - bccAddresses: `[String]`
+    ///   - to: `[String]`
+    ///   - cc: `[String]`
+    ///   - bcc: `[String]`
     ///   - subject: `String?`
     ///   - body: `Body?`
     public init(
-        toAddresses: [String],
-        ccAddresses: [String] = [],
-        bccAddresses: [String] = [],
+        to: [String],
+        cc: [String] = [],
+        bcc: [String] = [],
         subject: String?,
         body: Body?
     ) {
-        self.toAddresses = toAddresses
-        self.ccAddresses = ccAddresses
-        self.bccAddresses = bccAddresses
+        self.to = to
+        self.cc = cc
+        self.bcc = bcc
         self.subject = subject
         self.body = body
     }

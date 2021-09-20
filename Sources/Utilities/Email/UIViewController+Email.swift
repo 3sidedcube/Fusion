@@ -10,6 +10,40 @@ import Foundation
 import UIKit
 import MessageUI
 
+public extension MFMailComposeViewController {
+
+    /// Create an `MFMailComposeViewController`
+    ///
+    /// - Parameters:
+    ///   - email: `Email`
+    ///   - delegate: `MFMailComposeViewControllerDelegate`
+    ///
+    /// - Returns: `MFMailComposeViewController`
+    static func mailCompose(
+        email: Email,
+        delegate: MFMailComposeViewControllerDelegate = EmailDelegate.shared
+    ) -> MFMailComposeViewController {
+
+        // Create a `MFMailComposeViewController`
+        let viewController = MFMailComposeViewController()
+        viewController.mailComposeDelegate = delegate
+
+        // Configure the fields of the interface.
+        viewController.setToRecipients(email.to)
+        viewController.setCcRecipients(email.cc)
+        viewController.setBccRecipients(email.bcc)
+        viewController.setSubject(email.subject ?? "")
+        viewController.setMessageBody(
+            email.body?.content ?? "",
+            isHTML: email.body?.isHTML ?? false
+        )
+
+        return viewController
+    }
+}
+
+// MARK: - UIViewController + Email
+
 public extension UIViewController {
 
     /// First attempt to present an `MFMailComposeViewController` if available.
@@ -18,29 +52,21 @@ public extension UIViewController {
     ///
     /// - Parameters:
     ///   - email: `Email` content
-    ///   - animated: `Bool` present animation
     ///   - delegate: `MFMailComposeViewControllerDelegate`
+    ///   - animated: `Bool` present animation
     func presentEmailCompose(
         for email: Email,
-        animated: Bool = true,
-        delegate: MFMailComposeViewControllerDelegate = EmailDelegate.shared
+        delegate: MFMailComposeViewControllerDelegate = EmailDelegate.shared,
+        animated: Bool = true
     ) -> Bool {
         guard MFMailComposeViewController.canSendMail() else {
             return openFirstEmailClient(for: email)
         }
 
         // Create a `MFMailComposeViewController`
-        let viewController = MFMailComposeViewController()
-        viewController.mailComposeDelegate = delegate
-
-        // Configure the fields of the interface.
-        viewController.setToRecipients(email.toAddresses)
-        viewController.setCcRecipients(email.ccAddresses)
-        viewController.setBccRecipients(email.bccAddresses)
-        viewController.setSubject(email.subject ?? "")
-        viewController.setMessageBody(
-            email.body?.content ?? "",
-            isHTML: email.body?.isHTML ?? false
+        let viewController: MFMailComposeViewController = .mailCompose(
+            email: email,
+            delegate: delegate
         )
 
         // Present the view controller modally.
@@ -52,12 +78,27 @@ public extension UIViewController {
     ///
     /// - Parameter email: `Email`
     private func openFirstEmailClient(for email: Email) -> Bool {
-        let composeURL = EmailClient.allCases
-            .compactMap { URL(string: $0.composePattern(for: email)) }
-            .first { UIApplication.shared.canOpenURL($0) }
+        let composeURL = UIApplication.shared
+            .availableMailClients(email: email)
+            .first
 
         guard let url = composeURL else { return false }
         UIApplication.shared.open(url, options: [:])
         return true
+    }
+}
+
+// MARK: - UIApplication + Email
+
+public extension UIApplication {
+
+    /// `URL`s of `EmailClient`s installed on the user's device
+    ///
+    /// - Parameter email: `Email`
+    /// - Returns: `[URL]`
+    func availableMailClients(email: Email) -> [URL] {
+        return EmailClient.allCases
+            .compactMap { URL(string: $0.composePattern(for: email)) }
+            .filter { canOpenURL($0) }
     }
 }

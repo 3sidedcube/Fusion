@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 public extension UINavigationController {
 
@@ -47,5 +48,12 @@ public extension UINavigationController {
 
         // Push on the this `UINavigationController` stack
         pushViewController(viewController, animated: animated)
+    }
+}
+
+public extension UINavigationController {
+
+    func push() {
+        UIHostingController(rootView: Page)
     }
 }

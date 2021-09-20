@@ -39,7 +39,7 @@ public extension EmailClient {
     /// - Parameters:
     ///   - email: `Email`
     func composePattern(for email: Email) -> String {
-        let to = email.toAddresses.joined(separator: ",")
+        let to = email.to.joined(separator: ",")
         let subject = (email.subject ?? "").percentEncoded
         let body = (email.body?.content ?? "").percentEncoded
 

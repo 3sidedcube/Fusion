@@ -1,0 +1,28 @@
+{
+  "background_color" : "#00FF00",
+  "border" : {
+    "color" : "#0000FF",
+    "stroke_width" : 5
+  },
+  "corner_radius" : 5,
+  "margin" : {
+    "bottom" : 5,
+    "left" : 5,
+    "right" : 5,
+    "top" : 5
+  },
+  "padding" : {
+    "bottom" : 20,
+    "left" : 20,
+    "right" : 20,
+    "top" : 20
+  },
+  "shadow" : {
+    "blur" : 12,
+    "color" : "#000000",
+    "spread" : 0,
+    "x" : 0,
+    "y" : 0
+  },
+  "stroke_width" : 32
+}

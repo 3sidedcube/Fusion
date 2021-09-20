@@ -27,6 +27,34 @@
 		B86A644326EC823F00EEBAAE /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643F26EC823E00EEBAAE /* Alamofire.xcframework */; };
 		B86A644526EC823F00EEBAAE /* HTTPRequest.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A644026EC823E00EEBAAE /* HTTPRequest.xcframework */; };
 		B86A644926EC848900EEBAAE /* ModelSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A644826EC848900EEBAAE /* ModelSource.swift */; };
+		B86A644B26ECAEAC00EEBAAE /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A644A26ECAEAC00EEBAAE /* Units.swift */; };
+		B86A644F26ECB01500EEBAAE /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A644E26ECB01500EEBAAE /* SketchShadow.swift */; };
+		B86A645926ECB60F00EEBAAE /* BulletModel+ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A645326ECB60E00EEBAAE /* BulletModel+ListItemView.swift */; };
+		B86A645A26ECB60F00EEBAAE /* ImageModel+FusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A645426ECB60E00EEBAAE /* ImageModel+FusionView.swift */; };
+		B86A645B26ECB60F00EEBAAE /* ButtonModel+FusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A645526ECB60F00EEBAAE /* ButtonModel+FusionView.swift */; };
+		B86A645C26ECB60F00EEBAAE /* ListItemModel+ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A645626ECB60F00EEBAAE /* ListItemModel+ListItemView.swift */; };
+		B86A645D26ECB60F00EEBAAE /* TextEntity+FusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A645726ECB60F00EEBAAE /* TextEntity+FusionView.swift */; };
+		B86A645E26ECB60F00EEBAAE /* DividerModel+FusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A645826ECB60F00EEBAAE /* DividerModel+FusionView.swift */; };
+		B86A646026ECB66400EEBAAE /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A645F26ECB66400EEBAAE /* Defaults.swift */; };
+		B86A646526ECB69C00EEBAAE /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A646226ECB69C00EEBAAE /* Color+Extensions.swift */; };
+		B86A646626ECB69C00EEBAAE /* Color+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A646326ECB69C00EEBAAE /* Color+RGBA.swift */; };
+		B86A646726ECB69C00EEBAAE /* EdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A646426ECB69C00EEBAAE /* EdgeInsets+Extensions.swift */; };
+		B86A646926ECB6DD00EEBAAE /* LineHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A646826ECB6DD00EEBAAE /* LineHeight.swift */; };
+		B86A647526ECB74100EEBAAE /* View+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A646D26ECB74100EEBAAE /* View+ViewModel.swift */; };
+		B86A647626ECB74100EEBAAE /* FontModel+LegacyFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A646E26ECB74100EEBAAE /* FontModel+LegacyFont.swift */; };
+		B86A647726ECB74100EEBAAE /* TextAlignmentModel+TextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A646F26ECB74100EEBAAE /* TextAlignmentModel+TextAlignment.swift */; };
+		B86A647826ECB74100EEBAAE /* LineHeight+ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A647026ECB74100EEBAAE /* LineHeight+ViewModifier.swift */; };
+		B86A647926ECB74100EEBAAE /* SketchShadow+ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A647126ECB74100EEBAAE /* SketchShadow+ViewModifier.swift */; };
+		B86A647A26ECB74100EEBAAE /* FontModel+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A647226ECB74100EEBAAE /* FontModel+Font.swift */; };
+		B86A647B26ECB74100EEBAAE /* InsetsModel+EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A647326ECB74100EEBAAE /* InsetsModel+EdgeInsets.swift */; };
+		B86A647C26ECB74100EEBAAE /* Text+FontModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A647426ECB74100EEBAAE /* Text+FontModel.swift */; };
+		B86A648526ECB8DB00EEBAAE /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A648426ECB8DB00EEBAAE /* Sample.swift */; };
+		B86A648C26ECCD6600EEBAAE /* Page+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A648B26ECCD6600EEBAAE /* Page+View.swift */; };
+		B86A648E26ED0E4D00EEBAAE /* FusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A648D26ED0E4D00EEBAAE /* FusionView.swift */; };
+		B86A649026ED0F5F00EEBAAE /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A648F26ED0F5F00EEBAAE /* ModelView.swift */; };
+		B86A649226ED103D00EEBAAE /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A649126ED103D00EEBAAE /* ListItemView.swift */; };
+		B86A649426ED13C100EEBAAE /* Actionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A649326ED13C100EEBAAE /* Actionable.swift */; };
+		B86A649726ED416B00EEBAAE /* EmailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A649626ED416B00EEBAAE /* EmailViewControllerRepresentable.swift */; };
 		OBJ_274 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_218 /* AFError.swift */; };
 		OBJ_275 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_219 /* Alamofire.swift */; };
 		OBJ_276 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_220 /* AlamofireExtended.swift */; };
@@ -63,142 +91,52 @@
 		OBJ_307 /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_251 /* URLSessionConfiguration+Alamofire.swift */; };
 		OBJ_308 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_252 /* Validation.swift */; };
 		OBJ_315 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_217 /* Package.swift */; };
-		OBJ_321 /* CGFloat+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CGFloat+Defaults.swift */; };
-		OBJ_322 /* Int+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Int+Defaults.swift */; };
-		OBJ_323 /* NSLineBreakMode+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NSLineBreakMode+Defaults.swift */; };
-		OBJ_324 /* NSTextAlignment+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NSTextAlignment+Defaults.swift */; };
-		OBJ_325 /* UIColor+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* UIColor+Defaults.swift */; };
-		OBJ_326 /* UIEdgeInsets+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* UIEdgeInsets+Defaults.swift */; };
-		OBJ_327 /* UIFont+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* UIFont+Defaults.swift */; };
-		OBJ_328 /* UILabel+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* UILabel+Defaults.swift */; };
-		OBJ_329 /* UITableViewCell+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* UITableViewCell+Defaults.swift */; };
-		OBJ_330 /* JSON+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* JSON+Row.swift */; };
 		OBJ_331 /* JSONDecoder+SnakeCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* JSONDecoder+SnakeCase.swift */; };
-		OBJ_332 /* JSONEncoder+SnakeCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* JSONEncoder+SnakeCase.swift */; };
 		OBJ_333 /* OSLog+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* OSLog+Logger.swift */; };
-		OBJ_334 /* Page+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Page+Data.swift */; };
 		OBJ_335 /* Data+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Data+Codable.swift */; };
-		OBJ_336 /* Row+RowActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Row+RowActionable.swift */; };
-		OBJ_337 /* UIButton+Padded.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* UIButton+Padded.swift */; };
-		OBJ_338 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* UIColor+Extensions.swift */; };
-		OBJ_339 /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* UIEdgeInsets+Extensions.swift */; };
-		OBJ_340 /* UIFont+UIFontDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* UIFont+UIFontDescriptor.swift */; };
-		OBJ_341 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* UIImage+Extensions.swift */; };
-		OBJ_342 /* UIImageView+RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* UIImageView+RemoteImage.swift */; };
-		OBJ_343 /* UINavigationController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* UINavigationController+Action.swift */; };
+		OBJ_343 /* UINavigationController+ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* UINavigationController+ActionHandler.swift */; };
 		OBJ_344 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* UINavigationController+Extensions.swift */; };
 		OBJ_345 /* UINavigationController+Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* UINavigationController+Page.swift */; };
-		OBJ_346 /* UITableView+Bug.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* UITableView+Bug.swift */; };
-		OBJ_347 /* UIView+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* UIView+Corners.swift */; };
-		OBJ_348 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* UIView+Extensions.swift */; };
-		OBJ_349 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* UIViewController+Extensions.swift */; };
 		OBJ_350 /* URL+URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* URL+URLComponents.swift */; };
 		OBJ_351 /* Fusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Fusion.swift */; };
 		OBJ_352 /* APIEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* APIEnum.swift */; };
 		OBJ_353 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* APIModel.swift */; };
-		OBJ_354 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Border.swift */; };
-		OBJ_355 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Entry.swift */; };
-		OBJ_356 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Font.swift */; };
-		OBJ_357 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Padding.swift */; };
-		OBJ_358 /* RGBAHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* RGBAHex.swift */; };
-		OBJ_359 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Shadow.swift */; };
-		OBJ_360 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Size.swift */; };
-		OBJ_361 /* TextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* TextAlignment.swift */; };
+		OBJ_354 /* BorderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* BorderModel.swift */; };
+		OBJ_355 /* EntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* EntryModel.swift */; };
+		OBJ_356 /* FontModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* FontModel.swift */; };
+		OBJ_357 /* InsetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* InsetsModel.swift */; };
+		OBJ_359 /* ShadowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* ShadowModel.swift */; };
+		OBJ_360 /* SizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* SizeModel.swift */; };
+		OBJ_361 /* TextAlignmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* TextAlignmentModel.swift */; };
 		OBJ_362 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Action.swift */; };
 		OBJ_363 /* EmailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* EmailAction.swift */; };
 		OBJ_364 /* LinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* LinkAction.swift */; };
 		OBJ_365 /* NativeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* NativeAction.swift */; };
 		OBJ_366 /* PageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* PageAction.swift */; };
-		OBJ_367 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Bullet.swift */; };
-		OBJ_368 /* BulletGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* BulletGroup.swift */; };
-		OBJ_369 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* Button.swift */; };
-		OBJ_370 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* Divider.swift */; };
-		OBJ_371 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Image.swift */; };
+		OBJ_367 /* BulletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* BulletModel.swift */; };
+		OBJ_368 /* BulletGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* BulletGroupModel.swift */; };
+		OBJ_369 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* ButtonModel.swift */; };
+		OBJ_370 /* DividerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* DividerModel.swift */; };
+		OBJ_371 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* ImageModel.swift */; };
 		OBJ_372 /* JSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* JSONModel.swift */; };
-		OBJ_373 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* ListItem.swift */; };
-		OBJ_374 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* Text.swift */; };
+		OBJ_373 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* ListItemModel.swift */; };
+		OBJ_374 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* TextModel.swift */; };
 		OBJ_375 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Page.swift */; };
 		OBJ_376 /* ModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* ModelState.swift */; };
 		OBJ_377 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Screen.swift */; };
 		OBJ_378 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* ActionHandler.swift */; };
-		OBJ_379 /* RowActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* RowActionable.swift */; };
-		OBJ_380 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Identifiable.swift */; };
-		OBJ_381 /* MappedAccessoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* MappedAccessoryType.swift */; };
-		OBJ_382 /* CellDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* CellDisplayable.swift */; };
-		OBJ_383 /* CellHeightConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* CellHeightConfigurable.swift */; };
-		OBJ_384 /* RowArrayConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* RowArrayConvertible.swift */; };
-		OBJ_385 /* RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* RowConvertible.swift */; };
-		OBJ_386 /* RowUpdateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* RowUpdateListener.swift */; };
-		OBJ_387 /* Insettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Insettable.swift */; };
-		OBJ_388 /* Margined.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* Margined.swift */; };
-		OBJ_389 /* Padded.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* Padded.swift */; };
-		OBJ_390 /* TextProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* TextProperties.swift */; };
+		OBJ_390 /* TextEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* TextEntity.swift */; };
 		OBJ_391 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* ViewModel.swift */; };
-		OBJ_392 /* BulletRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* BulletRow.swift */; };
-		OBJ_393 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* ButtonRow.swift */; };
-		OBJ_394 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* ButtonTableViewCell.swift */; };
-		OBJ_395 /* ContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* ContainerTableViewCell.swift */; };
-		OBJ_396 /* DividerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* DividerRow.swift */; };
-		OBJ_397 /* DividerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* DividerTableViewCell.swift */; };
-		OBJ_398 /* FusionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* FusionRow.swift */; };
-		OBJ_399 /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* ImageRow.swift */; };
-		OBJ_400 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* ImageTableViewCell.swift */; };
-		OBJ_401 /* ListItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* ListItemRow.swift */; };
-		OBJ_402 /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* ListItemTableViewCell.swift */; };
-		OBJ_403 /* LineSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* LineSeparator.swift */; };
-		OBJ_404 /* Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Separator.swift */; };
-		OBJ_405 /* SeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* SeparatorTableViewCell.swift */; };
-		OBJ_406 /* TextRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* TextRow.swift */; };
-		OBJ_407 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* TextTableViewCell.swift */; };
 		OBJ_408 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* ModelData.swift */; };
 		OBJ_409 /* ProjectFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* ProjectFile.swift */; };
-		OBJ_410 /* CenterConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* CenterConstraints.swift */; };
-		OBJ_411 /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* Constrainable.swift */; };
-		OBJ_412 /* EdgeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* EdgeConstraints.swift */; };
-		OBJ_413 /* Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Corners.swift */; };
 		OBJ_414 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* Email.swift */; };
 		OBJ_415 /* EmailClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* EmailClient.swift */; };
 		OBJ_416 /* EmailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* EmailDelegate.swift */; };
 		OBJ_417 /* UIViewController+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* UIViewController+Email.swift */; };
-		OBJ_418 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_129 /* Lock.swift */; };
-		OBJ_419 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_130 /* RemoteImage.swift */; };
 		OBJ_420 /* SafariDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* SafariDelegate.swift */; };
-		OBJ_421 /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_132 /* SketchShadow.swift */; };
 		OBJ_422 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_134 /* BaseTableViewController.swift */; };
 		OBJ_423 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* BaseViewController.swift */; };
 		OBJ_424 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* PageViewController.swift */; };
-		OBJ_425 /* CALayer+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_138 /* CALayer+Border.swift */; };
-		OBJ_426 /* CALayer+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_139 /* CALayer+CornerRadius.swift */; };
-		OBJ_427 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_140 /* CALayer+Shadow.swift */; };
-		OBJ_428 /* Font+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_141 /* Font+UIFont.swift */; };
-		OBJ_429 /* Bullet+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* Bullet+RowConvertible.swift */; };
-		OBJ_430 /* BulletGroup+RowArrayConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_144 /* BulletGroup+RowArrayConvertible.swift */; };
-		OBJ_431 /* Button+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_145 /* Button+RowConvertible.swift */; };
-		OBJ_432 /* Divider+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_146 /* Divider+RowConvertible.swift */; };
-		OBJ_433 /* Image+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_147 /* Image+RowConvertible.swift */; };
-		OBJ_434 /* ListItem+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_148 /* ListItem+RowConvertible.swift */; };
-		OBJ_435 /* Text+RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_149 /* Text+RowConvertible.swift */; };
-		OBJ_436 /* Padding+UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_150 /* Padding+UIEdgeInsets.swift */; };
-		OBJ_437 /* Size+CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_151 /* Size+CGSize.swift */; };
-		OBJ_438 /* TextAlignment+NSTextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_152 /* TextAlignment+NSTextAlignment.swift */; };
-		OBJ_439 /* ButtonContainerView+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_155 /* ButtonContainerView+Button.swift */; };
-		OBJ_440 /* DividerContainerView+Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_156 /* DividerContainerView+Divider.swift */; };
-		OBJ_441 /* ImageContainerView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_157 /* ImageContainerView+Image.swift */; };
-		OBJ_442 /* LabelContainerView+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_158 /* LabelContainerView+Text.swift */; };
-		OBJ_443 /* ListItemContainerView+ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_159 /* ListItemContainerView+ListItem.swift */; };
-		OBJ_444 /* TextProperties+NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_160 /* TextProperties+NSAttributedString.swift */; };
-		OBJ_445 /* UIButton+TextProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_161 /* UIButton+TextProperties.swift */; };
-		OBJ_446 /* UILabel+TextProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_162 /* UILabel+TextProperties.swift */; };
-		OBJ_447 /* AdjustableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_164 /* AdjustableImageView.swift */; };
-		OBJ_448 /* ButtonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_166 /* ButtonContainerView.swift */; };
-		OBJ_449 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_167 /* ContainerView.swift */; };
-		OBJ_450 /* DividerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_168 /* DividerContainerView.swift */; };
-		OBJ_451 /* ImageContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_169 /* ImageContainerView.swift */; };
-		OBJ_452 /* LabelContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_170 /* LabelContainerView.swift */; };
-		OBJ_453 /* ListItemContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_171 /* ListItemContainerView.swift */; };
-		OBJ_454 /* Highlightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_173 /* Highlightable.swift */; };
-		OBJ_455 /* HighlightableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_174 /* HighlightableView.swift */; };
-		OBJ_456 /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_175 /* InsetLabel.swift */; };
 		OBJ_471 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_482 /* FusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_178 /* FusionTests.swift */; };
 		OBJ_483 /* UIColorExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_179 /* UIColorExtensionsTests.swift */; };
@@ -293,77 +231,53 @@
 		B86A643F26EC823E00EEBAAE /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
 		B86A644026EC823E00EEBAAE /* HTTPRequest.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HTTPRequest.xcframework; path = Carthage/Build/HTTPRequest.xcframework; sourceTree = "<group>"; };
 		B86A644826EC848900EEBAAE /* ModelSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSource.swift; sourceTree = "<group>"; };
+		B86A644A26ECAEAC00EEBAAE /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		B86A644E26ECB01500EEBAAE /* SketchShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
+		B86A645326ECB60E00EEBAAE /* BulletModel+ListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BulletModel+ListItemView.swift"; sourceTree = "<group>"; };
+		B86A645426ECB60E00EEBAAE /* ImageModel+FusionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageModel+FusionView.swift"; sourceTree = "<group>"; };
+		B86A645526ECB60F00EEBAAE /* ButtonModel+FusionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonModel+FusionView.swift"; sourceTree = "<group>"; };
+		B86A645626ECB60F00EEBAAE /* ListItemModel+ListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListItemModel+ListItemView.swift"; sourceTree = "<group>"; };
+		B86A645726ECB60F00EEBAAE /* TextEntity+FusionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextEntity+FusionView.swift"; sourceTree = "<group>"; };
+		B86A645826ECB60F00EEBAAE /* DividerModel+FusionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DividerModel+FusionView.swift"; sourceTree = "<group>"; };
+		B86A645F26ECB66400EEBAAE /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		B86A646226ECB69C00EEBAAE /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		B86A646326ECB69C00EEBAAE /* Color+RGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+RGBA.swift"; sourceTree = "<group>"; };
+		B86A646426ECB69C00EEBAAE /* EdgeInsets+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
+		B86A646826ECB6DD00EEBAAE /* LineHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineHeight.swift; sourceTree = "<group>"; };
+		B86A646D26ECB74100EEBAAE /* View+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+ViewModel.swift"; sourceTree = "<group>"; };
+		B86A646E26ECB74100EEBAAE /* FontModel+LegacyFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontModel+LegacyFont.swift"; sourceTree = "<group>"; };
+		B86A646F26ECB74100EEBAAE /* TextAlignmentModel+TextAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextAlignmentModel+TextAlignment.swift"; sourceTree = "<group>"; };
+		B86A647026ECB74100EEBAAE /* LineHeight+ViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LineHeight+ViewModifier.swift"; sourceTree = "<group>"; };
+		B86A647126ECB74100EEBAAE /* SketchShadow+ViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SketchShadow+ViewModifier.swift"; sourceTree = "<group>"; };
+		B86A647226ECB74100EEBAAE /* FontModel+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontModel+Font.swift"; sourceTree = "<group>"; };
+		B86A647326ECB74100EEBAAE /* InsetsModel+EdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InsetsModel+EdgeInsets.swift"; sourceTree = "<group>"; };
+		B86A647426ECB74100EEBAAE /* Text+FontModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Text+FontModel.swift"; sourceTree = "<group>"; };
+		B86A647E26ECB8BD00EEBAAE /* image.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = image.json; sourceTree = "<group>"; };
+		B86A647F26ECB8BD00EEBAAE /* button.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = button.json; sourceTree = "<group>"; };
+		B86A648026ECB8BD00EEBAAE /* listItem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = listItem.json; sourceTree = "<group>"; };
+		B86A648126ECB8BD00EEBAAE /* text.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = text.json; sourceTree = "<group>"; };
+		B86A648226ECB8BD00EEBAAE /* bullets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bullets.json; sourceTree = "<group>"; };
+		B86A648326ECB8BD00EEBAAE /* divider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = divider.json; sourceTree = "<group>"; };
+		B86A648426ECB8DB00EEBAAE /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		B86A648B26ECCD6600EEBAAE /* Page+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page+View.swift"; sourceTree = "<group>"; };
+		B86A648D26ED0E4D00EEBAAE /* FusionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionView.swift; sourceTree = "<group>"; };
+		B86A648F26ED0F5F00EEBAAE /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		B86A649126ED103D00EEBAAE /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		B86A649326ED13C100EEBAAE /* Actionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actionable.swift; sourceTree = "<group>"; };
+		B86A649626ED416B00EEBAAE /* EmailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		"Fusion::Fusion::Product" /* Fusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Fusion::FusionTests::Product" /* FusionTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FusionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"HTTPRequest::HTTPRequest::Product" /* HTTPRequest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HTTPRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* Int+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_100 /* DividerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTableViewCell.swift; sourceTree = "<group>"; };
-		OBJ_101 /* FusionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionRow.swift; sourceTree = "<group>"; };
-		OBJ_103 /* ImageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
-		OBJ_104 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
-		OBJ_106 /* ListItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemRow.swift; sourceTree = "<group>"; };
-		OBJ_107 /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
-		OBJ_109 /* LineSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSeparator.swift; sourceTree = "<group>"; };
-		OBJ_11 /* NSLineBreakMode+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLineBreakMode+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_110 /* Separator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Separator.swift; sourceTree = "<group>"; };
-		OBJ_111 /* SeparatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewCell.swift; sourceTree = "<group>"; };
-		OBJ_113 /* TextRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRow.swift; sourceTree = "<group>"; };
-		OBJ_114 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		OBJ_116 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		OBJ_117 /* ProjectFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFile.swift; sourceTree = "<group>"; };
-		OBJ_12 /* NSTextAlignment+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAlignment+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_120 /* CenterConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterConstraints.swift; sourceTree = "<group>"; };
-		OBJ_121 /* Constrainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrainable.swift; sourceTree = "<group>"; };
-		OBJ_122 /* EdgeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeConstraints.swift; sourceTree = "<group>"; };
-		OBJ_123 /* Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Corners.swift; sourceTree = "<group>"; };
 		OBJ_125 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		OBJ_126 /* EmailClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailClient.swift; sourceTree = "<group>"; };
 		OBJ_127 /* EmailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDelegate.swift; sourceTree = "<group>"; };
 		OBJ_128 /* UIViewController+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Email.swift"; sourceTree = "<group>"; };
-		OBJ_129 /* Lock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
-		OBJ_13 /* UIColor+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_130 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		OBJ_131 /* SafariDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariDelegate.swift; sourceTree = "<group>"; };
-		OBJ_132 /* SketchShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
 		OBJ_134 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		OBJ_135 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		OBJ_136 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		OBJ_138 /* CALayer+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Border.swift"; sourceTree = "<group>"; };
-		OBJ_139 /* CALayer+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+CornerRadius.swift"; sourceTree = "<group>"; };
-		OBJ_14 /* UIEdgeInsets+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_140 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
-		OBJ_141 /* Font+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+UIFont.swift"; sourceTree = "<group>"; };
-		OBJ_143 /* Bullet+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bullet+RowConvertible.swift"; sourceTree = "<group>"; };
-		OBJ_144 /* BulletGroup+RowArrayConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BulletGroup+RowArrayConvertible.swift"; sourceTree = "<group>"; };
-		OBJ_145 /* Button+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+RowConvertible.swift"; sourceTree = "<group>"; };
-		OBJ_146 /* Divider+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+RowConvertible.swift"; sourceTree = "<group>"; };
-		OBJ_147 /* Image+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+RowConvertible.swift"; sourceTree = "<group>"; };
-		OBJ_148 /* ListItem+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListItem+RowConvertible.swift"; sourceTree = "<group>"; };
-		OBJ_149 /* Text+RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+RowConvertible.swift"; sourceTree = "<group>"; };
-		OBJ_15 /* UIFont+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_150 /* Padding+UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Padding+UIEdgeInsets.swift"; sourceTree = "<group>"; };
-		OBJ_151 /* Size+CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Size+CGSize.swift"; sourceTree = "<group>"; };
-		OBJ_152 /* TextAlignment+NSTextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextAlignment+NSTextAlignment.swift"; sourceTree = "<group>"; };
-		OBJ_155 /* ButtonContainerView+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainerView+Button.swift"; sourceTree = "<group>"; };
-		OBJ_156 /* DividerContainerView+Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DividerContainerView+Divider.swift"; sourceTree = "<group>"; };
-		OBJ_157 /* ImageContainerView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageContainerView+Image.swift"; sourceTree = "<group>"; };
-		OBJ_158 /* LabelContainerView+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelContainerView+Text.swift"; sourceTree = "<group>"; };
-		OBJ_159 /* ListItemContainerView+ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListItemContainerView+ListItem.swift"; sourceTree = "<group>"; };
-		OBJ_16 /* UILabel+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_160 /* TextProperties+NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextProperties+NSAttributedString.swift"; sourceTree = "<group>"; };
-		OBJ_161 /* UIButton+TextProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TextProperties.swift"; sourceTree = "<group>"; };
-		OBJ_162 /* UILabel+TextProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+TextProperties.swift"; sourceTree = "<group>"; };
-		OBJ_164 /* AdjustableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustableImageView.swift; sourceTree = "<group>"; };
-		OBJ_166 /* ButtonContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainerView.swift; sourceTree = "<group>"; };
-		OBJ_167 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
-		OBJ_168 /* DividerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerContainerView.swift; sourceTree = "<group>"; };
-		OBJ_169 /* ImageContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainerView.swift; sourceTree = "<group>"; };
-		OBJ_17 /* UITableViewCell+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_170 /* LabelContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelContainerView.swift; sourceTree = "<group>"; };
-		OBJ_171 /* ListItemContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemContainerView.swift; sourceTree = "<group>"; };
-		OBJ_173 /* Highlightable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlightable.swift; sourceTree = "<group>"; };
-		OBJ_174 /* HighlightableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightableView.swift; sourceTree = "<group>"; };
-		OBJ_175 /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
 		OBJ_178 /* FusionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionTests.swift; sourceTree = "<group>"; };
 		OBJ_179 /* UIColorExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsTests.swift; sourceTree = "<group>"; };
 		OBJ_180 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -373,7 +287,6 @@
 		OBJ_187 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_188 /* HTTPHeader+Headers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPHeader+Headers.swift"; sourceTree = "<group>"; };
 		OBJ_189 /* HierarchicalDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchicalDateFormatter.swift; sourceTree = "<group>"; };
-		OBJ_19 /* JSON+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Row.swift"; sourceTree = "<group>"; };
 		OBJ_190 /* OSLog+Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Logger.swift"; sourceTree = "<group>"; };
 		OBJ_191 /* String+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Data.swift"; sourceTree = "<group>"; };
 		OBJ_192 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -392,7 +305,6 @@
 		OBJ_207 /* JSONDecoder+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Default.swift"; sourceTree = "<group>"; };
 		OBJ_208 /* JSONEncoder+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Default.swift"; sourceTree = "<group>"; };
 		OBJ_209 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		OBJ_21 /* JSONEncoder+SnakeCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+SnakeCase.swift"; sourceTree = "<group>"; };
 		OBJ_210 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_211 /* Result+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Model.swift"; sourceTree = "<group>"; };
 		OBJ_212 /* SnakeCaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeCaseModel.swift; sourceTree = "<group>"; };
@@ -412,7 +324,6 @@
 		OBJ_227 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		OBJ_228 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
 		OBJ_229 /* MultipartUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartUpload.swift; sourceTree = "<group>"; };
-		OBJ_23 /* Page+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page+Data.swift"; sourceTree = "<group>"; };
 		OBJ_230 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		OBJ_231 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		OBJ_232 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
@@ -434,7 +345,6 @@
 		OBJ_247 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
 		OBJ_248 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
 		OBJ_249 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
-		OBJ_25 /* Row+RowActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Row+RowActionable.swift"; sourceTree = "<group>"; };
 		OBJ_250 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		OBJ_251 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
 		OBJ_252 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -446,68 +356,40 @@
 		OBJ_266 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		OBJ_267 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		OBJ_268 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_27 /* UIButton+Padded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Padded.swift"; sourceTree = "<group>"; };
-		OBJ_28 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		OBJ_29 /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
-		OBJ_30 /* UIFont+UIFontDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+UIFontDescriptor.swift"; sourceTree = "<group>"; };
-		OBJ_31 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		OBJ_32 /* UIImageView+RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RemoteImage.swift"; sourceTree = "<group>"; };
-		OBJ_33 /* UINavigationController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Action.swift"; sourceTree = "<group>"; };
+		OBJ_33 /* UINavigationController+ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+ActionHandler.swift"; sourceTree = "<group>"; };
 		OBJ_34 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_35 /* UINavigationController+Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Page.swift"; sourceTree = "<group>"; };
-		OBJ_36 /* UITableView+Bug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Bug.swift"; sourceTree = "<group>"; };
-		OBJ_37 /* UIView+Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corners.swift"; sourceTree = "<group>"; };
-		OBJ_38 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		OBJ_39 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_40 /* URL+URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+URLComponents.swift"; sourceTree = "<group>"; };
 		OBJ_41 /* Fusion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fusion.swift; sourceTree = "<group>"; };
 		OBJ_43 /* APIEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnum.swift; sourceTree = "<group>"; };
 		OBJ_44 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
-		OBJ_46 /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
-		OBJ_47 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		OBJ_48 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		OBJ_49 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
-		OBJ_50 /* RGBAHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAHex.swift; sourceTree = "<group>"; };
-		OBJ_51 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
-		OBJ_52 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
-		OBJ_53 /* TextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlignment.swift; sourceTree = "<group>"; };
+		OBJ_46 /* BorderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderModel.swift; sourceTree = "<group>"; };
+		OBJ_47 /* EntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryModel.swift; sourceTree = "<group>"; };
+		OBJ_48 /* FontModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModel.swift; sourceTree = "<group>"; };
+		OBJ_49 /* InsetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetsModel.swift; sourceTree = "<group>"; };
+		OBJ_51 /* ShadowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModel.swift; sourceTree = "<group>"; };
+		OBJ_52 /* SizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeModel.swift; sourceTree = "<group>"; };
+		OBJ_53 /* TextAlignmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAlignmentModel.swift; sourceTree = "<group>"; };
 		OBJ_56 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		OBJ_57 /* EmailAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAction.swift; sourceTree = "<group>"; };
 		OBJ_58 /* LinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkAction.swift; sourceTree = "<group>"; };
 		OBJ_59 /* NativeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAction.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_60 /* PageAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageAction.swift; sourceTree = "<group>"; };
-		OBJ_61 /* Bullet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
-		OBJ_62 /* BulletGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletGroup.swift; sourceTree = "<group>"; };
-		OBJ_63 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		OBJ_64 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
-		OBJ_65 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		OBJ_61 /* BulletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletModel.swift; sourceTree = "<group>"; };
+		OBJ_62 /* BulletGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletGroupModel.swift; sourceTree = "<group>"; };
+		OBJ_63 /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
+		OBJ_64 /* DividerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerModel.swift; sourceTree = "<group>"; };
+		OBJ_65 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		OBJ_66 /* JSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONModel.swift; sourceTree = "<group>"; };
-		OBJ_67 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
-		OBJ_68 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		OBJ_67 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
+		OBJ_68 /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModel.swift; sourceTree = "<group>"; };
 		OBJ_69 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		OBJ_70 /* ModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelState.swift; sourceTree = "<group>"; };
 		OBJ_71 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		OBJ_74 /* ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
-		OBJ_75 /* RowActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowActionable.swift; sourceTree = "<group>"; };
-		OBJ_76 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
-		OBJ_77 /* MappedAccessoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappedAccessoryType.swift; sourceTree = "<group>"; };
-		OBJ_79 /* CellDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDisplayable.swift; sourceTree = "<group>"; };
-		OBJ_80 /* CellHeightConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeightConfigurable.swift; sourceTree = "<group>"; };
-		OBJ_81 /* RowArrayConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowArrayConvertible.swift; sourceTree = "<group>"; };
-		OBJ_82 /* RowConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowConvertible.swift; sourceTree = "<group>"; };
-		OBJ_83 /* RowUpdateListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowUpdateListener.swift; sourceTree = "<group>"; };
-		OBJ_85 /* Insettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insettable.swift; sourceTree = "<group>"; };
-		OBJ_86 /* Margined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margined.swift; sourceTree = "<group>"; };
-		OBJ_87 /* Padded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padded.swift; sourceTree = "<group>"; };
-		OBJ_88 /* TextProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProperties.swift; sourceTree = "<group>"; };
+		OBJ_88 /* TextEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntity.swift; sourceTree = "<group>"; };
 		OBJ_89 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		OBJ_9 /* CGFloat+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_92 /* BulletRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletRow.swift; sourceTree = "<group>"; };
-		OBJ_94 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
-		OBJ_95 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
-		OBJ_97 /* ContainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewCell.swift; sourceTree = "<group>"; };
-		OBJ_99 /* DividerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerRow.swift; sourceTree = "<group>"; };
 		"SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -572,48 +454,105 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		OBJ_102 /* ImageRow */ = {
+		B86A644C26ECAEF700EEBAAE /* Page */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_103 /* ImageRow.swift */,
-				OBJ_104 /* ImageTableViewCell.swift */,
+				OBJ_69 /* Page.swift */,
+				OBJ_71 /* Screen.swift */,
 			);
-			path = ImageRow;
+			path = Page;
 			sourceTree = "<group>";
 		};
-		OBJ_105 /* ListItemRow */ = {
+		B86A644D26ECAFB800EEBAAE /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_106 /* ListItemRow.swift */,
-				OBJ_107 /* ListItemTableViewCell.swift */,
+				OBJ_74 /* ActionHandler.swift */,
+				OBJ_56 /* Action.swift */,
+				B86A648D26ED0E4D00EEBAAE /* FusionView.swift */,
+				OBJ_66 /* JSONModel.swift */,
+				OBJ_88 /* TextEntity.swift */,
+				OBJ_89 /* ViewModel.swift */,
+				B86A649326ED13C100EEBAAE /* Actionable.swift */,
 			);
-			path = ListItemRow;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
-		OBJ_108 /* SeparatorTableViewCell */ = {
+		B86A645026ECB5E700EEBAAE /* FusionViews */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_109 /* LineSeparator.swift */,
-				OBJ_110 /* Separator.swift */,
-				OBJ_111 /* SeparatorTableViewCell.swift */,
+				B86A645326ECB60E00EEBAAE /* BulletModel+ListItemView.swift */,
+				B86A645626ECB60F00EEBAAE /* ListItemModel+ListItemView.swift */,
+				B86A645526ECB60F00EEBAAE /* ButtonModel+FusionView.swift */,
+				B86A645826ECB60F00EEBAAE /* DividerModel+FusionView.swift */,
+				B86A645426ECB60E00EEBAAE /* ImageModel+FusionView.swift */,
+				B86A645726ECB60F00EEBAAE /* TextEntity+FusionView.swift */,
+				B86A648B26ECCD6600EEBAAE /* Page+View.swift */,
+				B86A648F26ED0F5F00EEBAAE /* ModelView.swift */,
+				B86A649126ED103D00EEBAAE /* ListItemView.swift */,
 			);
-			path = SeparatorTableViewCell;
+			path = FusionViews;
 			sourceTree = "<group>";
 		};
-		OBJ_112 /* TextRow */ = {
+		B86A646126ECB68F00EEBAAE /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_113 /* TextRow.swift */,
-				OBJ_114 /* TextTableViewCell.swift */,
+				B86A646226ECB69C00EEBAAE /* Color+Extensions.swift */,
+				B86A646326ECB69C00EEBAAE /* Color+RGBA.swift */,
+				B86A646426ECB69C00EEBAAE /* EdgeInsets+Extensions.swift */,
 			);
-			path = TextRow;
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		B86A646A26ECB6E700EEBAAE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_43 /* APIEnum.swift */,
+				OBJ_44 /* APIModel.swift */,
+				OBJ_70 /* ModelState.swift */,
+				B86A644826EC848900EEBAAE /* ModelSource.swift */,
+				B86A644A26ECAEAC00EEBAAE /* Units.swift */,
+				B86A644E26ECB01500EEBAAE /* SketchShadow.swift */,
+				B86A646826ECB6DD00EEBAAE /* LineHeight.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B86A646C26ECB73300EEBAAE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B86A645026ECB5E700EEBAAE /* FusionViews */,
+				B86A647226ECB74100EEBAAE /* FontModel+Font.swift */,
+				B86A646E26ECB74100EEBAAE /* FontModel+LegacyFont.swift */,
+				B86A647026ECB74100EEBAAE /* LineHeight+ViewModifier.swift */,
+				B86A647326ECB74100EEBAAE /* InsetsModel+EdgeInsets.swift */,
+				B86A647426ECB74100EEBAAE /* Text+FontModel.swift */,
+				B86A646F26ECB74100EEBAAE /* TextAlignmentModel+TextAlignment.swift */,
+				B86A647126ECB74100EEBAAE /* SketchShadow+ViewModifier.swift */,
+				B86A646D26ECB74100EEBAAE /* View+ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B86A649526ED3FAD00EEBAAE /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				B86A648226ECB8BD00EEBAAE /* bullets.json */,
+				B86A647F26ECB8BD00EEBAAE /* button.json */,
+				B86A648326ECB8BD00EEBAAE /* divider.json */,
+				B86A647E26ECB8BD00EEBAAE /* image.json */,
+				B86A648026ECB8BD00EEBAAE /* listItem.json */,
+				B86A648126ECB8BD00EEBAAE /* text.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		OBJ_115 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				B86A649526ED3FAD00EEBAAE /* JSON */,
 				OBJ_116 /* ModelData.swift */,
 				OBJ_117 /* ProjectFile.swift */,
+				B86A648426ECB8DB00EEBAAE /* Sample.swift */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -621,25 +560,10 @@
 		OBJ_118 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_119 /* Constraints */,
-				OBJ_123 /* Corners.swift */,
 				OBJ_124 /* Email */,
-				OBJ_129 /* Lock.swift */,
-				OBJ_130 /* RemoteImage.swift */,
 				OBJ_131 /* SafariDelegate.swift */,
-				OBJ_132 /* SketchShadow.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		OBJ_119 /* Constraints */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_120 /* CenterConstraints.swift */,
-				OBJ_121 /* Constrainable.swift */,
-				OBJ_122 /* EdgeConstraints.swift */,
-			);
-			path = Constraints;
 			sourceTree = "<group>";
 		};
 		OBJ_124 /* Email */ = {
@@ -649,6 +573,7 @@
 				OBJ_126 /* EmailClient.swift */,
 				OBJ_127 /* EmailDelegate.swift */,
 				OBJ_128 /* UIViewController+Email.swift */,
+				B86A649626ED416B00EEBAAE /* EmailViewControllerRepresentable.swift */,
 			);
 			path = Email;
 			sourceTree = "<group>";
@@ -661,92 +586,6 @@
 				OBJ_136 /* PageViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		OBJ_137 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_138 /* CALayer+Border.swift */,
-				OBJ_139 /* CALayer+CornerRadius.swift */,
-				OBJ_140 /* CALayer+Shadow.swift */,
-				OBJ_141 /* Font+UIFont.swift */,
-				OBJ_142 /* Model+Row */,
-				OBJ_150 /* Padding+UIEdgeInsets.swift */,
-				OBJ_151 /* Size+CGSize.swift */,
-				OBJ_152 /* TextAlignment+NSTextAlignment.swift */,
-				OBJ_153 /* View+Model */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		OBJ_142 /* Model+Row */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_143 /* Bullet+RowConvertible.swift */,
-				OBJ_144 /* BulletGroup+RowArrayConvertible.swift */,
-				OBJ_145 /* Button+RowConvertible.swift */,
-				OBJ_146 /* Divider+RowConvertible.swift */,
-				OBJ_147 /* Image+RowConvertible.swift */,
-				OBJ_148 /* ListItem+RowConvertible.swift */,
-				OBJ_149 /* Text+RowConvertible.swift */,
-			);
-			path = "Model+Row";
-			sourceTree = "<group>";
-		};
-		OBJ_153 /* View+Model */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_154 /* ContainerViews */,
-				OBJ_160 /* TextProperties+NSAttributedString.swift */,
-				OBJ_161 /* UIButton+TextProperties.swift */,
-				OBJ_162 /* UILabel+TextProperties.swift */,
-			);
-			path = "View+Model";
-			sourceTree = "<group>";
-		};
-		OBJ_154 /* ContainerViews */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_155 /* ButtonContainerView+Button.swift */,
-				OBJ_156 /* DividerContainerView+Divider.swift */,
-				OBJ_157 /* ImageContainerView+Image.swift */,
-				OBJ_158 /* LabelContainerView+Text.swift */,
-				OBJ_159 /* ListItemContainerView+ListItem.swift */,
-			);
-			path = ContainerViews;
-			sourceTree = "<group>";
-		};
-		OBJ_163 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_164 /* AdjustableImageView.swift */,
-				OBJ_165 /* ContainerViews */,
-				OBJ_172 /* Highlightable */,
-				OBJ_175 /* InsetLabel.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		OBJ_165 /* ContainerViews */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_166 /* ButtonContainerView.swift */,
-				OBJ_167 /* ContainerView.swift */,
-				OBJ_168 /* DividerContainerView.swift */,
-				OBJ_169 /* ImageContainerView.swift */,
-				OBJ_170 /* LabelContainerView.swift */,
-				OBJ_171 /* ListItemContainerView.swift */,
-			);
-			path = ContainerViews;
-			sourceTree = "<group>";
-		};
-		OBJ_172 /* Highlightable */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_173 /* Highlightable.swift */,
-				OBJ_174 /* HighlightableView.swift */,
-			);
-			path = Highlightable;
 			sourceTree = "<group>";
 		};
 		OBJ_176 /* Tests */ = {
@@ -771,13 +610,11 @@
 		OBJ_18 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_19 /* JSON+Row.swift */,
+				B86A645F26ECB66400EEBAAE /* Defaults.swift */,
+				B86A646126ECB68F00EEBAAE /* SwiftUI */,
 				OBJ_20 /* JSONDecoder+SnakeCase.swift */,
-				OBJ_21 /* JSONEncoder+SnakeCase.swift */,
 				OBJ_22 /* OSLog+Logger.swift */,
-				OBJ_23 /* Page+Data.swift */,
 				OBJ_24 /* Data+Codable.swift */,
-				OBJ_25 /* Row+RowActionable.swift */,
 				OBJ_26 /* UIKit */,
 				OBJ_40 /* URL+URLComponents.swift */,
 			);
@@ -947,19 +784,9 @@
 		OBJ_26 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_27 /* UIButton+Padded.swift */,
-				OBJ_28 /* UIColor+Extensions.swift */,
-				OBJ_29 /* UIEdgeInsets+Extensions.swift */,
-				OBJ_30 /* UIFont+UIFontDescriptor.swift */,
-				OBJ_31 /* UIImage+Extensions.swift */,
-				OBJ_32 /* UIImageView+RemoteImage.swift */,
-				OBJ_33 /* UINavigationController+Action.swift */,
+				OBJ_33 /* UINavigationController+ActionHandler.swift */,
 				OBJ_34 /* UINavigationController+Extensions.swift */,
 				OBJ_35 /* UINavigationController+Page.swift */,
-				OBJ_36 /* UITableView+Bug.swift */,
-				OBJ_37 /* UIView+Corners.swift */,
-				OBJ_38 /* UIView+Extensions.swift */,
-				OBJ_39 /* UIViewController+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -967,14 +794,11 @@
 		OBJ_42 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_43 /* APIEnum.swift */,
-				OBJ_44 /* APIModel.swift */,
+				B86A646A26ECB6E700EEBAAE /* Other */,
+				B86A644D26ECAFB800EEBAAE /* Protocol */,
+				B86A644C26ECAEF700EEBAAE /* Page */,
 				OBJ_45 /* Components */,
 				OBJ_54 /* JSONModels */,
-				OBJ_69 /* Page.swift */,
-				OBJ_70 /* ModelState.swift */,
-				OBJ_71 /* Screen.swift */,
-				B86A644826EC848900EEBAAE /* ModelSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -982,14 +806,13 @@
 		OBJ_45 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_46 /* Border.swift */,
-				OBJ_47 /* Entry.swift */,
-				OBJ_48 /* Font.swift */,
-				OBJ_49 /* Padding.swift */,
-				OBJ_50 /* RGBAHex.swift */,
-				OBJ_51 /* Shadow.swift */,
-				OBJ_52 /* Size.swift */,
-				OBJ_53 /* TextAlignment.swift */,
+				OBJ_46 /* BorderModel.swift */,
+				OBJ_47 /* EntryModel.swift */,
+				OBJ_48 /* FontModel.swift */,
+				OBJ_49 /* InsetsModel.swift */,
+				OBJ_51 /* ShadowModel.swift */,
+				OBJ_52 /* SizeModel.swift */,
+				OBJ_53 /* TextAlignmentModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1017,14 +840,13 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_55 /* Actions */,
-				OBJ_61 /* Bullet.swift */,
-				OBJ_62 /* BulletGroup.swift */,
-				OBJ_63 /* Button.swift */,
-				OBJ_64 /* Divider.swift */,
-				OBJ_65 /* Image.swift */,
-				OBJ_66 /* JSONModel.swift */,
-				OBJ_67 /* ListItem.swift */,
-				OBJ_68 /* Text.swift */,
+				OBJ_61 /* BulletModel.swift */,
+				OBJ_62 /* BulletGroupModel.swift */,
+				OBJ_63 /* ButtonModel.swift */,
+				OBJ_64 /* DividerModel.swift */,
+				OBJ_65 /* ImageModel.swift */,
+				OBJ_67 /* ListItemModel.swift */,
+				OBJ_68 /* TextModel.swift */,
 			);
 			path = JSONModels;
 			sourceTree = "<group>";
@@ -1032,7 +854,6 @@
 		OBJ_55 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_56 /* Action.swift */,
 				OBJ_57 /* EmailAction.swift */,
 				OBJ_58 /* LinkAction.swift */,
 				OBJ_59 /* NativeAction.swift */,
@@ -1044,131 +865,16 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* Defaults */,
+				B86A646C26ECB73300EEBAAE /* ViewModels */,
 				OBJ_18 /* Extensions */,
 				OBJ_41 /* Fusion.swift */,
 				OBJ_42 /* Models */,
-				OBJ_72 /* Protocol */,
-				OBJ_90 /* Rows */,
 				OBJ_115 /* Sample */,
 				OBJ_118 /* Utilities */,
 				OBJ_133 /* ViewControllers */,
-				OBJ_137 /* ViewModels */,
-				OBJ_163 /* Views */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_72 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_73 /* Action */,
-				OBJ_76 /* Identifiable.swift */,
-				OBJ_77 /* MappedAccessoryType.swift */,
-				OBJ_78 /* Row */,
-				OBJ_84 /* ViewModel */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		OBJ_73 /* Action */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_74 /* ActionHandler.swift */,
-				OBJ_75 /* RowActionable.swift */,
-			);
-			path = Action;
-			sourceTree = "<group>";
-		};
-		OBJ_78 /* Row */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_79 /* CellDisplayable.swift */,
-				OBJ_80 /* CellHeightConfigurable.swift */,
-				OBJ_81 /* RowArrayConvertible.swift */,
-				OBJ_82 /* RowConvertible.swift */,
-				OBJ_83 /* RowUpdateListener.swift */,
-			);
-			path = Row;
-			sourceTree = "<group>";
-		};
-		OBJ_8 /* Defaults */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* CGFloat+Defaults.swift */,
-				OBJ_10 /* Int+Defaults.swift */,
-				OBJ_11 /* NSLineBreakMode+Defaults.swift */,
-				OBJ_12 /* NSTextAlignment+Defaults.swift */,
-				OBJ_13 /* UIColor+Defaults.swift */,
-				OBJ_14 /* UIEdgeInsets+Defaults.swift */,
-				OBJ_15 /* UIFont+Defaults.swift */,
-				OBJ_16 /* UILabel+Defaults.swift */,
-				OBJ_17 /* UITableViewCell+Defaults.swift */,
-			);
-			path = Defaults;
-			sourceTree = "<group>";
-		};
-		OBJ_84 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_85 /* Insettable.swift */,
-				OBJ_86 /* Margined.swift */,
-				OBJ_87 /* Padded.swift */,
-				OBJ_88 /* TextProperties.swift */,
-				OBJ_89 /* ViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		OBJ_90 /* Rows */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_91 /* BulletRow */,
-				OBJ_93 /* ButtonRow */,
-				OBJ_96 /* ContainerTableViewCell */,
-				OBJ_98 /* DividerRow */,
-				OBJ_101 /* FusionRow.swift */,
-				OBJ_102 /* ImageRow */,
-				OBJ_105 /* ListItemRow */,
-				OBJ_108 /* SeparatorTableViewCell */,
-				OBJ_112 /* TextRow */,
-			);
-			path = Rows;
-			sourceTree = "<group>";
-		};
-		OBJ_91 /* BulletRow */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_92 /* BulletRow.swift */,
-			);
-			path = BulletRow;
-			sourceTree = "<group>";
-		};
-		OBJ_93 /* ButtonRow */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_94 /* ButtonRow.swift */,
-				OBJ_95 /* ButtonTableViewCell.swift */,
-			);
-			path = ButtonRow;
-			sourceTree = "<group>";
-		};
-		OBJ_96 /* ContainerTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_97 /* ContainerTableViewCell.swift */,
-			);
-			path = ContainerTableViewCell;
-			sourceTree = "<group>";
-		};
-		OBJ_98 /* DividerRow */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_99 /* DividerRow.swift */,
-				OBJ_100 /* DividerTableViewCell.swift */,
-			);
-			path = DividerRow;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -1322,6 +1028,7 @@
 			attributes = {
 				LastSwiftMigration = 9999;
 				LastUpgradeCheck = 9999;
+				ORGANIZATIONNAME = "3 SIDED CUBE APP PRODUCTIONS LTD";
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Fusion" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1404,143 +1111,81 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_321 /* CGFloat+Defaults.swift in Sources */,
-				OBJ_322 /* Int+Defaults.swift in Sources */,
-				OBJ_323 /* NSLineBreakMode+Defaults.swift in Sources */,
-				OBJ_324 /* NSTextAlignment+Defaults.swift in Sources */,
-				OBJ_325 /* UIColor+Defaults.swift in Sources */,
-				OBJ_326 /* UIEdgeInsets+Defaults.swift in Sources */,
-				OBJ_327 /* UIFont+Defaults.swift in Sources */,
-				OBJ_328 /* UILabel+Defaults.swift in Sources */,
-				OBJ_329 /* UITableViewCell+Defaults.swift in Sources */,
-				OBJ_330 /* JSON+Row.swift in Sources */,
 				OBJ_331 /* JSONDecoder+SnakeCase.swift in Sources */,
-				OBJ_332 /* JSONEncoder+SnakeCase.swift in Sources */,
 				OBJ_333 /* OSLog+Logger.swift in Sources */,
-				OBJ_334 /* Page+Data.swift in Sources */,
 				OBJ_335 /* Data+Codable.swift in Sources */,
-				OBJ_336 /* Row+RowActionable.swift in Sources */,
-				OBJ_337 /* UIButton+Padded.swift in Sources */,
-				OBJ_338 /* UIColor+Extensions.swift in Sources */,
-				OBJ_339 /* UIEdgeInsets+Extensions.swift in Sources */,
-				OBJ_340 /* UIFont+UIFontDescriptor.swift in Sources */,
-				OBJ_341 /* UIImage+Extensions.swift in Sources */,
-				OBJ_342 /* UIImageView+RemoteImage.swift in Sources */,
-				OBJ_343 /* UINavigationController+Action.swift in Sources */,
+				B86A648526ECB8DB00EEBAAE /* Sample.swift in Sources */,
+				B86A647A26ECB74100EEBAAE /* FontModel+Font.swift in Sources */,
+				B86A645C26ECB60F00EEBAAE /* ListItemModel+ListItemView.swift in Sources */,
+				OBJ_343 /* UINavigationController+ActionHandler.swift in Sources */,
 				OBJ_344 /* UINavigationController+Extensions.swift in Sources */,
 				OBJ_345 /* UINavigationController+Page.swift in Sources */,
-				OBJ_346 /* UITableView+Bug.swift in Sources */,
-				OBJ_347 /* UIView+Corners.swift in Sources */,
-				OBJ_348 /* UIView+Extensions.swift in Sources */,
-				OBJ_349 /* UIViewController+Extensions.swift in Sources */,
 				OBJ_350 /* URL+URLComponents.swift in Sources */,
 				OBJ_351 /* Fusion.swift in Sources */,
 				OBJ_352 /* APIEnum.swift in Sources */,
+				B86A649426ED13C100EEBAAE /* Actionable.swift in Sources */,
 				OBJ_353 /* APIModel.swift in Sources */,
-				OBJ_354 /* Border.swift in Sources */,
-				OBJ_355 /* Entry.swift in Sources */,
-				OBJ_356 /* Font.swift in Sources */,
-				OBJ_357 /* Padding.swift in Sources */,
-				OBJ_358 /* RGBAHex.swift in Sources */,
-				OBJ_359 /* Shadow.swift in Sources */,
-				OBJ_360 /* Size.swift in Sources */,
-				OBJ_361 /* TextAlignment.swift in Sources */,
+				OBJ_354 /* BorderModel.swift in Sources */,
+				OBJ_355 /* EntryModel.swift in Sources */,
+				OBJ_356 /* FontModel.swift in Sources */,
+				OBJ_357 /* InsetsModel.swift in Sources */,
+				B86A649226ED103D00EEBAAE /* ListItemView.swift in Sources */,
+				OBJ_359 /* ShadowModel.swift in Sources */,
+				OBJ_360 /* SizeModel.swift in Sources */,
+				B86A649026ED0F5F00EEBAAE /* ModelView.swift in Sources */,
+				OBJ_361 /* TextAlignmentModel.swift in Sources */,
 				OBJ_362 /* Action.swift in Sources */,
 				OBJ_363 /* EmailAction.swift in Sources */,
 				OBJ_364 /* LinkAction.swift in Sources */,
 				OBJ_365 /* NativeAction.swift in Sources */,
 				OBJ_366 /* PageAction.swift in Sources */,
-				OBJ_367 /* Bullet.swift in Sources */,
-				OBJ_368 /* BulletGroup.swift in Sources */,
-				OBJ_369 /* Button.swift in Sources */,
-				OBJ_370 /* Divider.swift in Sources */,
-				OBJ_371 /* Image.swift in Sources */,
+				OBJ_367 /* BulletModel.swift in Sources */,
+				OBJ_368 /* BulletGroupModel.swift in Sources */,
+				B86A649726ED416B00EEBAAE /* EmailViewControllerRepresentable.swift in Sources */,
+				OBJ_369 /* ButtonModel.swift in Sources */,
+				B86A647C26ECB74100EEBAAE /* Text+FontModel.swift in Sources */,
+				B86A646726ECB69C00EEBAAE /* EdgeInsets+Extensions.swift in Sources */,
+				OBJ_370 /* DividerModel.swift in Sources */,
+				B86A646926ECB6DD00EEBAAE /* LineHeight.swift in Sources */,
+				B86A647926ECB74100EEBAAE /* SketchShadow+ViewModifier.swift in Sources */,
+				B86A647626ECB74100EEBAAE /* FontModel+LegacyFont.swift in Sources */,
+				OBJ_371 /* ImageModel.swift in Sources */,
+				B86A647B26ECB74100EEBAAE /* InsetsModel+EdgeInsets.swift in Sources */,
 				OBJ_372 /* JSONModel.swift in Sources */,
-				OBJ_373 /* ListItem.swift in Sources */,
-				OBJ_374 /* Text.swift in Sources */,
+				OBJ_373 /* ListItemModel.swift in Sources */,
+				OBJ_374 /* TextModel.swift in Sources */,
 				OBJ_375 /* Page.swift in Sources */,
+				B86A648C26ECCD6600EEBAAE /* Page+View.swift in Sources */,
 				OBJ_376 /* ModelState.swift in Sources */,
 				OBJ_377 /* Screen.swift in Sources */,
 				OBJ_378 /* ActionHandler.swift in Sources */,
-				OBJ_379 /* RowActionable.swift in Sources */,
-				OBJ_380 /* Identifiable.swift in Sources */,
-				OBJ_381 /* MappedAccessoryType.swift in Sources */,
-				OBJ_382 /* CellDisplayable.swift in Sources */,
-				OBJ_383 /* CellHeightConfigurable.swift in Sources */,
-				OBJ_384 /* RowArrayConvertible.swift in Sources */,
-				OBJ_385 /* RowConvertible.swift in Sources */,
-				OBJ_386 /* RowUpdateListener.swift in Sources */,
-				OBJ_387 /* Insettable.swift in Sources */,
-				OBJ_388 /* Margined.swift in Sources */,
-				OBJ_389 /* Padded.swift in Sources */,
-				OBJ_390 /* TextProperties.swift in Sources */,
+				OBJ_390 /* TextEntity.swift in Sources */,
+				B86A645A26ECB60F00EEBAAE /* ImageModel+FusionView.swift in Sources */,
+				B86A647526ECB74100EEBAAE /* View+ViewModel.swift in Sources */,
 				OBJ_391 /* ViewModel.swift in Sources */,
-				OBJ_392 /* BulletRow.swift in Sources */,
-				OBJ_393 /* ButtonRow.swift in Sources */,
-				OBJ_394 /* ButtonTableViewCell.swift in Sources */,
-				OBJ_395 /* ContainerTableViewCell.swift in Sources */,
-				OBJ_396 /* DividerRow.swift in Sources */,
-				OBJ_397 /* DividerTableViewCell.swift in Sources */,
-				OBJ_398 /* FusionRow.swift in Sources */,
-				OBJ_399 /* ImageRow.swift in Sources */,
-				OBJ_400 /* ImageTableViewCell.swift in Sources */,
-				OBJ_401 /* ListItemRow.swift in Sources */,
-				OBJ_402 /* ListItemTableViewCell.swift in Sources */,
-				OBJ_403 /* LineSeparator.swift in Sources */,
-				OBJ_404 /* Separator.swift in Sources */,
-				OBJ_405 /* SeparatorTableViewCell.swift in Sources */,
-				OBJ_406 /* TextRow.swift in Sources */,
-				OBJ_407 /* TextTableViewCell.swift in Sources */,
+				B86A645E26ECB60F00EEBAAE /* DividerModel+FusionView.swift in Sources */,
+				B86A645B26ECB60F00EEBAAE /* ButtonModel+FusionView.swift in Sources */,
+				B86A644B26ECAEAC00EEBAAE /* Units.swift in Sources */,
 				OBJ_408 /* ModelData.swift in Sources */,
+				B86A647826ECB74100EEBAAE /* LineHeight+ViewModifier.swift in Sources */,
 				OBJ_409 /* ProjectFile.swift in Sources */,
-				OBJ_410 /* CenterConstraints.swift in Sources */,
-				OBJ_411 /* Constrainable.swift in Sources */,
-				OBJ_412 /* EdgeConstraints.swift in Sources */,
-				OBJ_413 /* Corners.swift in Sources */,
 				OBJ_414 /* Email.swift in Sources */,
 				OBJ_415 /* EmailClient.swift in Sources */,
+				B86A647726ECB74100EEBAAE /* TextAlignmentModel+TextAlignment.swift in Sources */,
+				B86A645926ECB60F00EEBAAE /* BulletModel+ListItemView.swift in Sources */,
 				OBJ_416 /* EmailDelegate.swift in Sources */,
 				OBJ_417 /* UIViewController+Email.swift in Sources */,
-				OBJ_418 /* Lock.swift in Sources */,
-				OBJ_419 /* RemoteImage.swift in Sources */,
+				B86A644F26ECB01500EEBAAE /* SketchShadow.swift in Sources */,
+				B86A646626ECB69C00EEBAAE /* Color+RGBA.swift in Sources */,
 				OBJ_420 /* SafariDelegate.swift in Sources */,
-				OBJ_421 /* SketchShadow.swift in Sources */,
 				OBJ_422 /* BaseTableViewController.swift in Sources */,
+				B86A648E26ED0E4D00EEBAAE /* FusionView.swift in Sources */,
 				OBJ_423 /* BaseViewController.swift in Sources */,
 				OBJ_424 /* PageViewController.swift in Sources */,
-				OBJ_425 /* CALayer+Border.swift in Sources */,
-				OBJ_426 /* CALayer+CornerRadius.swift in Sources */,
-				OBJ_427 /* CALayer+Shadow.swift in Sources */,
-				OBJ_428 /* Font+UIFont.swift in Sources */,
-				OBJ_429 /* Bullet+RowConvertible.swift in Sources */,
-				OBJ_430 /* BulletGroup+RowArrayConvertible.swift in Sources */,
-				OBJ_431 /* Button+RowConvertible.swift in Sources */,
-				OBJ_432 /* Divider+RowConvertible.swift in Sources */,
-				OBJ_433 /* Image+RowConvertible.swift in Sources */,
-				OBJ_434 /* ListItem+RowConvertible.swift in Sources */,
-				OBJ_435 /* Text+RowConvertible.swift in Sources */,
-				OBJ_436 /* Padding+UIEdgeInsets.swift in Sources */,
-				OBJ_437 /* Size+CGSize.swift in Sources */,
-				OBJ_438 /* TextAlignment+NSTextAlignment.swift in Sources */,
-				OBJ_439 /* ButtonContainerView+Button.swift in Sources */,
-				OBJ_440 /* DividerContainerView+Divider.swift in Sources */,
-				OBJ_441 /* ImageContainerView+Image.swift in Sources */,
+				B86A646026ECB66400EEBAAE /* Defaults.swift in Sources */,
+				B86A645D26ECB60F00EEBAAE /* TextEntity+FusionView.swift in Sources */,
+				B86A646526ECB69C00EEBAAE /* Color+Extensions.swift in Sources */,
 				B86A644926EC848900EEBAAE /* ModelSource.swift in Sources */,
-				OBJ_442 /* LabelContainerView+Text.swift in Sources */,
-				OBJ_443 /* ListItemContainerView+ListItem.swift in Sources */,
-				OBJ_444 /* TextProperties+NSAttributedString.swift in Sources */,
-				OBJ_445 /* UIButton+TextProperties.swift in Sources */,
-				OBJ_446 /* UILabel+TextProperties.swift in Sources */,
-				OBJ_447 /* AdjustableImageView.swift in Sources */,
-				OBJ_448 /* ButtonContainerView.swift in Sources */,
-				OBJ_449 /* ContainerView.swift in Sources */,
-				OBJ_450 /* DividerContainerView.swift in Sources */,
-				OBJ_451 /* ImageContainerView.swift in Sources */,
-				OBJ_452 /* LabelContainerView.swift in Sources */,
-				OBJ_453 /* ListItemContainerView.swift in Sources */,
-				OBJ_454 /* Highlightable.swift in Sources */,
-				OBJ_455 /* HighlightableView.swift in Sources */,
-				OBJ_456 /* InsetLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

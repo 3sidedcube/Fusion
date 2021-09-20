@@ -15,27 +15,12 @@ struct ModelData {
     ///
     /// - Parameters:
     ///   - file: `ProjectFile`
-    ///   - decoder: `JSONDecoder`
+    ///   
     /// - Throws: File, data, or decoding error
     /// - Returns: `T`
-    static func decode<T>(
-        file: ProjectFile,
-        decoder: JSONDecoder = .sample
-    ) throws -> T where T: Decodable {
+    static func decode<T>(file: ProjectFile) throws -> T where T: Decodable {
         let url = try Bundle.main.urlOrThrow(for: file)
         let data = try Data(contentsOf: url)
-        return try decoder.decode(T.self, from: data)
-    }
-}
-
-// MARK: - JSONDecoder + Sample
-
-private extension JSONDecoder {
-
-    /// `JSONDecoder` default for sample data
-    static var sample: JSONDecoder {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return decoder
+        return try data.decode()
     }
 }

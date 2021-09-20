@@ -11,6 +11,6 @@ import Foundation
 /// An `Action` to push a (CMS) data driven `Page`.
 public struct PageAction: Codable, Action {
 
-    /// CMS `Entry`
-    public var entry: Entry?
+    /// `EntryModel` in the CMS
+    public var entry: EntryModel?
 }

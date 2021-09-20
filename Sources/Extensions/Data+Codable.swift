@@ -11,7 +11,7 @@ import HTTPRequest
 
 // MARK: - Data + Codable
 
-private extension Data {
+extension Data {
 
     /// Decode this JSON `Data` into `T` with `jsonDecoder`. Otherwise throw.
     ///
