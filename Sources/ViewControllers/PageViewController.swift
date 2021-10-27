@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import ThunderTable
-import HTTPRequest
 import Alamofire
 
 /// A `TemplateViewController` where a `TableViewController` child `UIViewController`

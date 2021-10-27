@@ -7,14 +7,14 @@
 //
 
 import Foundation
-import HTTPRequest
 
 extension JSONDecoder {
 
     /// The `.default` `JSONDecoder` with `keyDecodingStrategy` set
     /// to `.convertFromSnakeCase`
     static var snakeCase: JSONDecoder {
-        let decoder = JSONDecoder.default
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder
     }

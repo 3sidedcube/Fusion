@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import HTTPRequest
 import Alamofire
 import OSLog
 import SwiftUI

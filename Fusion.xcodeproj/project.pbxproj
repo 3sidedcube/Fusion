@@ -21,11 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		B86A643926EC822B00EEBAAE /* Kingfisher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643726EC822B00EEBAAE /* Kingfisher.xcframework */; };
-		B86A643B26EC822B00EEBAAE /* ThunderTable.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643826EC822B00EEBAAE /* ThunderTable.xcframework */; };
-		B86A644126EC823E00EEBAAE /* SwiftyJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643E26EC823E00EEBAAE /* SwiftyJSON.xcframework */; };
-		B86A644326EC823F00EEBAAE /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643F26EC823E00EEBAAE /* Alamofire.xcframework */; };
-		B86A644526EC823F00EEBAAE /* HTTPRequest.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A644026EC823E00EEBAAE /* HTTPRequest.xcframework */; };
+		B84DE8392729E78D00A017C9 /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643F26EC823E00EEBAAE /* Alamofire.xcframework */; };
+		B84DE83B2729E78D00A017C9 /* SwiftyJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643E26EC823E00EEBAAE /* SwiftyJSON.xcframework */; };
+		B84DE83D2729E78D00A017C9 /* Kingfisher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643726EC822B00EEBAAE /* Kingfisher.xcframework */; };
 		B86A644926EC848900EEBAAE /* ModelSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A644826EC848900EEBAAE /* ModelSource.swift */; };
 		B86A644B26ECAEAC00EEBAAE /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A644A26ECAEAC00EEBAAE /* Units.swift */; };
 		B86A644F26ECB01500EEBAAE /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A644E26ECB01500EEBAAE /* SketchShadow.swift */; };
@@ -405,11 +403,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				B86A644526EC823F00EEBAAE /* HTTPRequest.xcframework in Frameworks */,
-				B86A644326EC823F00EEBAAE /* Alamofire.xcframework in Frameworks */,
-				B86A644126EC823E00EEBAAE /* SwiftyJSON.xcframework in Frameworks */,
-				B86A643B26EC822B00EEBAAE /* ThunderTable.xcframework in Frameworks */,
-				B86A643926EC822B00EEBAAE /* Kingfisher.xcframework in Frameworks */,
+				B84DE83D2729E78D00A017C9 /* Kingfisher.xcframework in Frameworks */,
+				B84DE8392729E78D00A017C9 /* Alamofire.xcframework in Frameworks */,
+				B84DE83B2729E78D00A017C9 /* SwiftyJSON.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,7 +813,7 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -833,7 +829,6 @@
 				OBJ_268 /* README.md */,
 				B86A643626EC822B00EEBAAE /* Frameworks */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_54 /* JSONModels */ = {
@@ -1037,7 +1032,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_257 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

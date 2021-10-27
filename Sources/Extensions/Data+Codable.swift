@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import HTTPRequest
 
 // MARK: - Data + Codable
 

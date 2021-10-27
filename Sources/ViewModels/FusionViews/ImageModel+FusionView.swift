@@ -13,17 +13,12 @@ import Kingfisher
 extension ImageModel: FusionView {
 
     public func body(actionHandler: ActionHandler?) -> some View {
-        Group {
-            if let url = url {
-                KFImage.url(url)
-                    .resizable()
-                    .cacheMemoryOnly()
-                    .fade(duration: 0.25)
-                    .viewModel(self)
-            } else {
-                EmptyView()
-            }
-        }
+        guard let url = url else { return EmptyView() }
+        KFImage.url(url)
+            .resizable()
+            .cacheMemoryOnly()
+            .fade(duration: 0.25)
+            .viewModel(self)
     }
 }
 

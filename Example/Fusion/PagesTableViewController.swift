@@ -11,7 +11,6 @@ import UIKit
 import ThunderTable
 import Fusion
 import Alamofire
-import HTTPRequest
 
 /// List Pages on the CMS
 class PagesTableViewController: BaseTableViewController {

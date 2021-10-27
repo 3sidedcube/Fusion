@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import HTTPRequest
 import Fusion
 
 /// `Dictionary` passed into the application on launch
