@@ -11,42 +11,42 @@ import Foundation
 extension BulletGroupModel {
 
     static var sample: BulletGroupModel {
-        return decode(.init(fileName: "bullets", extension: "json"))
+        return decode(.init(fileName: "bullets", fileExtension: "json"))
     }
 }
 
 extension ButtonModel {
 
     static var sample: ButtonModel {
-        return decode(.init(fileName: "button", extension: "json"))
+        return decode(.init(fileName: "button", fileExtension: "json"))
     }
 }
 
 extension DividerModel {
 
     static var sample: DividerModel {
-        return decode(.init(fileName: "divider", extension: "json"))
+        return decode(.init(fileName: "divider", fileExtension: "json"))
     }
 }
 
 extension ImageModel {
 
     static var sample: ImageModel {
-        return decode(.init(fileName: "image", extension: "json"))
+        return decode(.init(fileName: "image", fileExtension: "json"))
     }
 }
 
 extension ListItemModel {
 
     static var sample: ListItemModel {
-        return decode(.init(fileName: "listItem", extension: "json"))
+        return decode(.init(fileName: "listItem", fileExtension: "json"))
     }
 }
 
 extension TextModel {
 
     static var sample: TextModel {
-        return decode(.init(fileName: "text", extension: "json"))
+        return decode(.init(fileName: "text", fileExtension: "json"))
     }
 }
 

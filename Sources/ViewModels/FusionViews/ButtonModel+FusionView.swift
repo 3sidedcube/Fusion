@@ -9,13 +9,13 @@
 import Foundation
 import SwiftUI
 
-extension ButtonModel: FusionView {
+extension ButtonModel: View {
 
-    public func body(actionHandler: ActionHandler?) -> some View {
+    public var body: some View {
         Button(action: {
-            actionHandler?.handle(actionable: self)
+            Fusion.shared.handle(actionable: self)
         }, label: {
-            ModelView(model: self, actionHandler: actionHandler)
+            self
         })
     }
 }
@@ -24,6 +24,6 @@ extension ButtonModel: FusionView {
 
 struct ButtonModel_Previews: PreviewProvider {
     static var previews: some View {
-        ModelView(model: ButtonModel.sample)
+        ButtonModel.sample
     }
 }

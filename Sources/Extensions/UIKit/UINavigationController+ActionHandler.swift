@@ -49,7 +49,7 @@ extension UINavigationController: ActionHandler {
     ///   - pageAction: `PageAction`
     private func pushPageAction(_ pageAction: PageAction) -> Bool {
         guard let pageURL = pageAction.entry?.toApiURL() else { return false }
-        pushPageURL(pageURL)
+        //pushPageURL(pageURL) // TODO
         return true
     }
 

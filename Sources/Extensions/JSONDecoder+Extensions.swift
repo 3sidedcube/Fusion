@@ -1,5 +1,5 @@
 //
-//  JSONDecoder+StatamicAPI.swift
+//  JSONDecoder+Extensions.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 24/01/2021.
@@ -10,9 +10,10 @@ import Foundation
 
 extension JSONDecoder {
 
-    /// The `.default` `JSONDecoder` with `keyDecodingStrategy` set
-    /// to `.convertFromSnakeCase`
-    static var snakeCase: JSONDecoder {
+    /// A `JSONDecoder` with:
+    /// - `dateDecodingStrategy` set to `.iso8601`
+    /// - `keyDecodingStrategy` set to `.convertFromSnakeCase`
+    static var fusion: JSONDecoder {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         decoder.keyDecodingStrategy = .convertFromSnakeCase

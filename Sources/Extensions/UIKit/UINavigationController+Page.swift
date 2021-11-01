@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 import SwiftUI
 
+// TODO
+
+/*
 public extension UINavigationController {
 
     /// `pushPage(_:animated:)` with the given `pageURL`
@@ -29,6 +32,7 @@ public extension UINavigationController {
     func pushPage(_ page: Page, animated: Bool = true) {
         pushPage(.model(page), animated: animated)
     }
+    
 
     /// Push a `PageViewController` on this `UINavigationController` stack with the
     /// given `configuration`
@@ -57,3 +61,4 @@ public extension UINavigationController {
         UIHostingController(rootView: Page)
     }
 }
+*/

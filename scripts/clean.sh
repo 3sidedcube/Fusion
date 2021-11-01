@@ -4,7 +4,7 @@
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 # Carthage directory
-CARTHAGE_DIR=Carthage
+CARTHAGE_DIR="Carthage"
 
 # Delete the carthage directory
-rm -rf ${SCRIPT_DIR}/../${CARTHAGE_DIR}
+rm -rf "${SCRIPT_DIR}/../${CARTHAGE_DIR}"

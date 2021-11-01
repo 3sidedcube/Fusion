@@ -10,15 +10,18 @@ import Foundation
 import SwiftUI
 import Kingfisher
 
-extension ImageModel: FusionView {
+extension ImageModel: View {
 
-    public func body(actionHandler: ActionHandler?) -> some View {
-        guard let url = url else { return EmptyView() }
-        KFImage.url(url)
-            .resizable()
-            .cacheMemoryOnly()
-            .fade(duration: 0.25)
-            .viewModel(self)
+    public var body: some View {
+        if let url = url {
+            KFImage.url(url)
+                .resizable()
+                .cacheMemoryOnly()
+                .fade(duration: 0.25)
+                .viewModel(self)
+        } else {
+            EmptyView()
+        }
     }
 }
 
@@ -26,6 +29,6 @@ extension ImageModel: FusionView {
 
 struct ImageModel_Previews: PreviewProvider {
     static var previews: some View {
-        return ModelView(model: ImageModel.sample)
+        ImageModel.sample
     }
 }

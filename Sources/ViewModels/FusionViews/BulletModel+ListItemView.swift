@@ -20,6 +20,6 @@ extension BulletModel: ListItemView {
 
 struct BulletModel_Previews: PreviewProvider {
     static var previews: some View {
-        ModelView(model: BulletGroupModel.sample.children[0])
+        BulletGroupModel.sample.children[0]
     }
 }

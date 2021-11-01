@@ -54,7 +54,7 @@ public extension Color {
     /// - Parameter string: `String` hex formatted color
     init?(hexString string: String) {
         // Trim non-alphanumerics (which includes the # character)
-        let hex = string.trimmingCharacters(in: .alphanumerics.inverted)
+        let hex = string.trimmingCharacters(in: .hexadecimal.inverted)
 
         var int = UInt64()
         Scanner(string: hex).scanHexInt64(&int)

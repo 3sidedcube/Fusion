@@ -49,7 +49,7 @@ open class Fusion: ActionHandler {
 
     /// `JSONDecoder` to use for JSON decoding
     open var jsonDecoder: JSONDecoder {
-        return JSONDecoder.snakeCase
+        return JSONDecoder.fusion
     }
 
     // MARK: - JSONModel
@@ -79,15 +79,22 @@ open class Fusion: ActionHandler {
 
     // MARK: - HTTPRequest
 
-    /// Create a `HTTPRequest` for fetching a `Page` at the given `pageURL`
+    /// Fetch a `Page` and call the `completion` closure when the result has been acquired
     ///
-    /// - Parameter pageURL: `URL` to fetch `Page` from
-    open func httpRequestForPageURL(_ pageURL: URL) throws -> HTTPRequest {
-        return try HTTPRequest(
-            method: .get,
-            urlComponents: pageURL.toURLComponents(),
-            additionalHeaders: HTTPHeaders([.acceptJSON])
-        )
+    /// - Parameters:
+    ///   - url: `URL` to fetch `Page` entity
+    ///   - completion: Completion closure
+    open func fetchPage(
+        url: URL,
+        completion: @escaping (Result<Page, Error>) -> Void
+    ) {
+        AF.fetchJSONData(url: url) { result in
+            completion(Result {
+                let data = try result.successOrThrow().data
+                let model: APIModel<Page> = try data.decode()
+                return model.data
+            })
+        }
     }
 
     // MARK: - ActionHandler
@@ -123,14 +130,10 @@ open class Fusion: ActionHandler {
     /// then use this method.
     ///
     /// - Parameter model: `JSONModel`
-    /// - Returns: `FusionView`
-    open func view(for model: JSONModel) -> some FusionView {
-        if model is FusionView {
-            return model
-        }
-        if let fusionView = model as? FusionView {
-            return fusionView
-        }
+    /// - Returns: `View`
+    open func view(for model: JSONModel) -> AnyView? {
+        guard let viewModel = model as? FusionView else { return nil }
+        return viewModel.toView()
     }
 
     // MARK: - Page
@@ -138,10 +141,10 @@ open class Fusion: ActionHandler {
     /// Create a `PageViewController` instance with the given `configuration`
     ///
     /// - Parameter configuration: `ModelSource<URL, Page>`
-    open func createPageViewController(
+    /*open func createPageViewController(
         state: ModelSource<URL, Page>
     ) -> PageViewController {
         // Return a `PageViewController`, subclasses may provide their own instance
         return PageViewController(state: state)
-    }
+    }*/
 }

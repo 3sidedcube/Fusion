@@ -11,7 +11,7 @@ import SwiftUI
 
 extension TextEntity {
 
-    public func body(actionHandler: ActionHandler?) -> some View {
+    public var body: some View {
         Text(contentOrDefault)
             .kerning(letterSpacingOrDefault)
             .fontModel(fontModelOrDefault)
@@ -64,6 +64,6 @@ private extension TextEntity {
 
 struct TextEntity_Previews: PreviewProvider {
     static var previews: some View {
-        ModelView(model: TextModel.sample)
+        TextModel.sample
     }
 }

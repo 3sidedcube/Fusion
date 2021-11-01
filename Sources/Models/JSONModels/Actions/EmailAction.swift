@@ -37,9 +37,9 @@ public extension EmailAction {
     /// Map to `Email`
     var email: Email {
         return Email(
-            toAddresses: to ?? [],
-            ccAddresses: cc ?? [],
-            bccAddresses: bcc ?? [],
+            to: to ?? [],
+            cc: cc ?? [],
+            bcc: bcc ?? [],
             subject: subject,
             body: .init(
                 content: body ?? "",
@@ -52,9 +52,9 @@ public extension EmailAction {
     ///
     /// - Parameter email: `Email`
     init(email: Email) {
-        to = email.toAddresses
-        cc = email.ccAddresses
-        bcc = email.bccAddresses
+        to = email.to
+        cc = email.cc
+        bcc = email.bcc
         subject = email.subject
         body = email.body?.content
         isHtml = email.body?.isHTML

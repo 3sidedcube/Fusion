@@ -20,6 +20,6 @@ extension ListItemModel: ListItemView {
 
 struct ListItemModel_Previews: PreviewProvider {
     static var previews: some View {
-        return ModelView(model: ListItemModel.sample)
+        ListItemModel.sample
     }
 }

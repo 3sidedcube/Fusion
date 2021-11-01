@@ -2,4 +2,3 @@
 
 # Run Carthage update to fetch `xcframework`s
 carthage update --use-xcframeworks
-

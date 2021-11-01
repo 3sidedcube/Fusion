@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import SwiftUI
 
 /// Properties which define how to draw text
-public protocol TextEntity: ViewModel, FusionView {
+public protocol TextEntity: ViewModel, View {
 
     /// Text content
     var content: String? { get }

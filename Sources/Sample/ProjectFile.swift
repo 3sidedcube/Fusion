@@ -15,7 +15,7 @@ struct ProjectFile {
     var fileName: String
 
     /// Extension of the file/resource
-    var `extension`: String
+    var fileExtension: String
 }
 
 // MARK: - Bundle + ProjectFile
@@ -29,7 +29,7 @@ extension Bundle {
     func url(for file: ProjectFile) -> URL? {
         return url(
             forResource: file.fileName,
-            withExtension: file.extension
+            withExtension: file.fileExtension
         )
     }
 

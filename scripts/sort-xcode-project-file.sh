@@ -21,4 +21,3 @@ PROJECT_FILE_PATH="${SCRIPT_DIR}/../${XCODE_PROJECT_FILE_NAME}/project.pbxproj"
 
 # Run the script
 "${SCRIPT_DIR}/${SORT_SCRIPT_NAME}" "${PROJECT_FILE_PATH}"
-

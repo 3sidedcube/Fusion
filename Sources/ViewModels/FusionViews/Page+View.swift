@@ -10,34 +10,15 @@ import Foundation
 import SwiftUI
 import SwiftyJSON
 
-extension Page: View, ActionHandler {
-
-    public func handleAction(_ action: Action) -> Bool {
-        return false
-    }
+extension Page: View {
 
     public var body: some View {
-        List {
-            ForEach(jsonModels) { jsonModel in
-                ModelView(model: jsonModel, actionHandler: self)
+        let views = jsonModels.compactMap { Fusion.shared.view(for: $0) }
+        return List {
+            ForEach(0 ..< views.count) { index in
+                views[index]
             }
         }
-    }
-}
-
-extension JSONModel: FusionView {
-
-    // TODO
-    public func body(actionHandler: ActionHandler?) -> some View {
-        if let jsonModel = try? toJSONModel() {
-            if let view = Fusion.shared.viewForModel(jsonModel) {
-                return view
-            } else if fusionView = jsonModel as? FusionView {
-                return ModelView(model: fusionView, actionHandler: actionHandler)
-            }
-        }
-
-        return EmptyView()
     }
 }
 
@@ -46,7 +27,30 @@ extension JSONModel: FusionView {
 private extension Page {
 
     /// Get `JSONModel` components
+    /// 
+    /// Take all items which are non-nil `JSONModel`s
     var jsonModels: [JSONModel] {
-        return screen?.children.array?.compactMap { try? $0.toJSONModel() } ?? []
+        guard let children = screen?.children.array else { return [] }
+        return children.compactMap { try? $0.toJSONModel() }
+    }
+}
+
+// MARK: - PreviewProvider
+
+struct Page_Previews: PreviewProvider {
+    static var previews: some View {
+        Page(
+            id: UUID(),
+            title: nil,
+            date: Date(),
+            lastModified: nil,
+            slug: nil,
+            backgroundColor: nil,
+            screen: Screen(children: JSON([
+                ButtonModel.sample // TODO
+            ])),
+            apiUrl: nil,
+            analyticsScreenView: nil
+        )
     }
 }

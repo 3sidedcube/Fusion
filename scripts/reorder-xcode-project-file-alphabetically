@@ -181,4 +181,3 @@ sub sortFilesByFileName($$)
     }
     return lc($aFileName) cmp lc($bFileName);
 }
-

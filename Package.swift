@@ -22,11 +22,11 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/SwiftyJSON/SwiftyJSON.git",
-            .upToNextMajor(from: "4.0.0")
+            .upToNextMajor(from: "5.0.0")
         ),
         .package(
             url: "https://github.com/onevcat/Kingfisher.git",
-            .upToNextMajor(from: "6.0.0")
+            .upToNextMajor(from: "7.0.0")
         )
     ],
     targets: [

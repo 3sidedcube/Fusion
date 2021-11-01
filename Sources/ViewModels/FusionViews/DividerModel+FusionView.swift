@@ -9,9 +9,9 @@
 import Foundation
 import SwiftUI
 
-extension DividerModel: FusionView {
+extension DividerModel: View {
 
-    public func body(actionHandler: ActionHandler?) -> some View {
+    public var body: some View {
         Divider()
             .frame(idealHeight: strokeWidthOrDefault)
             .viewModel(self)
@@ -33,6 +33,6 @@ private extension DividerModel {
 
 struct DividerModel_Previews: PreviewProvider {
     static var previews: some View {
-        ModelView(model: DividerModel.sample)
+        DividerModel.sample
     }
 }

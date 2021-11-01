@@ -10,8 +10,8 @@ import Foundation
 import SwiftUI
 
 /// Protocol sharing `ListItemModel` view
-protocol ListItemView: ViewModel, FusionView {
-    associatedtype Leading: FusionView
+protocol ListItemView: ViewModel, View {
+    associatedtype Leading: View
 
     /// `Leading`
     var leading: Leading? { get }
@@ -48,21 +48,21 @@ extension ListItemView {
 
 extension ListItemView {
 
-    public func body(actionHandler: ActionHandler?) -> some View {
+    public var body: some View {
         HStack {
             if let leading = leading {
-                ModelView(model: leading, actionHandler: actionHandler)
+                leading
             }
             Spacer()
                 .frame(idealWidth: imageSpacingOrDefault)
             VStack {
                 if let title = title {
-                    ModelView(model: title, actionHandler: actionHandler)
+                    title
                 }
                 Spacer()
                     .frame(idealHeight: textSpacingOrDefault)
                 if let subtitle = subtitle {
-                    ModelView(model: subtitle, actionHandler: actionHandler)
+                    subtitle
                 }
             }
         }

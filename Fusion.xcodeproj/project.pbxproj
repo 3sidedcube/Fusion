@@ -24,6 +24,10 @@
 		B84DE8392729E78D00A017C9 /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643F26EC823E00EEBAAE /* Alamofire.xcframework */; };
 		B84DE83B2729E78D00A017C9 /* SwiftyJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643E26EC823E00EEBAAE /* SwiftyJSON.xcframework */; };
 		B84DE83D2729E78D00A017C9 /* Kingfisher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86A643726EC822B00EEBAAE /* Kingfisher.xcframework */; };
+		B84DE8412729E9F800A017C9 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DE8402729E9F800A017C9 /* CharacterSet+Extensions.swift */; };
+		B84DE8432729EADE00A017C9 /* Session+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DE8422729EADE00A017C9 /* Session+Request.swift */; };
+		B84DE8462729F72B00A017C9 /* HTTPHeader+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DE8452729F72B00A017C9 /* HTTPHeader+Extensions.swift */; };
+		B84DE8482729FFEE00A017C9 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DE8472729FFEE00A017C9 /* Result+Extensions.swift */; };
 		B86A644926EC848900EEBAAE /* ModelSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A644826EC848900EEBAAE /* ModelSource.swift */; };
 		B86A644B26ECAEAC00EEBAAE /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A644A26ECAEAC00EEBAAE /* Units.swift */; };
 		B86A644F26ECB01500EEBAAE /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A644E26ECB01500EEBAAE /* SketchShadow.swift */; };
@@ -48,11 +52,10 @@
 		B86A647C26ECB74100EEBAAE /* Text+FontModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A647426ECB74100EEBAAE /* Text+FontModel.swift */; };
 		B86A648526ECB8DB00EEBAAE /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A648426ECB8DB00EEBAAE /* Sample.swift */; };
 		B86A648C26ECCD6600EEBAAE /* Page+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A648B26ECCD6600EEBAAE /* Page+View.swift */; };
-		B86A648E26ED0E4D00EEBAAE /* FusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A648D26ED0E4D00EEBAAE /* FusionView.swift */; };
-		B86A649026ED0F5F00EEBAAE /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A648F26ED0F5F00EEBAAE /* ModelView.swift */; };
 		B86A649226ED103D00EEBAAE /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A649126ED103D00EEBAAE /* ListItemView.swift */; };
 		B86A649426ED13C100EEBAAE /* Actionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A649326ED13C100EEBAAE /* Actionable.swift */; };
 		B86A649726ED416B00EEBAAE /* EmailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86A649626ED416B00EEBAAE /* EmailViewControllerRepresentable.swift */; };
+		B8CFC162272B38CC00AFC615 /* FusionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CFC161272B38CC00AFC615 /* FusionView.swift */; };
 		OBJ_274 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_218 /* AFError.swift */; };
 		OBJ_275 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_219 /* Alamofire.swift */; };
 		OBJ_276 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_220 /* AlamofireExtended.swift */; };
@@ -89,13 +92,12 @@
 		OBJ_307 /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_251 /* URLSessionConfiguration+Alamofire.swift */; };
 		OBJ_308 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_252 /* Validation.swift */; };
 		OBJ_315 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_217 /* Package.swift */; };
-		OBJ_331 /* JSONDecoder+SnakeCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* JSONDecoder+SnakeCase.swift */; };
+		OBJ_331 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* JSONDecoder+Extensions.swift */; };
 		OBJ_333 /* OSLog+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* OSLog+Logger.swift */; };
 		OBJ_335 /* Data+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Data+Codable.swift */; };
 		OBJ_343 /* UINavigationController+ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* UINavigationController+ActionHandler.swift */; };
 		OBJ_344 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* UINavigationController+Extensions.swift */; };
 		OBJ_345 /* UINavigationController+Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* UINavigationController+Page.swift */; };
-		OBJ_350 /* URL+URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* URL+URLComponents.swift */; };
 		OBJ_351 /* Fusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Fusion.swift */; };
 		OBJ_352 /* APIEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* APIEnum.swift */; };
 		OBJ_353 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* APIModel.swift */; };
@@ -132,71 +134,21 @@
 		OBJ_416 /* EmailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* EmailDelegate.swift */; };
 		OBJ_417 /* UIViewController+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* UIViewController+Email.swift */; };
 		OBJ_420 /* SafariDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* SafariDelegate.swift */; };
-		OBJ_422 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_134 /* BaseTableViewController.swift */; };
-		OBJ_423 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* BaseViewController.swift */; };
-		OBJ_424 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* PageViewController.swift */; };
 		OBJ_471 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_482 /* FusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_178 /* FusionTests.swift */; };
 		OBJ_483 /* UIColorExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_179 /* UIColorExtensionsTests.swift */; };
 		OBJ_484 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_180 /* XCTestManifests.swift */; };
-		OBJ_486 /* Fusion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Fusion::Fusion::Product" /* Fusion.framework */; };
-		OBJ_487 /* HTTPRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HTTPRequest::HTTPRequest::Product" /* HTTPRequest.framework */; };
-		OBJ_488 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
-		OBJ_489 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */; };
-		OBJ_498 /* AFDataResponse+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_185 /* AFDataResponse+Model.swift */; };
-		OBJ_499 /* Array+URLQueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_186 /* Array+URLQueryItem.swift */; };
-		OBJ_500 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_187 /* FileManager+Extensions.swift */; };
-		OBJ_501 /* HTTPHeader+Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_188 /* HTTPHeader+Headers.swift */; };
-		OBJ_502 /* HierarchicalDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_189 /* HierarchicalDateFormatter.swift */; };
-		OBJ_503 /* OSLog+Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_190 /* OSLog+Logger.swift */; };
-		OBJ_504 /* String+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_191 /* String+Data.swift */; };
-		OBJ_505 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_192 /* String+Extensions.swift */; };
-		OBJ_506 /* String+HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_193 /* String+HTTP.swift */; };
-		OBJ_507 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_195 /* Configuration.swift */; };
-		OBJ_508 /* HTTPRequest+Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_196 /* HTTPRequest+Build.swift */; };
-		OBJ_509 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_197 /* HTTPRequest.swift */; };
-		OBJ_510 /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_198 /* HTTPRequestable.swift */; };
-		OBJ_511 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_200 /* KeychainError.swift */; };
-		OBJ_512 /* KeychainToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_201 /* KeychainToken.swift */; };
-		OBJ_513 /* NotificationCenter+KeychainToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_202 /* NotificationCenter+KeychainToken.swift */; };
-		OBJ_514 /* DateFormatter+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_204 /* DateFormatter+ISO8601.swift */; };
-		OBJ_515 /* Decodable+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_205 /* Decodable+JSON.swift */; };
-		OBJ_516 /* Encodable+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_206 /* Encodable+JSON.swift */; };
-		OBJ_517 /* JSONDecoder+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_207 /* JSONDecoder+Default.swift */; };
-		OBJ_518 /* JSONEncoder+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_208 /* JSONEncoder+Default.swift */; };
-		OBJ_519 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_209 /* Model.swift */; };
-		OBJ_520 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_210 /* Result+Extensions.swift */; };
-		OBJ_521 /* Result+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_211 /* Result+Model.swift */; };
-		OBJ_522 /* SnakeCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_212 /* SnakeCaseModel.swift */; };
-		OBJ_523 /* Session+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_214 /* Session+URLRequest.swift */; };
-		OBJ_524 /* Session+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_215 /* Session+URLRequestConvertible.swift */; };
-		OBJ_526 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
-		OBJ_533 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_183 /* Package.swift */; };
 		OBJ_538 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_255 /* SwiftyJSON.swift */; };
 		OBJ_545 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_256 /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B86A642E26EC81E400EEBAAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Alamofire::Alamofire";
-			remoteInfo = Alamofire;
-		};
 		B86A643126EC81E400EEBAAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Fusion::Fusion";
 			remoteInfo = Fusion;
-		};
-		B86A643226EC81E400EEBAAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "HTTPRequest::HTTPRequest";
-			remoteInfo = HTTPRequest;
 		};
 		B86A643326EC81E400EEBAAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -222,7 +174,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84DE8402729E9F800A017C9 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
+		B84DE8422729EADE00A017C9 /* Session+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+Request.swift"; sourceTree = "<group>"; };
+		B84DE8442729ECC100A017C9 /* Fusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84DE8452729F72B00A017C9 /* HTTPHeader+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPHeader+Extensions.swift"; sourceTree = "<group>"; };
+		B84DE8472729FFEE00A017C9 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
+		B84DE849272A0A4C00A017C9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84DE84A272A0A4C00A017C9 /* FusionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FusionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84DE84B272A0A4C00A017C9 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86A643726EC822B00EEBAAE /* Kingfisher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Kingfisher.xcframework; path = Carthage/Build/Kingfisher.xcframework; sourceTree = "<group>"; };
 		B86A643826EC822B00EEBAAE /* ThunderTable.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ThunderTable.xcframework; path = Carthage/Build/ThunderTable.xcframework; sourceTree = "<group>"; };
 		B86A643E26EC823E00EEBAAE /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
@@ -258,14 +217,10 @@
 		B86A648326ECB8BD00EEBAAE /* divider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = divider.json; sourceTree = "<group>"; };
 		B86A648426ECB8DB00EEBAAE /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		B86A648B26ECCD6600EEBAAE /* Page+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page+View.swift"; sourceTree = "<group>"; };
-		B86A648D26ED0E4D00EEBAAE /* FusionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionView.swift; sourceTree = "<group>"; };
-		B86A648F26ED0F5F00EEBAAE /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		B86A649126ED103D00EEBAAE /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		B86A649326ED13C100EEBAAE /* Actionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actionable.swift; sourceTree = "<group>"; };
 		B86A649626ED416B00EEBAAE /* EmailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewControllerRepresentable.swift; sourceTree = "<group>"; };
-		"Fusion::Fusion::Product" /* Fusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Fusion::FusionTests::Product" /* FusionTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FusionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"HTTPRequest::HTTPRequest::Product" /* HTTPRequest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HTTPRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8CFC161272B38CC00AFC615 /* FusionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionView.swift; sourceTree = "<group>"; };
 		OBJ_116 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		OBJ_117 /* ProjectFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFile.swift; sourceTree = "<group>"; };
 		OBJ_125 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
@@ -273,9 +228,6 @@
 		OBJ_127 /* EmailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDelegate.swift; sourceTree = "<group>"; };
 		OBJ_128 /* UIViewController+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Email.swift"; sourceTree = "<group>"; };
 		OBJ_131 /* SafariDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariDelegate.swift; sourceTree = "<group>"; };
-		OBJ_134 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
-		OBJ_135 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		OBJ_136 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		OBJ_178 /* FusionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionTests.swift; sourceTree = "<group>"; };
 		OBJ_179 /* UIColorExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsTests.swift; sourceTree = "<group>"; };
 		OBJ_180 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -293,7 +245,7 @@
 		OBJ_196 /* HTTPRequest+Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPRequest+Build.swift"; sourceTree = "<group>"; };
 		OBJ_197 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		OBJ_198 /* HTTPRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
-		OBJ_20 /* JSONDecoder+SnakeCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+SnakeCase.swift"; sourceTree = "<group>"; };
+		OBJ_20 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_200 /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
 		OBJ_201 /* KeychainToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainToken.swift; sourceTree = "<group>"; };
 		OBJ_202 /* NotificationCenter+KeychainToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+KeychainToken.swift"; sourceTree = "<group>"; };
@@ -357,7 +309,6 @@
 		OBJ_33 /* UINavigationController+ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+ActionHandler.swift"; sourceTree = "<group>"; };
 		OBJ_34 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_35 /* UINavigationController+Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Page.swift"; sourceTree = "<group>"; };
-		OBJ_40 /* URL+URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+URLComponents.swift"; sourceTree = "<group>"; };
 		OBJ_41 /* Fusion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fusion.swift; sourceTree = "<group>"; };
 		OBJ_43 /* APIEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnum.swift; sourceTree = "<group>"; };
 		OBJ_44 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
@@ -388,7 +339,6 @@
 		OBJ_74 /* ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
 		OBJ_88 /* TextEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntity.swift; sourceTree = "<group>"; };
 		OBJ_89 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		"SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,18 +363,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_486 /* Fusion.framework in Frameworks */,
-				OBJ_487 /* HTTPRequest.framework in Frameworks */,
-				OBJ_488 /* Alamofire.framework in Frameworks */,
-				OBJ_489 /* SwiftyJSON.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_525 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_526 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,11 +402,11 @@
 			children = (
 				OBJ_74 /* ActionHandler.swift */,
 				OBJ_56 /* Action.swift */,
-				B86A648D26ED0E4D00EEBAAE /* FusionView.swift */,
 				OBJ_66 /* JSONModel.swift */,
 				OBJ_88 /* TextEntity.swift */,
 				OBJ_89 /* ViewModel.swift */,
 				B86A649326ED13C100EEBAAE /* Actionable.swift */,
+				B8CFC161272B38CC00AFC615 /* FusionView.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -483,7 +421,6 @@
 				B86A645426ECB60E00EEBAAE /* ImageModel+FusionView.swift */,
 				B86A645726ECB60F00EEBAAE /* TextEntity+FusionView.swift */,
 				B86A648B26ECCD6600EEBAAE /* Page+View.swift */,
-				B86A648F26ED0F5F00EEBAAE /* ModelView.swift */,
 				B86A649126ED103D00EEBAAE /* ListItemView.swift */,
 			);
 			path = FusionViews;
@@ -574,16 +511,6 @@
 			path = Email;
 			sourceTree = "<group>";
 		};
-		OBJ_133 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_134 /* BaseTableViewController.swift */,
-				OBJ_135 /* BaseViewController.swift */,
-				OBJ_136 /* PageViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		OBJ_176 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,13 +533,16 @@
 		OBJ_18 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B84DE8422729EADE00A017C9 /* Session+Request.swift */,
 				B86A645F26ECB66400EEBAAE /* Defaults.swift */,
 				B86A646126ECB68F00EEBAAE /* SwiftUI */,
-				OBJ_20 /* JSONDecoder+SnakeCase.swift */,
+				OBJ_20 /* JSONDecoder+Extensions.swift */,
 				OBJ_22 /* OSLog+Logger.swift */,
 				OBJ_24 /* Data+Codable.swift */,
 				OBJ_26 /* UIKit */,
-				OBJ_40 /* URL+URLComponents.swift */,
+				B84DE8402729E9F800A017C9 /* CharacterSet+Extensions.swift */,
+				B84DE8452729F72B00A017C9 /* HTTPHeader+Extensions.swift */,
+				B84DE8472729FFEE00A017C9 /* Result+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -765,18 +695,6 @@
 			path = .build/checkouts/SwiftyJSON/Source/SwiftyJSON;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_257 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"Alamofire::Alamofire::Product" /* Alamofire.framework */,
-				"Fusion::Fusion::Product" /* Fusion.framework */,
-				"Fusion::FusionTests::Product" /* FusionTests.xctest */,
-				"HTTPRequest::HTTPRequest::Product" /* HTTPRequest.framework */,
-				"SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		OBJ_26 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -820,7 +738,6 @@
 				OBJ_7 /* Sources */,
 				OBJ_176 /* Tests */,
 				OBJ_181 /* Dependencies */,
-				OBJ_257 /* Products */,
 				OBJ_263 /* Example */,
 				OBJ_264 /* Carthage */,
 				OBJ_265 /* scripts */,
@@ -828,6 +745,10 @@
 				OBJ_267 /* Cartfile */,
 				OBJ_268 /* README.md */,
 				B86A643626EC822B00EEBAAE /* Frameworks */,
+				B84DE8442729ECC100A017C9 /* Fusion.framework */,
+				B84DE849272A0A4C00A017C9 /* Alamofire.framework */,
+				B84DE84A272A0A4C00A017C9 /* FusionTests.xctest */,
+				B84DE84B272A0A4C00A017C9 /* SwiftyJSON.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -866,7 +787,6 @@
 				OBJ_42 /* Models */,
 				OBJ_115 /* Sample */,
 				OBJ_118 /* Utilities */,
-				OBJ_133 /* ViewControllers */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -887,7 +807,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = "Alamofire::Alamofire::Product" /* Alamofire.framework */;
+			productReference = B84DE849272A0A4C00A017C9 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		"Alamofire::SwiftPMPackageDescription" /* AlamofirePackageDescription */ = {
@@ -917,7 +837,7 @@
 			);
 			name = Fusion;
 			productName = Fusion;
-			productReference = "Fusion::Fusion::Product" /* Fusion.framework */;
+			productReference = B84DE8442729ECC100A017C9 /* Fusion.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		"Fusion::FusionTests" /* FusionTests */ = {
@@ -931,13 +851,12 @@
 			);
 			dependencies = (
 				OBJ_490 /* PBXTargetDependency */,
-				OBJ_491 /* PBXTargetDependency */,
 				OBJ_492 /* PBXTargetDependency */,
 				OBJ_493 /* PBXTargetDependency */,
 			);
 			name = FusionTests;
 			productName = FusionTests;
-			productReference = "Fusion::FusionTests::Product" /* FusionTests.xctest */;
+			productReference = B84DE84A272A0A4C00A017C9 /* FusionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		"Fusion::SwiftPMPackageDescription" /* FusionPackageDescription */ = {
@@ -952,37 +871,6 @@
 			);
 			name = FusionPackageDescription;
 			productName = FusionPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"HTTPRequest::HTTPRequest" /* HTTPRequest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_494 /* Build configuration list for PBXNativeTarget "HTTPRequest" */;
-			buildPhases = (
-				OBJ_497 /* Sources */,
-				OBJ_525 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_527 /* PBXTargetDependency */,
-			);
-			name = HTTPRequest;
-			productName = HTTPRequest;
-			productReference = "HTTPRequest::HTTPRequest::Product" /* HTTPRequest.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"HTTPRequest::SwiftPMPackageDescription" /* HTTPRequestPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_529 /* Build configuration list for PBXNativeTarget "HTTPRequestPackageDescription" */;
-			buildPhases = (
-				OBJ_532 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HTTPRequestPackageDescription;
-			productName = HTTPRequestPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
 		"SwiftyJSON::SwiftPMPackageDescription" /* SwiftyJSONPackageDescription */ = {
@@ -1012,7 +900,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = "SwiftyJSON::SwiftyJSON::Product" /* SwiftyJSON.framework */;
+			productReference = B84DE84B272A0A4C00A017C9 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1033,7 +921,7 @@
 				en,
 			);
 			mainGroup = OBJ_5;
-			productRefGroup = OBJ_257 /* Products */;
+			productRefGroup = OBJ_5;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1043,8 +931,6 @@
 				"Fusion::SwiftPMPackageDescription" /* FusionPackageDescription */,
 				"Fusion::FusionPackageTests::ProductTarget" /* FusionPackageTests */,
 				"Fusion::FusionTests" /* FusionTests */,
-				"HTTPRequest::HTTPRequest" /* HTTPRequest */,
-				"HTTPRequest::SwiftPMPackageDescription" /* HTTPRequestPackageDescription */,
 				"SwiftyJSON::SwiftyJSON" /* SwiftyJSON */,
 				"SwiftyJSON::SwiftPMPackageDescription" /* SwiftyJSONPackageDescription */,
 			);
@@ -1106,7 +992,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_331 /* JSONDecoder+SnakeCase.swift in Sources */,
+				B84DE8482729FFEE00A017C9 /* Result+Extensions.swift in Sources */,
+				OBJ_331 /* JSONDecoder+Extensions.swift in Sources */,
 				OBJ_333 /* OSLog+Logger.swift in Sources */,
 				OBJ_335 /* Data+Codable.swift in Sources */,
 				B86A648526ECB8DB00EEBAAE /* Sample.swift in Sources */,
@@ -1115,7 +1002,7 @@
 				OBJ_343 /* UINavigationController+ActionHandler.swift in Sources */,
 				OBJ_344 /* UINavigationController+Extensions.swift in Sources */,
 				OBJ_345 /* UINavigationController+Page.swift in Sources */,
-				OBJ_350 /* URL+URLComponents.swift in Sources */,
+				B84DE8412729E9F800A017C9 /* CharacterSet+Extensions.swift in Sources */,
 				OBJ_351 /* Fusion.swift in Sources */,
 				OBJ_352 /* APIEnum.swift in Sources */,
 				B86A649426ED13C100EEBAAE /* Actionable.swift in Sources */,
@@ -1127,11 +1014,11 @@
 				B86A649226ED103D00EEBAAE /* ListItemView.swift in Sources */,
 				OBJ_359 /* ShadowModel.swift in Sources */,
 				OBJ_360 /* SizeModel.swift in Sources */,
-				B86A649026ED0F5F00EEBAAE /* ModelView.swift in Sources */,
 				OBJ_361 /* TextAlignmentModel.swift in Sources */,
 				OBJ_362 /* Action.swift in Sources */,
 				OBJ_363 /* EmailAction.swift in Sources */,
 				OBJ_364 /* LinkAction.swift in Sources */,
+				B8CFC162272B38CC00AFC615 /* FusionView.swift in Sources */,
 				OBJ_365 /* NativeAction.swift in Sources */,
 				OBJ_366 /* PageAction.swift in Sources */,
 				OBJ_367 /* BulletModel.swift in Sources */,
@@ -1139,6 +1026,7 @@
 				B86A649726ED416B00EEBAAE /* EmailViewControllerRepresentable.swift in Sources */,
 				OBJ_369 /* ButtonModel.swift in Sources */,
 				B86A647C26ECB74100EEBAAE /* Text+FontModel.swift in Sources */,
+				B84DE8462729F72B00A017C9 /* HTTPHeader+Extensions.swift in Sources */,
 				B86A646726ECB69C00EEBAAE /* EdgeInsets+Extensions.swift in Sources */,
 				OBJ_370 /* DividerModel.swift in Sources */,
 				B86A646926ECB6DD00EEBAAE /* LineHeight.swift in Sources */,
@@ -1156,6 +1044,7 @@
 				OBJ_378 /* ActionHandler.swift in Sources */,
 				OBJ_390 /* TextEntity.swift in Sources */,
 				B86A645A26ECB60F00EEBAAE /* ImageModel+FusionView.swift in Sources */,
+				B84DE8432729EADE00A017C9 /* Session+Request.swift in Sources */,
 				B86A647526ECB74100EEBAAE /* View+ViewModel.swift in Sources */,
 				OBJ_391 /* ViewModel.swift in Sources */,
 				B86A645E26ECB60F00EEBAAE /* DividerModel+FusionView.swift in Sources */,
@@ -1173,10 +1062,6 @@
 				B86A644F26ECB01500EEBAAE /* SketchShadow.swift in Sources */,
 				B86A646626ECB69C00EEBAAE /* Color+RGBA.swift in Sources */,
 				OBJ_420 /* SafariDelegate.swift in Sources */,
-				OBJ_422 /* BaseTableViewController.swift in Sources */,
-				B86A648E26ED0E4D00EEBAAE /* FusionView.swift in Sources */,
-				OBJ_423 /* BaseViewController.swift in Sources */,
-				OBJ_424 /* PageViewController.swift in Sources */,
 				B86A646026ECB66400EEBAAE /* Defaults.swift in Sources */,
 				B86A645D26ECB60F00EEBAAE /* TextEntity+FusionView.swift in Sources */,
 				B86A646526ECB69C00EEBAAE /* Color+Extensions.swift in Sources */,
@@ -1199,48 +1084,6 @@
 				OBJ_482 /* FusionTests.swift in Sources */,
 				OBJ_483 /* UIColorExtensionsTests.swift in Sources */,
 				OBJ_484 /* XCTestManifests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_497 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_498 /* AFDataResponse+Model.swift in Sources */,
-				OBJ_499 /* Array+URLQueryItem.swift in Sources */,
-				OBJ_500 /* FileManager+Extensions.swift in Sources */,
-				OBJ_501 /* HTTPHeader+Headers.swift in Sources */,
-				OBJ_502 /* HierarchicalDateFormatter.swift in Sources */,
-				OBJ_503 /* OSLog+Logger.swift in Sources */,
-				OBJ_504 /* String+Data.swift in Sources */,
-				OBJ_505 /* String+Extensions.swift in Sources */,
-				OBJ_506 /* String+HTTP.swift in Sources */,
-				OBJ_507 /* Configuration.swift in Sources */,
-				OBJ_508 /* HTTPRequest+Build.swift in Sources */,
-				OBJ_509 /* HTTPRequest.swift in Sources */,
-				OBJ_510 /* HTTPRequestable.swift in Sources */,
-				OBJ_511 /* KeychainError.swift in Sources */,
-				OBJ_512 /* KeychainToken.swift in Sources */,
-				OBJ_513 /* NotificationCenter+KeychainToken.swift in Sources */,
-				OBJ_514 /* DateFormatter+ISO8601.swift in Sources */,
-				OBJ_515 /* Decodable+JSON.swift in Sources */,
-				OBJ_516 /* Encodable+JSON.swift in Sources */,
-				OBJ_517 /* JSONDecoder+Default.swift in Sources */,
-				OBJ_518 /* JSONEncoder+Default.swift in Sources */,
-				OBJ_519 /* Model.swift in Sources */,
-				OBJ_520 /* Result+Extensions.swift in Sources */,
-				OBJ_521 /* Result+Model.swift in Sources */,
-				OBJ_522 /* SnakeCaseModel.swift in Sources */,
-				OBJ_523 /* Session+URLRequest.swift in Sources */,
-				OBJ_524 /* Session+URLRequestConvertible.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_532 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_533 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1273,11 +1116,6 @@
 			target = "Fusion::Fusion" /* Fusion */;
 			targetProxy = B86A643126EC81E400EEBAAE /* PBXContainerItemProxy */;
 		};
-		OBJ_491 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "HTTPRequest::HTTPRequest" /* HTTPRequest */;
-			targetProxy = B86A643226EC81E400EEBAAE /* PBXContainerItemProxy */;
-		};
 		OBJ_492 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Alamofire::Alamofire" /* Alamofire */;
@@ -1287,11 +1125,6 @@
 			isa = PBXTargetDependency;
 			target = "SwiftyJSON::SwiftyJSON" /* SwiftyJSON */;
 			targetProxy = B86A643426EC81E400EEBAAE /* PBXContainerItemProxy */;
-		};
-		OBJ_527 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Alamofire::Alamofire" /* Alamofire */;
-			targetProxy = B86A642E26EC81E400EEBAAE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1425,7 +1258,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Fusion.xcodeproj/Fusion_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
@@ -1458,7 +1291,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Fusion.xcodeproj/Fusion_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
@@ -1593,88 +1426,6 @@
 				TARGET_NAME = FusionTests;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
-		OBJ_495 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Fusion.xcodeproj/HTTPRequest_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HTTPRequest;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = HTTPRequest;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_496 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Fusion.xcodeproj/HTTPRequest_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = HTTPRequest;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = HTTPRequest;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_530 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_531 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1822,24 +1573,6 @@
 			buildConfigurations = (
 				OBJ_479 /* Debug */,
 				OBJ_480 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_494 /* Build configuration list for PBXNativeTarget "HTTPRequest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_495 /* Debug */,
-				OBJ_496 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_529 /* Build configuration list for PBXNativeTarget "HTTPRequestPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_530 /* Debug */,
-				OBJ_531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
