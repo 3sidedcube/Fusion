@@ -71,6 +71,7 @@ open class ImageRow: FusionRow<ImageTableViewCell> {
             (controller as? RowUpdateListener)?.rowRequestedUpdate(self)
         }
 
+        //cell.imageContainerView.setViewModel(image)
         redrawUI(cell)
     }
 
