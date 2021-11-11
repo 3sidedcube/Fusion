@@ -16,6 +16,6 @@ public extension CALayer {
     /// - Parameters:
     ///   - cornerRadius: `Float`
     func setCornerRadius(_ cornerRadius: Float?) {
-        setCorners(.radius(CGFloat(cornerRadius ?? 0)))
+        setCorners(.radius(CGFloat(cornerRadius ?? 0))) // TODO: Shadow
     }
 }
