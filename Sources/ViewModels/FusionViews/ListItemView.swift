@@ -11,10 +11,10 @@ import SwiftUI
 
 /// Protocol sharing `ListItemModel` view
 protocol ListItemView: ViewModel, View {
-    associatedtype Leading: View
+    associatedtype LeadingView: View
 
-    /// `Leading`
-    var leading: Leading? { get }
+    /// `LeadingView`
+    var leading: LeadingView? { get }
 
     /// `TextModel` of the title
     var title: TextModel? { get }

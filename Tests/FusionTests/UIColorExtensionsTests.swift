@@ -11,7 +11,7 @@ import UIKit
 import XCTest
 import Fusion
 
-// swiftlint:disable empty_xctest_method
+// TODO
 final class UIColorExtensionsTests: XCTestCase {
 
     /// Test converting `UIColor` to and from a HEX string
