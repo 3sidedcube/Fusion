@@ -170,3 +170,11 @@ open class NumberContainerView: LabelContainerView {
         return !(label.text?.trimmed ?? "").isEmpty
     }
 }
+
+extension String {
+
+    /// Trim the `.whitespacesAndNewlines` `CharacterSet`
+    var trimmed: String {
+        return trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}

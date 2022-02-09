@@ -212,9 +212,10 @@ open class PageViewController: BaseViewController {
 
         // Hit API to fetch `Page`
         beginRefreshing()
-        AF.request(httpRequest) { [weak self] result in
+        httpRequest.request(queue: .main) { [weak self] result in
             self?.endRefreshing()
-            self?.page = try? result.cmsObjectOrThrow().data
+            let dataResult = result.map { $0.data }
+            self?.page = try? dataResult.cmsObjectOrThrow().data
         }
     }
 

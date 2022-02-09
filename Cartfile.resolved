@@ -1,5 +1,5 @@
+github "3sidedcube/HTTPRequest" "53be96932460b082ac63a15e429e31115b5dc742"
 github "3sidedcube/ThunderTable" "7664938f52d79d5c172359939afc03819c44a608"
-github "Alamofire/Alamofire" "5.4.4"
-github "BenShutt/HTTPRequest" "313930cd5e895d64b75adde155fc45721b0029aa"
+github "Alamofire/Alamofire" "5.5.0"
 github "SwiftyJSON/SwiftyJSON" "5.0.1"
-github "onevcat/Kingfisher" "7.1.1"
+github "onevcat/Kingfisher" "7.1.2"

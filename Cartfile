@@ -4,4 +4,4 @@ github "onevcat/Kingfisher" ~> 7.0
 
 # 3SidedCube
 github "3sidedcube/ThunderTable" "release/v2.0.0"
-github "BenShutt/HTTPRequest" "develop"
+github "3sidedcube/HTTPRequest" "release/v1.0.0"

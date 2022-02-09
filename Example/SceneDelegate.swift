@@ -26,8 +26,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     /// The root `UIViewController` of the app
     private static func rootViewController() -> UIViewController {
-        return UINavigationController(
+        let navigationController = UINavigationController(
             rootViewController: PagesTableViewController()
         )
+        navigationController.navigationBar.configureAppearance()
+        return navigationController
+    }
+}
+
+private extension UINavigationBar {
+
+    func configureAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+        standardAppearance = appearance
+        compactAppearance = appearance
+        scrollEdgeAppearance = appearance
     }
 }

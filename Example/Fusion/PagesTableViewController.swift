@@ -53,9 +53,10 @@ class PagesTableViewController: BaseTableViewController {
         )
 
         beginRefreshing()
-        AF.request(httpRequest) { [weak self] result in
+        httpRequest.request { [weak self] result in
             self?.endRefreshing()
-            self?.pages = (try? result.cmsObjectOrThrow().data) ?? []
+            let dataResult = result.map { $0.data }
+            self?.pages = (try? dataResult.cmsObjectOrThrow().data) ?? []
         }
     }
 
