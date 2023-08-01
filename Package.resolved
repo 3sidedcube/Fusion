@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "cubefoundation-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/3sidedcube/cubefoundation-ios.git",
+      "state" : {
+        "branch" : "fix/font-weight",
+        "revision" : "8f00e2ab2f5236f70b33f124f5c5c5751acc553a"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -7,7 +7,7 @@ let package = Package(
     name: "Fusion",
     platforms: [
         .iOS(.v15),
-        .macOS(.v12)
+        .macOS(.v13)
     ],
     products: [
         .library(
@@ -15,10 +15,25 @@ let package = Package(
             targets: ["Fusion"]
         )
     ],
+    dependencies: [
+        .package(
+            url: "https://github.com/3sidedcube/cubefoundation-ios.git",
+            branch: "fix/font-weight"
+        )
+    ],
     targets: [
         .target(
             name: "Fusion",
-            dependencies: [],
+            dependencies: [
+                .product(
+                    name: "CubeFoundation",
+                    package: "cubefoundation-ios"
+                ),
+                .product(
+                    name: "CubeFoundationSwiftUI",
+                    package: "cubefoundation-ios"
+                )
+            ],
             path: "Sources"
         ),
         .testTarget(
