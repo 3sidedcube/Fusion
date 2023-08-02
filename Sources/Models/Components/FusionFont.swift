@@ -15,9 +15,8 @@ struct FusionFont: Model {
     var size: Pt?
     var weight: Int?
 
-    // MARK: Computed
+    // MARK: - Computed
 
-    /// Map `font` to `Font.Name`
     var fontName: Font.Name {
         guard let fontName = name else { return .default }
         return .custom(fontName)

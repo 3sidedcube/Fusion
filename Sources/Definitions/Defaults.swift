@@ -14,10 +14,27 @@ extension Int {
 
 extension Pt {
     static let defaultFontSize: Pt = 20
+
+    static let defaultCornerRadius: Pt = 0
+    static let defaultBorderLineWidth: Pt = 2
+
+    static let defaultShadowX: Pt = 0
+    static let defaultShadowY: Pt = 0
+    static let defaultShadowBlur: Pt = 0
+
+    static let defaultPaddingLeading: Pt = 0
+    static let defaultPaddingTrailing: Pt = 0
+    static let defaultPaddingTop: Pt = 0
+    static let defaultPaddingBottom: Pt = 0
 }
 
 extension Color {
     static let defaultTextColor: Color = .black
+
+    static let defaultBackgroundColor: Color = .clear
+    static let defaultBorderColor: Color = .clear
+
+    static let defaultShadowColor: Color = .black
 }
 
 extension Font.Name {

@@ -25,11 +25,6 @@ struct FusionText: Model, View {
         alignment ?? .default
     }
 
-    var foregroundColor: Color {
-        guard let textColor else { return .defaultTextColor }
-        return Color(hexString: textColor) ?? .defaultTextColor
-    }
-
     // MARK: - View
 
     var body: some View {
@@ -42,10 +37,10 @@ struct FusionText: Model, View {
                 letter: letterSpacing,
                 underline: false
             ))
-            .foregroundColor(foregroundColor)
+            .foregroundColor(textColor?.color ?? .defaultTextColor)
             .lineLimit(lineLimit)
-            .frame(maxWidth: .infinity, alignment: textAlignment.alignment)
             .multilineTextAlignment(textAlignment.textAlignment)
+            .frame(maxWidth: .infinity, alignment: textAlignment.alignment)
     }
 }
 
