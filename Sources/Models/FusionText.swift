@@ -17,13 +17,9 @@ struct FusionText: Model {
     var alignment: FusionTextAlignment?
     var lineHeight: Px
     var letterSpacing: Px
-    var numberOfLines: Int?
+    var lineLimit: Int?
 
     // MARK: Computed
-
-    var fusionFont: FusionFont {
-        font ?? FusionFont()
-    }
 
     var textAlignment: FusionTextAlignment {
         alignment ?? .default
@@ -42,15 +38,15 @@ extension FusionText: View {
     var body: some View {
         Text(value, isMarkdown: isMarkdown ?? false)
             .style(.init(
-                fusionFont.fontName,
-                weight: .init(integer: fusionFont.weight),
-                size: fusionFont.size,
+                font?.fontName ?? .default,
+                weight: .init(integer: font?.weight ?? .defaultFontWeight),
+                size: font?.size ?? .defaultFontSize,
                 lineHeight: lineHeight,
                 letter: letterSpacing,
                 underline: false
             ))
             .foregroundColor(foregroundColor)
-            .lineLimit(numberOfLines)
+            .lineLimit(lineLimit)
             .frame(maxWidth: .infinity, alignment: textAlignment.alignment)
             .multilineTextAlignment(textAlignment.textAlignment)
     }

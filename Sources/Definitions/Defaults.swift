@@ -8,21 +8,22 @@
 
 import SwiftUI
 
-extension Color {
+extension Int {
+    static let defaultFontWeight = 400
+}
 
+extension Pt {
+    static let defaultFontSize: Pt = 20
+}
+
+extension Color {
     static let defaultTextColor: Color = .black
 }
 
-extension FusionTextAlignment {
-
-    static let `default`: FusionTextAlignment = .leading
+extension Font.Name {
+    static let `default`: Font.Name = .system
 }
 
-extension FusionFont {
-
-    init() {
-        name = nil
-        size = 20
-        weight = 400
-    }
+extension FusionTextAlignment {
+    static let `default`: FusionTextAlignment = .leading
 }
