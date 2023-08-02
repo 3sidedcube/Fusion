@@ -13,10 +13,8 @@ struct FusionText: Model, View {
     var value: String
     var isMarkdown: Bool?
     var textColor: RGBAHex?
-    var font: FusionFont?
+    var textStyle: FusionTextStyle?
     var alignment: FusionTextAlignment?
-    var lineHeight: Px
-    var letterSpacing: Px
     var lineLimit: Int?
 
     // MARK: - Computed
@@ -29,14 +27,7 @@ struct FusionText: Model, View {
 
     var body: some View {
         Text(value, isMarkdown: isMarkdown ?? false)
-            .style(.init(
-                font?.fontName ?? .default,
-                weight: .init(integer: font?.weight ?? .defaultFontWeight),
-                size: font?.size ?? .defaultFontSize,
-                lineHeight: lineHeight,
-                letter: letterSpacing,
-                underline: false
-            ))
+            .textStyle(textStyle)
             .foregroundColor(textColor?.color ?? .defaultTextColor)
             .lineLimit(lineLimit)
             .multilineTextAlignment(textAlignment.textAlignment)
