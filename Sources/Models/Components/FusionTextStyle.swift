@@ -32,7 +32,7 @@ struct FusionTextStyle: Model, ViewModifier {
             weight: .init(integer: weight ?? .defaultFontWeight),
             size: size ?? .defaultFontSize,
             lineHeight: lineHeight ?? size ?? .defaultFontSize,
-            letter: letterSpacing ?? 1, // TODO!
+            letter: letterSpacing ?? .defaultLetterSpacing,
             underline: false
         ))
     }

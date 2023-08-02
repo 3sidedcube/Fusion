@@ -5,8 +5,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/3sidedcube/cubefoundation-ios.git",
       "state" : {
-        "branch" : "fix/font-weight",
-        "revision" : "8f00e2ab2f5236f70b33f124f5c5c5751acc553a"
+        "branch" : "develop",
+        "revision" : "b9d44aff2dbfd1912a21c56bcd2c6d489ee396f4"
+      }
+    },
+    {
+      "identity" : "swiftyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON.git",
+      "state" : {
+        "revision" : "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+        "version" : "5.0.1"
       }
     }
   ],

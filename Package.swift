@@ -18,13 +18,18 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/3sidedcube/cubefoundation-ios.git",
-            branch: "fix/font-weight"
+            branch: "develop"
+        ),
+        .package(
+            url: "https://github.com/SwiftyJSON/SwiftyJSON.git",
+            .upToNextMajor(from: "5.0.0")
         )
     ],
     targets: [
         .target(
             name: "Fusion",
             dependencies: [
+                "SwiftyJSON",
                 .product(
                     name: "CubeFoundation",
                     package: "cubefoundation-ios"

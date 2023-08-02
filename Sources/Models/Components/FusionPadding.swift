@@ -10,10 +10,10 @@ import SwiftUI
 
 struct FusionPadding: Model, ViewModifier {
 
-    var leading: CGFloat?
-    var trailing: CGFloat?
     var top: CGFloat?
+    var leading: CGFloat?
     var bottom: CGFloat?
+    var trailing: CGFloat?
 
     // MARK: - ViewModifier
 

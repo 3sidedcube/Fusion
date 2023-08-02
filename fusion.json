@@ -1,0 +1,57 @@
+{
+    "type": "Scroll",
+    "axis": "vertical",
+    "padding": {
+        "top": 10,
+        "leading": 20,
+        "bottom": 10,
+        "trailing": 20
+    },
+    "subviews": [
+        {
+            "type": "VStack",
+            "spacing": 10,
+            "subviews": [
+                {
+                    "type": "Image",
+                    "scaleType": "aspectFill",
+                    "url": "https://images.unsplash.com/photo-1690397756255-51f90a65c708",
+                    "frame": {
+                        "width": "fill",
+                        "height": "200"
+                    },
+                    "cornerRadius": 10,
+                    "shadow": {
+                        "blur": 6
+                    }
+                },
+                {
+                    "type": "Text",
+                    "textStyle": {
+                        "size": 24,
+                        "weight": 700,
+                    },
+                    "frame": {
+                        "width": "fill"
+                    },
+                    "padding": {
+                        "top": 10
+                    }
+                },
+                {
+                    "type": "Text",
+                    "textStyle": {
+                        "size": 16,
+                        "weight": 400,
+                    },
+                    "frame": {
+                        "width": "fill"
+                    },
+                    "padding": {
+                        "top": 10
+                    }
+                }
+            ]
+        }
+    ]
+}

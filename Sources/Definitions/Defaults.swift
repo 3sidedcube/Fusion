@@ -14,6 +14,7 @@ extension Int {
 
 extension CGFloat {
     static let defaultFontSize: CGFloat = 20
+    static let defaultLetterSpacing: CGFloat = 0
 
     static let defaultCornerRadius: CGFloat = 0
     static let defaultBorderLineWidth: CGFloat = 2
@@ -22,10 +23,10 @@ extension CGFloat {
     static let defaultShadowY: CGFloat = 0
     static let defaultShadowBlur: CGFloat = 0
 
-    static let defaultPaddingLeading: CGFloat = 0
-    static let defaultPaddingTrailing: CGFloat = 0
     static let defaultPaddingTop: CGFloat = 0
+    static let defaultPaddingLeading: CGFloat = 0
     static let defaultPaddingBottom: CGFloat = 0
+    static let defaultPaddingTrailing: CGFloat = 0
 }
 
 extension Color {
@@ -36,7 +37,7 @@ extension Color {
 
     static let defaultShadowColor: Color = .black
 
-    static let imagePlaceholder: Color = .gray.opacity(0.2)
+    static let imagePlaceholder = Color(white255: 200)
 }
 
 extension Font.Name {
@@ -44,9 +45,13 @@ extension Font.Name {
 }
 
 extension FusionTextAlignment {
-    static let `default`: FusionTextAlignment = .leading
+    static let `default`: FusionTextAlignment = .center
 }
 
 extension FusionScaleType {
     static let `default`: FusionScaleType = .aspectFill
+}
+
+extension JSONDecoder {
+    static let `default` = JSONDecoder()
 }
