@@ -35,6 +35,8 @@ extension Color {
     static let defaultBorderColor: Color = .clear
 
     static let defaultShadowColor: Color = .black
+
+    static let imagePlaceholder: Color = .gray.opacity(0.2)
 }
 
 extension Font.Name {
@@ -43,4 +45,8 @@ extension Font.Name {
 
 extension FusionTextAlignment {
     static let `default`: FusionTextAlignment = .leading
+}
+
+extension FusionScaleType {
+    static let `default`: FusionScaleType = .aspectFill
 }

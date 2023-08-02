@@ -18,7 +18,7 @@ struct FusionBorder: Model {
 
 extension InsettableShape {
 
-    func border(_ border: FusionBorder?) -> some View {
+    @ViewBuilder func border(_ border: FusionBorder?) -> some View {
         strokeBorder(
             border?.color?.color ?? .defaultBorderColor,
             lineWidth: border?.lineWidth ?? .defaultBorderLineWidth
