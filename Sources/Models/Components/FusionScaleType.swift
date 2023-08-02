@@ -8,19 +8,11 @@
 
 import SwiftUI
 
-enum FusionScaleType: Model {
+enum FusionScaleType: String, Model {
 
     case scaleToFill
     case aspectFit
     case aspectFill
-
-    var contentMode: ContentMode {
-        switch self {
-        case .scaleToFill: return .fill
-        case .aspectFit: return .fit
-        case .aspectFill: return .fill
-        }
-    }
 }
 
 // MARK: - Image + Extensions
