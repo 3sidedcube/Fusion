@@ -24,7 +24,6 @@ struct FusionView: Model, View {
             .border(border)
             .background(backgroundColor?.color ?? .defaultBackgroundColor)
             .size(size)
-            .cornerRadius(cornerRadius ?? .defaultCornerRadius)
             .shadow(shadow)
             .padding(padding)
     }
