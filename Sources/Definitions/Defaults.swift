@@ -12,20 +12,20 @@ extension Int {
     static let defaultFontWeight = 400
 }
 
-extension Pt {
-    static let defaultFontSize: Pt = 20
+extension CGFloat {
+    static let defaultFontSize: CGFloat = 20
 
-    static let defaultCornerRadius: Pt = 0
-    static let defaultBorderLineWidth: Pt = 2
+    static let defaultCornerRadius: CGFloat = 0
+    static let defaultBorderLineWidth: CGFloat = 2
 
-    static let defaultShadowX: Pt = 0
-    static let defaultShadowY: Pt = 0
-    static let defaultShadowBlur: Pt = 0
+    static let defaultShadowX: CGFloat = 0
+    static let defaultShadowY: CGFloat = 0
+    static let defaultShadowBlur: CGFloat = 0
 
-    static let defaultPaddingLeading: Pt = 0
-    static let defaultPaddingTrailing: Pt = 0
-    static let defaultPaddingTop: Pt = 0
-    static let defaultPaddingBottom: Pt = 0
+    static let defaultPaddingLeading: CGFloat = 0
+    static let defaultPaddingTrailing: CGFloat = 0
+    static let defaultPaddingTop: CGFloat = 0
+    static let defaultPaddingBottom: CGFloat = 0
 }
 
 extension Color {

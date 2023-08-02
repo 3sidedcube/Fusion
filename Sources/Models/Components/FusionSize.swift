@@ -1,5 +1,5 @@
 //
-//  Size.swift
+//  FusionSize.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 02/08/2023.
@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct Size: Model, ViewModifier {
+struct FusionSize: Model, ViewModifier {
 
-    var width: Pt?
-    var height: Pt?
+    var width: CGFloat?
+    var height: CGFloat?
 
     // MARK: - ViewModifier
 
@@ -24,7 +24,7 @@ struct Size: Model, ViewModifier {
 
 extension View {
 
-    func size(_ size: Size?) -> some View {
-        modifier(size ?? Size())
+    func size(_ size: FusionSize?) -> some View {
+        modifier(size ?? FusionSize())
     }
 }

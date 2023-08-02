@@ -1,5 +1,5 @@
 //
-//  Shadow.swift
+//  FusionShadow.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 02/08/2023.
@@ -9,13 +9,13 @@
 import SwiftUI
 import CubeFoundationSwiftUI
 
-struct Shadow: Model, ViewModifier {
+struct FusionShadow: Model, ViewModifier {
 
-    var x: Pt?
-    var y: Pt?
+    var x: CGFloat?
+    var y: CGFloat?
     var color: RGBAHex?
-    var blur: Pt?
-    var spread: Pt? // Unsupported by FigmaShadow
+    var blur: CGFloat?
+    var spread: CGFloat? // Unsupported by FigmaShadow
 
     // MARK: - ViewModifier
 
@@ -33,7 +33,7 @@ struct Shadow: Model, ViewModifier {
 
 extension View {
 
-    func shadow(_ shadow: Shadow?) -> some View {
-        modifier(shadow ?? Shadow())
+    func shadow(_ shadow: FusionShadow?) -> some View {
+        modifier(shadow ?? FusionShadow())
     }
 }

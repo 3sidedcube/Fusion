@@ -19,6 +19,11 @@ struct FusionText: Model, View {
 
     // MARK: - Computed
 
+    var numberOfLines: Int? {
+        guard let lineLimit else { return nil }
+        return max(0, lineLimit)
+    }
+
     var textAlignment: FusionTextAlignment {
         alignment ?? .default
     }
@@ -29,7 +34,7 @@ struct FusionText: Model, View {
         Text(value, isMarkdown: isMarkdown ?? false)
             .textStyle(textStyle)
             .foregroundColor(textColor?.color ?? .defaultTextColor)
-            .lineLimit(lineLimit)
+            .lineLimit(numberOfLines)
             .multilineTextAlignment(textAlignment.textAlignment)
             .frame(maxWidth: .infinity, alignment: textAlignment.alignment)
     }

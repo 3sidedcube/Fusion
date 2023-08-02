@@ -11,11 +11,11 @@ import SwiftUI
 struct FusionView: Model, View {
 
     var backgroundColor: RGBAHex?
-    var cornerRadius: Pt?
-    var padding: Padding?
-    var shadow: Shadow?
-    var border: Border?
-    var size: Size?
+    var cornerRadius: CGFloat?
+    var padding: FusionPadding?
+    var shadow: FusionShadow?
+    var border: FusionBorder?
+    var size: FusionSize?
 
     // MARK: - View
 

@@ -12,11 +12,5 @@ import CubeFoundationSwiftUI
 /// Shorthand for model conformance
 typealias Model = Equatable & Hashable & Codable
 
-/// Size in pts
-typealias Pt = CGFloat
-
-/// Size in pixels
-typealias Px = CGFloat
-
 /// A hex string of the form `#RRGGBBAA`
 typealias RGBAHex = Color.RGBAHex

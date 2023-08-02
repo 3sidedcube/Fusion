@@ -1,5 +1,5 @@
 //
-//  Padding.swift
+//  FusionPadding.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 02/08/2023.
@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-struct Padding: Model, ViewModifier {
+struct FusionPadding: Model, ViewModifier {
 
-    var leading: Pt?
-    var trailing: Pt?
-    var top: Pt?
-    var bottom: Pt?
+    var leading: CGFloat?
+    var trailing: CGFloat?
+    var top: CGFloat?
+    var bottom: CGFloat?
 
     // MARK: - ViewModifier
 
@@ -31,7 +31,7 @@ struct Padding: Model, ViewModifier {
 
 extension View {
 
-    func padding(_ padding: Padding?) -> some View {
-        modifier(padding ?? Padding())
+    func padding(_ padding: FusionPadding?) -> some View {
+        modifier(padding ?? FusionPadding())
     }
 }

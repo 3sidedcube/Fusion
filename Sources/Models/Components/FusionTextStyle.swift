@@ -12,10 +12,10 @@ import CubeFoundationSwiftUI
 struct FusionTextStyle: Model, ViewModifier {
 
     var name: String?
-    var size: Pt?
+    var size: CGFloat?
     var weight: Int?
-    var lineHeight: Px?
-    var letterSpacing: Px?
+    var lineHeight: CGFloat?
+    var letterSpacing: CGFloat?
 
     // MARK: - Computed
 

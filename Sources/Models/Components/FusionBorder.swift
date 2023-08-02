@@ -1,5 +1,5 @@
 //
-//  Border.swift
+//  FusionBorder.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 02/08/2023.
@@ -8,17 +8,17 @@
 
 import SwiftUI
 
-struct Border: Model {
+struct FusionBorder: Model {
 
     var color: RGBAHex?
-    var lineWidth: Pt?
+    var lineWidth: CGFloat?
 }
 
 // MARK: - InsettableShape + Extensions
 
 extension InsettableShape {
 
-    func border(_ border: Border?) -> some View {
+    func border(_ border: FusionBorder?) -> some View {
         strokeBorder(
             border?.color?.color ?? .defaultBorderColor,
             lineWidth: border?.lineWidth ?? .defaultBorderLineWidth
