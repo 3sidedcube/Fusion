@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FusionText: Model {
+struct FusionText: Model, View {
 
     var value: String
     var isMarkdown: Bool?
@@ -19,7 +19,7 @@ struct FusionText: Model {
     var letterSpacing: Px
     var lineLimit: Int?
 
-    // MARK: Computed
+    // MARK: - Computed
 
     var textAlignment: FusionTextAlignment {
         alignment ?? .default
@@ -29,11 +29,8 @@ struct FusionText: Model {
         guard let textColor else { return .defaultTextColor }
         return Color(hexString: textColor) ?? .defaultTextColor
     }
-}
 
-// MARK: - View
-
-extension FusionText: View {
+    // MARK: - View
 
     var body: some View {
         Text(value, isMarkdown: isMarkdown ?? false)
@@ -52,7 +49,7 @@ extension FusionText: View {
     }
 }
 
-// MARK: - Text
+// MARK: - Text + Extensions
 
 extension Text {
 
