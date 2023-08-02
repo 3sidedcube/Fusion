@@ -7,33 +7,31 @@
 //
 
 import SwiftUI
-import CubeFoundationSwiftUI
 
 struct FusionText: Model {
 
     var value: String
-    var isMarkdown: Bool
-    var textColor: RGBAHex
-    var font: FusionFont
-    var alignment: FusionTextAlignment
+    var isMarkdown: Bool?
+    var textColor: RGBAHex?
+    var font: FusionFont?
+    var alignment: FusionTextAlignment?
     var lineHeight: Px
     var letterSpacing: Px
-    var numberOfLines: Int
-}
+    var numberOfLines: Int?
 
-// MARK: - Computed
+    // MARK: Computed
 
-extension FusionText {
-
-    /// Map `font` to `Font.Name`
-    var fontName: Font.Name {
-        guard let fontName = font.name else { return .system }
-        return .custom(fontName)
+    var fusionFont: FusionFont {
+        font ?? FusionFont()
     }
 
-    /// Map `textColor` to `Color` falling back on a default
+    var textAlignment: FusionTextAlignment {
+        alignment ?? .default
+    }
+
     var foregroundColor: Color {
-        Color(hexString: textColor) ?? .defaultTextColor
+        guard let textColor else { return .defaultTextColor }
+        return Color(hexString: textColor) ?? .defaultTextColor
     }
 }
 
@@ -42,19 +40,19 @@ extension FusionText {
 extension FusionText: View {
 
     var body: some View {
-        Text(value, isMarkdown: isMarkdown)
+        Text(value, isMarkdown: isMarkdown ?? false)
             .style(.init(
-                fontName,
-                weight: .init(integer: font.weight),
-                size: font.size,
+                fusionFont.fontName,
+                weight: .init(integer: fusionFont.weight),
+                size: fusionFont.size,
                 lineHeight: lineHeight,
                 letter: letterSpacing,
                 underline: false
             ))
             .foregroundColor(foregroundColor)
             .lineLimit(numberOfLines)
-            .frame(maxWidth: .infinity, alignment: alignment.alignment)
-            .multilineTextAlignment(alignment.textAlignment)
+            .frame(maxWidth: .infinity, alignment: textAlignment.alignment)
+            .multilineTextAlignment(textAlignment.textAlignment)
     }
 }
 

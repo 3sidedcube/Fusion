@@ -14,6 +14,8 @@ enum FusionTextAlignment: String, Model {
     case center
     case trailing
 
+    // MARK: Computed
+
     /// Map to `Alignment`
     var alignment: Alignment {
         switch textAlignment {

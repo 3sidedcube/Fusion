@@ -7,10 +7,19 @@
 //
 
 import SwiftUI
+import CubeFoundationSwiftUI
 
 struct FusionFont: Model {
 
     var name: String?
     var size: Pt
     var weight: Int
+
+    // MARK: Computed
+
+    /// Map `font` to `Font.Name`
+    var fontName: Font.Name {
+        guard let fontName = name else { return .system }
+        return .custom(fontName)
+    }
 }
