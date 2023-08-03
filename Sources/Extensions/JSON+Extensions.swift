@@ -18,7 +18,7 @@ extension JSON: Hashable {
     }
 }
 
-// TODO: Computationally expensive, and same content?
+// TODO: Computationally expensive? And same content has same ID?
 
 extension JSON: Identifiable {
 
