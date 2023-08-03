@@ -1,4 +1,24 @@
 {
     "url": "https://images.unsplash.com/photo-1688315031371-e216dad33add",
-    "scaleType": "aspectFill"
+    "scaleType": "aspectFill",
+
+    "frame": {
+        "width": 350,
+        "height": 300
+    },
+    "cornerRadius": 10,
+    "border": {
+        "color": "#FFFFFF",
+        "lineWidth": 4
+    },
+    "shadow": {
+        "blur": 10,
+        "color": "#00000099"
+    },
+    "margins": {
+        "top": 20,
+        "leading": 20,
+        "bottom": 20,
+        "trailing": 20
+    }
 }

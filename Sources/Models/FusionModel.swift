@@ -43,11 +43,11 @@ private extension FusionModel {
             .frame(frame)
             .background(background)
             .cornerRadius(corner)
+            .clipped()
             .overlay {
                 RoundedRectangle(cornerRadius: corner)
                     .border(border)
             }
-            .clipped()
             .compositingGroup()
             .shadow(shadow)
             .padding(margins)

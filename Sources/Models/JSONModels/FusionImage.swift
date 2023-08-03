@@ -26,13 +26,16 @@ struct FusionImage: FusionModel, View {
     // MARK: - View
 
     var body: some View {
-        AsyncImage(url: url) { image in
-            image.scaleType(scaleType ?? .default)
-        } placeholder: {
-            Color.imagePlaceholder
-        }
-        .clipped()
-        .view(self)
+        Rectangle()
+            .fill(.clear)
+            .overlay {
+                AsyncImage(url: url) { image in
+                    image.scaleType(scaleType ?? .default)
+                } placeholder: {
+                    Color.imagePlaceholder
+                }
+            }
+            .view(self)
     }
 }
 

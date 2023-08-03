@@ -9,7 +9,8 @@
     },
     "subviews": [
         {
-            "type": "VStack",
+            "type": "Stack",
+            "axis": "vertical",
             "spacing": 10,
             "subviews": [
                 {
