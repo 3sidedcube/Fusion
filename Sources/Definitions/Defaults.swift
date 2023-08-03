@@ -44,8 +44,8 @@ extension Font.Name {
     static let `default`: Font.Name = .system
 }
 
-extension FusionTextAlignment {
-    static let `default`: FusionTextAlignment = .center
+extension FusionAlignment {
+    static let `default`: FusionAlignment = .center
 }
 
 extension FusionScaleType {

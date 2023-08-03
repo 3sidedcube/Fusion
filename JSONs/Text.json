@@ -1,12 +1,32 @@
 {
-    "value": "This is a text from JSON",
-    "isMarkdown": false,
+    "value": "This is a **text** from *JSON*",
+    "isMarkdown": true,
     "textColor": "#555555",
     "textStyle": {
-        "name": null,
         "size": 32,
-        "weight": 700
+        "weight": 400
     },
-    "alignment": "leading",
-    "lineLimit": null
+    "alignment": "center",
+
+    "padding": {
+        "top": 30,
+        "leading": 40,
+        "bottom": 30,
+        "trailing": 40
+    },
+    "frame": {
+        "width": -1
+    },
+    "backgroundColor": "#FFA500",
+    "cornerRadius": 30,
+    "border": {
+        "color": "#000000",
+        "lineWidth": 5
+    },
+    "margins": {
+        "top": 30,
+        "leading": 20,
+        "bottom": 30,
+        "trailing": 20
+    }
 }

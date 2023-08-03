@@ -13,17 +13,36 @@ struct FusionFrame: Model, ViewModifier {
 
     var width: CGFloat?
     var height: CGFloat?
+    var alignment: FusionAlignment?
+
+    var frameAlignment: Alignment {
+        (alignment ?? .default).alignment
+    }
+
+    func alignment(_ alignment: FusionAlignment?) -> Self {
+        var frame = self
+        frame.alignment = alignment
+        return frame
+    }
 
     func body(content: Content) -> some View {
         content
-            .frame(width: width?.value, height: height?.value)
-            .frame(maxWidth: width?.maxValue, maxHeight: height?.maxValue)
+            .frame(
+                width: width?.value,
+                height: height?.value,
+                alignment: frameAlignment
+            )
+            .frame(
+                maxWidth: width?.maxValue,
+                maxHeight: height?.maxValue,
+                alignment: frameAlignment
+            )
     }
 }
 
 // MARK: - CGFloat + Extensions
 
-private extension CGFloat {
+extension CGFloat {
 
     var value: CGFloat? {
         self < 0 ? nil : self

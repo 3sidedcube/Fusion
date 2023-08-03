@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FusionView: Model, View {
+struct FusionView: FusionModel, View {
 
     var padding: FusionPadding?
     var backgroundColor: RGBAHex?
@@ -33,18 +33,7 @@ struct FusionView: Model, View {
     var body: some View {
         Rectangle()
             .fill(.clear)
-            .padding(padding)
-            .background(background)
-            .frame(frame)
-            .cornerRadius(corner)
-            .overlay {
-                RoundedRectangle(cornerRadius: corner)
-                    .border(border)
-            }
-            .clipped()
-            .compositingGroup()
-            .shadow(shadow)
-            .padding(margins)
+            .view(self)
     }
 }
 

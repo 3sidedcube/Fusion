@@ -8,10 +8,20 @@
 
 import SwiftUI
 
-struct FusionImage: Model, View {
+struct FusionImage: FusionModel, View {
 
     var url: URL?
     var scaleType: FusionScaleType?
+
+    // MARK: View
+
+    var padding: FusionPadding?
+    var backgroundColor: RGBAHex?
+    var frame: FusionFrame?
+    var cornerRadius: CGFloat?
+    var border: FusionBorder?
+    var shadow: FusionShadow?
+    var margins: FusionPadding?
 
     // MARK: - View
 
@@ -22,6 +32,7 @@ struct FusionImage: Model, View {
             Color.imagePlaceholder
         }
         .clipped()
+        .view(self)
     }
 }
 

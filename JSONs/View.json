@@ -5,11 +5,11 @@
         "bottom": 10,
         "trailing": 20
     },
-    "backgroundColor": "#AB3E4788",
     "frame": {
         "width": -1,
         "height": 300
     },
+    "backgroundColor": "#AB3E4788",
     "cornerRadius": 20,
     "border": {
         "color": "#FFFFFF",

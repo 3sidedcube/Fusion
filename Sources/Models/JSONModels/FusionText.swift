@@ -8,24 +8,30 @@
 
 import SwiftUI
 
-struct FusionText: Model, View {
+struct FusionText: FusionModel, View {
 
     var value: String
     var isMarkdown: Bool?
     var textColor: RGBAHex?
     var textStyle: FusionTextStyle?
-    var alignment: FusionTextAlignment?
+    var alignment: FusionAlignment?
     var lineLimit: Int?
+
+    // MARK: View
+
+    var padding: FusionPadding?
+    var backgroundColor: RGBAHex?
+    var frame: FusionFrame?
+    var cornerRadius: CGFloat?
+    var border: FusionBorder?
+    var shadow: FusionShadow?
+    var margins: FusionPadding?
 
     // MARK: - Computed
 
     var numberOfLines: Int? {
         guard let lineLimit else { return nil }
         return max(0, lineLimit)
-    }
-
-    var textAlignment: FusionTextAlignment {
-        alignment ?? .default
     }
 
     // MARK: - View
@@ -35,8 +41,9 @@ struct FusionText: Model, View {
             .textStyle(textStyle)
             .foregroundColor(textColor?.color ?? .defaultTextColor)
             .lineLimit(numberOfLines)
-            .multilineTextAlignment(textAlignment.textAlignment)
-            .frame(alignment: textAlignment.alignment)
+            .multilineTextAlignment((alignment ?? .default).textAlignment)
+            .frame(frame?.alignment(alignment))
+            .view(self)
     }
 }
 
