@@ -29,7 +29,7 @@ struct FusionText: FusionModel, View {
 
     // MARK: - Computed
 
-    var numberOfLines: Int? {
+    private var numberOfLines: Int? {
         guard let lineLimit else { return nil }
         return max(0, lineLimit)
     }

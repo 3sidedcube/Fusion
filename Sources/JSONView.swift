@@ -1,5 +1,5 @@
 //
-//  FusionScreen.swift
+//  JSONView.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 02/08/2023.
@@ -31,7 +31,7 @@ struct JSONView: View {
             ProgressView()
                 .padding()
         } else if let json = viewModel.json {
-            AnyView(erasing: Fusion.shared.view(for: json))
+            Fusion.shared.erasedView(for: json)
         }
     }
 }

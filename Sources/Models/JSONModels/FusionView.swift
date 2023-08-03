@@ -18,16 +18,6 @@ struct FusionView: FusionModel, View {
     var shadow: FusionShadow?
     var margins: FusionPadding?
 
-    // MARK: - Computed
-
-    var background: Color {
-        backgroundColor?.color ?? .defaultBackgroundColor
-    }
-
-    var corner: CGFloat {
-        cornerRadius ?? .defaultCornerRadius
-    }
-
     // MARK: - View
 
     var body: some View {

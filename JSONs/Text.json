@@ -1,4 +1,5 @@
 {
+    "type": "Text",
     "value": "This is a **text** from *JSON*",
     "isMarkdown": true,
     "textColor": "#555555",

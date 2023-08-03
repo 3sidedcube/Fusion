@@ -27,6 +27,8 @@ extension CGFloat {
     static let defaultPaddingLeading: CGFloat = 0
     static let defaultPaddingBottom: CGFloat = 0
     static let defaultPaddingTrailing: CGFloat = 0
+
+    static let defaultStackSpacing: CGFloat = 0
 }
 
 extension Color {
@@ -54,4 +56,8 @@ extension FusionScaleType {
 
 extension JSONDecoder {
     static let `default` = JSONDecoder()
+}
+
+extension FusionAxis {
+    static let `default`: FusionAxis = .vertical
 }

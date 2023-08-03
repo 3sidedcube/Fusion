@@ -1,0 +1,63 @@
+{
+    "type": "Stack",
+    "axis": "vertical",
+    "spacing": 20,
+    "subviews": [
+        {
+            "type": "Image",
+            "url": "https://images.unsplash.com/photo-1690397756255-51f90a65c708",
+            "scaleType": "aspectFill",
+            "frame": {
+                "width": -1,
+                "height": 200
+            },
+            "cornerRadius": 10,
+            "border": {
+                "color": "#FFFFFF",
+                "lineWidth": 4
+            },
+            "shadow": {
+                "blur": 6
+            }
+        },
+        {
+            "type": "Text",
+            "value": "This Is Title Text",
+            "textStyle": {
+                "size": 24,
+                "weight": 700,
+            },
+            "frame": {
+                "width": -1
+            }
+        },
+        {
+            "type": "Text",
+            "value": "This is a longer body of text",
+            "textStyle": {
+                "size": 16,
+                "weight": 400,
+            },
+            "frame": {
+                "width": -1
+            }
+        }
+    ],
+    "padding": {
+        "top": 10,
+        "leading": 10,
+        "bottom": 10,
+        "trailing": 10
+    },
+    "backgroundColor": "#EFEFEF",
+    "frame": {
+        "width": -1
+    },
+    "cornerRadius": 10,
+    "margins": {
+        "top": 20,
+        "leading": 20,
+        "bottom": 20,
+        "trailing": 20
+    }
+}
