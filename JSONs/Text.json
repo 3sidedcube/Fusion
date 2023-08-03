@@ -1,0 +1,12 @@
+{
+    "value": "This is a text from JSON",
+    "isMarkdown": false,
+    "textColor": "#555555",
+    "textStyle": {
+        "name": null,
+        "size": 32,
+        "weight": 700
+    },
+    "alignment": "leading",
+    "lineLimit": null
+}

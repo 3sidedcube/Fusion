@@ -1,0 +1,28 @@
+{
+    "padding": {
+        "top": 10,
+        "leading": 20,
+        "bottom": 10,
+        "trailing": 20
+    },
+    "backgroundColor": "#AB3E4788",
+    "frame": {
+        "width": -1,
+        "height": 300
+    },
+    "cornerRadius": 20,
+    "border": {
+        "color": "#FFFFFF",
+        "lineWidth": 10
+    },
+    "shadow": {
+        "blur": 20,
+        "color": "#00000099"
+    },
+    "margins": {
+        "top": 30,
+        "leading": 20,
+        "bottom": 30,
+        "trailing": 20
+    }
+}

@@ -32,10 +32,10 @@ extension CGFloat {
 extension Color {
     static let defaultTextColor: Color = .black
 
-    static let defaultBackgroundColor: Color = .clear
-    static let defaultBorderColor: Color = .clear
+    static let defaultBackgroundColor: Color = .white.opacity(0)
+    static let defaultBorderColor: Color = .white.opacity(0)
 
-    static let defaultShadowColor: Color = .black
+    static let defaultShadowColor: Color = .black.opacity(0)
 
     static let imagePlaceholder = Color(white255: 200)
 }

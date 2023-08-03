@@ -10,23 +10,48 @@ import SwiftUI
 
 struct FusionView: Model, View {
 
-    var backgroundColor: RGBAHex?
-    var cornerRadius: CGFloat?
     var padding: FusionPadding?
-    var shadow: FusionShadow?
-    var border: FusionBorder?
+    var backgroundColor: RGBAHex?
     var frame: FusionFrame?
+    var cornerRadius: CGFloat?
+    var border: FusionBorder?
+    var shadow: FusionShadow?
+    var margins: FusionPadding?
+
+    // MARK: - Computed
+
+    var background: Color {
+        backgroundColor?.color ?? .defaultBackgroundColor
+    }
+
+    var corner: CGFloat {
+        cornerRadius ?? .defaultCornerRadius
+    }
 
     // MARK: - View
 
     var body: some View {
         Rectangle()
+            .fill(.clear)
             .padding(padding)
-            .background(backgroundColor?.color ?? .defaultBackgroundColor)
+            .background(background)
             .frame(frame)
-            .cornerRadius(cornerRadius ?? .defaultCornerRadius)
-            // .border(border)
+            .cornerRadius(corner)
+            .overlay {
+                RoundedRectangle(cornerRadius: corner)
+                    .border(border)
+            }
+            .clipped()
             .compositingGroup()
             .shadow(shadow)
+            .padding(margins)
+    }
+}
+
+// MARK: - PreviewProvider
+
+struct FusionView_Previews: PreviewProvider {
+    static var previews: some View {
+        FusionView.preview(from: "View")
     }
 }

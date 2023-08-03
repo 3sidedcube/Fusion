@@ -24,3 +24,11 @@ struct FusionImage: Model, View {
         .clipped()
     }
 }
+
+// MARK: - PreviewProvider
+
+struct FusionImage_Previews: PreviewProvider {
+    static var previews: some View {
+        FusionImage.preview(from: "Image")
+    }
+}

@@ -36,7 +36,7 @@ struct FusionText: Model, View {
             .foregroundColor(textColor?.color ?? .defaultTextColor)
             .lineLimit(numberOfLines)
             .multilineTextAlignment(textAlignment.textAlignment)
-            .frame(maxWidth: .infinity, alignment: textAlignment.alignment)
+            .frame(alignment: textAlignment.alignment)
     }
 }
 
@@ -55,5 +55,13 @@ extension Text {
         } else {
             self.init(verbatim: value)
         }
+    }
+}
+
+// MARK: - PreviewProvider
+
+struct FusionText_Previews: PreviewProvider {
+    static var previews: some View {
+        FusionText.preview(from: "Text")
     }
 }

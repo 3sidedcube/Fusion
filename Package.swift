@@ -39,7 +39,8 @@ let package = Package(
                     package: "cubefoundation-ios"
                 )
             ],
-            path: "Sources"
+            path: "Sources",
+            exclude: ["JSONs/JSONPreviews.swift"]
         ),
         .testTarget(
             name: "FusionTests",
