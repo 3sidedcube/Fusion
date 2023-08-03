@@ -15,16 +15,18 @@ struct FusionView: Model, View {
     var padding: FusionPadding?
     var shadow: FusionShadow?
     var border: FusionBorder?
-    var size: FusionSize?
+    var frame: FusionFrame?
 
     // MARK: - View
 
     var body: some View {
-        RoundedRectangle(cornerRadius: cornerRadius ?? .defaultCornerRadius)
-            .border(border)
-            .background(backgroundColor?.color ?? .defaultBackgroundColor)
-            .size(size)
-            .shadow(shadow)
+        Rectangle()
             .padding(padding)
+            .background(backgroundColor?.color ?? .defaultBackgroundColor)
+            .frame(frame)
+            .cornerRadius(cornerRadius ?? .defaultCornerRadius)
+            // .border(border)
+            .compositingGroup()
+            .shadow(shadow)
     }
 }

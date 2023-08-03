@@ -9,47 +9,63 @@
 import SwiftUI
 import SwiftyJSON
 
-// TODO: Doesn't need to be a screen
+struct JSONView: View {
 
-struct FusionScreen: View {
+    enum Source {
+        case json(JSON)
+        case url(URL)
+    }
 
-    @StateObject private var source = FusionSource()
+    @StateObject private var viewModel: JSONViewModel
+
+    init(url: URL) {
+        self.init(source: .url(url))
+    }
+
+    init(source: Source) {
+        _viewModel = .init(wrappedValue: JSONViewModel(source: source))
+    }
 
     var body: some View {
-        if source.isLoading {
+        if viewModel.isLoading {
             ProgressView()
-        } else if let json = source.json {
+                .padding()
+        } else if let json = viewModel.json {
             AnyView(erasing: Fusion.shared.view(for: json))
         }
     }
 }
 
-@MainActor final class FusionSource: ObservableObject {
+// MARK: - JSONViewModel
+
+@MainActor private final class JSONViewModel: ObservableObject {
 
     @Published private(set) var json: JSON?
     @Published private(set) var isLoading = false
 
-    func load(json: JSON) {
-        self.json = json
+    init(source: JSONView.Source) {
+        switch source {
+        case let .json(json):
+            self.json = json
+        case let .url(url):
+            Task {
+                try await load(url: url)
+            }
+        }
     }
 
-    func load(url: URL) async {
+    func load(url: URL) async throws {
         isLoading = true
         defer { isLoading = false }
-
-        do {
-            json = try await JSONLoader.load(url: url)
-        } catch {
-            print("Failed to load \(JSON.self) at \(url)")
-        }
+        json = try await JSON(url: url)
     }
 }
 
 // MARK: - JSONLoader
 
-private struct JSONLoader {
+private extension JSON {
 
-    static func load(url: URL) async throws -> JSON {
-        try JSON(data: Data(contentsOf: url))
+    init(url: URL) async throws {
+        try self.init(data: Data(contentsOf: url))
     }
 }
