@@ -19,7 +19,7 @@ import CubeFoundation
     /// `JSONDecoder` to use for decoding models from JSON
     var jsonDecoder: JSONDecoder = .default
 
-    /// Mapping of type keys to decodable view-models to render
+    /// Registration of types to decodable models to render as a view
     var models: [String: any JSONModel.Type] = [
         "View": FusionView.self,
         "Text": FusionText.self,
@@ -42,9 +42,15 @@ import CubeFoundation
         do {
             return try jsonModel(from: json)
         } catch {
-            print("\(Fusion.self) error loading JSON: \(error)")
+            logError(error)
             return EmptyView()
         }
+    }
+
+    /// Failed to load a view from JSON due to `error`
+    /// - Parameter error: `Error`
+    func logError(_ error: Error) {
+        print("\(Fusion.self) error loading JSON: \(error)")
     }
 }
 
@@ -56,6 +62,6 @@ enum FusionError: Error {
     /// Failed to find the type of model to decode
     case type
 
-    /// Failed to find a corresponding `JSONModel` for the given type
+    /// Failed to find a registered JSON model for the given type
     case model(type: String)
 }
