@@ -17,3 +17,12 @@ extension JSON: Hashable {
         hasher.combine(rawString() ?? "")
     }
 }
+
+// TODO: Computationally expensive, and same content?
+
+extension JSON: Identifiable {
+
+    public var id: String {
+        rawString() ?? ""
+    }
+}

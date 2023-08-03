@@ -1,7 +1,7 @@
 {
     "type": "Stack",
     "axis": "vertical",
-    "spacing": 20,
+    "spacing": 10,
     "subviews": [
         {
             "type": "Image",
@@ -27,13 +27,16 @@
                 "size": 24,
                 "weight": 700,
             },
+            "padding": {
+                "top": 10
+            },
             "frame": {
                 "width": -1
             }
         },
         {
             "type": "Text",
-            "value": "This is a longer body of text",
+            "value": "This is a longer body of text that should wrap onto multiple lines",
             "textStyle": {
                 "size": 16,
                 "weight": 400,

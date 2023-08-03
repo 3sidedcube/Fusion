@@ -40,10 +40,7 @@ struct FusionStack: FusionModel, View {
     var body: some View {
         stackView {
             if let subviews = subviews?.array {
-                ForEach(
-                    Array(subviews.enumerated()),
-                    id: \.offset
-                ) { _, subview in
+                ForEach(subviews) { subview in
                     Fusion.shared.erasedView(for: subview)
                 }
             }
