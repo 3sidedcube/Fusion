@@ -14,8 +14,6 @@ struct FusionStack: FusionModel, View {
     var spacing: CGFloat?
     var subviews: ModelJSON?
 
-    // MARK: View
-
     var padding: FusionPadding?
     var backgroundColor: RGBAHex?
     var frame: FusionFrame?

@@ -13,8 +13,6 @@ struct FusionImage: FusionModel, View {
     var url: URL?
     var scaleType: FusionScaleType?
 
-    // MARK: View
-
     var padding: FusionPadding?
     var backgroundColor: RGBAHex?
     var frame: FusionFrame?

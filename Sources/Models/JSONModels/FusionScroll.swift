@@ -14,8 +14,6 @@ struct FusionScroll: FusionModel, View {
     var showsIndicators: Bool?
     var subviews: ModelJSON?
 
-    // MARK: View
-
     var padding: FusionPadding?
     var backgroundColor: RGBAHex?
     var frame: FusionFrame?

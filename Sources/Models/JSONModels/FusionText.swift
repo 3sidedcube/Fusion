@@ -17,8 +17,6 @@ struct FusionText: FusionModel, View {
     var alignment: FusionAlignment?
     var lineLimit: Int?
 
-    // MARK: View
-
     var padding: FusionPadding?
     var backgroundColor: RGBAHex?
     var frame: FusionFrame?
