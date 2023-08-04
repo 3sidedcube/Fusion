@@ -24,22 +24,15 @@ extension Decodable where Self: View {
             .appendingPathExtension("json")
     }
 
-    /// Decode this model from the given `file`
-    /// - Parameter file: `JSONFile`
-    /// - Returns: `Self`
-    @MainActor static func decode(from file: JSONFile) throws -> Self {
-        try Fusion.shared.jsonDecoder.decode(
-            Self.self,
-            from: Data(contentsOf: url(for: file))
-        )
-    }
-
     /// Load this model for preview from the given `file`
     /// - Parameter file: `JSONFile`
     /// - Returns: `Self`
     @MainActor static func preview(from file: JSONFile) -> Self {
         do {
-            return try decode(from: file)
+            return try Fusion.shared.jsonDecoder.decode(
+                Self.self,
+                from: Data(contentsOf: url(for: file))
+            )
         } catch {
             fatalError("Failed to load \(Self.self) from \(JSONFile.self) '\(file)' - \(error)")
         }
