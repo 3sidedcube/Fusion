@@ -44,6 +44,7 @@ struct FusionScroll: FusionModel, View {
                 }
             }
         }
+        .view(self)
     }
 }
 
