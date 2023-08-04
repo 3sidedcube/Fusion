@@ -6,23 +6,44 @@
 //  Copyright © 2023 3 SIDED CUBE APP PRODUCTIONS LTD. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 import SwiftyJSON
 
-// TODO: Can we do this?
+// MARK: - Hashable
 
 extension JSON: Hashable {
 
+    // TODO: Can we do this
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(rawString() ?? "")
+        if let hashable = object as? any Hashable {
+            hashable.hash(into: &hasher)
+        } else {
+            hasher.combine(rawString() ?? "")
+        }
     }
 }
 
-// TODO: Computationally expensive? And same content has same ID?
+// MARK: - JSONArray + View
 
-extension JSON: Identifiable {
+extension JSONArray: View {
 
-    public var id: String {
-        rawString() ?? ""
+    @MainActor private var views: [AnyView]? {
+        compactMap { json in
+            guard let view = try? Fusion.shared.view(for: json) else { return nil }
+            return AnyView(erasing: view)
+        }
+    }
+
+    public var body: some View {
+        if let views, !views.isEmpty {
+            ForEach(
+                Swift.Array(zip(views.indices, views)),
+                id: \.0
+            ) { _, view in
+                view
+            }
+        } else {
+            EmptyView()
+        }
     }
 }

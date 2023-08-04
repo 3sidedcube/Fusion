@@ -12,7 +12,7 @@ import SwiftUI
 ///
 /// This entity should be understood as a `ViewModifier`, but we don't
 /// conform to it here so that we don't interfere with `View` conformance.
-protocol FusionModel: Model, View {
+protocol FusionModel: DecodableView {
 
     var padding: FusionPadding? { get }
     var frame: FusionFrame? { get }

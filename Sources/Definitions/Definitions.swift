@@ -24,3 +24,6 @@ typealias ModelJSON = JSON
 
 /// Denotes a `JSON` which represents an action
 typealias ActionJSON = JSON
+
+/// A `JSON` array
+typealias JSONArray = [JSON]

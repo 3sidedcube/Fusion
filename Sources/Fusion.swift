@@ -24,28 +24,28 @@ import CubeFoundation
         "View": FusionView.self,
         "Text": FusionText.self,
         "Image": FusionImage.self,
-        "Stack": FusionStack.self
+        "Stack": FusionStack.self,
+        "Scroll": FusionScroll.self
     ]
 
     /// Map `JSON` to a `DecodableView`
     /// - Parameter json: `JSON`
     /// - Returns: `DecodableView`
-    private func jsonModel(from json: JSON) throws -> any DecodableView {
+    private func jsonModel(for json: JSON) throws -> any DecodableView {
         let type = try json["type"].string ?! FusionError.type
         let model = try models[type] ?! FusionError.model(type: type)
         return try jsonDecoder.decode(model, from: json.rawData())
     }
 
     /// Get any `View` for `json`.
-    /// - Note: Errors that are thrown are caught and the method returns `EmptyView`.
     /// - Parameter json: `JSON`
     /// - Returns: `View`
-    private func view(for json: JSON) -> any View {
+    func view(for json: JSON) throws -> any View {
         do {
-            return try jsonModel(from: json)
+            return try jsonModel(for: json)
         } catch {
             logError(error)
-            return EmptyView()
+            throw error
         }
     }
 
@@ -53,7 +53,8 @@ import CubeFoundation
     /// - Parameter json: `JSON`
     /// - Returns: `View`
     func erasedView(for json: JSON) -> AnyView {
-        AnyView(erasing: Fusion.shared.view(for: json))
+        let view = (try? view(for: json)) ?? EmptyView()
+        return AnyView(erasing: view)
     }
 
     /// Failed to load a view from JSON due to `error`

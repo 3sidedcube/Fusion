@@ -39,9 +39,7 @@ struct FusionScroll: FusionModel, View {
             showsIndicators: showsIndicators ?? .defaultShowsIndicators
         ) {
             if let subviews = subviews?.array {
-                ForEach(subviews) { subview in
-                    Fusion.shared.erasedView(for: subview)
-                }
+                subviews
             }
         }
         .view(self)
