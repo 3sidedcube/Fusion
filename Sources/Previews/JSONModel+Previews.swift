@@ -22,12 +22,23 @@ extension Decodable where Self: View {
     /// - Returns: `URL`
     static func url(for file: JSONFile) throws -> URL {
         try URL.packageDirectory
+            .appending(path: "Tests")
             .appending(path: "JSONs")
             .appending(path: file)
             .appendingPathExtension("json")
     }
 
-    /// Load this model for preview from the given `file`
+    /// Decode this model from the given `file`
+    /// - Parameter file: `JSONFile`
+    /// - Returns: `Self`
+    @MainActor static func decode(from file: JSONFile) throws -> Self {
+        try Fusion.shared.jsonDecoder.decode(
+            Self.self,
+            from: Data(contentsOf: url(for: file))
+        )
+    }
+
+    /// Decode this model from the given `file` for previewing, fatal erroring on throw
     /// - Parameter file: `JSONFile`
     /// - Returns: `Self`
     @MainActor static func preview(from file: JSONFile) -> Self {
