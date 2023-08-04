@@ -51,6 +51,6 @@ struct FusionScroll: FusionModel, View {
 
 // struct FusionScroll_Previews: PreviewProvider {
 //     static var previews: some View {
-//         FusionScroll.preview(from: "Scoll")
+//         FusionScroll.preview(from: "Scroll")
 //     }
 // }
