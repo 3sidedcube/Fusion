@@ -46,6 +46,6 @@ let package = Package(
             name: "FusionTests",
             dependencies: ["Fusion"],
             path: "Tests"
-        ),
+        )
     ]
 )
