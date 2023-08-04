@@ -22,6 +22,10 @@ struct JSONView: View {
         self.init(source: .url(url))
     }
 
+    init(json: JSON) {
+        self.init(source: .json(json))
+    }
+
     init(source: Source) {
         _viewModel = .init(wrappedValue: JSONViewModel(source: source))
     }

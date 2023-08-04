@@ -1,5 +1,5 @@
 //
-//  JSONPreviews.swift
+//  JSONModel+Previews.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 03/08/2023.
