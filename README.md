@@ -2,7 +2,7 @@
 
 A Swift Package (library) that renders JSON data into SwiftUI views.
 
-## Supported Views
+## Supported views
 
 * View
 * Text
@@ -12,7 +12,7 @@ A Swift Package (library) that renders JSON data into SwiftUI views.
 
 The `View` properties can be applied to all models.
 
-## Basic Usage
+## Basic usage
 
 ```swift
 struct MyView: View {
@@ -23,7 +23,7 @@ struct MyView: View {
 }
 ```
 
-## Make A Custom Model
+## Make a custom model
 
 Make your own (view) model:
 
