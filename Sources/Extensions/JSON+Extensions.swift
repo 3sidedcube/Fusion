@@ -13,7 +13,7 @@ import SwiftyJSON
 
 extension JSON: Hashable {
 
-    // TODO: Can we do this
+    // TODO: Can we do this?
     public func hash(into hasher: inout Hasher) {
         if let hashable = object as? any Hashable {
             hashable.hash(into: &hasher)
