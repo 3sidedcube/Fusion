@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+// Strictly internal. Consider adding to SPM target:
+// exclude: ["Previews/JSONModel+Previews.swift"]
+
 /// Add preview logic to JSON models
 extension Decodable where Self: View {
 

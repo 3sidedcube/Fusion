@@ -40,7 +40,6 @@ let package = Package(
                 )
             ],
             path: "Sources"
-            // exclude: ["Previews/JSONModel+Previews.swift"]
         ),
         .testTarget(
             name: "FusionTests",
