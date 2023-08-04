@@ -28,7 +28,7 @@ struct FusionStack: FusionModel, View {
     // MARK: - Computed
 
     private var stackAxis: FusionAxis {
-        axis ?? .default
+        axis ?? .stackDefault
     }
 
     private var stackSpacing: CGFloat {

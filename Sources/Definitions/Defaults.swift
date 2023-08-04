@@ -8,6 +8,10 @@
 
 import SwiftUI
 
+extension Bool {
+    static let defaultShowsIndicators = true
+}
+
 extension Int {
     static let defaultFontWeight = 400
 }
@@ -59,5 +63,6 @@ extension JSONDecoder {
 }
 
 extension FusionAxis {
-    static let `default`: FusionAxis = .vertical
+    static let scrollDefault: FusionAxis = .vertical
+    static let stackDefault: FusionAxis = .vertical
 }
