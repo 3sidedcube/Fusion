@@ -42,7 +42,7 @@ struct FusionFrame: Model, ViewModifier {
 
 // MARK: - CGFloat + Extensions
 
-extension CGFloat {
+private extension CGFloat {
 
     var value: CGFloat? {
         self < 0 ? nil : self
