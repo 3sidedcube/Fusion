@@ -12,7 +12,7 @@ import SwiftUI
 ///
 /// This entity should be understood as a `ViewModifier`, but we don't
 /// conform to it here so that we don't interfere with `View` conformance.
-protocol FusionModel: Model {
+protocol FusionModel: Model, View {
 
     var padding: FusionPadding? { get }
     var frame: FusionFrame? { get }
@@ -21,6 +21,7 @@ protocol FusionModel: Model {
     var border: FusionBorder? { get }
     var shadow: FusionShadow? { get }
     var margins: FusionPadding? { get }
+    var onTap: ActionJSON? { get }
 }
 
 // MARK: - Extensions
@@ -37,7 +38,23 @@ private extension FusionModel {
 
     // MARK: - ViewModifier
 
-    @ViewBuilder func modify<Content: View>(_ content: Content) -> some View {
+    @MainActor @ViewBuilder func modify<Content: View>(
+        _ content: Content
+    ) -> some View {
+        if let onTap {
+            Button(action: {
+                Fusion.shared.handle(action: onTap, from: self)
+            }, label: {
+                modifyView(content)
+            })
+        } else {
+            modifyView(content)
+        }
+    }
+
+    @MainActor @ViewBuilder private func modifyView<Content: View>(
+        _ content: Content
+    ) -> some View {
         content
             .padding(padding)
             .frame(frame)
@@ -58,7 +75,9 @@ private extension FusionModel {
 
 extension View {
 
-    func view<Model: FusionModel>(_ model: Model) -> some View {
+    @MainActor func view<Model: FusionModel>(
+        _ model: Model
+    ) -> some View {
         model.modify(self)
     }
 }

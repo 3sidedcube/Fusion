@@ -7,13 +7,12 @@
 //
 
 import SwiftUI
-import SwiftyJSON
 
 struct FusionScroll: FusionModel, View {
 
     var axis: FusionAxis?
     var showsIndicators: Bool?
-    var subviews: JSON?
+    var subviews: ModelJSON?
 
     // MARK: View
 
@@ -24,6 +23,7 @@ struct FusionScroll: FusionModel, View {
     var border: FusionBorder?
     var shadow: FusionShadow?
     var margins: FusionPadding?
+    var onTap: ActionJSON?
 
     // MARK: - Computed
 

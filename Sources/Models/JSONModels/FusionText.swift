@@ -26,6 +26,7 @@ struct FusionText: FusionModel, View {
     var border: FusionBorder?
     var shadow: FusionShadow?
     var margins: FusionPadding?
+    var onTap: ActionJSON?
 
     // MARK: - Computed
 

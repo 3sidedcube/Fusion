@@ -20,17 +20,17 @@ import CubeFoundation
     var jsonDecoder: JSONDecoder = .default
 
     /// Registration of types to decodable models to render as a view
-    var models: [String: any JSONModel.Type] = [
+    var models: [String: any DecodableView.Type] = [
         "View": FusionView.self,
         "Text": FusionText.self,
         "Image": FusionImage.self,
         "Stack": FusionStack.self
     ]
 
-    /// Map `JSON` to a `JSONModel`
+    /// Map `JSON` to a `DecodableView`
     /// - Parameter json: `JSON`
-    /// - Returns: `JSONModel`
-    private func jsonModel(from json: JSON) throws -> any JSONModel {
+    /// - Returns: `DecodableView`
+    private func jsonModel(from json: JSON) throws -> any DecodableView {
         let type = try json["type"].string ?! FusionError.type
         let model = try models[type] ?! FusionError.model(type: type)
         return try jsonDecoder.decode(model, from: json.rawData())
@@ -59,7 +59,17 @@ import CubeFoundation
     /// Failed to load a view from JSON due to `error`
     /// - Parameter error: `Error`
     func logError(_ error: Error) {
-        print("\(Fusion.self) error loading JSON: \(error)")
+        print("[\(Fusion.self)] Error loading JSON model: \(error)")
+    }
+
+    // MARK: - Actions
+
+    /// Handle the given `action`
+    /// - Parameters:
+    ///   - action: `JSON`
+    ///   - view: `Content`
+    func handle<Content: View>(action: JSON, from view: Content) {
+        // TODO
     }
 }
 

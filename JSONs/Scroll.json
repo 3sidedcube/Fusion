@@ -30,7 +30,7 @@
                     "value": "This Is Title Text",
                     "textStyle": {
                         "size": 24,
-                        "weight": 700,
+                        "weight": 700
                     },
                     "padding": {
                         "top": 10
@@ -44,7 +44,7 @@
                     "value": "This is a longer body of text that should wrap onto multiple lines",
                     "textStyle": {
                         "size": 16,
-                        "weight": 400,
+                        "weight": 400
                     },
                     "frame": {
                         "width": -1

@@ -7,13 +7,20 @@
 //
 
 import SwiftUI
+import SwiftyJSON
 import CubeFoundationSwiftUI
 
 /// Shorthand for model conformance
 typealias Model = Equatable & Hashable & Codable
 
 /// A view-model that can be decoded from JSON and rendered into a SwiftUI view
-typealias JSONModel = Decodable & View
+typealias DecodableView = Decodable & View
 
 /// A hex string of the form `#RRGGBBAA`
 typealias RGBAHex = Color.RGBAHex
+
+/// Denotes a `JSON` which represents an view
+typealias ModelJSON = JSON
+
+/// Denotes a `JSON` which represents an action
+typealias ActionJSON = JSON
