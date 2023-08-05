@@ -10,6 +10,7 @@ import SwiftUI
 
 extension Bool {
     static let defaultShowsIndicators = true
+    static let defaultLinkInApp = true
 }
 
 extension Int {

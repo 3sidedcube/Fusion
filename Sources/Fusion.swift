@@ -49,7 +49,7 @@ import CubeFoundation
         }
     }
 
-    /// Get `View` for `json`
+    /// Get `View` for `json`, if an error is thrown fallback on empty.
     /// - Parameter json: `JSON`
     /// - Returns: `View`
     func erasedView(for json: JSON) -> AnyView {
