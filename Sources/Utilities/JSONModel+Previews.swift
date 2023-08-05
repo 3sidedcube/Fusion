@@ -9,7 +9,7 @@
 import SwiftUI
 
 // Strictly internal. Consider adding to SPM target:
-// exclude: ["Previews/JSONModel+Previews.swift"]
+// exclude: ["Utilities/JSONModel+Previews.swift"]
 
 /// Add preview logic to JSON models
 extension Decodable where Self: View {
@@ -43,10 +43,8 @@ extension Decodable where Self: View {
     /// - Returns: `Self`
     @MainActor static func preview(from file: JSONFile) -> Self {
         do {
-            return try Fusion.shared.jsonDecoder.decode(
-                Self.self,
-                from: Data(contentsOf: url(for: file))
-            )
+            let data = try Data(contentsOf: url(for: file))
+            return try Fusion.shared.decode(Self.self, from: data)
         } catch {
             fatalError("Failed to load \(Self.self) from \(JSONFile.self) '\(file)' - \(error)")
         }

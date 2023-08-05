@@ -1,5 +1,5 @@
 //
-//  PageAction.swift
+//  NativeAction.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 05/08/2023.
@@ -8,21 +8,17 @@
 
 import SwiftUI
 
-struct PageAction: Model, ViewModifier {
+struct NativeAction: Model, ViewModifier {
 
-    var url: URL
+    var id: String
 
     // MARK: - ViewModifier
 
     func body(content: Content) -> some View {
-        NavigationLink(value: self) {
+        Button(action: {
+            Fusion.shared.handleNativeAction(id: id, from: content)
+        }, label: {
             content
-        }
-    }
-
-    // MARK: - FusionAction
-
-    func navigationDestination() -> some View {
-        JSONView(url: url)
+        })
     }
 }

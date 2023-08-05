@@ -36,17 +36,18 @@ private extension FusionModel {
         cornerRadius ?? .defaultCornerRadius
     }
 
+    @MainActor var action: (any ViewModifier)? {
+        guard let onTap else { return nil }
+        return try? Fusion.shared.viewModifier(for: onTap)
+    }
+
     // MARK: - ViewModifier
 
     @MainActor @ViewBuilder func modify<Content: View>(
         _ content: Content
     ) -> some View {
-        if let onTap {
-            Button(action: {
-                Fusion.shared.handle(action: onTap, from: self)
-            }, label: {
-                modifyView(content)
-            })
+        if let action {
+            modifyView(content) // TODO: Modify the view
         } else {
             modifyView(content)
         }

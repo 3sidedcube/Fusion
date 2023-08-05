@@ -12,31 +12,38 @@ import SwiftyJSON
 struct JSONView: View {
 
     enum Source {
-        case json(JSON)
+        case json(ModelJSON)
         case url(URL)
     }
 
     @StateObject private var viewModel: JSONViewModel
 
-    init(url: URL) {
-        self.init(source: .url(url))
-    }
-
-    init(json: JSON) {
-        self.init(source: .json(json))
-    }
-
     init(source: Source) {
-        _viewModel = .init(wrappedValue: JSONViewModel(source: source))
+        _viewModel = .init(
+            wrappedValue: JSONViewModel(source: source)
+        )
     }
 
     var body: some View {
         if viewModel.isLoading {
             ProgressView()
                 .padding()
-        } else if let json = viewModel.json {
-            Fusion.shared.erasedView(for: json)
+        } else if let view = viewModel.view {
+            view
         }
+    }
+}
+
+// MARK: - Extensions
+
+extension JSONView {
+
+    init(url: URL) {
+        self.init(source: .url(url))
+    }
+
+    init(json: ModelJSON) {
+        self.init(source: .json(json))
     }
 }
 
@@ -44,8 +51,14 @@ struct JSONView: View {
 
 @MainActor private final class JSONViewModel: ObservableObject {
 
-    @Published private(set) var json: JSON?
+    @Published private(set) var json: ModelJSON?
     @Published private(set) var isLoading = false
+
+    var view: AnyView? {
+        guard let json else { return nil }
+        guard let view = try? Fusion.shared.view(for: json) else { return nil }
+        return AnyView(erasing: view)
+    }
 
     init(source: JSONView.Source) {
         switch source {
@@ -61,13 +74,13 @@ struct JSONView: View {
     func load(url: URL) async throws {
         isLoading = true
         defer { isLoading = false }
-        json = try await JSON(url: url)
+        json = try await ModelJSON(url: url)
     }
 }
 
 // MARK: - JSONLoader
 
-private extension JSON {
+private extension ModelJSON {
 
     init(url: URL) async throws {
         try self.init(data: Data(contentsOf: url))
