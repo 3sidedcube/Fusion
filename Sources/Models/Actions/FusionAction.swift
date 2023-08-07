@@ -8,33 +8,37 @@
 
 import SwiftUI
 
-// TODO: View needs to navigate actions
-
+/// A `Model` decoded from an `ActionJSON` which modifies a SwiftUI `View`.
 protocol FusionAction: Model, ViewModifier {
+
+    /// A view that is navigated to
     associatedtype Destination: View
 
+    /// If this action navigates to another view via a `NavigationLink`, return
+    /// the `Destination` for that action.
     @ViewBuilder func navigationDestination() -> Destination
 }
 
+// MARK: - Extensions
+
 extension FusionAction {
 
-    /// By default, return empty view
+    /// By default, returns an empty view
     @ViewBuilder func navigationDestination() -> some View {}
 }
 
+// MARK: - View + Extensions
+
 extension View {
 
-    func navigate<Action: FusionAction>(_ type: Action.Type) -> some View {
-        navigationDestination(for: type) { action in
-            action.navigationDestination()
-        }
-    }
-
-    // TODO: Generalize with Fusion.shared.actions
+    /// Add a navigation destination for all the actions on the shared `Fusion`
+    /// - Returns: `View`
     @MainActor func navigateFusionActions() -> some View {
-        self
-            .navigate(LinkAction.self)
-            .navigate(PageAction.self)
-            .navigate(NativeAction.self)
+        ForEach(Array(Fusion.shared.actions), id: \.0) { _, type in
+            navigationDestination(for: type) { action in
+                action.navigationDestination().erased()
+            }
+            .erased()
+        }
     }
 }

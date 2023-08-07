@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-/// A `Model` which renders a SwiftUI `View`.
+/// A `Model` decoded from a `ModelJSON` which renders a SwiftUI `View`.
 /// All entities have the properties of a `FusionView`.
 ///
 /// This entity should be understood as both a `View` and a `ViewModifier`.
