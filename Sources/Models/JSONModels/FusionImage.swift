@@ -28,13 +28,35 @@ struct FusionImage: FusionModel {
         Rectangle()
             .fill(.clear)
             .overlay {
-                AsyncImage(url: url) { image in
-                    image.scaleType(scaleType ?? .default)
-                } placeholder: {
-                    Color.imagePlaceholder
-                }
+                URLImage(
+                    url: url,
+                    scaleType: scaleType ?? .default
+                )
             }
             .view(self)
+    }
+}
+
+// MARK: - URLImage
+
+private struct URLImage: View {
+
+    var url: URL?
+    var scaleType: FusionScaleType
+
+    var body: some View {
+        AsyncImage(url: url) { phase in
+            if let image = phase.image {
+                image.scaleType(scaleType)
+            } else {
+                Color.imagePlaceholder
+                    .overlay {
+                        if phase.error == nil {
+                            ProgressView()
+                        }
+                    }
+            }
+        }
     }
 }
 
