@@ -2,7 +2,7 @@
 
 A Swift Package (library) that renders JSON data into SwiftUI views.
 
-## Supported views
+## Supported types
 
 * View
 * Text
@@ -22,6 +22,37 @@ struct MyView: View {
     }
 }
 ```
+
+## How it works
+
+For every UI component that could be represented as a JSON object, a `FusionModel` is created like:
+
+```swift
+struct FusionText: FusionModel {
+    var value: String
+    var isMarkdown: Bool?
+    ...
+}
+```
+
+Since a `FusionModel` is `Decodable`, this can be decoded from a JSON such as:
+
+```json
+{
+    "type": "Text",
+    "value": "Hello 👋",
+    "isMarkdown": false,
+    ...
+}
+```
+
+Fusion decodes the JSON into its corresponding model using the `type` property.
+It's matched to a model type in the `Fusion.shared.models` property.
+
+Since a `FusionModel` is also a `View`, it can then be rendered into UI.
+A similar logic applies to `FusionAction`s, except they are rendered as `ViewModifiers`.
+
+The models in this library are prefixed with the `"Fusion*"` suffix to not interfere with the SwiftUI types.
 
 ## Make a custom model
 
