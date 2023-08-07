@@ -43,17 +43,7 @@ private extension FusionModel {
 
     // MARK: - ViewModifier
 
-    @MainActor @ViewBuilder func modify(_ content: some View) -> some View {
-        if let action {
-            modifyView(content)
-                .modify(with: action)
-                .erased()
-        } else {
-            modifyView(content)
-        }
-    }
-
-    @MainActor @ViewBuilder private func modifyView(_ content: some View) -> some View {
+    @ViewBuilder private func update(_ content: some View) -> some View {
         content
             .padding(padding)
             .frame(frame)
@@ -67,6 +57,16 @@ private extension FusionModel {
             .compositingGroup()
             .shadow(shadow)
             .padding(margins)
+    }
+
+    @MainActor @ViewBuilder func modify(_ content: some View) -> some View {
+        if let action {
+            update(content)
+                .modify(with: action)
+                .erased()
+        } else {
+            update(content)
+        }
     }
 }
 
