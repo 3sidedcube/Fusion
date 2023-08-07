@@ -57,7 +57,7 @@ import CubeFoundation
     // MARK: - Models
 
     /// Map `JSON` to a `DecodableView`
-    /// - Parameter json: `JSON`
+    /// - Parameter json: `ModelJSON`
     /// - Returns: `DecodableView`
     private func model(for json: ModelJSON) throws -> any DecodableView {
         let type = try json[typeKey].string ?! FusionError.type
@@ -66,7 +66,7 @@ import CubeFoundation
     }
 
     /// Get any `View` for `json`.
-    /// - Parameter json: `JSON`
+    /// - Parameter json: `ModelJSON`
     /// - Returns: `View`
     func view(for json: ModelJSON) throws -> any View {
         try logOnThrow {
@@ -77,7 +77,7 @@ import CubeFoundation
     // MARK: - Actions
 
     /// Map `JSON` to a `DecodableViewModifier`
-    /// - Parameter json: `JSON`
+    /// - Parameter json: `ActionJSON`
     /// - Returns: `DecodableViewModifier`
     private func action(for json: ActionJSON) throws -> any DecodableViewModifier {
         let type = try json[typeKey].string ?! FusionError.type
@@ -86,7 +86,7 @@ import CubeFoundation
     }
 
     /// Get any `ViewModifier` for `json`.
-    /// - Parameter json: `JSON`
+    /// - Parameter json: `ActionJSON`
     /// - Returns: `View`
     func viewModifier(for json: ActionJSON) throws -> any ViewModifier {
         try logOnThrow {
