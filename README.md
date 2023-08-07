@@ -2,16 +2,6 @@
 
 A Swift Package (library) that renders JSON data into SwiftUI views.
 
-## Supported types
-
-* View
-* Text
-* Image
-* Stack
-* Scroll
-
-The `View` properties can be applied to all models.
-
 ## Basic usage
 
 ```swift
@@ -53,6 +43,16 @@ Since a `FusionModel` is also a `View`, it can then be rendered into UI.
 A similar logic applies to `FusionAction`s, except they are rendered as `ViewModifiers`.
 
 The models in this library are prefixed with the `"Fusion*"` suffix to not interfere with the SwiftUI types.
+
+## Supported types
+
+* View
+* Text
+* Image
+* Stack
+* Scroll
+
+The `View` properties can be applied to all models.
 
 ## Make a custom model
 
