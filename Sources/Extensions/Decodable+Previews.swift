@@ -14,7 +14,7 @@ import SwiftUI
 /// Add preview logic to JSON models
 extension Decodable where Self: View {
 
-    /// Name of the JSON file without the path extension
+    /// Name of the JSON file without the path extension in the sample directory
     typealias JSONFile = String
 
     /// Get the `URL` to `file`
