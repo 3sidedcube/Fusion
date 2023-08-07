@@ -28,8 +28,8 @@ struct JSONView: View {
         if viewModel.isLoading {
             ProgressView()
                 .padding()
-        } else if let view = viewModel.view {
-            view.erased()
+        } else if let json = viewModel.json {
+            (try? Fusion.shared.view(for: json))?.erased()
         }
     }
 }
@@ -53,11 +53,6 @@ extension JSONView {
 
     @Published private(set) var json: ModelJSON?
     @Published private(set) var isLoading = false
-
-    var view: (any View)? {
-        guard let json else { return nil }
-        return try? Fusion.shared.view(for: json)
-    }
 
     init(source: JSONView.Source) {
         switch source {
