@@ -36,7 +36,7 @@ struct FusionText: FusionModel {
     // MARK: - View
 
     var body: some View {
-        Text(value, isMarkdown: isMarkdown ?? false)
+        Text(value, isMarkdown: isMarkdown ?? .defaultIsMarkdown)
             .textStyle(textStyle)
             .foregroundColor(textColor?.color ?? .defaultTextColor)
             .lineLimit(numberOfLines)
@@ -51,15 +51,19 @@ struct FusionText: FusionModel {
 extension Text {
 
     /// Initialize with a `value` that is either markdown or plain text.
-    /// - Warning: If the markdown can't be parsed the error is silently masked.
     /// - Parameters:
     ///   - value: String to render
     ///   - isMarkdown: Is the `value` markdown
-    init(_ value: String, isMarkdown: Bool) {
-        // TODO: Log markdown error
-        if isMarkdown, let markdown = try? AttributedString(markdown: value) {
-            self.init(markdown)
-        } else {
+    @MainActor init(_ value: String, isMarkdown: Bool) {
+        guard isMarkdown else {
+            self.init(verbatim: value)
+            return
+        }
+
+        do {
+            try self.init(AttributedString(markdown: value))
+        } catch {
+            Fusion.shared.log("Failed to load markdown: \(error)")
             self.init(verbatim: value)
         }
     }

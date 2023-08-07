@@ -9,6 +9,7 @@
 import SwiftUI
 
 extension Bool {
+    static let defaultIsMarkdown = false
     static let defaultShowsIndicators = true
     static let defaultLinkInApp = true
     static let defaultStackIsLazy = true
