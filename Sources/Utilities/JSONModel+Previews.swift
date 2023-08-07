@@ -43,8 +43,7 @@ extension Decodable where Self: View {
     /// - Returns: `Self`
     @MainActor static func preview(from file: JSONFile) -> Self {
         do {
-            let data = try Data(contentsOf: url(for: file))
-            return try Fusion.shared.decode(Self.self, from: data)
+            return try decode(from: file)
         } catch {
             fatalError("Failed to load \(Self.self) from \(JSONFile.self) '\(file)' - \(error)")
         }
