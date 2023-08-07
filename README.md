@@ -59,7 +59,7 @@ The `View` properties can be applied to all models.
 Make your own (view) model:
 
 ```swift
-struct MyModel: FusionModel, View {
+struct MyModel: FusionModel {
     var myProperty: String
     ...
     
