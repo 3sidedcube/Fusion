@@ -24,9 +24,17 @@ extension FusionAction {
 
 extension View {
 
-    func navigate<Action: FusionAction>(_ action: Action) -> some View {
-        navigationDestination(for: Action.self) { action in
+    func navigate<Action: FusionAction>(_ type: Action.Type) -> some View {
+        navigationDestination(for: type) { action in
             action.navigationDestination()
         }
+    }
+
+    // TODO: Generalize with Fusion.shared.actions
+    @MainActor func navigateFusionActions() -> some View {
+        self
+            .navigate(LinkAction.self)
+            .navigate(PageAction.self)
+            .navigate(NativeAction.self)
     }
 }

@@ -13,12 +13,6 @@ import CubeFoundationSwiftUI
 /// Shorthand for model conformance
 typealias Model = Equatable & Hashable & Codable
 
-/// A model that can be decoded from JSON and rendered as a SwiftUI view
-typealias DecodableView = Decodable & View
-
-/// A model that can be decoded from JSON and modify a SwiftUI view
-typealias DecodableViewModifier = Decodable & ViewModifier
-
 /// A hex string of the form `#RRGGBBAA`
 typealias RGBAHex = Color.RGBAHex
 

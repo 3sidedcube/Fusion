@@ -26,7 +26,7 @@ import CubeFoundation
     var isLoggingEnabled = false
 
     /// Registration of type identifiers to decodable models to render as a view
-    var models: [String: any DecodableView.Type] = [
+    var models: [String: any FusionModel.Type] = [
         "View": FusionView.self,
         "Text": FusionText.self,
         "Image": FusionImage.self,
@@ -35,7 +35,7 @@ import CubeFoundation
     ]
 
     /// Registration of type identifiers to decodable models to modify a view
-    var actions: [String: any DecodableViewModifier.Type] = [
+    var actions: [String: any FusionAction.Type] = [
         "Page": PageAction.self,
         "Link": LinkAction.self,
         "Native": NativeAction.self
@@ -59,7 +59,7 @@ import CubeFoundation
     /// Map `JSON` to a `DecodableView`
     /// - Parameter json: `ModelJSON`
     /// - Returns: `DecodableView`
-    private func model(for json: ModelJSON) throws -> any DecodableView {
+    private func model(for json: ModelJSON) throws -> any FusionModel {
         let type = try json[typeKey].string ?! FusionError.type
         let model = try models[type] ?! FusionError.model(type: type)
         return try decode(model, from: json.rawData())
@@ -79,7 +79,7 @@ import CubeFoundation
     /// Map `JSON` to a `DecodableViewModifier`
     /// - Parameter json: `ActionJSON`
     /// - Returns: `DecodableViewModifier`
-    private func action(for json: ActionJSON) throws -> any DecodableViewModifier {
+    private func action(for json: ActionJSON) throws -> any FusionAction {
         let type = try json[typeKey].string ?! FusionError.type
         let model = try actions[type] ?! FusionError.model(type: type)
         return try decode(model, from: json.rawData())
