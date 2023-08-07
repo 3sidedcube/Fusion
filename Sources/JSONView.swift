@@ -57,7 +57,7 @@ extension JSONView {
     var view: AnyView? {
         guard let json else { return nil }
         guard let view = try? Fusion.shared.view(for: json) else { return nil }
-        return AnyView(erasing: view)
+        return view.erased()
     }
 
     init(source: JSONView.Source) {

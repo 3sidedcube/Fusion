@@ -12,7 +12,7 @@ import SwiftUI
 ///
 /// This entity should be understood as a `ViewModifier`, but we don't
 /// conform to it here so that we don't interfere with `View` conformance.
-protocol FusionModel: DecodableView {
+protocol FusionModel: Model, View {
 
     var padding: FusionPadding? { get }
     var frame: FusionFrame? { get }
@@ -43,19 +43,17 @@ private extension FusionModel {
 
     // MARK: - ViewModifier
 
-    @MainActor @ViewBuilder func modify<Content: View>(
-        _ content: Content
-    ) -> some View {
+    @MainActor @ViewBuilder func modify(_ content: some View) -> some View {
         if let action {
-            modifyView(content) // TODO: Modify the view
+            modifyView(content)
+                .modify(with: action)
+                .erased()
         } else {
             modifyView(content)
         }
     }
 
-    @MainActor @ViewBuilder private func modifyView<Content: View>(
-        _ content: Content
-    ) -> some View {
+    @MainActor @ViewBuilder private func modifyView(_ content: some View) -> some View {
         content
             .padding(padding)
             .frame(frame)

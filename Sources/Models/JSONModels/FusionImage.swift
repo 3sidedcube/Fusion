@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FusionImage: FusionModel, View {
+struct FusionImage: FusionModel {
 
     var url: URL?
     var scaleType: FusionScaleType?

@@ -12,7 +12,14 @@ import SwiftUI
 
 protocol FusionAction: Model, ViewModifier {
     associatedtype Destination: View
-    func navigationDestination() -> Destination
+
+    @ViewBuilder func navigationDestination() -> Destination
+}
+
+extension FusionAction {
+
+    /// By default, return empty view
+    @ViewBuilder func navigationDestination() -> some View {}
 }
 
 extension View {

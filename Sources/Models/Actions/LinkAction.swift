@@ -9,7 +9,7 @@
 import SwiftUI
 import CubeFoundationSwiftUI
 
-struct LinkAction: Model, ViewModifier, FusionAction {
+struct LinkAction: FusionAction {
 
     var url: URL
     var inApp: Bool?
@@ -18,7 +18,7 @@ struct LinkAction: Model, ViewModifier, FusionAction {
         inApp ?? .defaultLinkInApp
     }
 
-    // MARK: - ViewModifier
+    // MARK: - FusionAction
 
     func body(content: Content) -> some View {
         if isSafari {
@@ -33,8 +33,6 @@ struct LinkAction: Model, ViewModifier, FusionAction {
             })
         }
     }
-
-    // MARK: - FusionAction
 
     func navigationDestination() -> some View {
         SafariView(url: url)

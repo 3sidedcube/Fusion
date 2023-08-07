@@ -29,8 +29,7 @@ extension JSONArray: View {
 
     @MainActor private var views: [AnyView]? {
         compactMap { json in
-            guard let view = try? Fusion.shared.view(for: json) else { return nil }
-            return AnyView(erasing: view)
+            (try? Fusion.shared.view(for: json))?.erased()
         }
     }
 

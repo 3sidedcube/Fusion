@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FusionScroll: FusionModel, View {
+struct FusionScroll: FusionModel {
 
     var axis: FusionAxis?
     var showsIndicators: Bool?

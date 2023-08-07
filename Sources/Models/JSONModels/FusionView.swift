@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FusionView: FusionModel, View {
+struct FusionView: FusionModel {
 
     var padding: FusionPadding?
     var backgroundColor: RGBAHex?

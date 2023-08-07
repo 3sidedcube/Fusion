@@ -8,19 +8,17 @@
 
 import SwiftUI
 
-struct PageAction: Model, ViewModifier {
+struct PageAction: FusionAction {
 
     var url: URL
 
-    // MARK: - ViewModifier
+    // MARK: - FusionAction
 
     func body(content: Content) -> some View {
         NavigationLink(value: self) {
             content
         }
     }
-
-    // MARK: - FusionAction
 
     func navigationDestination() -> some View {
         JSONView(url: url)

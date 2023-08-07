@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FusionText: FusionModel, View {
+struct FusionText: FusionModel {
 
     var value: String
     var isMarkdown: Bool?

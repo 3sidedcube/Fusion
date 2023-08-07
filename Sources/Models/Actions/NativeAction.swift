@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-struct NativeAction: Model, ViewModifier {
+struct NativeAction: FusionAction {
 
     var id: String
 
-    // MARK: - ViewModifier
+    // MARK: - FusionAction
 
     func body(content: Content) -> some View {
         Button(action: {

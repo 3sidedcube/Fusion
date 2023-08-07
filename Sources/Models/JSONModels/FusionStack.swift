@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FusionStack: FusionModel, View {
+struct FusionStack: FusionModel {
 
     var axis: FusionAxis?
     var spacing: CGFloat?
