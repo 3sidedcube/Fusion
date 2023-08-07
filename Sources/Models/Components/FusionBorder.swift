@@ -20,7 +20,7 @@ extension InsettableShape {
 
     @ViewBuilder func border(_ border: FusionBorder?) -> some View {
         strokeBorder(
-            border?.color?.color ?? .defaultBorderColor,
+            Color(hex: border?.color) ?? .defaultBorderColor,
             lineWidth: border?.lineWidth ?? .defaultBorderLineWidth
         )
     }

@@ -30,7 +30,7 @@ protocol FusionModel: Model, View {
 private extension FusionModel {
 
     var background: Color {
-        backgroundColor?.color ?? .defaultBackgroundColor
+        Color(hex: backgroundColor) ?? .defaultBackgroundColor
     }
 
     var corner: CGFloat {

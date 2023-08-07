@@ -24,7 +24,7 @@ struct FusionShadow: Model, ViewModifier {
             x: x ?? .defaultShadowX,
             y: y ?? .defaultShadowY,
             blur: blur ?? .defaultShadowBlur,
-            color: color?.color ?? .defaultShadowColor
+            color: Color(hex: color) ?? .defaultShadowColor
         ))
     }
 }

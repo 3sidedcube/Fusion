@@ -1,5 +1,5 @@
 //
-//  RGBAHex+Color.swift
+//  Color+RGBAHex.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 02/08/2023.
@@ -7,11 +7,11 @@
 //
 
 import SwiftUI
-import CubeFoundationSwiftUI
 
-extension RGBAHex {
+extension Color {
 
-    var color: Color? {
-        Color(hexString: self)
+    init?(hex: RGBAHex?) {
+        guard let hex else { return nil }
+        self.init(hexString: hex)
     }
 }

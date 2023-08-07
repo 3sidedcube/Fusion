@@ -38,7 +38,7 @@ struct FusionText: FusionModel {
     var body: some View {
         Text(value, isMarkdown: isMarkdown ?? .defaultIsMarkdown)
             .textStyle(textStyle)
-            .foregroundColor(textColor?.color ?? .defaultTextColor)
+            .foregroundColor(Color(hex: textColor) ?? .defaultTextColor)
             .lineLimit(numberOfLines)
             .multilineTextAlignment((alignment ?? .default).textAlignment)
             .frame(frame?.alignment(alignment))
