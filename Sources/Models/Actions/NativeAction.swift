@@ -16,7 +16,9 @@ struct NativeAction: FusionAction {
 
     func body(content: Content) -> some View {
         Button(action: {
-            Fusion.shared.handleNativeAction(id: id, from: content)
+            if !Fusion.shared.handleNativeAction(id: id) {
+                Fusion.shared.log("NativeAction with id=\(id) not handled")
+            }
         }, label: {
             content
         })

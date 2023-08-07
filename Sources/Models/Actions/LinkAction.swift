@@ -27,7 +27,11 @@ struct LinkAction: FusionAction {
             }
         } else {
             Button(action: {
-                UIApplication.shared.open(url)
+                UIApplication.shared.open(url) { isSuccess in
+                    if !isSuccess {
+                        Fusion.shared.log("Failed to open URL: \(url)")
+                    }
+                }
             }, label: {
                 content
             })

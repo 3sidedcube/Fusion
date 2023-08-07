@@ -60,7 +60,11 @@ extension JSONView {
             self.json = json
         case let .url(url):
             Task {
-                try await load(url: url)
+                do {
+                    try await load(url: url)
+                } catch {
+                    Fusion.shared.log("Failed to load \(url) - \(error)")
+                }
             }
         }
     }

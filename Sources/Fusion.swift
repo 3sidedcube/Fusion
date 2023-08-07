@@ -103,26 +103,25 @@ import CubeFoundation
         do {
             return try operation()
         } catch {
-            log(error: error)
+            log("Error decoding model: \(error)")
             throw error
         }
     }
 
-    /// Failed to load a view from JSON due to `error`
-    /// - Parameter error: `Error`
-    func log(error: Error) {
+    /// Log a message if logging is enabled
+    /// - Parameter message: `String`
+    func log(_ message: String) {
         guard isLoggingEnabled else { return }
-        print("[\(Fusion.self)] Error decoding model: \(error)")
+        print("[\(Fusion.self)] \(message)")
     }
 
     // MARK: - Actions
 
-    /// Handle a native action with `id` from `view`
-    /// - Parameters:
-    ///   - id: `String`
-    ///   - view: `Content`
-    func handleNativeAction<Content: View>(id: String, from view: Content) {
-        // TODO
+    /// Handle a native action with `id`
+    /// - Parameter id: `String`
+    /// - Returns: `Bool`
+    func handleNativeAction(id: String) -> Bool {
+        false
     }
 }
 
