@@ -69,7 +69,7 @@ import CubeFoundation
     /// - Parameter json: `JSON`
     /// - Returns: `View`
     func view(for json: ModelJSON) throws -> any View {
-        try logOnError {
+        try logOnThrow {
             try model(for: json)
         }
     }
@@ -89,7 +89,7 @@ import CubeFoundation
     /// - Parameter json: `JSON`
     /// - Returns: `View`
     func viewModifier(for json: ActionJSON) throws -> any ViewModifier {
-        try logOnError {
+        try logOnThrow {
             try action(for: json)
         }
     }
@@ -99,7 +99,7 @@ import CubeFoundation
     /// Try `operation`, if it throws log the error and throw on
     /// - Parameter operation: Block of code to run
     /// - Returns: Return type of `operation`
-    private func logOnError<T>(operation: () throws -> T) throws -> T {
+    private func logOnThrow<T>(operation: () throws -> T) throws -> T {
         do {
             return try operation()
         } catch {
