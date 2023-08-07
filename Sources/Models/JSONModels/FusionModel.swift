@@ -8,10 +8,11 @@
 
 import SwiftUI
 
-/// A `Model` which has the properties of a `FusionView`.
+/// A `Model` which renders a SwiftUI `View`.
+/// All entities have the properties of a `FusionView`.
 ///
-/// This entity should be understood as a `ViewModifier`, but we don't
-/// conform to it here so that we don't interfere with `View` conformance.
+/// This entity should be understood as both a `View` and a `ViewModifier`.
+/// We don't conform to `ViewModifier` to prioritize `View` conformance.
 protocol FusionModel: Model, View {
 
     var padding: FusionPadding? { get }
