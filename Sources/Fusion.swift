@@ -98,7 +98,7 @@ import CubeFoundation
 
     /// Try `operation`, if it throws log the error and throw on
     /// - Parameter operation: Block of code to run
-    /// - Returns: Return type of `operation`
+    /// - Returns: Return type of the given `operation`
     private func logOnThrow<T>(operation: () throws -> T) throws -> T {
         do {
             return try operation()
