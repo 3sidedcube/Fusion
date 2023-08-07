@@ -56,6 +56,7 @@ extension Text {
     ///   - value: String to render
     ///   - isMarkdown: Is the `value` markdown
     init(_ value: String, isMarkdown: Bool) {
+        // TODO: Log markdown error
         if isMarkdown, let markdown = try? AttributedString(markdown: value) {
             self.init(markdown)
         } else {
