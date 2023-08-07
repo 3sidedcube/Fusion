@@ -27,7 +27,7 @@ extension JSON: Hashable {
 
 extension JSONArray: View {
 
-    @MainActor private var views: [AnyView]? {
+    @MainActor private var views: [some View]? {
         compactMap { json in
             (try? Fusion.shared.view(for: json))?.erased()
         }

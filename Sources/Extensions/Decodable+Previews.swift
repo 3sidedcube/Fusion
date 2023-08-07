@@ -1,5 +1,5 @@
 //
-//  JSONModel+Previews.swift
+//  Decodable+Previews.swift
 //  Fusion
 //
 //  Created by Ben Shutt on 03/08/2023.
@@ -9,7 +9,7 @@
 import SwiftUI
 
 // Strictly internal. Consider adding to SPM target:
-// exclude: ["Utilities/JSONModel+Previews.swift"]
+// exclude: ["Extensions/JSONModel+Previews.swift"]
 
 /// Add preview logic to JSON models
 extension Decodable where Self: View {
