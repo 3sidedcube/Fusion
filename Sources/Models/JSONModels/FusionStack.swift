@@ -12,6 +12,7 @@ struct FusionStack: FusionModel {
 
     var axis: FusionAxis?
     var spacing: CGFloat?
+    var isLazy: Bool?
     var subviews: ModelJSON?
 
     var padding: FusionPadding?
@@ -33,10 +34,14 @@ struct FusionStack: FusionModel {
         spacing ?? .defaultStackSpacing
     }
 
+    private var isLazyStack: Bool {
+        isLazy ?? .defaultStackIsLazy
+    }
+
     // MARK: - View
 
     var body: some View {
-        stackView {
+        stack {
             if let subviews = subviews?.array {
                 subviews
             }
@@ -44,16 +49,42 @@ struct FusionStack: FusionModel {
         .view(self)
     }
 
-    @ViewBuilder func stackView<Content: View>(
+    // MARK: - Helper
+
+    @ViewBuilder func stack<Content: View>(
         @ViewBuilder content: () -> Content
     ) -> some View {
         switch stackAxis {
         case .vertical:
-            VStack(alignment: .center, spacing: spacing) {
+            vStack(content: content)
+        case .horizontal:
+            hStack(content: content)
+        }
+    }
+
+    @ViewBuilder func vStack<Content: View>(
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        if isLazyStack {
+            LazyVStack(alignment: .defaultAlignment, spacing: spacing) {
                 content()
             }
-        case .horizontal:
-            VStack(alignment: .center, spacing: spacing) {
+        } else {
+            VStack(alignment: .defaultAlignment, spacing: spacing) {
+                content()
+            }
+        }
+    }
+
+    @ViewBuilder func hStack<Content: View>(
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        if isLazyStack {
+            LazyHStack(alignment: .defaultAlignment, spacing: spacing) {
+                content()
+            }
+        } else {
+            HStack(alignment: .defaultAlignment, spacing: spacing) {
                 content()
             }
         }

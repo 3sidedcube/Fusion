@@ -11,6 +11,7 @@ import SwiftUI
 extension Bool {
     static let defaultShowsIndicators = true
     static let defaultLinkInApp = true
+    static let defaultStackIsLazy = true
 }
 
 extension Int {
@@ -66,4 +67,12 @@ extension JSONDecoder {
 extension FusionAxis {
     static let scrollDefault: FusionAxis = .vertical
     static let stackDefault: FusionAxis = .vertical
+}
+
+extension HorizontalAlignment {
+    static let defaultAlignment: HorizontalAlignment = .center
+}
+
+extension VerticalAlignment {
+    static let defaultAlignment: VerticalAlignment = .center
 }
