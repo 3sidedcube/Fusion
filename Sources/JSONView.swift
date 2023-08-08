@@ -9,22 +9,22 @@
 import SwiftUI
 import SwiftyJSON
 
-struct JSONView: View {
+public struct JSONView: View {
 
-    enum Source {
+    public enum Source {
         case json(ModelJSON)
         case url(URL)
     }
 
     @StateObject private var viewModel: JSONViewModel
 
-    init(source: Source) {
+    public init(source: Source) {
         _viewModel = .init(
             wrappedValue: JSONViewModel(source: source)
         )
     }
 
-    var body: some View {
+    public var body: some View {
         if viewModel.isLoading {
             ProgressView()
                 .padding()
@@ -36,7 +36,7 @@ struct JSONView: View {
 
 // MARK: - Extensions
 
-extension JSONView {
+public extension JSONView {
 
     init(url: URL) {
         self.init(source: .url(url))

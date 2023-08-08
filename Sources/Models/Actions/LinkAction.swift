@@ -10,10 +10,19 @@ import SwiftUI
 import CubeFoundationSwiftUI
 
 /// An action model which opens a `URL`
-struct LinkAction: FusionAction {
+public struct LinkAction: FusionAction {
 
-    var url: URL
-    var inApp: Bool?
+    public var url: URL
+    public var inApp: Bool?
+
+    // MARK: - Init
+
+    public init(url: URL, inApp: Bool? = nil) {
+        self.url = url
+        self.inApp = inApp
+    }
+
+    // MARK: - Computed
 
     private var isSafari: Bool {
         inApp ?? .defaultLinkInApp
@@ -21,7 +30,7 @@ struct LinkAction: FusionAction {
 
     // MARK: - FusionAction
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         if isSafari {
             NavigationLink(value: self) {
                 content
@@ -38,7 +47,7 @@ struct LinkAction: FusionAction {
         }
     }
 
-    func navigationDestination() -> some View {
+    public func navigationDestination() -> some View {
         SafariView(url: url)
     }
 }

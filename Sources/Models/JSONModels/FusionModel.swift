@@ -13,7 +13,7 @@ import SwiftUI
 ///
 /// This entity should be understood as both a `View` and a `ViewModifier`.
 /// We don't conform to `ViewModifier` to prioritize `View` conformance.
-protocol FusionModel: Model, View {
+public protocol FusionModel: Model, View {
 
     var padding: FusionPadding? { get }
     var frame: FusionFrame? { get }
@@ -73,7 +73,7 @@ private extension FusionModel {
 
 // MARK: - View + Extensions
 
-extension View {
+public extension View {
 
     @MainActor func view<Model: FusionModel>(
         _ model: Model

@@ -9,17 +9,17 @@
 import SwiftUI
 import CubeFoundationSwiftUI
 
-struct FusionShadow: Model, ViewModifier {
+public struct FusionShadow: Model, ViewModifier {
 
-    var x: CGFloat?
-    var y: CGFloat?
-    var color: RGBAHex?
-    var blur: CGFloat?
-    var spread: CGFloat? // Unsupported by FigmaShadow
+    public var x: CGFloat?
+    public var y: CGFloat?
+    public var color: RGBAHex?
+    public var blur: CGFloat?
+    public var spread: CGFloat? // Unsupported by FigmaShadow
 
     // MARK: - ViewModifier
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content.shadow(FigmaShadow(
             x: x ?? .defaultShadowX,
             y: y ?? .defaultShadowY,
@@ -31,7 +31,7 @@ struct FusionShadow: Model, ViewModifier {
 
 // MARK: - View + Extensions
 
-extension View {
+public extension View {
 
     func shadow(_ shadow: FusionShadow?) -> some View {
         modifier(shadow ?? FusionShadow())

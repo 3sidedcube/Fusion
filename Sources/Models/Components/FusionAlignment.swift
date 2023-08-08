@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum FusionAlignment: String, Model {
+public enum FusionAlignment: String, Model {
 
     case topLeading
     case top

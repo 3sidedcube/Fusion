@@ -9,19 +9,25 @@
 import SwiftUI
 
 /// An action model which opens another Fusion page
-struct PageAction: FusionAction {
+public struct PageAction: FusionAction {
 
-    var url: URL
+    public var url: URL
+
+    // MARK: - Init
+
+    public init(url: URL) {
+        self.url = url
+    }
 
     // MARK: - FusionAction
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         NavigationLink(value: self) {
             content
         }
     }
 
-    func navigationDestination() -> some View {
+    public func navigationDestination() -> some View {
         JSONView(url: url)
     }
 }

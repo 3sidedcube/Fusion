@@ -9,23 +9,23 @@
 import SwiftUI
 
 /// Model that draws a SwiftUI `Text`
-struct FusionText: FusionModel {
+public struct FusionText: FusionModel {
 
-    var value: String
-    var isMarkdown: Bool?
-    var textColor: RGBAHex?
-    var textStyle: FusionTextStyle?
-    var alignment: FusionAlignment?
-    var lineLimit: Int?
+    public var value: String
+    public var isMarkdown: Bool?
+    public var textColor: RGBAHex?
+    public var textStyle: FusionTextStyle?
+    public var alignment: FusionAlignment?
+    public var lineLimit: Int?
 
-    var padding: FusionPadding?
-    var backgroundColor: RGBAHex?
-    var frame: FusionFrame?
-    var cornerRadius: CGFloat?
-    var border: FusionBorder?
-    var shadow: FusionShadow?
-    var margins: FusionPadding?
-    var onTap: ActionJSON?
+    public var padding: FusionPadding?
+    public var backgroundColor: RGBAHex?
+    public var frame: FusionFrame?
+    public var cornerRadius: CGFloat?
+    public var border: FusionBorder?
+    public var shadow: FusionShadow?
+    public var margins: FusionPadding?
+    public var onTap: ActionJSON?
 
     // MARK: - Computed
 
@@ -36,7 +36,7 @@ struct FusionText: FusionModel {
 
     // MARK: - View
 
-    var body: some View {
+    public var body: some View {
         Text(value, isMarkdown: isMarkdown ?? .defaultIsMarkdown)
             .textStyle(textStyle)
             .foregroundColor(Color(hex: textColor) ?? .defaultTextColor)
@@ -49,7 +49,7 @@ struct FusionText: FusionModel {
 
 // MARK: - Text + Extensions
 
-extension Text {
+private extension Text {
 
     /// Initialize with a `value` that is either markdown or plain text.
     /// - Parameters:

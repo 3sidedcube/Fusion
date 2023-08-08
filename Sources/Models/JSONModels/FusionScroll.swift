@@ -9,20 +9,20 @@
 import SwiftUI
 
 /// Model that draws a SwiftUI `ScrollView`
-struct FusionScroll: FusionModel {
+public struct FusionScroll: FusionModel {
 
-    var axis: FusionAxis?
-    var showsIndicators: Bool?
-    var subviews: ModelJSON?
+    public var axis: FusionAxis?
+    public var showsIndicators: Bool?
+    public var subviews: ModelJSON?
 
-    var padding: FusionPadding?
-    var backgroundColor: RGBAHex?
-    var frame: FusionFrame?
-    var cornerRadius: CGFloat?
-    var border: FusionBorder?
-    var shadow: FusionShadow?
-    var margins: FusionPadding?
-    var onTap: ActionJSON?
+    public var padding: FusionPadding?
+    public var backgroundColor: RGBAHex?
+    public var frame: FusionFrame?
+    public var cornerRadius: CGFloat?
+    public var border: FusionBorder?
+    public var shadow: FusionShadow?
+    public var margins: FusionPadding?
+    public var onTap: ActionJSON?
 
     // MARK: - Computed
 
@@ -32,7 +32,7 @@ struct FusionScroll: FusionModel {
 
     // MARK: - View
 
-    var body: some View {
+    public var body: some View {
         ScrollView(
             scrollAxis.axis,
             showsIndicators: showsIndicators ?? .defaultShowsIndicators

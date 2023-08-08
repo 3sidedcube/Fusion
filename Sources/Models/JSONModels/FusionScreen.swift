@@ -9,22 +9,22 @@
 import SwiftUI
 
 /// Model that draws a screen
-struct FusionScreen: FusionModel {
+public struct FusionScreen: FusionModel {
 
-    var title: String?
-    var screenEvent: String?
-    var subviews: ModelJSON?
+    public var title: String?
+    public var screenEvent: String?
+    public var subviews: ModelJSON?
 
-    var padding: FusionPadding?
-    var backgroundColor: RGBAHex?
-    var frame: FusionFrame?
-    var cornerRadius: CGFloat?
-    var border: FusionBorder?
-    var shadow: FusionShadow?
-    var margins: FusionPadding?
-    var onTap: ActionJSON? { nil }
+    public var padding: FusionPadding?
+    public var backgroundColor: RGBAHex?
+    public var frame: FusionFrame?
+    public var cornerRadius: CGFloat?
+    public var border: FusionBorder?
+    public var shadow: FusionShadow?
+    public var margins: FusionPadding?
+    public var onTap: ActionJSON? { nil }
 
-    var body: some View {
+    public var body: some View {
         ZStack {
             Rectangle()
                 .fill(Color.defaultScreenBackgroundColor)
@@ -46,7 +46,7 @@ struct FusionScreen: FusionModel {
 
 // MARK: - NavigationTitle
 
-struct NavigationTitle: ViewModifier {
+private struct NavigationTitle: ViewModifier {
 
     var title: String?
 

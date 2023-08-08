@@ -9,7 +9,7 @@
 import SwiftUI
 
 /// A `Model` decoded from an `ActionJSON` which modifies a SwiftUI `View`.
-protocol FusionAction: Model, ViewModifier {
+public protocol FusionAction: Model, ViewModifier {
 
     /// A view that is navigated to
     associatedtype Destination: View
@@ -21,7 +21,7 @@ protocol FusionAction: Model, ViewModifier {
 
 // MARK: - Extensions
 
-extension FusionAction {
+public extension FusionAction {
 
     /// By default, returns an empty view
     @ViewBuilder func navigationDestination() -> some View {}
@@ -29,7 +29,7 @@ extension FusionAction {
 
 // MARK: - View + Extensions
 
-extension View {
+public extension View {
 
     /// Add a navigation destination for all the actions on the shared `Fusion`
     /// - Returns: `View`

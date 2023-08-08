@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct FusionPadding: Model, ViewModifier {
+public struct FusionPadding: Model, ViewModifier {
 
-    var top: CGFloat?
-    var leading: CGFloat?
-    var bottom: CGFloat?
-    var trailing: CGFloat?
+    public var top: CGFloat?
+    public var leading: CGFloat?
+    public var bottom: CGFloat?
+    public var trailing: CGFloat?
 
     // MARK: - ViewModifier
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content.padding(EdgeInsets(
             top: top ?? .defaultPaddingTop,
             leading: leading ?? .defaultPaddingLeading,
@@ -29,7 +29,7 @@ struct FusionPadding: Model, ViewModifier {
 
 // MARK: - View + Extensions
 
-extension View {
+public extension View {
 
     func padding(_ padding: FusionPadding?) -> some View {
         modifier(padding ?? FusionPadding())

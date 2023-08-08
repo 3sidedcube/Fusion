@@ -9,20 +9,20 @@
 import SwiftUI
 
 /// Model that draws a SwiftUI `Rectangle` which shared properties
-struct FusionView: FusionModel {
+public struct FusionView: FusionModel {
 
-    var padding: FusionPadding?
-    var backgroundColor: RGBAHex?
-    var frame: FusionFrame?
-    var cornerRadius: CGFloat?
-    var border: FusionBorder?
-    var shadow: FusionShadow?
-    var margins: FusionPadding?
-    var onTap: ActionJSON?
+    public var padding: FusionPadding?
+    public var backgroundColor: RGBAHex?
+    public var frame: FusionFrame?
+    public var cornerRadius: CGFloat?
+    public var border: FusionBorder?
+    public var shadow: FusionShadow?
+    public var margins: FusionPadding?
+    public var onTap: ActionJSON?
 
     // MARK: - View
 
-    var body: some View {
+    public var body: some View {
         Rectangle()
             .fill(.clear)
             .view(self)

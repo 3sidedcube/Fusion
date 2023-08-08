@@ -8,15 +8,15 @@
 
 import SwiftUI
 
-struct FusionBorder: Model {
+public struct FusionBorder: Model {
 
-    var color: RGBAHex?
-    var lineWidth: CGFloat?
+    public var color: RGBAHex?
+    public var lineWidth: CGFloat?
 }
 
 // MARK: - InsettableShape + Extensions
 
-extension InsettableShape {
+public extension InsettableShape {
 
     @ViewBuilder func border(_ border: FusionBorder?) -> some View {
         strokeBorder(

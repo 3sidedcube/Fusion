@@ -9,21 +9,21 @@
 import SwiftUI
 
 /// Model that draws a SwiftUI `VStack` or `HStack`
-struct FusionStack: FusionModel {
+public struct FusionStack: FusionModel {
 
-    var axis: FusionAxis?
-    var spacing: CGFloat?
-    var isLazy: Bool?
-    var subviews: ModelJSON?
+    public var axis: FusionAxis?
+    public var spacing: CGFloat?
+    public var isLazy: Bool?
+    public var subviews: ModelJSON?
 
-    var padding: FusionPadding?
-    var backgroundColor: RGBAHex?
-    var frame: FusionFrame?
-    var cornerRadius: CGFloat?
-    var border: FusionBorder?
-    var shadow: FusionShadow?
-    var margins: FusionPadding?
-    var onTap: ActionJSON?
+    public var padding: FusionPadding?
+    public var backgroundColor: RGBAHex?
+    public var frame: FusionFrame?
+    public var cornerRadius: CGFloat?
+    public var border: FusionBorder?
+    public var shadow: FusionShadow?
+    public var margins: FusionPadding?
+    public var onTap: ActionJSON?
 
     // MARK: - Computed
 
@@ -41,7 +41,7 @@ struct FusionStack: FusionModel {
 
     // MARK: - View
 
-    var body: some View {
+    public var body: some View {
         stack {
             if let subviews = subviews?.array {
                 subviews
@@ -52,7 +52,7 @@ struct FusionStack: FusionModel {
 
     // MARK: - Helper
 
-    @ViewBuilder func stack<Content: View>(
+    @ViewBuilder private func stack<Content: View>(
         @ViewBuilder content: () -> Content
     ) -> some View {
         switch stackAxis {
@@ -63,7 +63,7 @@ struct FusionStack: FusionModel {
         }
     }
 
-    @ViewBuilder func vStack<Content: View>(
+    @ViewBuilder private func vStack<Content: View>(
         @ViewBuilder content: () -> Content
     ) -> some View {
         if isLazyStack {
@@ -77,7 +77,7 @@ struct FusionStack: FusionModel {
         }
     }
 
-    @ViewBuilder func hStack<Content: View>(
+    @ViewBuilder private func hStack<Content: View>(
         @ViewBuilder content: () -> Content
     ) -> some View {
         if isLazyStack {

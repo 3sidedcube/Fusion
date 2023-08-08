@@ -9,13 +9,19 @@
 import SwiftUI
 
 /// An action model which notifies the `Fusion` that an action was performed
-struct NativeAction: FusionAction {
+public struct NativeAction: FusionAction {
 
-    var id: String
+    public var id: String
+
+    // MARK: - Init
+
+    public init(id: String) {
+        self.id = id
+    }
 
     // MARK: - FusionAction
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         Button(action: {
             guard !Fusion.shared.handle(nativeAction: id) else { return }
             Fusion.shared.log("Native action '\(id)' not handled")

@@ -11,16 +11,16 @@ import SwiftyJSON
 import CubeFoundationSwiftUI
 
 /// Shorthand for model conformance
-typealias Model = Equatable & Hashable & Codable
+public typealias Model = Equatable & Hashable & Codable
 
 /// A hex string of the form `#RRGGBBAA`
-typealias RGBAHex = Color.RGBAHex
+public typealias RGBAHex = Color.RGBAHex
 
 /// Denotes a `JSON` which represents an view
-typealias ModelJSON = JSON
+public typealias ModelJSON = JSON
 
 /// Denotes a `JSON` which represents an action
-typealias ActionJSON = JSON
+public typealias ActionJSON = JSON
 
 /// A `JSON` array
-typealias JSONArray = [JSON]
+public typealias JSONArray = [JSON]

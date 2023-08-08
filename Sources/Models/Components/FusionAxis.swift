@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum FusionAxis: String, Model {
+public enum FusionAxis: String, Model {
 
     case vertical
     case horizontal

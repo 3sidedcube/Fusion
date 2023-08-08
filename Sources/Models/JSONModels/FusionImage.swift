@@ -9,23 +9,23 @@
 import SwiftUI
 
 /// Model that draws a SwiftUI `Image` loaded from a `URL`
-struct FusionImage: FusionModel {
+public struct FusionImage: FusionModel {
 
-    var url: URL?
-    var scaleType: FusionScaleType?
+    public var url: URL?
+    public var scaleType: FusionScaleType?
 
-    var padding: FusionPadding?
-    var backgroundColor: RGBAHex?
-    var frame: FusionFrame?
-    var cornerRadius: CGFloat?
-    var border: FusionBorder?
-    var shadow: FusionShadow?
-    var margins: FusionPadding?
-    var onTap: ActionJSON?
+    public var padding: FusionPadding?
+    public var backgroundColor: RGBAHex?
+    public var frame: FusionFrame?
+    public var cornerRadius: CGFloat?
+    public var border: FusionBorder?
+    public var shadow: FusionShadow?
+    public var margins: FusionPadding?
+    public var onTap: ActionJSON?
 
     // MARK: - View
 
-    var body: some View {
+    public var body: some View {
         Rectangle()
             .fill(.clear)
             .overlay {

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum FusionScaleType: String, Model {
+public enum FusionScaleType: String, Model {
 
     case scaleToFill
     case aspectFit
@@ -17,7 +17,7 @@ enum FusionScaleType: String, Model {
 
 // MARK: - Image + Extensions
 
-extension Image {
+public extension Image {
 
     @ViewBuilder func scaleType(_ scaleType: FusionScaleType) -> some View {
         switch scaleType {

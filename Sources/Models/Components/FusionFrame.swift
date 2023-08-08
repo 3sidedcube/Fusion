@@ -9,11 +9,11 @@
 import SwiftUI
 
 /// Construct a frame for a view.
-struct FusionFrame: Model, ViewModifier {
+public struct FusionFrame: Model, ViewModifier {
 
-    var width: CGFloat?
-    var height: CGFloat?
-    var alignment: FusionAlignment?
+    public var width: CGFloat?
+    public var height: CGFloat?
+    public var alignment: FusionAlignment?
 
     var frameAlignment: Alignment {
         (alignment ?? .default).alignment
@@ -25,7 +25,7 @@ struct FusionFrame: Model, ViewModifier {
         return frame
     }
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .frame(
                 width: width?.value,
@@ -55,7 +55,7 @@ private extension CGFloat {
 
 // MARK: - View + Extensions
 
-extension View {
+public extension View {
 
     func frame(_ frame: FusionFrame?) -> some View {
         modifier(frame ?? FusionFrame())

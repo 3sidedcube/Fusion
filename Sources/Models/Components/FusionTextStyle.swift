@@ -9,13 +9,13 @@
 import SwiftUI
 import CubeFoundationSwiftUI
 
-struct FusionTextStyle: Model, ViewModifier {
+public struct FusionTextStyle: Model, ViewModifier {
 
-    var name: String?
-    var size: CGFloat?
-    var weight: Int?
-    var lineHeight: CGFloat?
-    var letterSpacing: CGFloat?
+    public var name: String?
+    public var size: CGFloat?
+    public var weight: Int?
+    public var lineHeight: CGFloat?
+    public var letterSpacing: CGFloat?
 
     // MARK: - Computed
 
@@ -26,7 +26,7 @@ struct FusionTextStyle: Model, ViewModifier {
 
     // MARK: - ViewModifier
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content.style(TextStyle(
             fontName,
             weight: .init(integer: weight ?? .defaultFontWeight),
@@ -40,7 +40,7 @@ struct FusionTextStyle: Model, ViewModifier {
 
 // MARK: - View + Extensions
 
-extension View {
+public extension View {
 
     func textStyle(_ textStyle: FusionTextStyle?) -> some View {
         modifier(textStyle ?? FusionTextStyle())
