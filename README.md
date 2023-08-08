@@ -51,6 +51,7 @@ The models in this library are prefixed with the `"Fusion*"` suffix to not inter
 * Image
 * Stack
 * Scroll
+* Screen
 
 The `View` properties can be applied to all models.
 
