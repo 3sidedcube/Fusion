@@ -11,22 +11,34 @@ import SwiftyJSON
 import CubeFoundation
 
 /// Manage the registered models and map them to views
-@MainActor struct Fusion {
+@MainActor public struct Fusion {
 
     /// Shared singleton `Fusion` instance
-    static var shared = Fusion()
+    public private(set) static var shared = Fusion()
 
     /// JSON key for the type of the entity
-    var typeKey = "type"
+    private let typeKey = "type"
 
     /// `JSONDecoder` to use for decoding models from JSON
-    var jsonDecoder: JSONDecoder = .default
+    public var jsonDecoder: JSONDecoder = .default
 
     /// Should log when an error is thrown
-    var isLoggingEnabled = false
+    public var isLoggingEnabled = false
+
+    /// Handle a native action
+    public var handleNativeAction: ((String) -> Bool)?
+
+    /// Handle a screen event
+    public var handleScreenEvent: ((String) -> Bool)?
+
+    // MARK: - Init
+
+    private init() {}
+
+    // MARK: - Computed
 
     /// Registration of type identifiers to decodable models to render as a view
-    var models: [String: any FusionModel.Type] = [
+    public var models: [String: any FusionModel.Type] = [
         "View": FusionView.self,
         "Text": FusionText.self,
         "Image": FusionImage.self,
@@ -36,7 +48,7 @@ import CubeFoundation
     ]
 
     /// Registration of type identifiers to decodable models to modify a view
-    var actions: [String: any FusionAction.Type] = [
+    public var actions: [String: any FusionAction.Type] = [
         "Page": PageAction.self,
         "Link": LinkAction.self,
         "Native": NativeAction.self
@@ -69,7 +81,7 @@ import CubeFoundation
     /// Get any `View` for `json`.
     /// - Parameter json: `ModelJSON`
     /// - Returns: `View`
-    func view(for json: ModelJSON) throws -> any View {
+    public func view(for json: ModelJSON) throws -> any View {
         try logOnThrow {
             try model(for: json)
         }
@@ -89,7 +101,7 @@ import CubeFoundation
     /// Get any `ViewModifier` for `json`.
     /// - Parameter json: `ActionJSON`
     /// - Returns: `View`
-    func viewModifier(for json: ActionJSON) throws -> any ViewModifier {
+    public func viewModifier(for json: ActionJSON) throws -> any ViewModifier {
         try logOnThrow {
             try action(for: json)
         }
@@ -122,21 +134,21 @@ import CubeFoundation
     /// - Parameter nativeAction: `String` the native action
     /// - Returns: `Bool` was the native action handled
     func handle(nativeAction: String) -> Bool {
-        false
+        handleNativeAction?(nativeAction) ?? false
     }
 
     /// Handle a screen event
     /// - Parameter screenEvent: `String` the screen event
     /// - Returns: `Bool` was the screen event handled
     func handle(screenEvent: String) -> Bool {
-        false
+        handleScreenEvent?(screenEvent) ?? false
     }
 }
 
 // MARK: - FusionError
 
 /// An `Error` in `Fusion`
-enum FusionError: Error {
+public enum FusionError: Error {
 
     /// Failed to find the type of model to decode
     case type

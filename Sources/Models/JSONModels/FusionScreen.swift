@@ -24,6 +24,34 @@ public struct FusionScreen: FusionModel {
     public var margins: FusionPadding?
     public var onTap: ActionJSON? { nil }
 
+    // MARK: - Init
+
+    public init(
+        title: String? = nil,
+        screenEvent: String? = nil,
+        subviews: ModelJSON? = nil,
+        padding: FusionPadding? = nil,
+        backgroundColor: RGBAHex? = nil,
+        frame: FusionFrame? = nil,
+        cornerRadius: CGFloat? = nil,
+        border: FusionBorder? = nil,
+        shadow: FusionShadow? = nil,
+        margins: FusionPadding? = nil
+    ) {
+        self.title = title
+        self.screenEvent = screenEvent
+        self.subviews = subviews
+        self.padding = padding
+        self.backgroundColor = backgroundColor
+        self.frame = frame
+        self.cornerRadius = cornerRadius
+        self.border = border
+        self.shadow = shadow
+        self.margins = margins
+    }
+
+    // MARK: - View
+
     public var body: some View {
         ZStack {
             Rectangle()

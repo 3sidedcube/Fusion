@@ -22,7 +22,33 @@ public struct FusionScroll: FusionModel {
     public var border: FusionBorder?
     public var shadow: FusionShadow?
     public var margins: FusionPadding?
-    public var onTap: ActionJSON?
+    public var onTap: ActionJSON? { nil }
+
+    // MARK: - Init
+
+    public init(
+        axis: FusionAxis? = nil,
+        showsIndicators: Bool? = nil,
+        subviews: ModelJSON? = nil,
+        padding: FusionPadding? = nil,
+        backgroundColor: RGBAHex? = nil,
+        frame: FusionFrame? = nil,
+        cornerRadius: CGFloat? = nil,
+        border: FusionBorder? = nil,
+        shadow: FusionShadow? = nil,
+        margins: FusionPadding? = nil
+    ) {
+        self.axis = axis
+        self.showsIndicators = showsIndicators
+        self.subviews = subviews
+        self.padding = padding
+        self.backgroundColor = backgroundColor
+        self.frame = frame
+        self.cornerRadius = cornerRadius
+        self.border = border
+        self.shadow = shadow
+        self.margins = margins
+    }
 
     // MARK: - Computed
 

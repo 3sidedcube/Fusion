@@ -15,7 +15,21 @@ public struct FusionFrame: Model, ViewModifier {
     public var height: CGFloat?
     public var alignment: FusionAlignment?
 
-    var frameAlignment: Alignment {
+    // MARK: - Init
+
+    public init(
+        width: CGFloat? = nil,
+        height: CGFloat? = nil,
+        alignment: FusionAlignment? = nil
+    ) {
+        self.width = width
+        self.height = height
+        self.alignment = alignment
+    }
+
+    // MARK: - Computed
+
+    private var frameAlignment: Alignment {
         (alignment ?? .default).alignment
     }
 

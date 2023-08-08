@@ -12,6 +12,16 @@ public struct FusionBorder: Model {
 
     public var color: RGBAHex?
     public var lineWidth: CGFloat?
+
+    // MARK: - Init
+
+    public init(
+        color: RGBAHex? = nil,
+        lineWidth: CGFloat? = nil
+    ) {
+        self.color = color
+        self.lineWidth = lineWidth
+    }
 }
 
 // MARK: - InsettableShape + Extensions

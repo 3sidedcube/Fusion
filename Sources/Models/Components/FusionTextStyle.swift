@@ -17,6 +17,22 @@ public struct FusionTextStyle: Model, ViewModifier {
     public var lineHeight: CGFloat?
     public var letterSpacing: CGFloat?
 
+    // MARK: - Init
+
+    public init(
+        name: String? = nil,
+        size: CGFloat? = nil,
+        weight: Int? = nil,
+        lineHeight: CGFloat? = nil,
+        letterSpacing: CGFloat? = nil
+    ) {
+        self.name = name
+        self.size = size
+        self.weight = weight
+        self.lineHeight = lineHeight
+        self.letterSpacing = letterSpacing
+    }
+
     // MARK: - Computed
 
     private var fontName: Font.Name {

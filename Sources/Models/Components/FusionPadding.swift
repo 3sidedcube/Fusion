@@ -15,6 +15,20 @@ public struct FusionPadding: Model, ViewModifier {
     public var bottom: CGFloat?
     public var trailing: CGFloat?
 
+    // MARK: - Init
+
+    public init(
+        top: CGFloat? = nil,
+        leading: CGFloat? = nil,
+        bottom: CGFloat? = nil,
+        trailing: CGFloat? = nil
+    ) {
+        self.top = top
+        self.leading = leading
+        self.bottom = bottom
+        self.trailing = trailing
+    }
+
     // MARK: - ViewModifier
 
     public func body(content: Content) -> some View {

@@ -27,6 +27,40 @@ public struct FusionText: FusionModel {
     public var margins: FusionPadding?
     public var onTap: ActionJSON?
 
+    // MARK: - Init
+
+    public init(
+        value: String,
+        isMarkdown: Bool? = nil,
+        textColor: RGBAHex? = nil,
+        textStyle: FusionTextStyle? = nil,
+        alignment: FusionAlignment? = nil,
+        lineLimit: Int? = nil,
+        padding: FusionPadding? = nil,
+        backgroundColor: RGBAHex? = nil,
+        frame: FusionFrame? = nil,
+        cornerRadius: CGFloat? = nil,
+        border: FusionBorder? = nil,
+        shadow: FusionShadow? = nil,
+        margins: FusionPadding? = nil,
+        onTap: ActionJSON? = nil
+    ) {
+        self.value = value
+        self.isMarkdown = isMarkdown
+        self.textColor = textColor
+        self.textStyle = textStyle
+        self.alignment = alignment
+        self.lineLimit = lineLimit
+        self.padding = padding
+        self.backgroundColor = backgroundColor
+        self.frame = frame
+        self.cornerRadius = cornerRadius
+        self.border = border
+        self.shadow = shadow
+        self.margins = margins
+        self.onTap = onTap
+    }
+
     // MARK: - Computed
 
     private var numberOfLines: Int? {

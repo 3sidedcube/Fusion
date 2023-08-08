@@ -17,7 +17,10 @@ public struct LinkAction: FusionAction {
 
     // MARK: - Init
 
-    public init(url: URL, inApp: Bool? = nil) {
+    public init(
+        url: URL,
+        inApp: Bool? = nil
+    ) {
         self.url = url
         self.inApp = inApp
     }

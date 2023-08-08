@@ -17,6 +17,22 @@ public struct FusionShadow: Model, ViewModifier {
     public var blur: CGFloat?
     public var spread: CGFloat? // Unsupported by FigmaShadow
 
+    // MARK: - Init
+
+    public init(
+        x: CGFloat? = nil,
+        y: CGFloat? = nil,
+        color: RGBAHex? = nil,
+        blur: CGFloat? = nil,
+        spread: CGFloat? = nil
+    ) {
+        self.x = x
+        self.y = y
+        self.color = color
+        self.blur = blur
+        self.spread = spread
+    }
+
     // MARK: - ViewModifier
 
     public func body(content: Content) -> some View {
