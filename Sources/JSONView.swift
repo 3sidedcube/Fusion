@@ -9,20 +9,31 @@
 import SwiftUI
 import SwiftyJSON
 
+/// A view rendered from Fusion JSON
 public struct JSONView: View {
 
+    /// Source of the JSON data
     public enum Source {
+
+        /// Provide directly with the JSON
         case json(ModelJSON)
+
+        /// Load the JSON from a URL
         case url(URL)
     }
 
+    /// View model to load the JSON from the source
     @StateObject private var viewModel: JSONViewModel
 
+    /// Initialize with the relevant `source`
+    /// - Parameter source: `Source`
     public init(source: Source) {
         _viewModel = .init(
             wrappedValue: JSONViewModel(source: source)
         )
     }
+
+    // MARK: - View
 
     public var body: some View {
         if viewModel.isLoading {
@@ -49,11 +60,17 @@ public extension JSONView {
 
 // MARK: - JSONViewModel
 
+/// Load JSON from source
 @MainActor private final class JSONViewModel: ObservableObject {
 
+    /// The JSON when loaded, `nil` if loading or failed to load
     @Published private(set) var json: ModelJSON?
+
+    /// Is the JSON being loaded
     @Published private(set) var isLoading = false
 
+    /// Initialize with `source`
+    /// - Parameter source: `JSONView.Source`
     init(source: JSONView.Source) {
         switch source {
         case let .json(json):
@@ -69,6 +86,8 @@ public extension JSONView {
         }
     }
 
+    /// Load from `url` asynchronously
+    /// - Parameter url: `URL`
     func load(url: URL) async throws {
         isLoading = true
         defer { isLoading = false }
@@ -80,6 +99,8 @@ public extension JSONView {
 
 private extension ModelJSON {
 
+    /// Initialize JSON by loading the data at `url`
+    /// - Parameter url: `URL`
     init(url: URL) async throws {
         try self.init(data: Data(contentsOf: url))
     }
