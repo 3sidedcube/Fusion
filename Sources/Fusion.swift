@@ -117,10 +117,17 @@ import CubeFoundation
 
     // MARK: - Actions
 
-    /// Handle a native action with `id`
-    /// - Parameter id: `String`
-    /// - Returns: `Bool`
-    func handleNativeAction(id: String) -> Bool {
+    /// Handle a native action
+    /// - Parameter nativeAction: `String` the native action
+    /// - Returns: `Bool` was the native action handled
+    func handle(nativeAction: String) -> Bool {
+        false
+    }
+
+    /// Handle a screen event
+    /// - Parameter screenEvent: `String` the screen event
+    /// - Returns: `Bool` was the screen event handled
+    func handle(screenEvent: String) -> Bool {
         false
     }
 }

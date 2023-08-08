@@ -47,6 +47,8 @@ extension Color {
     static let defaultShadowColor: Color = .black.opacity(0)
 
     static let imagePlaceholder = Color(white255: 200)
+
+    static let defaultScreenBackgroundColor: Color = .white
 }
 
 extension Font.Name {
