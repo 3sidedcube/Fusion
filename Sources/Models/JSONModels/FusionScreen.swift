@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// Model that draws a screen
 struct FusionScreen: FusionModel {
 
     var title: String?

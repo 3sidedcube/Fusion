@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// Model that draws a SwiftUI `Image` loaded from a `URL`
 struct FusionImage: FusionModel {
 
     var url: URL?

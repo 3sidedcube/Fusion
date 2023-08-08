@@ -9,6 +9,7 @@
 import SwiftUI
 import CubeFoundationSwiftUI
 
+/// An action model which opens a `URL`
 struct LinkAction: FusionAction {
 
     var url: URL

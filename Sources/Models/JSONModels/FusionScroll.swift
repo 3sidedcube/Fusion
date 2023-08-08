@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// Model that draws a SwiftUI `ScrollView`
 struct FusionScroll: FusionModel {
 
     var axis: FusionAxis?

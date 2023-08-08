@@ -31,7 +31,8 @@ import CubeFoundation
         "Text": FusionText.self,
         "Image": FusionImage.self,
         "Stack": FusionStack.self,
-        "Scroll": FusionScroll.self
+        "Scroll": FusionScroll.self,
+        "Screen": FusionScreen.self
     ]
 
     /// Registration of type identifiers to decodable models to modify a view

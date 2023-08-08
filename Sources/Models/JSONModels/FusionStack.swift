@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// Model that draws a SwiftUI `VStack` or `HStack`
 struct FusionStack: FusionModel {
 
     var axis: FusionAxis?

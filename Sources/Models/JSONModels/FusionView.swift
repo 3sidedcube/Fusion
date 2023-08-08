@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// Model that draws a SwiftUI `Rectangle` which shared properties
 struct FusionView: FusionModel {
 
     var padding: FusionPadding?

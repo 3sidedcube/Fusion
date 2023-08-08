@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// An action model which opens another Fusion page
 struct PageAction: FusionAction {
 
     var url: URL

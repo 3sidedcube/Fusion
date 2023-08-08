@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// Model that draws a SwiftUI `Text`
 struct FusionText: FusionModel {
 
     var value: String

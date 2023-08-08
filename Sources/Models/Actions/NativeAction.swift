@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// An action model which notifies the `Fusion` that an action was performed
 struct NativeAction: FusionAction {
 
     var id: String
