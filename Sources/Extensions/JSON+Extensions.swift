@@ -9,7 +9,29 @@
 import SwiftUI
 import SwiftyJSON
 
-// MARK: - Hashable
+// MARK: - JSON + Encodable
+
+public extension JSON {
+
+    init(
+        encoding models: [any Encodable],
+        with jsonEncoder: JSONEncoder = JSONEncoder()
+    ) throws {
+        self = try JSON(models.map {
+            try JSON(encoding: $0, with: jsonEncoder)
+        })
+    }
+
+    init(
+        encoding model: some Encodable,
+        with jsonEncoder: JSONEncoder = JSONEncoder()
+    ) throws {
+        try self.init(data: jsonEncoder.encode(model))
+    }
+}
+
+
+// MARK: - JSON + Hashable
 
 extension JSON: Hashable {
 
