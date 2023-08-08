@@ -14,7 +14,7 @@ import CubeFoundation
 @MainActor public struct Fusion {
 
     /// Shared singleton `Fusion` instance
-    public private(set) static var shared = Fusion()
+    public static var shared = Fusion()
 
     /// JSON key for the type of the entity
     private let typeKey = "type"
