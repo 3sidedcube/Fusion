@@ -27,7 +27,7 @@ public struct JSONView: View {
 
     /// Initialize with the relevant `source`
     /// - Parameter source: `Source`
-    public init(source: Source) {
+    fileprivate init(source: Source) {
         _viewModel = .init(
             wrappedValue: JSONViewModel(source: source)
         )
