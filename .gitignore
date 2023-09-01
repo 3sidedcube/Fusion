@@ -1,9 +1,13 @@
-### Swift Package Manager ###
+### SPM ###
 .DS_Store
 /.build
 /Packages
-# Removed -> /*.xcodeproj
+/*.xcodeproj
 xcuserdata/
+DerivedData/
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
 
 ### Vim ###
 # Swap
@@ -14,49 +18,8 @@ xcuserdata/
 [._]ss[a-gi-z]
 [._]sw[a-p]
 
-# Session
-Session.vim
-Sessionx.vim
-
-# Temporary
-.netrwhist
-*~
-# Auto-generated tag files
-tags
-# Persistent undo
-[._]*.un~
-
-### Carthage ###
-Carthage/Build
-Carthage/Checkouts
-
-### Xcode ###
-## User settings
-xcuserdata/
-
-## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
-*.xcscmblueprint
-*.xccheckout
-
-## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
-build/
-DerivedData/
-*.moved-aside
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-
-## Gcc Patch
-/*.gcno
-
-### Xcode Patch ###
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
-**/xcshareddata/WorkspaceSettings.xcsettings
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
