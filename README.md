@@ -81,3 +81,7 @@ Fusion.shared.models["MyModel"] = MyModel.self
 Fusion here means to bring together two platforms, iOS and Android, powered by a single data source.  
 For web-server apps, the business logic should sit server-side as much as possible.
 Fusion aims to be as simple as "server tell me what to draw and I'll draw it".
+
+## Legacy
+
+This framework was initially developed (and nearly finished) in UIKit. The work can be found in the branch: `legacy/ui-kit`.
